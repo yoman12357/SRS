@@ -9,31 +9,36 @@
       "name": "cybersrs-qwen3-4b-ft.gguf.part01",
       "size": 536870912,
       "sha256": "24e242fcae8dbf2012f8531ad05897726165d2ca29b6077b5ec958e05bef689a",
-      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723543545?download=1"
+      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723543545?download=1",
+      "browser_url": "https://github.com/yoman12357/SRS/releases/download/v0.1.0/cybersrs-qwen3-4b-ft.gguf.part01"
     },
     {
       "name": "cybersrs-qwen3-4b-ft.gguf.part02",
       "size": 536870912,
       "sha256": "2f799f8fdc720adc191b244db35bba349535c101633f4cb5a2162af7b77ce67f",
-      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723543550?download=1"
+      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723543550?download=1",
+      "browser_url": "https://github.com/yoman12357/SRS/releases/download/v0.1.0/cybersrs-qwen3-4b-ft.gguf.part02"
     },
     {
       "name": "cybersrs-qwen3-4b-ft.gguf.part03",
       "size": 536870912,
       "sha256": "e98b8a11283e0901f3262b31b70d50985affbe7d0ca862fd4c05a0b285b1dca3",
-      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723543552?download=1"
+      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723543552?download=1",
+      "browser_url": "https://github.com/yoman12357/SRS/releases/download/v0.1.0/cybersrs-qwen3-4b-ft.gguf.part03"
     },
     {
       "name": "cybersrs-qwen3-4b-ft.gguf.part04",
       "size": 536870912,
       "sha256": "1f949ee246d49c0a7604c10ae7a94ca2e80db49630a98f5e3a60a3d3d074b435",
-      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723544633?download=1"
+      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723544633?download=1",
+      "browser_url": "https://github.com/yoman12357/SRS/releases/download/v0.1.0/cybersrs-qwen3-4b-ft.gguf.part04"
     },
     {
       "name": "cybersrs-qwen3-4b-ft.gguf.part05",
       "size": 349796640,
       "sha256": "8247aa72da20eebd3e9fe46f3095bed4ff045cab880a9d96baad01ff98032f5f",
-      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723544678?download=1"
+      "url": "https://api.github.com/repos/yoman12357/SRS/releases/assets/723544678?download=1",
+      "browser_url": "https://github.com/yoman12357/SRS/releases/download/v0.1.0/cybersrs-qwen3-4b-ft.gguf.part05"
     }
   ]
 }

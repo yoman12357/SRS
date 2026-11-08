@@ -33,29 +33,37 @@ def _download_part(cache: Path, asset: dict) -> Path:
     if _matches(destination, asset):
         return destination
     temporary = destination.with_suffix(destination.suffix + ".download")
+    api_headers = {"Accept": "application/octet-stream"}
+    token = os.getenv("CYBERSRS_MODEL_GITHUB_TOKEN")
+    targets = [(asset["browser_url"], {}), (asset["url"], api_headers)]
+    if token and asset["url"].startswith("https://api.github.com/"):
+        api_headers["Authorization"] = f"Bearer {token}"
+        targets.reverse()
+    failure = None
     for attempt in range(1, 4):
         print(f"Downloading {asset['name']} (attempt {attempt}/3)", flush=True)
-        try:
-            with (
-                httpx.stream(
-                    "GET", asset["url"],
-                    headers={"Accept": "application/octet-stream"},
-                    follow_redirects=True, timeout=60,
-                ) as response,
-                temporary.open("wb") as stream,
-            ):
-                response.raise_for_status()
-                for block in response.iter_bytes(chunk_size=BUFFER_SIZE):
-                    stream.write(block)
-            if not _matches(temporary, asset):
-                raise ValueError("Release asset failed SHA-256 or size verification")
-            temporary.replace(destination)
-            return destination
-        except (httpx.HTTPError, OSError, ValueError):
-            temporary.unlink(missing_ok=True)
-            if attempt == 3:
-                raise
-    raise RuntimeError("Model download did not complete")
+        for url, headers in targets:
+            try:
+                with (
+                    httpx.stream(
+                        "GET", url, headers=headers, follow_redirects=True, timeout=60,
+                    ) as response,
+                    temporary.open("wb") as stream,
+                ):
+                    response.raise_for_status()
+                    for block in response.iter_bytes(chunk_size=BUFFER_SIZE):
+                        stream.write(block)
+                if not _matches(temporary, asset):
+                    raise ValueError("Release asset failed SHA-256 or size verification")
+                temporary.replace(destination)
+                return destination
+            except (httpx.HTTPError, OSError, ValueError) as error:
+                failure = error
+                temporary.unlink(missing_ok=True)
+    raise RuntimeError(
+        f"Could not download {asset['name']} from GitHub. "
+        "Run setup again after a network outage or download rate limit clears."
+    ) from failure
 
 
 def _import_model(settings: Settings, manifest: dict, env: dict[str, str]) -> None:
@@ -90,6 +98,7 @@ def _import_model(settings: Settings, manifest: dict, env: dict[str, str]) -> No
 def install_models(settings: Settings) -> None:
     """Install missing models and keep any already configured local models."""
     env = os.environ | {"OLLAMA_HOST": settings.ollama_base_url}
+    env.pop("CYBERSRS_MODEL_GITHUB_TOKEN", None)
     try:
         response = httpx.get(
             f"{settings.ollama_base_url}/api/tags", follow_redirects=False, timeout=8

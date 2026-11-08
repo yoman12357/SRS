@@ -62,6 +62,9 @@ commands. Open [CyberSRS](http://127.0.0.1:8010/) after launch. Setup creates
 It builds the frontend, verifies and imports the exact released fine-tuned Qwen
 weights, installs missing base Qwen and nomic embedding models, and indexes the
 starter knowledge. Run setup again to retry an interrupted download.
+If GitHub's public API is rate limited on a shared connection, try again after
+the limit clears. A setup-only token can be supplied through the
+`CYBERSRS_MODEL_GITHUB_TOKEN` environment variable for authenticated downloads.
 
 The [model release](https://github.com/yoman12357/SRS/releases/tag/v0.1.0)
 also includes the raw QLoRA adapter for historical asset inspection.
