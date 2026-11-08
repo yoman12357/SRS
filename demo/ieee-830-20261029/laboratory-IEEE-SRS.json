@@ -1,0 +1,1690 @@
+{
+  "id": "bea99bfc-ec9d-49cd-92f6-0ceed75757dd",
+  "project_id": "f2d054f9-dd01-4caf-b5be-8c41543ad05f",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "f2d054f9-dd01-4caf-b5be-8c41543ad05f",
+    "title": "Secure Access Control and Network Monitoring for University Research Laboratories",
+    "original_description": "Design a secure access-control and network-monitoring system for university research laboratories containing sensitive equipment and research data. The system should allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions. Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours. The system should maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices. The solution should be secure, reliable, and manageable across multiple research buildings.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure access-control and network-monitoring system for university research laboratories containing sensitive equipment and research data.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "The system should allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The system should maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+        "context": ""
+      },
+      {
+        "id": "E-005",
+        "source": "description",
+        "quote": "The solution should be secure, reliable, and manageable across multiple research buildings.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Secure Access Control and Network Monitoring for University Research Laboratories",
+      "domain": "security",
+      "supported": true,
+      "summary": "A secure access-control system is required to restrict access to research lab networks based on role, with administrator privileges to manage permissions and monitor activity. The system must maintain audit logs, isolate lab networks from general university networks, and support both university-managed and approved research devices.",
+      "stakeholders": [
+        "university administrators",
+        "research faculty",
+        "students",
+        "lab technicians"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "The system must provide secure access control for sensitive equipment and data, ensuring only authorized users can access lab systems based on role."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Access is granted only to students, faculty, researchers, and administrators with approved roles and permissions, preventing unauthorized access."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Administrators can grant/revoke access, review active sessions, monitor unusual login activity, and receive alerts for failed attempts or outside-hours access."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "network",
+            "security"
+          ],
+          "explanation": "The system must maintain audit logs of access decisions and administrator actions; isolate research lab networks from general student/guest networks; support university-managed and approved research devices."
+        },
+        {
+          "evidence_id": "E-005",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "nonfunctional"
+          ],
+          "explanation": "The solution must be reliable, secure, and manageable across multiple research buildings to ensure consistent operation."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7412,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7242,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-ecd06e0e85ebe229:2",
+        "source_document_id": "kb-ecd06e0e85ebe229",
+        "chunk_index": 2,
+        "page_or_section": "text chunk 3",
+        "relevance_score": 0.7057,
+        "text": "ake advantage of. Faults related to authorization control can allow malicious insiders and outsiders alike to view, modify, or delete sensitive resources of all forms (databases records, static files, personally identifiable information (PII), etc.) or perform actions, such as creating a new account or initiating a costly order, that they should not be privileged to do. Furthermore, if logging related to access control is not properly set-up, such authorization violations may go undetected or at least remain unattributable to a particular individual or group.\n\n## Recommendations\n\n### Enforce Least Privileges\n\nAs a security concept, Least Privileges refers to the principle of assigning users only the minimum privileges necessary to complete their job. Although perhaps most commonly applied in system administration, this principle has relevance to the software developer as well. Least Privileges must be applied both horizontally and vertically. For example, even though both an accountant and sales representative may occupy the same level in an organization's hierarchy, both require access to different resources to perform their jobs. The accountant should likely not be granted access to a customer database and the sales representative should not be able to access payroll data. Similarly, the head of the sales department is likely to need more privileged access than their subordinates.\n\nFailure to enforce least privileges in an application can jeopardize the confidentiality of sensitive resources. Mitigation strategies are applied primarily during the Architecture and Design phase (see [CWE-272](https://cwe.mitre.org/data/definitions/272.html)); however, the principle must be addressed throughout the SDLC.\n\nConsider the following points and best practices:\n\n- During the de",
+        "title": "03_OWASP_CheatSheets/038_OWASP_Authorization_Cheat_Sheet.md",
+        "sha256": "e78a10eb9759a1fc7593ba1fc89a05b017e7e795ac16ad5496bdba86138d891f"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:2",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 2,
+        "page_or_section": "text chunk 3",
+        "relevance_score": 0.6897,
+        "text": "ke better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Policy Engine** - This makes decisions about whether to allow or block access. It looks at user identity, device health, location, behavior, and risk scores. The tricky part is making policies that are secure but don't make work impossible.\n\n**Policy Administrator** - This takes the decision from the Policy Engine and tells the enforcement systems what to do. When the Policy Engine says \"allow access but require extra verification,\" the Policy Administrator figures out the details and sends commands to the right systems.\n\n**Policy Enforcement Point** - These actually block or allow access attempts. This includes firewalls, proxy servers, application gateways, and API gateways. The important thing is that enforcement happens everywhere, not just at your network edge.\n\nThese three parts work together on every access request in real time, creating security that adapts to changing situations.\n\n## How Zero Trust Addresses Modern Security Challenges\n\nZero Trust tackles security problems that traditional approaches can't handle effectively. Here's how it works in practice:\n\n### Traditional vs. Zero Trust Responses\n\n| Attack Scenario | Traditional Security Response | Zero Trust Response |\n|----------------|------------------------------|-------------------|\n| **Stolen credentials** | Reset password, add basic MFA | Continuous risk assessment, device verification, behavioral analysis - access denied even with valid credentials if risk is high |\n| **Insider threat** | Trust employees inside network perimeter | Verify every action regardless of user location, role, or tenure - no implici",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-ecd06e0e85ebe229:16",
+        "source_document_id": "kb-ecd06e0e85ebe229",
+        "chunk_index": 16,
+        "page_or_section": "text chunk 17",
+        "relevance_score": 0.7083,
+        "text": "ation being left in an unpredictable state ([CWE-280: Improper Handling of Insufficient Permissions or Privileges](https://cwe.mitre.org/data/definitions/280.html)). Specific recommendations include the following:\n\n- Ensure all exception and failed access control checks are handled no matter how unlikely they seem ([OWASP Top Ten Proactive Controls C10: Handle all errors and exceptions](https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions)). This does not mean that an application should always try to \"correct\" for a failed check; oftentimes a simple message or HTTP status code is all that is required.\n- Centralize the logic for handling failed access control checks.\n- Verify the handling of exception and authorization failures. Ensure that such failures, no matter how unlikely, do not put the software into an unstable state that could lead to authorization bypass.\n- Ensure sensitive information, such as system logs or debugging output, is not exposed in error messages. Misconfigured error messages can increase the attack surface of your application. ([CWE-209: Generation of Error Message Containing Sensitive Information](https://cwe.mitre.org/data/definitions/209.html))\n\n### Implement Appropriate Logging\n\nLogging is one of the most important detective controls in application security; insufficient logging and monitoring is recognized as among  the most critical security risks in [OWASP's Top Ten 2021](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/). Appropriate logs can not only detect malicious activity, but are also invaluable resources in post-incident investigations, can be used to troubleshoot access control and other security related problems, and are useful in security auditing. Though easy to overlook during th",
+        "title": "03_OWASP_CheatSheets/038_OWASP_Authorization_Cheat_Sheet.md",
+        "sha256": "e78a10eb9759a1fc7593ba1fc89a05b017e7e795ac16ad5496bdba86138d891f"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure access-control and network-monitoring system for university research laboratories containing sensitive equipment and research data.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The system should maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-005",
+          "detail": "The solution should be secure, reliable, and manageable across multiple research buildings.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "provide secure access-control and network-monitoring capabilities for university research laboratories containing sensitive equipment and research data.",
+          "statement": "The system shall provide secure access-control and network-monitoring capabilities for university research laboratories containing sensitive equipment and research data.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A research laboratory with sensitive equipment and data",
+              "when": "The system is deployed to monitor and control access",
+              "then": "Access to the lab systems is restricted to authorized users only, and network traffic is monitored for anomalies",
+              "method": "test",
+              "observable_evidence": "Test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+          "statement": "The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user with defined roles: student, faculty, researcher, administrator",
+              "when": "The user attempts to access a lab network system",
+              "then": "Access is granted only if the user's role and permissions are authorized by the system",
+              "method": "inspection",
+              "observable_evidence": "Test capture of permission evaluation response showing role-based access decisions"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.",
+          "statement": "Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrative user with valid credentials and access rights",
+              "when": "The administrator initiates a request to grant or revoke access to a system",
+              "then": "The administrator observes access permissions are updated",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of the resulting response"
+            },
+            {
+              "given": "An administrative user with valid credentials and access rights",
+              "when": "The administrator reviews active sessions and monitors login activity",
+              "then": "The administrator sees a list of active sessions and login activity records",
+              "method": "analysis",
+              "observable_evidence": "Test capture of the resulting state"
+            },
+            {
+              "given": "An administrative user with valid credentials and access rights",
+              "when": "The system detects repeated failed authentication attempts or unauthorized access outside approved hours",
+              "then": "The system detects repeated failed authentication attempts or unauthorized access outside approved hours",
+              "method": "test",
+              "observable_evidence": "Test capture of the observed result"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "The solution should be secure, reliable, and manageable across multiple research buildings.",
+          "statement": "The solution should be secure, reliable, and manageable across multiple research buildings.",
+          "rationale": "Implements stakeholder source E-005.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A multi-building university environment with distributed lab networks",
+              "when": "The system is configured to manage access and monitoring across all buildings",
+              "then": "Access policies are consistently enforced, and network monitoring remains functional without degradation in performance or reliability",
+              "method": "test",
+              "observable_evidence": "Test capture of cross-building policy enforcement and monitoring continuity"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-004"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "SEC-001",
+          "title": "maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+          "statement": "The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator performs an access decision or action",
+              "when": "The system records the event in an audit log",
+              "then": "The log entry includes timestamp, user identity, action type, target resource, and outcome",
+              "method": "test",
+              "observable_evidence": "Test capture of audit log entries for access decisions and administrative actions"
+            },
+            {
+              "given": "A research device connects to a lab network via approved configuration",
+              "when": "The system validates the device's identity and permissions",
+              "then": "The connection is allowed only if the device is university-managed or has an approved research device certificate",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of device onboarding and permission validation"
+            },
+            {
+              "given": "A student attempts to access a lab network from outside campus hours",
+              "when": "The system enforces access restrictions based on time and location rules",
+              "then": "Access is denied with a message indicating the restriction, and an alert is generated for administrator review",
+              "method": "inspection",
+              "observable_evidence": "Test capture of access denial events and corresponding alerts"
+            }
+          ],
+          "unresolved_decisions": [
+            "Thresholds for what constitutes unusual login activity",
+            "Definition of 'approved research device' and how it is validated"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "SEC-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "SEC-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "Thresholds for what constitutes unusual login activity",
+        "Definition of 'approved research device' and how it is validated"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Access Control Engine",
+          "detail": "Proposed logical owner for FR-002, SEC-001, FR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "SEC-001",
+            "FR-004"
+          ],
+          "component_name": "Access Control Engine",
+          "responsibility": "The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices. The solution should be secure, reliable, and manageable across multiple research buildings."
+        },
+        {
+          "title": "Network Monitoring Module",
+          "detail": "Proposed logical owner for FR-001, SEC-001, FR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "SEC-001",
+            "FR-004"
+          ],
+          "component_name": "Network Monitoring Module",
+          "responsibility": "The system shall provide secure access-control and network-monitoring capabilities for university research laboratories containing sensitive equipment and research data. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices. The solution should be secure, reliable, and manageable across multiple research buildings."
+        },
+        {
+          "title": "Audit and Alert Service",
+          "detail": "Proposed logical owner for FR-003, SEC-001, FR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003",
+            "SEC-001",
+            "FR-004"
+          ],
+          "component_name": "Audit and Alert Service",
+          "responsibility": "Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices. The solution should be secure, reliable, and manageable across multiple research buildings."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "from_component": "Access Control Engine",
+          "to_component": "Network Monitoring Module",
+          "data_or_action": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "from_component": "Access Control Engine",
+          "to_component": "Audit and Alert Service",
+          "data_or_action": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "from_component": "Network Monitoring Module",
+          "to_component": "Access Control Engine",
+          "data_or_action": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "from_component": "Network Monitoring Module",
+          "to_component": "Audit and Alert Service",
+          "data_or_action": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "from_component": "Audit and Alert Service",
+          "to_component": "Access Control Engine",
+          "data_or_action": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "from_component": "Audit and Alert Service",
+          "to_component": "Network Monitoring Module",
+          "data_or_action": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "untrusted_component": "Access Control Engine",
+          "trusted_component": "Network Monitoring Module",
+          "enforcement": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "untrusted_component": "Access Control Engine",
+          "trusted_component": "Audit and Alert Service",
+          "enforcement": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "untrusted_component": "Network Monitoring Module",
+          "trusted_component": "Access Control Engine",
+          "enforcement": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "untrusted_component": "Network Monitoring Module",
+          "trusted_component": "Audit and Alert Service",
+          "enforcement": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "untrusted_component": "Audit and Alert Service",
+          "trusted_component": "Access Control Engine",
+          "enforcement": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "SEC-001"
+          ],
+          "untrusted_component": "Audit and Alert Service",
+          "trusted_component": "Network Monitoring Module",
+          "enforcement": "The solution should be secure, reliable, and manageable across multiple research buildings. The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "students",
+          "goal": "The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+          "story": "As students, I need the following behavior: The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+          "preconditions": [
+            "A user with defined roles: student, faculty, researcher, administrator"
+          ],
+          "steps": [
+            "The user attempts to access a lab network system"
+          ],
+          "success_outcome": "Access is granted only if the user's role and permissions are authorized by the system",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: A research laboratory with sensitive equipment and data",
+            "When: The system is deployed to monitor and control access"
+          ],
+          "expected_result": "Expected: Access to the lab systems is restricted to authorized users only, and network traffic is monitored for anomalies",
+          "evidence_to_record": "Evidence: Test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A user with defined roles: student, faculty, researcher, administrator",
+            "When: The user attempts to access a lab network system"
+          ],
+          "expected_result": "Expected: Access is granted only if the user's role and permissions are authorized by the system",
+          "evidence_to_record": "Evidence: Test capture of permission evaluation response showing role-based access decisions",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrative user with valid credentials and access rights",
+            "When: The administrator initiates a request to grant or revoke access to a system"
+          ],
+          "expected_result": "Expected: The administrator observes access permissions are updated",
+          "evidence_to_record": "Evidence: Test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrative user with valid credentials and access rights",
+            "When: The administrator reviews active sessions and monitors login activity"
+          ],
+          "expected_result": "Expected: The administrator sees a list of active sessions and login activity records",
+          "evidence_to_record": "Evidence: Test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrative user with valid credentials and access rights",
+            "When: The system detects repeated failed authentication attempts or unauthorized access outside approved hours"
+          ],
+          "expected_result": "Expected: The system detects repeated failed authentication attempts or unauthorized access outside approved hours",
+          "evidence_to_record": "Evidence: Test capture of the observed result",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: A multi-building university environment with distributed lab networks",
+            "When: The system is configured to manage access and monitoring across all buildings"
+          ],
+          "expected_result": "Expected: Access policies are consistently enforced, and network monitoring remains functional without degradation in performance or reliability",
+          "evidence_to_record": "Evidence: Test capture of cross-building policy enforcement and monitoring continuity",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An administrator performs an access decision or action",
+            "When: The system records the event in an audit log"
+          ],
+          "expected_result": "Expected: The log entry includes timestamp, user identity, action type, target resource, and outcome",
+          "evidence_to_record": "Evidence: Test capture of audit log entries for access decisions and administrative actions",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: A research device connects to a lab network via approved configuration",
+            "When: The system validates the device's identity and permissions"
+          ],
+          "expected_result": "Expected: The connection is allowed only if the device is university-managed or has an approved research device certificate",
+          "evidence_to_record": "Evidence: Test capture of device onboarding and permission validation",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: A student attempts to access a lab network from outside campus hours",
+            "When: The system enforces access restrictions based on time and location rules"
+          ],
+          "expected_result": "Expected: Access is denied with a message indicating the restriction, and an alert is generated for administrator review",
+          "evidence_to_record": "Evidence: Test capture of access denial events and corresponding alerts",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Access control",
+          "detail": "Rules and enforcement governing which principals may perform actions on resources.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Device isolation",
+          "detail": "Restriction of a device's network access; the source determines whether and by whom this action is permitted.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "The selection of Agile as the required model is based on a uniform score of 40 across all candidates, with no differentiating input evidence provided to favor one methodology over another. Given the absence of explicit factors such as budget, delivery timelines, failure consequences, feedback mechanisms, legacy systems, regulation, schedule constraints, stability needs, uncertainty levels, or verification requirements, no candidate model can be objectively ranked for suitability. The provisional nature of this decision reflects an incomplete evidence base. All models receive equal score meaning—suitability points out of 100—not probabilities. Without evidence to differentiate between Agile and other methodologies (e.g., DevSecOps, Spiral, V-Model, Waterfall, Hybrid, Incremental), the choice remains arbitrary and unsupported by input data. The requirement for secure access control, role-based permissions, real-time monitoring, audit logging, and cross-building manageability aligns with iterative development principles but does not inherently mandate Agile over other models. Unknown factors such as regulation or legacy systems could influence model selection if addressed; however, these are currently unaccounted for in the input evidence. Therefore, this decision is grounded only in equal suitability scores and lacks evidentiary differentiation.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall provide secure access-control and network-monitoring capabilities for university research laboratories containing sensitive equipment and research data.; FR-002: The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.; FR-003: Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.; FR-004: The solution should be secure, reliable, and manageable across multiple research buildings.; SEC-001: The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall provide secure access-control and network-monitoring capabilities for university research laboratories containing sensitive equipment and research data.; FR-002: The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.; FR-003: Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.; FR-004: The solution should be secure, reliable, and manageable across multiple research buildings.; SEC-001: The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+            "In an authorized isolated test environment, execute TEST-001: Given: A research laboratory with sensitive equipment and data When: The system is deployed to monitor and control access Expected: Access to the lab systems is restricted to authorized users only, and network traffic is monitored for anomalies",
+            "In an authorized isolated test environment, execute TEST-002: Given: A user with defined roles: student, faculty, researcher, administrator When: The user attempts to access a lab network system Expected: Access is granted only if the user's role and permissions are authorized by the system",
+            "In an authorized isolated test environment, execute TEST-003: Given: An administrative user with valid credentials and access rights When: The administrator initiates a request to grant or revoke access to a system Expected: The administrator observes access permissions are updated",
+            "In an authorized isolated test environment, execute TEST-004: Given: An administrative user with valid credentials and access rights When: The administrator reviews active sessions and monitors login activity Expected: The administrator sees a list of active sessions and login activity records",
+            "In an authorized isolated test environment, execute TEST-005: Given: An administrative user with valid credentials and access rights When: The system detects repeated failed authentication attempts or unauthorized access outside approved hours Expected: The system detects repeated failed authentication attempts or unauthorized access outside approved hours",
+            "In an authorized isolated test environment, execute TEST-006: Given: A multi-building university environment with distributed lab networks When: The system is configured to manage access and monitoring across all buildings Expected: Access policies are consistently enforced, and network monitoring remains functional without degradation in performance or reliability",
+            "In an authorized isolated test environment, execute TEST-007: Given: An administrator performs an access decision or action When: The system records the event in an audit log Expected: The log entry includes timestamp, user identity, action type, target resource, and outcome",
+            "In an authorized isolated test environment, execute TEST-008: Given: A research device connects to a lab network via approved configuration When: The system validates the device's identity and permissions Expected: The connection is allowed only if the device is university-managed or has an approved research device certificate",
+            "In an authorized isolated test environment, execute TEST-009: Given: A student attempts to access a lab network from outside campus hours When: The system enforces access restrictions based on time and location rules Expected: Access is denied with a message indicating the restriction, and an alert is generated for administrator review",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "SEC-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [],
+      "security": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "prompt_version": "sequential-1.28",
+    "input_fingerprint": "5bb507fed0ef368f6ea0e6c247cf2d1f8776deaac58567fe9f66e5ca82cfa15c"
+  },
+  "content_hash": "30c2cc09749b96ef07e0e33926dc7c54c11d1dd194cde7de426cc89848bc2e1c",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 22,
+    "checks_total": 22,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002"
+      ],
+      "E-003": [
+        "FR-003"
+      ],
+      "E-004": [
+        "SEC-001"
+      ],
+      "E-005": [
+        "FR-004"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-003",
+          "TEST-004",
+          "TEST-005"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-004",
+        "evidence_ids": [
+          "E-005"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "SEC-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-007",
+          "TEST-008",
+          "TEST-009"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "f9dc16b1-ec0f-438b-b8eb-19163722d1d5",
+  "created_at": "2026-10-29T10:08:40.747439+00:00",
+  "presentation": {
+    "profile": "ieee-830-1998-1.0",
+    "title": "Secure Access Control and Network Monitoring for University Research Laboratories",
+    "sections": [
+      {
+        "number": "1",
+        "title": "Introduction",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.1",
+        "title": "Purpose",
+        "paragraphs": [
+          "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+          "This SRS describes the software's required behavior for users, administrators and the Project Analyst reviewing the specification."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.2",
+        "title": "Scope",
+        "paragraphs": [
+          "Design a secure access-control and network-monitoring system for university research laboratories containing sensitive equipment and research data. The system should allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions. Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours. The system should maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices. The solution should be secure, reliable, and manageable across multiple research buildings."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.3",
+        "title": "Definitions, acronyms and abbreviations",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Access control",
+                "Rules and enforcement governing which principals may perform actions on resources."
+              ],
+              [
+                "Audit record",
+                "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition."
+              ],
+              [
+                "Log",
+                "A collection of event records. This term does not itself require additional logging fields, events or access permissions."
+              ],
+              [
+                "Device isolation",
+                "Restriction of a device's network access; the source determines whether and by whom this action is permitted."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.4",
+        "title": "References",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Reference",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Format",
+                "IEEE Std 830-1998, clauses 5 and Annex A (document organization)."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.5",
+        "title": "Overview",
+        "paragraphs": [
+          "Section 2 summarizes the product, stakeholders and open decisions. Section 3 contains the uniquely identified requirements. Detailed evidence, acceptance procedures and the SDLC plan are available in the supporting report."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2",
+        "title": "Overall description",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.1",
+        "title": "Product perspective",
+        "paragraphs": [
+          "Design a secure access-control and network-monitoring system for university research laboratories containing sensitive equipment and research data."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.2",
+        "title": "Product functions",
+        "paragraphs": [
+          "Functional topics are summarized below; section 3 retains the full requirements."
+        ],
+        "bullets": [
+          "Access permissions — FR-001, FR-002, FR-003",
+          "Authentication — FR-003",
+          "Monitoring and alerts — FR-001, FR-003",
+          "The solution should be secure, reliable, and manageable across multiple research buildings. — FR-004"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.3",
+        "title": "User characteristics and stakeholders",
+        "paragraphs": [
+          "Labels group stakeholders for readability. They do not combine permissions.",
+          "Education, training and experience requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Role",
+              "Source user groups",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "User",
+                "students, faculty, researchers, guest",
+                "Uses permitted functions; each source class keeps its specified permissions."
+              ],
+              [
+                "Admin",
+                "lab administrators, Administrative users, administrator",
+                "Performs only the role's source-defined operations in section 3."
+              ],
+              [
+                "Project Analyst",
+                "Document review role",
+                "Reviews requirements and tracks open decisions; this role grants no product access."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "2.4",
+        "title": "Constraints",
+        "paragraphs": [
+          "No additional implementation constraints were confirmed. Source-defined restrictions remain in the requirements in section 3."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.5",
+        "title": "Assumptions and dependencies",
+        "paragraphs": [
+          "Open decisions requiring confirmation:"
+        ],
+        "bullets": [
+          "Thresholds for what constitutes unusual login activity",
+          "Definition of 'approved research device' and how it is validated"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3",
+        "title": "Specific requirements",
+        "paragraphs": [
+          "Each requirement is stated once with its original identifier and wording. Cross-references identify requirements covering more than one concern."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1",
+        "title": "External interface requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.1",
+        "title": "User interfaces",
+        "paragraphs": [
+          "Related requirements: FR-003. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.2",
+        "title": "Hardware interfaces",
+        "paragraphs": [
+          "Related requirements: FR-001, SEC-001. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.3",
+        "title": "Software interfaces",
+        "paragraphs": [
+          "Related requirements: FR-003. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.4",
+        "title": "Communications interfaces",
+        "paragraphs": [
+          "Related requirements: FR-001, FR-002, SEC-001. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.2",
+        "title": "Functional requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "FR-001",
+            "statement": "The system shall provide secure access-control and network-monitoring capabilities for university research laboratories containing sensitive equipment and research data.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-001"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "statement": "The system shall allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-002"
+            ]
+          },
+          {
+            "id": "FR-003",
+            "statement": "Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-003",
+              "TEST-004",
+              "TEST-005"
+            ]
+          },
+          {
+            "id": "FR-004",
+            "statement": "The solution should be secure, reliable, and manageable across multiple research buildings.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-005"
+            ],
+            "test_ids": [
+              "TEST-006"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.3",
+        "title": "Performance requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.4",
+        "title": "Logical database requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.5",
+        "title": "Design constraints",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6",
+        "title": "Software system attributes",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.1",
+        "title": "Reliability",
+        "paragraphs": [
+          "Also covered by: FR-004."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.2",
+        "title": "Availability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.3",
+        "title": "Security",
+        "paragraphs": [
+          "Also covered by: FR-001, FR-002, FR-003, FR-004."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "SEC-001",
+            "statement": "The system shall maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-007",
+              "TEST-008",
+              "TEST-009"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.4",
+        "title": "Maintainability",
+        "paragraphs": [
+          "Also covered by: FR-004."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.5",
+        "title": "Portability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.7",
+        "title": "Other requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "6b5d7e3f-ac74-4207-a07a-2f5cfd73f2dc",
+  "name": "Secure University Vulnerability Remediation Tracking System",
+  "description": "Design a secure vulnerability-remediation tracking system for a university that manages findings from approved security assessment reports for servers, applications, endpoints, and network devices. Security analysts should be able to review findings, assign remediation tasks to authorized departmental administrators, record investigation notes, track remediation status, and close findings after reviewing submitted evidence. The system should restrict access according to user roles, detect unauthorized changes to findings or remediation records, generate security alerts, and maintain audit logs of finding updates and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-30T03:36:10.147568+00:00",
+  "updated_at": "2026-10-30T03:36:10.147568+00:00",
+  "reference_hashes": []
+}

@@ -1,0 +1,55 @@
+{
+  "case": "firewall",
+  "project_id": "43c4eaf9-3fcf-4615-a704-b52d38187478",
+  "label": "semantic9",
+  "started_local": "2026-10-29T22:28:30.686873+05:30",
+  "analysis": {
+    "run_id": "454abe0f-9da3-4574-ac26-ada23d9fee63",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T16:58:18.606497+00:00",
+    "terminal_at": "2026-10-29T16:58:28.885598+00:00",
+    "total_seconds": 10.279,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 10.195,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 10.195,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "796a9053-aaea-468f-9051-cd317a236b37",
+    "status": "failed",
+    "error": "section_validation_failed:E-002_O06:unsupported_live_behavior;E-002_O06:criterion_missing_observed_action_result;FR-007:unsupported_response_time_commitment;FR-007:unsupported_source_detail_live_behavior",
+    "created_at": "2026-10-29T16:58:30.689885+00:00",
+    "terminal_at": "2026-10-29T16:59:16.054725+00:00",
+    "total_seconds": 45.365,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.39,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 43.891
+      }
+    },
+    "maximum_section_seconds": 43.891,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-002_O06:unsupported_live_behavior;E-002_O06:criterion_missing_observed_action_result;FR-007:unsupported_response_time_commitment;FR-007:unsupported_source_detail_live_behavior",
+  "total_wall_seconds": 58.266,
+  "source_unchanged": true
+}

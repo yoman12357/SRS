@@ -1,0 +1,10 @@
+{
+  "id": "195cd75c-0708-45cc-9496-e78f89c67751",
+  "name": "Secure Backup and Recovery Management System",
+  "description": "Design a secure backup and recovery management system for a university that protects critical data from academic departments, administrative systems, research platforms, and shared services. The system should allow authorized administrators to define backup policies, initiate and monitor backup jobs, restore approved data, and review backup status across multiple campus locations. It should detect failed or incomplete backup operations, generate security and operational alerts, maintain audit logs of backup and restore activities, and restrict backup administration based on user roles. The platform should integrate with existing university storage and identity services and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-30T02:57:59.822367+00:00",
+  "updated_at": "2026-10-30T02:57:59.822367+00:00",
+  "reference_hashes": []
+}

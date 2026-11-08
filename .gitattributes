@@ -1,0 +1,6 @@
+# Preserve the byte hashes recorded in the source-asset manifests.
+ai/** -text
+fine-tuning/** -text
+knowledge/** -text
+resources/** -text
+models/** -text

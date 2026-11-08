@@ -1,0 +1,1410 @@
+{
+  "id": "c599ff2d-80ba-4634-bed1-6be9c6e60aa4",
+  "project_id": "359e7293-04dd-4a32-9e11-82ee2a09414a",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "359e7293-04dd-4a32-9e11-82ee2a09414a",
+    "title": "Secure DNS and Web Access Filtering System",
+    "original_description": "Design a secure DNS and web-access filtering system for a university that protects students, faculty, staff, and administrative users from malicious or unauthorized internet destinations. The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected. The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices. The solution should be secure, scalable, reliable, and manageable.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure DNS and web-access filtering system for a university that protects students, faculty, staff, and administrative users from malicious or unauthorized internet destinations.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices.",
+        "context": ""
+      },
+      {
+        "id": "E-005",
+        "source": "description",
+        "quote": "The solution should be secure, scalable, reliable, and manageable.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Secure DNS and Web Access Filtering System",
+      "domain": "security",
+      "supported": true,
+      "summary": "A university deploys a secure DNS and web-access filtering system to protect users from malicious or unauthorized internet destinations. The system inspects DNS requests, blocks known malicious domains, applies role-based browsing policies, and provides administrators with tools for policy creation, exception management, and investigation of suspicious activity. Audit logs are maintained, and the solution integrates with centralized authentication and supports deployment across academic buildings, hostels, laboratories, and administrative offices.",
+      "stakeholders": [
+        "university administrators",
+        "IT security staff",
+        "faculty",
+        "students",
+        "staff"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "introduction",
+            "functional",
+            "security"
+          ],
+          "explanation": "The system must protect students, faculty, staff, and administrative users from malicious or unauthorized internet destinations."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security",
+            "data"
+          ],
+          "explanation": "The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "network",
+            "compliance"
+          ],
+          "explanation": "The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices."
+        },
+        {
+          "evidence_id": "E-005",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional"
+          ],
+          "explanation": "The solution should be secure, scalable, reliable, and manageable."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": [
+        "how user roles are defined and mapped to browsing policies",
+        "what constitutes suspicious behavior and how it is detected",
+        "how audit logs are stored and accessed by authorized personnel",
+        "whether the system will support real-time threat intelligence feeds"
+      ]
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7363,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7357,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:22",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 22,
+        "page_or_section": "text chunk 23",
+        "relevance_score": 0.72,
+        "text": "administrators and help desk staff should be trained to follow the prescribed process and recognize and respond to social engineering attacks. Refer to [CISA's \"Avoiding Social Engineering and Phishing Attacks\"](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) for guidance.\n\n## Adaptive or Risk Based Authentication\n\nA feature of more advanced applications is the ability to require different authentication stages depending on various environmental and contextual attributes (including but not limited to, the sensitivity of the data for which access is being requested, time of day, user location, IP address, or device fingerprint).\n\nFor example, an application may require MFA for the first login from a particular device but not for subsequent logins from that device. Alternatively, a single sign-on solution may authenticate the user and allow them to remain logged in for a day but require a reauthentication if they try to access their profile page.\n\nAnother option is the opposite approach where an application allows low risk access with just something that identifies the device (e.g., a specific mobile device fingerprint, a persistent cookie and browser fingerprint, etc. from the previous IP address) and then gradually requires stronger authentication for more sensitive operations. An example might be to allow someone to trigger something to see their current bank balance, but not the account number or anything else. If they need to see transactions, then the application puts them through some base level authentication and if they want to do any money movement, then MFA is required.\n\nQuestions that should be considered when implementing a mechanism like this include:\n\n- Are the policies being put in place in line with any corporate p",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:2",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 2,
+        "page_or_section": "text chunk 3",
+        "relevance_score": 0.7049,
+        "text": "ke better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Policy Engine** - This makes decisions about whether to allow or block access. It looks at user identity, device health, location, behavior, and risk scores. The tricky part is making policies that are secure but don't make work impossible.\n\n**Policy Administrator** - This takes the decision from the Policy Engine and tells the enforcement systems what to do. When the Policy Engine says \"allow access but require extra verification,\" the Policy Administrator figures out the details and sends commands to the right systems.\n\n**Policy Enforcement Point** - These actually block or allow access attempts. This includes firewalls, proxy servers, application gateways, and API gateways. The important thing is that enforcement happens everywhere, not just at your network edge.\n\nThese three parts work together on every access request in real time, creating security that adapts to changing situations.\n\n## How Zero Trust Addresses Modern Security Challenges\n\nZero Trust tackles security problems that traditional approaches can't handle effectively. Here's how it works in practice:\n\n### Traditional vs. Zero Trust Responses\n\n| Attack Scenario | Traditional Security Response | Zero Trust Response |\n|----------------|------------------------------|-------------------|\n| **Stolen credentials** | Reset password, add basic MFA | Continuous risk assessment, device verification, behavioral analysis - access denied even with valid credentials if risk is high |\n| **Insider threat** | Trust employees inside network perimeter | Verify every action regardless of user location, role, or tenure - no implici",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-ecd06e0e85ebe229:5",
+        "source_document_id": "kb-ecd06e0e85ebe229",
+        "chunk_index": 5,
+        "page_or_section": "text chunk 6",
+        "relevance_score": 0.7107,
+        "text": "or class. Remember an attacker only needs to find one way in. Even if just a single access control check is \"missed\", the confidentiality and/or integrity of a resource can be jeopardized. Validating permissions correctly on just the majority of requests is insufficient. Specific technologies that can help developers in performing such consistent permission checks include the following:\n\n- [Java/Jakarta EE Filters](https://jakarta.ee/specifications/platform/8/apidocs/javax/servlet/Filter.html) including implementations in [Spring Security](https://docs.spring.io/spring-security/site/docs/5.4.0/reference/html5/#servlet-security-filters)\n- [Middleware in the Django Framework](https://docs.djangoproject.com/en/4.0/ref/middleware/)\n- [.NET Core Filters](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-3.1#authorization-filters)\n- [Middleware in the Laravel PHP Framework](https://laravel.com/docs/8.x/middleware)\n\n### Thoroughly Review the Authorization Logic of Chosen Tools and Technologies, Implementing Custom Logic if Necessary\n\nToday's developers have access to vast amounts of libraries, platforms, and frameworks that allow them to incorporate robust, complex logic into their apps with minimal effort. However, these frameworks and libraries must not be viewed as a quick panacea for all development problems; developers have a duty to use such frameworks responsibly and wisely. Two general concerns relevant to framework/library selection as relevant to proper access control are misconfiguration/lack of configuration on the part of the developer and vulnerabilities within the components themselves (see [A6](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A6-Security_Misconfiguration) and [A9](https://owasp.org/www-proj",
+        "title": "03_OWASP_CheatSheets/038_OWASP_Authorization_Cheat_Sheet.md",
+        "sha256": "e78a10eb9759a1fc7593ba1fc89a05b017e7e795ac16ad5496bdba86138d891f"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure DNS and web-access filtering system for a university that protects students, faculty, staff, and administrative users from malicious or unauthorized internet destinations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-005",
+          "detail": "The solution should be secure, scalable, reliable, and manageable.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": [
+        "how user roles are defined and mapped to browsing policies",
+        "what constitutes suspicious behavior and how it is detected",
+        "how audit logs are stored and accessed by authorized personnel",
+        "whether the system will support real-time threat intelligence feeds"
+      ]
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "implement a secure DNS and web-access filtering mechanism to protect all university users from malicious or unauthorized internet destinations.",
+          "statement": "The system shall implement a secure DNS and web-access filtering mechanism to protect all university users from malicious or unauthorized internet destinations.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A student attempts to access a known malicious domain",
+              "when": "The DNS resolver receives the request",
+              "then": "The system blocks the request.",
+              "method": "test",
+              "observable_evidence": "Test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'malicious domain'"
+          ]
+        },
+        {
+          "id": "FR-002",
+          "title": "inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events.",
+          "statement": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A faculty member attempts to access a restricted educational resource",
+              "when": "The system evaluates the request against role-based policy rules",
+              "then": "Access is granted according to the faculty policy",
+              "method": "test",
+              "observable_evidence": "Test capture of policy evaluation and access decision"
+            },
+            {
+              "given": "An administrator initiates a dashboard query for blocked requests",
+              "when": "The system retrieves security event logs from its internal store",
+              "then": "The dashboard returns a list of recent blocked domains and associated user actions",
+              "method": "inspection",
+              "observable_evidence": "Test capture of dashboard response to query"
+            }
+          ],
+          "unresolved_decisions": [
+            "Threshold for repeated access attempts",
+            "Definition of 'known malicious domain'"
+          ]
+        },
+        {
+          "id": "FR-003",
+          "title": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "statement": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator creates a new filtering policy for staff",
+              "when": "The system receives the policy configuration request",
+              "then": "The policy is stored and applied to staff user sessions",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of policy creation and application confirmation"
+            },
+            {
+              "given": "The system detects repeated access attempts",
+              "when": "The system detects repeated access attempts",
+              "then": "The system triggers an investigation workflow",
+              "method": "analysis",
+              "observable_evidence": "Test capture of the observed result"
+            },
+            {
+              "given": "An administrator approves an exception for a specific domain",
+              "when": "The system receives the exception request",
+              "then": "Access to that domain is permitted for the specified user or group",
+              "method": "test",
+              "observable_evidence": "Test capture of approved exception and access grant"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'suspicious behavior'",
+            "Duration of temporary restriction",
+            "Workflow for investigation review"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "The solution shall be secure, scalable, reliable, and manageable.",
+          "statement": "The solution shall be secure, scalable, reliable, and manageable.",
+          "rationale": "Implements stakeholder source E-005.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A system under operational load with concurrent user sessions",
+              "when": "The system receives a request to scale resource allocation dynamically",
+              "then": "The system maintains service availability without degradation in performance or data integrity",
+              "method": "test",
+              "observable_evidence": "Test capture of system response during dynamic scaling operation"
+            },
+            {
+              "given": "An administrator initiates a configuration change to the security policy",
+              "when": "The system applies the updated policy to active user sessions",
+              "then": "The updated security policy is applied to active user sessions",
+              "method": "inspection",
+              "observable_evidence": "Test capture of the resulting state"
+            },
+            {
+              "given": "A component failure is detected in the core service layer",
+              "when": "The system initiates failover to redundant components",
+              "then": "The system restores functionality within defined recovery time objectives without data loss",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of failover sequence and service continuity"
+            },
+            {
+              "given": "An operator attempts to modify configuration beyond authorized scope",
+              "when": "The system enforces access control policies during management operations",
+              "then": "The system denies the action.",
+              "method": "analysis",
+              "observable_evidence": "Test capture of the observed result"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'manageable' in terms of administrative interface usability thresholds",
+            "Thresholds for scalability under peak load conditions",
+            "Recovery time objectives for component failure scenarios"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "DR-001",
+          "title": "The platform shall maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices.",
+          "statement": "The platform shall maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A system administrator modifies a filtering policy in the university network",
+              "when": "The policy change is applied to the network configuration",
+              "then": "An audit log entry is generated recording the timestamp, user identity, action type, and affected resource scope",
+              "method": "test",
+              "observable_evidence": "External test capture of the audit log response after policy modification"
+            },
+            {
+              "given": "A user attempts to access a domain blocked by role-based filtering policies",
+              "when": "The system evaluates the request against active policies and authentication status",
+              "then": "The system either blocks the access or allows it based on defined rules, with a decision recorded in audit logs",
+              "method": "inspection",
+              "observable_evidence": "External test capture of filtering decision outcome and corresponding log entry"
+            },
+            {
+              "given": "Centralized authentication service returns a user identity for an academic building network access request",
+              "when": "The system receives the identity via integration with centralized authentication",
+              "then": "The system validates the identity and applies appropriate role-based policies without requiring manual intervention",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of successful authentication flow and policy application"
+            },
+            {
+              "given": "The platform is deployed in an academic building, hostel, laboratory, or administrative office environment",
+              "when": "Network traffic is observed across these physical locations",
+              "then": "The system maintains consistent filtering and policy enforcement without degradation in performance or availability",
+              "method": "analysis",
+              "observable_evidence": "External test capture of network behavior before and after deployment in each location"
+            }
+          ],
+          "unresolved_decisions": [
+            "Whether audit logs shall include metadata about the source IP address of policy change initiators",
+            "The exact scope of role-based policies across different building types",
+            "How policy synchronization is handled during cross-location deployments"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "DR-001",
+        "FR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "how user roles are defined and mapped to browsing policies",
+        "what constitutes suspicious behavior and how it is detected",
+        "how audit logs are stored and accessed by authorized personnel",
+        "whether the system will support real-time threat intelligence feeds"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003"
+          ],
+          "component_name": "Actor: administrators",
+          "responsibility": "Represent the source-stated actor: administrators."
+        },
+        {
+          "title": "Policy Engine",
+          "detail": "Proposed logical owner for FR-002, FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ],
+          "component_name": "Policy Engine",
+          "responsibility": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected. The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "DNS and Web Access Filter",
+          "detail": "Proposed logical owner for FR-001, DR-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "DR-001",
+            "NFR-001"
+          ],
+          "component_name": "DNS and Web Access Filter",
+          "responsibility": "The system shall implement a secure DNS and web-access filtering mechanism to protect all university users from malicious or unauthorized internet destinations. The platform shall maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices. The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Administrator Dashboard",
+          "detail": "Proposed logical owner for FR-002, FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ],
+          "component_name": "Administrator Dashboard",
+          "responsibility": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected. The solution shall be secure, scalable, reliable, and manageable."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003"
+          ],
+          "from_component": "Actor: administrators",
+          "to_component": "Policy Engine",
+          "data_or_action": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "from_component": "Policy Engine",
+          "to_component": "DNS and Web Access Filter",
+          "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ],
+          "from_component": "Policy Engine",
+          "to_component": "Administrator Dashboard",
+          "data_or_action": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected. The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "from_component": "DNS and Web Access Filter",
+          "to_component": "Policy Engine",
+          "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "from_component": "DNS and Web Access Filter",
+          "to_component": "Administrator Dashboard",
+          "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ],
+          "from_component": "Administrator Dashboard",
+          "to_component": "Policy Engine",
+          "data_or_action": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected. The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "from_component": "Administrator Dashboard",
+          "to_component": "DNS and Web Access Filter",
+          "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003"
+          ],
+          "untrusted_component": "Actor: administrators",
+          "trusted_component": "Policy Engine",
+          "enforcement": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ],
+          "untrusted_component": "Administrator Dashboard",
+          "trusted_component": "Policy Engine",
+          "enforcement": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected. The solution shall be secure, scalable, reliable, and manageable."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "untrusted_component": "Administrator Dashboard",
+          "trusted_component": "DNS and Web Access Filter",
+          "enforcement": "The solution shall be secure, scalable, reliable, and manageable."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "Administrators",
+          "goal": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "story": "As Administrators, I need the following behavior: Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "preconditions": [
+            "The system detects repeated access attempts"
+          ],
+          "steps": [
+            "The system detects repeated access attempts"
+          ],
+          "success_outcome": "The system triggers an investigation workflow",
+          "alternate_flows": [
+            "Given: An administrator creates a new filtering policy for staff When: The system receives the policy configuration request Then: The policy is stored and applied to staff user sessions Evidence: Test capture of policy creation and application confirmation"
+          ],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": [
+            "Definition of 'suspicious behavior'",
+            "Duration of temporary restriction",
+            "Workflow for investigation review"
+          ]
+        },
+        {
+          "id": "UC-002",
+          "actor": "Administrators",
+          "goal": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "story": "As Administrators, I need the following behavior: Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+          "preconditions": [
+            "An administrator approves an exception for a specific domain"
+          ],
+          "steps": [
+            "The system receives the exception request"
+          ],
+          "success_outcome": "Access to that domain is permitted for the specified user or group",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": [
+            "Definition of 'suspicious behavior'",
+            "Duration of temporary restriction",
+            "Workflow for investigation review"
+          ]
+        }
+      ],
+      "open_issues": [
+        "Definition of 'suspicious behavior'",
+        "Duration of temporary restriction",
+        "Workflow for investigation review"
+      ]
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: A student attempts to access a known malicious domain",
+            "When: The DNS resolver receives the request"
+          ],
+          "expected_result": "Expected: The system blocks the request.",
+          "evidence_to_record": "Evidence: Test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A faculty member attempts to access a restricted educational resource",
+            "When: The system evaluates the request against role-based policy rules"
+          ],
+          "expected_result": "Expected: Access is granted according to the faculty policy",
+          "evidence_to_record": "Evidence: Test capture of policy evaluation and access decision",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: An administrator initiates a dashboard query for blocked requests",
+            "When: The system retrieves security event logs from its internal store"
+          ],
+          "expected_result": "Expected: The dashboard returns a list of recent blocked domains and associated user actions",
+          "evidence_to_record": "Evidence: Test capture of dashboard response to query",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator creates a new filtering policy for staff",
+            "When: The system receives the policy configuration request"
+          ],
+          "expected_result": "Expected: The policy is stored and applied to staff user sessions",
+          "evidence_to_record": "Evidence: Test capture of policy creation and application confirmation",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: The system detects repeated access attempts",
+            "When: The system detects repeated access attempts"
+          ],
+          "expected_result": "Expected: The system triggers an investigation workflow",
+          "evidence_to_record": "Evidence: Test capture of the observed result",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator approves an exception for a specific domain",
+            "When: The system receives the exception request"
+          ],
+          "expected_result": "Expected: Access to that domain is permitted for the specified user or group",
+          "evidence_to_record": "Evidence: Test capture of approved exception and access grant",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A system under operational load with concurrent user sessions",
+            "When: The system receives a request to scale resource allocation dynamically"
+          ],
+          "expected_result": "Expected: The system maintains service availability without degradation in performance or data integrity",
+          "evidence_to_record": "Evidence: Test capture of system response during dynamic scaling operation",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: An administrator initiates a configuration change to the security policy",
+            "When: The system applies the updated policy to active user sessions"
+          ],
+          "expected_result": "Expected: The updated security policy is applied to active user sessions",
+          "evidence_to_record": "Evidence: Test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A component failure is detected in the core service layer",
+            "When: The system initiates failover to redundant components"
+          ],
+          "expected_result": "Expected: The system restores functionality within defined recovery time objectives without data loss",
+          "evidence_to_record": "Evidence: Test capture of failover sequence and service continuity",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: An operator attempts to modify configuration beyond authorized scope",
+            "When: The system enforces access control policies during management operations"
+          ],
+          "expected_result": "Expected: The system denies the action.",
+          "evidence_to_record": "Evidence: Test capture of the observed result",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "DR-001"
+          ],
+          "procedure": [
+            "Given: A system administrator modifies a filtering policy in the university network",
+            "When: The policy change is applied to the network configuration"
+          ],
+          "expected_result": "Expected: An audit log entry is generated recording the timestamp, user identity, action type, and affected resource scope",
+          "evidence_to_record": "Evidence: External test capture of the audit log response after policy modification",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "DR-001"
+          ],
+          "procedure": [
+            "Given: A user attempts to access a domain blocked by role-based filtering policies",
+            "When: The system evaluates the request against active policies and authentication status"
+          ],
+          "expected_result": "Expected: The system either blocks the access or allows it based on defined rules, with a decision recorded in audit logs",
+          "evidence_to_record": "Evidence: External test capture of filtering decision outcome and corresponding log entry",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "DR-001"
+          ],
+          "procedure": [
+            "Given: Centralized authentication service returns a user identity for an academic building network access request",
+            "When: The system receives the identity via integration with centralized authentication"
+          ],
+          "expected_result": "Expected: The system validates the identity and applies appropriate role-based policies without requiring manual intervention",
+          "evidence_to_record": "Evidence: External test capture of successful authentication flow and policy application",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "DR-001"
+          ],
+          "procedure": [
+            "Given: The platform is deployed in an academic building, hostel, laboratory, or administrative office environment",
+            "When: Network traffic is observed across these physical locations"
+          ],
+          "expected_result": "Expected: The system maintains consistent filtering and policy enforcement without degradation in performance or availability",
+          "evidence_to_record": "Evidence: External test capture of network behavior before and after deployment in each location",
+          "test_type": "analysis"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "No differentiating input evidence is provided to favor one SDLC model over others. All models receive equal suitability points (40/100) due to absence of factors such as budget, delivery, failure consequences, feedback, legacy, regulation, schedule, stability, uncertainty, verification. The decision remains provisional until these unknown factors are clarified.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall implement a secure DNS and web-access filtering mechanism to protect all university users from malicious or unauthorized internet destinations.; FR-002: The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events.; FR-003: Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+            "Review and baseline the source-defined work group: NFR-001: The solution shall be secure, scalable, reliable, and manageable.; DR-001: The platform shall maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001",
+            "DR-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall implement a secure DNS and web-access filtering mechanism to protect all university users from malicious or unauthorized internet destinations.; FR-002: The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events.; FR-003: Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+            "Implement the source-defined work group: NFR-001: The solution shall be secure, scalable, reliable, and manageable.; DR-001: The platform shall maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices.",
+            "In an authorized isolated test environment, execute TEST-001: Given: A student attempts to access a known malicious domain When: The DNS resolver receives the request Expected: The system blocks the request.",
+            "In an authorized isolated test environment, execute TEST-002: Given: A faculty member attempts to access a restricted educational resource When: The system evaluates the request against role-based policy rules Expected: Access is granted according to the faculty policy",
+            "In an authorized isolated test environment, execute TEST-003: Given: An administrator initiates a dashboard query for blocked requests When: The system retrieves security event logs from its internal store Expected: The dashboard returns a list of recent blocked domains and associated user actions",
+            "In an authorized isolated test environment, execute TEST-004: Given: An administrator creates a new filtering policy for staff When: The system receives the policy configuration request Expected: The policy is stored and applied to staff user sessions",
+            "In an authorized isolated test environment, execute TEST-005: Given: The system detects repeated access attempts When: The system detects repeated access attempts Expected: The system triggers an investigation workflow",
+            "In an authorized isolated test environment, execute TEST-006: Given: An administrator approves an exception for a specific domain When: The system receives the exception request Expected: Access to that domain is permitted for the specified user or group",
+            "In an authorized isolated test environment, execute TEST-007: Given: A system under operational load with concurrent user sessions When: The system receives a request to scale resource allocation dynamically Expected: The system maintains service availability without degradation in performance or data integrity",
+            "In an authorized isolated test environment, execute TEST-008: Given: An administrator initiates a configuration change to the security policy When: The system applies the updated policy to active user sessions Expected: The updated security policy is applied to active user sessions",
+            "In an authorized isolated test environment, execute TEST-009: Given: A component failure is detected in the core service layer When: The system initiates failover to redundant components Expected: The system restores functionality within defined recovery time objectives without data loss",
+            "In an authorized isolated test environment, execute TEST-010: Given: An operator attempts to modify configuration beyond authorized scope When: The system enforces access control policies during management operations Expected: The system denies the action.",
+            "In an authorized isolated test environment, execute TEST-011: Given: A system administrator modifies a filtering policy in the university network When: The policy change is applied to the network configuration Expected: An audit log entry is generated recording the timestamp, user identity, action type, and affected resource scope",
+            "In an authorized isolated test environment, execute TEST-012: Given: A user attempts to access a domain blocked by role-based filtering policies When: The system evaluates the request against active policies and authentication status Expected: The system either blocks the access or allows it based on defined rules, with a decision recorded in audit logs",
+            "In an authorized isolated test environment, execute TEST-013: Given: Centralized authentication service returns a user identity for an academic building network access request When: The system receives the identity via integration with centralized authentication Expected: The system validates the identity and applies appropriate role-based policies without requiring manual intervention",
+            "In an authorized isolated test environment, execute TEST-014: Given: The platform is deployed in an academic building, hostel, laboratory, or administrative office environment When: Network traffic is observed across these physical locations Expected: The system maintains consistent filtering and policy enforcement without degradation in performance or availability",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001",
+            "DR-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001",
+            "DR-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "security": [],
+      "data": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "prompt_version": "sequential-1.28",
+    "input_fingerprint": "e8eaa1e23e15fab442711ff5d650cbf3f8493e0f1ced1c15e4802f4e7b5cb1db"
+  },
+  "content_hash": "bad6625ad3214c7431f456a00a11950c8c3cc765d7a5a6c79f6c6e95ae9ab581",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 22,
+    "checks_total": 22,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002"
+      ],
+      "E-003": [
+        "FR-003"
+      ],
+      "E-004": [
+        "DR-001"
+      ],
+      "E-005": [
+        "NFR-001"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-002",
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001",
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-004",
+          "TEST-005",
+          "TEST-006"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-005"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-007",
+          "TEST-008",
+          "TEST-009",
+          "TEST-010"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "DR-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-011",
+          "TEST-012",
+          "TEST-013",
+          "TEST-014"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "defa0366-2d5a-4cf7-a5b0-9351fe2812c0",
+  "created_at": "2026-10-29T10:23:17.128847+00:00"
+}

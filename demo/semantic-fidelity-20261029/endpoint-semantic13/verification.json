@@ -1,0 +1,238 @@
+{
+  "case": "endpoint",
+  "project_id": "f3936e4a-289f-4689-989a-41e2a604dab4",
+  "version_id": "2ff0e44d-074f-4704-ba5f-721bcda108e9",
+  "content_hash": "9382877a67e00a12fe355218c2c9da52e315d531ed56b6abaaa40df175e182a8",
+  "status": "verified",
+  "quality": "needs_review",
+  "functional_requirements": 12,
+  "quality_requirements": 1,
+  "obligation_matrix": {
+    "collect system events, authentication activity, process information, and security alerts": [
+      {
+        "id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ]
+      }
+    ],
+    "detect unusual login behavior": [
+      {
+        "id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "detect repeated failed authentication": [
+      {
+        "id": "FR-003",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "detect suspicious process activity": [
+      {
+        "id": "FR-004",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "detect unauthorized configuration changes": [
+      {
+        "id": "FR-005",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "review alerts": [
+      {
+        "id": "FR-006",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "investigate affected devices": [
+      {
+        "id": "FR-007",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "record investigation notes": [
+      {
+        "id": "FR-008",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "change alert status": [
+      {
+        "id": "FR-009",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "isolate compromised endpoints when necessary": [
+      {
+        "id": "FR-010",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "maintain audit logs of security events and administrator actions": [
+      {
+        "id": "FR-011",
+        "evidence_ids": [
+          "E-004"
+        ]
+      }
+    ],
+    "provide a centralized dashboard": [
+      {
+        "id": "FR-012",
+        "evidence_ids": [
+          "E-004"
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "Q-326455fa58e5",
+      "question": "What conditions define unusual login behavior?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-002"
+      ]
+    },
+    {
+      "id": "Q-66ec7b6022bf",
+      "question": "What conditions define repeated authentication failures?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-002"
+      ]
+    },
+    {
+      "id": "Q-88a00a650fd2",
+      "question": "What conditions define suspicious process activity?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-002"
+      ]
+    },
+    {
+      "id": "Q-51ce9ae15f38",
+      "question": "What makes a configuration change unauthorized?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-002"
+      ]
+    },
+    {
+      "id": "Q-3624d3181d5c",
+      "question": "What conditions authorize endpoint isolation?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-003"
+      ]
+    },
+    {
+      "id": "Q-3aae42e94793",
+      "question": "Which fields must the audit logs contain?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-004"
+      ]
+    },
+    {
+      "id": "Q-64ef2e28335c",
+      "question": "What retention period is required for the audit logs?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-004"
+      ]
+    },
+    {
+      "id": "Q-7b2e5f89a0b1",
+      "question": "Which security acceptance outcomes must be demonstrated?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-001"
+      ]
+    },
+    {
+      "id": "Q-66cf5513b374",
+      "question": "How are the stated roles and authorized permissions assigned?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-003",
+        "E-004"
+      ]
+    }
+  ],
+  "traceability": {
+    "FR-007": [
+      "TEST-007"
+    ],
+    "FR-004": [
+      "TEST-004"
+    ],
+    "FR-009": [
+      "TEST-009"
+    ],
+    "FR-011": [
+      "TEST-011"
+    ],
+    "FR-005": [
+      "TEST-005"
+    ],
+    "FR-002": [
+      "TEST-002"
+    ],
+    "FR-001": [
+      "TEST-001"
+    ],
+    "FR-012": [
+      "TEST-012"
+    ],
+    "NFR-001": [
+      "TEST-013"
+    ],
+    "FR-006": [
+      "TEST-006"
+    ],
+    "FR-010": [
+      "TEST-010"
+    ],
+    "FR-008": [
+      "TEST-008"
+    ],
+    "FR-003": [
+      "TEST-003"
+    ]
+  },
+  "pdf_pages": 6,
+  "pdf_sha256": "5b3a381b910410165734dc40cf5979fac0ae242284ada684360a77f53acac515",
+  "generation_seconds": 110.721,
+  "assistant_output_review": "pending",
+  "human_approvals": 0
+}

@@ -1,0 +1,241 @@
+{
+  "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+  "items": [
+    {
+      "title": "Actor: administrators",
+      "detail": "Proposed logical endpoint for the source-stated actor: administrators.",
+      "status": "proposed",
+      "evidence_ids": [
+        "E-002",
+        "E-003"
+      ],
+      "sources": [],
+      "requirement_ids": [
+        "FR-002",
+        "FR-003"
+      ],
+      "component_name": "Actor: administrators",
+      "responsibility": "Represent the source-stated actor: administrators."
+    },
+    {
+      "title": "DNS and Web Access Filtering Engine",
+      "detail": "Proposed logical owner for FR-001, FR-002, NFR-001.",
+      "status": "proposed",
+      "evidence_ids": [
+        "E-001",
+        "E-002",
+        "E-005"
+      ],
+      "sources": [],
+      "requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "NFR-001"
+      ],
+      "component_name": "DNS and Web Access Filtering Engine",
+      "responsibility": "The system shall implement a secure DNS and web-access filtering mechanism to protect all university users from malicious or unauthorized internet destinations. The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events. The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "title": "Policy Management Interface",
+      "detail": "Proposed logical owner for FR-003, NFR-001.",
+      "status": "proposed",
+      "evidence_ids": [
+        "E-003",
+        "E-005"
+      ],
+      "sources": [],
+      "requirement_ids": [
+        "FR-003",
+        "NFR-001"
+      ],
+      "component_name": "Policy Management Interface",
+      "responsibility": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected. The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "title": "Audit and Logging Service",
+      "detail": "Proposed logical owner for DR-001, NFR-001.",
+      "status": "proposed",
+      "evidence_ids": [
+        "E-004",
+        "E-005"
+      ],
+      "sources": [],
+      "requirement_ids": [
+        "DR-001",
+        "NFR-001"
+      ],
+      "component_name": "Audit and Logging Service",
+      "responsibility": "The platform shall maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices. The solution shall be secure, scalable, reliable, and manageable."
+    }
+  ],
+  "open_issues": [],
+  "data_flows": [
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "FR-002"
+      ],
+      "evidence_ids": [
+        "E-002"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for FR-002.",
+      "from_component": "Actor: administrators",
+      "to_component": "DNS and Web Access Filtering Engine",
+      "data_or_action": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "FR-003"
+      ],
+      "evidence_ids": [
+        "E-003"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for FR-003.",
+      "from_component": "Actor: administrators",
+      "to_component": "Policy Management Interface",
+      "data_or_action": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for NFR-001.",
+      "from_component": "DNS and Web Access Filtering Engine",
+      "to_component": "Policy Management Interface",
+      "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for NFR-001.",
+      "from_component": "DNS and Web Access Filtering Engine",
+      "to_component": "Audit and Logging Service",
+      "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for NFR-001.",
+      "from_component": "Policy Management Interface",
+      "to_component": "DNS and Web Access Filtering Engine",
+      "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for NFR-001.",
+      "from_component": "Policy Management Interface",
+      "to_component": "Audit and Logging Service",
+      "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for NFR-001.",
+      "from_component": "Audit and Logging Service",
+      "to_component": "DNS and Web Access Filtering Engine",
+      "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined interaction",
+      "detail": "Proposed directed path for NFR-001.",
+      "from_component": "Audit and Logging Service",
+      "to_component": "Policy Management Interface",
+      "data_or_action": "The solution shall be secure, scalable, reliable, and manageable."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "FR-002"
+      ],
+      "evidence_ids": [
+        "E-002"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined trust boundary",
+      "detail": "Proposed logical trust-domain crossing for FR-002.",
+      "untrusted_component": "Actor: administrators",
+      "trusted_component": "DNS and Web Access Filtering Engine",
+      "enforcement": "The system shall inspect DNS requests, block access to known malicious domains, apply role-based browsing policies, and provide administrators with a dashboard for reviewing blocked requests and security events."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "FR-003"
+      ],
+      "evidence_ids": [
+        "E-003"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined trust boundary",
+      "detail": "Proposed logical trust-domain crossing for FR-003.",
+      "untrusted_component": "Actor: administrators",
+      "trusted_component": "Policy Management Interface",
+      "enforcement": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected."
+    },
+    {
+      "status": "proposed",
+      "requirement_ids": [
+        "NFR-001"
+      ],
+      "evidence_ids": [
+        "E-005"
+      ],
+      "sources": [],
+      "title": "Proposed source-defined trust boundary",
+      "detail": "Proposed logical trust-domain crossing for NFR-001.",
+      "untrusted_component": "DNS and Web Access Filtering Engine",
+      "trusted_component": "Policy Management Interface",
+      "enforcement": "The solution shall be secure, scalable, reliable, and manageable."
+    }
+  ]
+}

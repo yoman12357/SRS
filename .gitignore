@@ -1,0 +1,22 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite*
+data/
+*.safetensors
+*.gguf
+.pytest_cache/
+.ruff_cache/
+frontend/node_modules/
+frontend/dist/
+*.egg-info/
+# Local drafts and internal evidence may contain exact inference requests and project input.
+demo/**/private-attempts.json
+docs/reference/Problem Statement (2).docx
+docs/reference/PROFESSOR_BRIEF.txt
+# The publisher's source URLs remain in the corpus.
+fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/**/*.pdf

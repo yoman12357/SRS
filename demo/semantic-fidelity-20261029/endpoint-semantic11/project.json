@@ -1,0 +1,10 @@
+{
+  "id": "7c4497b4-b3d2-4217-a421-bb573abcef7e",
+  "name": "Four-case demo - Secure Server and Endpoint Monitoring Platform",
+  "description": "Design a secure monitoring platform for university servers and managed endpoints that collects system events, authentication activity, process information, and security alerts from multiple departments. The platform should detect unusual login behavior, repeated failed authentication, suspicious process activity, and unauthorized configuration changes. Security administrators should be able to review alerts, investigate affected devices, record investigation notes, change alert status, and isolate compromised endpoints when necessary. The system should maintain audit logs of security events and administrator actions and provide a centralized dashboard for monitoring security status across multiple campus locations.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-29T19:41:29.140511+00:00",
+  "updated_at": "2026-10-29T19:41:29.140511+00:00",
+  "reference_hashes": []
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "case": "dns",
+    "project_id": "359e7293-04dd-4a32-9e11-82ee2a09414a",
+    "version_id": "c599ff2d-80ba-4634-bed1-6be9c6e60aa4",
+    "content_hash": "bad6625ad3214c7431f456a00a11950c8c3cc765d7a5a6c79f6c6e95ae9ab581",
+    "canonical_unchanged": true,
+    "old_pages": 26,
+    "ieee_pages": 5,
+    "requirements_preserved": 5,
+    "quality": "needs_review",
+    "human_reviews": 0,
+    "introduction_preserved": true,
+    "stakeholder_labels": [
+      "Admin",
+      "Project Analyst",
+      "User"
+    ],
+    "live_api_verified": true
+  },
+  {
+    "case": "laboratory",
+    "project_id": "f2d054f9-dd01-4caf-b5be-8c41543ad05f",
+    "version_id": "bea99bfc-ec9d-49cd-92f6-0ceed75757dd",
+    "content_hash": "30c2cc09749b96ef07e0e33926dc7c54c11d1dd194cde7de426cc89848bc2e1c",
+    "canonical_unchanged": true,
+    "old_pages": 24,
+    "ieee_pages": 5,
+    "requirements_preserved": 5,
+    "quality": "needs_review",
+    "human_reviews": 0,
+    "introduction_preserved": true,
+    "stakeholder_labels": [
+      "Admin",
+      "Project Analyst",
+      "User"
+    ],
+    "live_api_verified": true
+  }
+]

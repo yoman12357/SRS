@@ -1,0 +1,60 @@
+{
+  "run_id": "220e06a4-0c14-4dea-bc14-ff6417c096c2",
+  "status": "failed",
+  "error": "section_validation_failed:architecture:internal_pair_requires_shared_or_dependent_obligations",
+  "created_at": "2026-10-28T20:56:30.515065+00:00",
+  "terminal_at": "2026-10-28T20:57:21.706462+00:00",
+  "total_seconds": 51.191,
+  "sections": {
+    "introduction": {
+      "status": "completed",
+      "seconds": 7.52,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "completed",
+      "seconds": 13.935,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "nonfunctional": {
+      "status": "completed",
+      "seconds": 0.013,
+      "models": []
+    },
+    "security": {
+      "status": "completed",
+      "seconds": 3.859,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "data": {
+      "status": "completed",
+      "seconds": 0.023,
+      "models": []
+    },
+    "network": {
+      "status": "completed",
+      "seconds": 0.029,
+      "models": []
+    },
+    "compliance": {
+      "status": "completed",
+      "seconds": 10.02,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "architecture": {
+      "status": "failed",
+      "seconds": 15.665
+    }
+  },
+  "maximum_section_seconds": 15.665,
+  "completed_srs": false,
+  "human_approval": false
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "key": "remediation",
+    "name": "Secure University Vulnerability Remediation Tracking System",
+    "description": "Design a secure vulnerability-remediation tracking system for a university that manages findings from approved security assessment reports for servers, applications, endpoints, and network devices. Security analysts should be able to review findings, assign remediation tasks to authorized departmental administrators, record investigation notes, track remediation status, and close findings after reviewing submitted evidence. The system should restrict access according to user roles, detect unauthorized changes to findings or remediation records, generate security alerts, and maintain audit logs of finding updates and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+  },
+  {
+    "key": "certificates",
+    "name": "Secure University Digital Certificate Management System",
+    "description": "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services. Authorized certificate administrators should be able to review certificate requests, approve certificate issuance, renew certificates, revoke compromised certificates, and track certificate status. The system should restrict certificate administration based on approved roles, monitor certificate validity, detect expired certificates and unauthorized certificate changes, generate security alerts, and maintain audit logs of certificate lifecycle activities and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "case": "firewall",
+  "project_id": "e978ce0c-bb48-4a53-a395-8d9950c3701c",
+  "label": "semantic10",
+  "started_local": "2026-10-29T22:35:53.207296+05:30",
+  "analysis": {
+    "run_id": "0744fa1b-38ad-453f-ae28-321552b62d27",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T17:05:41.121182+00:00",
+    "terminal_at": "2026-10-29T17:05:51.566342+00:00",
+    "total_seconds": 10.445,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 10.355,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 10.355,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "0ae4c102-85c6-4208-8700-7fe465b0d7e0",
+    "status": "failed",
+    "error": "context_budget_exceeded",
+    "created_at": "2026-10-29T17:05:53.210296+00:00",
+    "terminal_at": "2026-10-29T17:07:20.480081+00:00",
+    "total_seconds": 87.27,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.282,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 64.973,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 19.226,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.028,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.031,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.029,
+        "models": []
+      },
+      "compliance": {
+        "status": "failed",
+        "seconds": 1.538
+      }
+    },
+    "maximum_section_seconds": 64.973,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "context_budget_exceeded",
+  "total_wall_seconds": 100.422,
+  "source_unchanged": true
+}

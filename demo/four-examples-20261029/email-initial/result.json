@@ -1,0 +1,147 @@
+{
+  "case": "email",
+  "project_id": "45030d8f-3960-4de3-ac19-ee6539724aee",
+  "label": "initial",
+  "started_local": "2026-10-29T18:48:31.004048+05:30",
+  "analysis": {
+    "run_id": "098e0502-88f8-409b-81ca-33dc7b085b51",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T13:18:20.916954+00:00",
+    "terminal_at": "2026-10-29T13:18:30.690962+00:00",
+    "total_seconds": 9.774,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 9.683,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 9.683,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "completed",
+  "generation": {
+    "run_id": "2e65c3a3-275c-4ec7-bf20-46e3a4c375f0",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T13:18:31.006049+00:00",
+    "terminal_at": "2026-10-29T13:20:05.382625+00:00",
+    "total_seconds": 94.377,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.136,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 28.651,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 18.611,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 18.643,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.026,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.025,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 8.359,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 4.869,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 1.225,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 1.188,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "completed",
+        "seconds": 1.614,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "verification": {
+        "status": "completed",
+        "seconds": 6.235,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "glossary": {
+        "status": "completed",
+        "seconds": 0.87,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "sdlc": {
+        "status": "completed",
+        "seconds": 2.539,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 28.651,
+    "completed_srs": true,
+    "human_approval": false
+  },
+  "error": null,
+  "pdf_pages": 5,
+  "version_id": "5b3705de-97b3-4e92-b748-6a8d14aa787c",
+  "content_hash": "858db8978f93fa4a7076061d301d331e44788750a47ec74ce3567c442a408577",
+  "quality": "needs_review",
+  "models_used": [
+    "cybersrs-qwen3-4b-ft:latest",
+    "qwen3:4b-instruct-2507-q4_K_M"
+  ],
+  "pdf": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Four Examples\\2 - Email Security Gateway SRS.pdf",
+  "total_wall_seconds": 107.187,
+  "source_unchanged": true
+}

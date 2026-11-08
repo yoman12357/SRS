@@ -1,0 +1,2391 @@
+{
+  "id": "14de3c18-5aa5-4db2-a4a3-096c0afacf30",
+  "project_id": "195cd75c-0708-45cc-9496-e78f89c67751",
+  "kind": "generate",
+  "status": "completed",
+  "input_hash": "9846061a135cc82ca8e7784b528ca1d4d2b20281255c009dd6786e0a56d2b752",
+  "events": [
+    {
+      "at": "2026-10-30T03:03:12.063174+00:00",
+      "agent": "introduction",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:03:20.771048+00:00",
+      "agent": "introduction",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 8.703,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "introduction_projection_version": "source-fact-introduction-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:03:20.794881+00:00",
+      "agent": "functional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:04:36.187560+00:00",
+      "agent": "functional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "attempts": 10,
+      "source_obligations_version": "source-obligations-1.2",
+      "atomic_source_keys": [
+        "E-001_O01",
+        "E-002_O01",
+        "E-002_O02",
+        "E-002_O03",
+        "E-002_O04",
+        "E-002_O05",
+        "E-003_O01",
+        "E-003_O02",
+        "E-003_O03",
+        "E-003_O04",
+        "E-004_O01"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [
+        "E-002_O01",
+        "E-002_O02",
+        "E-003_O01",
+        "E-003_O02",
+        "E-003_O03",
+        "E-003_O01"
+      ],
+      "elapsed_seconds": 75.39,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:04:36.200994+00:00",
+      "agent": "nonfunctional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:04:45.937520+00:00",
+      "agent": "nonfunctional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 2,
+      "source_obligations_version": "source-obligations-1.2",
+      "atomic_source_keys": [
+        "E-001_O02",
+        "E-004_O02",
+        "E-004_O03",
+        "E-004_O04",
+        "E-004_O05"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [],
+      "elapsed_seconds": 9.734,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:04:45.951598+00:00",
+      "agent": "security",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:04:45.979578+00:00",
+      "agent": "security",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:04:45.992761+00:00",
+      "agent": "data",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:04:46.020395+00:00",
+      "agent": "data",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.015,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:04:46.035572+00:00",
+      "agent": "network",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:04:46.063582+00:00",
+      "agent": "network",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:04:46.077775+00:00",
+      "agent": "compliance",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:04:52.508906+00:00",
+      "agent": "compliance",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 6.437,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:04:52.522905+00:00",
+      "agent": "architecture",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:07.429647+00:00",
+      "agent": "architecture",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 3,
+      "elapsed_seconds": 14.906,
+      "architecture_stages": [
+        {
+          "stage": "components",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 2.796,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "ownership",
+          "selection_version": "source-keyed-owners-1.0",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 3.172,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "internal_interactions",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 8.891,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        }
+      ],
+      "architecture_layout_version": "source-backed-layout-1.1",
+      "source_paths_compiled": true,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:07.443645+00:00",
+      "agent": "threats",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:10.078969+00:00",
+      "agent": "threats",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.625,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.1",
+      "model_candidate_order": [
+        "derived/account-takeover",
+        "derived/privilege-escalation",
+        "derived/malicious-admin-change",
+        "derived/compromised-integration",
+        "derived/detection-evasion"
+      ],
+      "retained_source_candidates": [
+        "derived/account-takeover",
+        "derived/privilege-escalation",
+        "derived/malicious-admin-change",
+        "derived/compromised-integration",
+        "derived/audit-evidence-loss",
+        "derived/detection-evasion"
+      ],
+      "composition": "Deterministic source-linked hypotheses; model orders candidates",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:10.094758+00:00",
+      "agent": "risks",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:12.622917+00:00",
+      "agent": "risks",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.532,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.1",
+      "model_candidate_order": [
+        "boundary-1",
+        "boundary-2",
+        "boundary-3",
+        "boundary-4",
+        "boundary-5",
+        "boundary-6"
+      ],
+      "retained_source_candidates": [
+        "boundary-1",
+        "boundary-2",
+        "boundary-3",
+        "boundary-4",
+        "boundary-5",
+        "boundary-6"
+      ],
+      "composition": "Deterministic source-linked hypotheses; model orders candidates",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:12.637342+00:00",
+      "agent": "scenarios",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:15.041451+00:00",
+      "agent": "scenarios",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.407,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "scenario_projection_version": "canonical-scenarios-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:15.057979+00:00",
+      "agent": "verification",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:20.564831+00:00",
+      "agent": "verification",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 5.5,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "verification_projection_version": "canonical-criteria-verification-1.1",
+      "verification_selection_version": "source-keyed-types-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:20.579666+00:00",
+      "agent": "glossary",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:21.980963+00:00",
+      "agent": "glossary",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.406,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.1",
+      "model_candidate_order": [
+        "term-6",
+        "term-4",
+        "term-3",
+        "term-2"
+      ],
+      "retained_source_candidates": [
+        "term-6",
+        "term-4",
+        "term-3",
+        "term-2"
+      ],
+      "composition": "Deterministic source-linked hypotheses; model orders candidates",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:22.039843+00:00",
+      "agent": "sdlc",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T03:05:27.228170+00:00",
+      "agent": "sdlc",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 5.187,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "sdlc_prompt_version": "sequential-sdlc-generation-2.1",
+      "lifecycle_projection_version": "source-linked-lifecycle-1.1",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T03:05:27.377203+00:00",
+      "agent": "document",
+      "state": "completed",
+      "version_id": "64874397-e273-40ee-881b-9f5ac73d9437"
+    }
+  ],
+  "checkpoints": {
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure backup and recovery management system for a university that protects critical data from academic departments, administrative systems, research platforms, and shared services.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should allow authorized administrators to define backup policies, initiate and monitor backup jobs, restore approved data, and review backup status across multiple campus locations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "It should detect failed or incomplete backup operations, generate security and operational alerts, maintain audit logs of backup and restore activities, and restrict backup administration based on user roles.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The platform should integrate with existing university storage and identity services and remain secure, reliable, scalable, and manageable.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "protect critical data from academic departments, administrative systems, research platforms, and shared services",
+          "statement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services.",
+          "rationale": "Source obligation E-001_O01.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system protects critical data from academic departments, administrative systems, research platforms, and shared services",
+              "when": "the system initiates a protection operation for designated data assets",
+              "then": "the protected data remains accessible and intact without unauthorized modification or loss",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "allow authorized administrators to define backup policies",
+          "statement": "The system shall allow authorized administrators to define backup policies.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized administrators define backup policies",
+              "when": "the actor initiates the operation on the named object",
+              "then": "authorized administrators define backup policies; the resulting backup policy is observed and recorded in the system's policy registry",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "allow authorized administrators to initiate backup jobs",
+          "statement": "The system shall allow authorized administrators to initiate backup jobs.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized administrators initiate backup jobs",
+              "when": "the actor initiates the operation on the named object",
+              "then": "authorized administrators initiate backup jobs; the resulting job is observed and recorded in the system's job history",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "allow authorized administrators to monitor backup jobs",
+          "statement": "The system shall allow authorized administrators to monitor backup jobs.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized administrators monitor backup jobs",
+              "when": "the actor initiates the operation on the named object",
+              "then": "the current job status is returned and observable in the system state",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-005",
+          "title": "allow authorized administrators to restore approved data",
+          "statement": "The system shall allow authorized administrators to restore approved data.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized administrators restore approved data",
+              "when": "the actor initiates the operation on the named object",
+              "then": "the restored state is returned and observable in the system state",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-006",
+          "title": "allow authorized administrators to review backup status across multiple campus locations",
+          "statement": "The system shall allow authorized administrators to review backup status across multiple campus locations.",
+          "rationale": "Source obligation E-002_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized administrators request backup status across multiple campus locations",
+              "when": "the actor requests the named items as specified",
+              "then": "the requested items are returned for examination",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-007",
+          "title": "detect failed or incomplete backup operations",
+          "statement": "The system shall detect failed or incomplete backup operations.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system detects a failed or incomplete backup operation",
+              "when": "the system initiates detection of a failed or incomplete backup operation",
+              "then": "The system reports an observable result indicating a detected failed or incomplete backup operation.",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-008",
+          "title": "generate security and operational alerts",
+          "statement": "The system shall generate security and operational alerts.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system identifies an anomalous backup event",
+              "when": "the system initiates alert generation for security or operational anomalies",
+              "then": "The system generates and emits a security or operational alert for the anomalous backup event",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-009",
+          "title": "maintain audit logs of backup and restore activities",
+          "statement": "The system shall maintain audit logs of backup and restore activities.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system records a backup or restore activity",
+              "when": "the system performs a backup or restore operation",
+              "then": "The system maintains an audit log entry for the backup or restore activity",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which fields must the audit logs contain?",
+            "What retention period is required for the audit logs?"
+          ]
+        },
+        {
+          "id": "FR-010",
+          "title": "restrict backup administration based on user roles",
+          "statement": "The system shall restrict backup administration based on user roles.",
+          "rationale": "Source obligation E-003_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "user attempts to perform backup administration action",
+              "when": "a user with restricted role initiates a backup administration operation",
+              "then": "the request is denied and no administrative action is performed",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-011",
+          "title": "integrate with existing university storage and identity services",
+          "statement": "The system shall integrate with existing university storage and identity services.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "integration"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system integrates with existing university storage and identity services using the defined interface",
+              "when": "the system initiates a backup operation against an authenticated user's data set",
+              "then": "the resulting backup is stored in the designated university storage location and accessible only to authorized users via identity authentication",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-001_O02.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage during backup and recovery operations.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD/uncertain.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed, as no specific quantitative thresholds for security assurance are provided in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        },
+        {
+          "id": "NFR-002",
+          "title": "remain secure",
+          "statement": "The system shall remain secure.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain secure during backup and recovery operations.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for security assurance.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        },
+        {
+          "id": "NFR-003",
+          "title": "remain reliable",
+          "statement": "The system shall remain reliable.",
+          "rationale": "Source obligation E-004_O03.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain reliable during backup and recovery operations.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for reliability assurance.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What measurable reliability and recovery targets must the system meet?"
+          ]
+        },
+        {
+          "id": "NFR-004",
+          "title": "remain scalable",
+          "statement": "The system shall remain scalable.",
+          "rationale": "Source obligation E-004_O04.",
+          "priority": "should",
+          "dimensions": [
+            "performance"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain scalable during backup and recovery operations.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for scalability assurance.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What measurable scalability targets must the system meet?"
+          ]
+        },
+        {
+          "id": "NFR-005",
+          "title": "remain manageable",
+          "statement": "The system shall remain manageable.",
+          "rationale": "Source obligation E-004_O05.",
+          "priority": "should",
+          "dimensions": [
+            "usability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain manageable during backup and recovery operations.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for manageability assurance.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "What criteria define acceptable manageability?"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-011"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "NFR-001",
+        "NFR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-011",
+        "NFR-002",
+        "NFR-003",
+        "NFR-004",
+        "NFR-005"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How are the stated roles and authorized permissions assigned?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: authorized administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: authorized administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "component_name": "Actor: authorized administrators",
+          "responsibility": "Represent the source-stated actor: authorized administrators."
+        },
+        {
+          "title": "Backup Administration Interface",
+          "detail": "Proposed logical owner for FR-002, FR-003, FR-004, FR-005, FR-006, FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Backup Administration Interface",
+          "responsibility": "The system shall allow authorized administrators to define backup policies. The system shall allow authorized administrators to initiate backup jobs. The system shall allow authorized administrators to monitor backup jobs. The system shall allow authorized administrators to restore approved data. The system shall allow authorized administrators to review backup status across multiple campus locations. The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Security Monitoring Engine",
+          "detail": "Proposed logical owner for FR-007, FR-008, FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Security Monitoring Engine",
+          "responsibility": "The system shall detect failed or incomplete backup operations. The system shall generate security and operational alerts. The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Audit and Logging Service",
+          "detail": "Proposed logical owner for FR-009, FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-009",
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Audit and Logging Service",
+          "responsibility": "The system shall maintain audit logs of backup and restore activities. The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Integration Layer",
+          "detail": "Proposed logical owner for FR-011.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "component_name": "Integration Layer",
+          "responsibility": "The system shall integrate with existing university storage and identity services."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, FR-004, FR-005, FR-006.",
+          "from_component": "Actor: authorized administrators",
+          "to_component": "Backup Administration Interface",
+          "data_or_action": "The system shall allow authorized administrators to define backup policies. The system shall allow authorized administrators to initiate backup jobs. The system shall allow authorized administrators to monitor backup jobs. The system shall allow authorized administrators to restore approved data. The system shall allow authorized administrators to review backup status across multiple campus locations."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003, FR-004, FR-005, FR-006.",
+          "untrusted_component": "Actor: authorized administrators",
+          "trusted_component": "Backup Administration Interface",
+          "enforcement": "The system shall allow authorized administrators to define backup policies. The system shall allow authorized administrators to initiate backup jobs. The system shall allow authorized administrators to monitor backup jobs. The system shall allow authorized administrators to restore approved data. The system shall allow authorized administrators to review backup status across multiple campus locations."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "untrusted_component": "Backup Administration Interface",
+          "trusted_component": "Security Monitoring Engine",
+          "enforcement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "untrusted_component": "Backup Administration Interface",
+          "trusted_component": "Audit and Logging Service",
+          "enforcement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "untrusted_component": "Security Monitoring Engine",
+          "trusted_component": "Backup Administration Interface",
+          "enforcement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "untrusted_component": "Security Monitoring Engine",
+          "trusted_component": "Audit and Logging Service",
+          "enforcement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "untrusted_component": "Audit and Logging Service",
+          "trusted_component": "Backup Administration Interface",
+          "enforcement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-001",
+            "FR-010",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-010, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "untrusted_component": "Audit and Logging Service",
+          "trusted_component": "Security Monitoring Engine",
+          "enforcement": "The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services. The system shall restrict backup administration based on user roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [
+        {
+          "id": "THR-001",
+          "asset": "User identities and authenticated access",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "impact": "Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "control_requirement_ids": [
+            "FR-011",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-002",
+          "asset": "Role and permission boundaries",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "impact": "A lower-privilege user could access restricted functions or sensitive resources.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-003",
+          "asset": "Administrative security decisions",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A malicious or compromised administrator misuses a source-permitted management operation to weaken protection or disrupt legitimate use through the stated administrative workflow.",
+          "impact": "Misused administrative authority could undermine protection or interrupt legitimate use.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-004",
+          "asset": "Integration trust paths",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "impact": "Untrusted integration data could cause incorrect decisions or hide security events.",
+          "control_requirement_ids": [
+            "FR-011",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-005",
+          "asset": "Monitoring and security alerts",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "impact": "Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-006",
+          "asset": "Security and administrative audit evidence",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "impact": "Investigators could lose reliable evidence of the events required by the brief.",
+          "control_requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        }
+      ],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [
+        {
+          "id": "RISK-001",
+          "description": "Derived risk affecting User identities and authenticated access: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "mitigation": "Review impersonation and compromised-identity paths against the stated access duties; confirm any additional identity or session protections with the stakeholder. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-011",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-002",
+          "description": "Derived risk affecting Role and permission boundaries: A lower-privilege user could access restricted functions or sensitive resources.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "mitigation": "Test permitted and denied role/resource pairs against the linked authorization duties; review ambiguous permission assignments with the resource owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-003",
+          "description": "Derived risk affecting Administrative security decisions: Misused administrative authority could undermine protection or interrupt legitimate use.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A malicious or compromised administrator misuses a source-permitted management operation to weaken protection or disrupt legitimate use through the stated administrative workflow.",
+          "mitigation": "Review misuse cases for each source-permitted administrative operation and compare its outcomes and audit coverage with the stated management boundary. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-004",
+          "description": "Derived risk affecting Integration trust paths: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "mitigation": "Review trust assumptions at the specified integration boundaries with missing or altered input fixtures; confirm the required failure handling with the owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-011",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-005",
+          "description": "Derived risk affecting Monitoring and security alerts: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "mitigation": "Evaluate the stated detection duties with representative positive and negative events; confirm undecided thresholds, alert priorities and investigation responsibilities. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-006",
+          "description": "Derived risk affecting Security and administrative audit evidence: Investigators could lose reliable evidence of the events required by the brief.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "mitigation": "Compare source-required events with the resulting audit evidence; assess missing and altered-record cases and confirm unprovided protection or retention decisions. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        }
+      ],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "authorized administrators",
+          "goal": "The system shall allow authorized administrators to define backup policies.",
+          "story": "As authorized administrators, I need the following behavior: The system shall allow authorized administrators to define backup policies.",
+          "preconditions": [
+            "authorized administrators define backup policies"
+          ],
+          "steps": [
+            "the actor initiates the operation on the named object"
+          ],
+          "success_outcome": "authorized administrators define backup policies; the resulting backup policy is observed and recorded in the system's policy registry",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-002",
+          "actor": "authorized administrators",
+          "goal": "The system shall allow authorized administrators to initiate backup jobs.",
+          "story": "As authorized administrators, I need the following behavior: The system shall allow authorized administrators to initiate backup jobs.",
+          "preconditions": [
+            "authorized administrators initiate backup jobs"
+          ],
+          "steps": [
+            "the actor initiates the operation on the named object"
+          ],
+          "success_outcome": "authorized administrators initiate backup jobs; the resulting job is observed and recorded in the system's job history",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-003",
+          "actor": "authorized administrators",
+          "goal": "The system shall allow authorized administrators to monitor backup jobs.",
+          "story": "As authorized administrators, I need the following behavior: The system shall allow authorized administrators to monitor backup jobs.",
+          "preconditions": [
+            "authorized administrators monitor backup jobs"
+          ],
+          "steps": [
+            "the actor initiates the operation on the named object"
+          ],
+          "success_outcome": "the current job status is returned and observable in the system state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-004",
+          "actor": "authorized administrators",
+          "goal": "The system shall allow authorized administrators to restore approved data.",
+          "story": "As authorized administrators, I need the following behavior: The system shall allow authorized administrators to restore approved data.",
+          "preconditions": [
+            "authorized administrators restore approved data"
+          ],
+          "steps": [
+            "the actor initiates the operation on the named object"
+          ],
+          "success_outcome": "the restored state is returned and observable in the system state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-005",
+          "actor": "authorized administrators",
+          "goal": "The system shall allow authorized administrators to review backup status across multiple campus locations.",
+          "story": "As authorized administrators, I need the following behavior: The system shall allow authorized administrators to review backup status across multiple campus locations.",
+          "preconditions": [
+            "authorized administrators request backup status across multiple campus locations"
+          ],
+          "steps": [
+            "the actor requests the named items as specified"
+          ],
+          "success_outcome": "the requested items are returned for examination",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: the system protects critical data from academic departments, administrative systems, research platforms, and shared services",
+            "When: the system initiates a protection operation for designated data assets"
+          ],
+          "expected_result": "Expected: the protected data remains accessible and intact without unauthorized modification or loss",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: authorized administrators define backup policies",
+            "When: the actor initiates the operation on the named object"
+          ],
+          "expected_result": "Expected: authorized administrators define backup policies; the resulting backup policy is observed and recorded in the system's policy registry",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: authorized administrators initiate backup jobs",
+            "When: the actor initiates the operation on the named object"
+          ],
+          "expected_result": "Expected: authorized administrators initiate backup jobs; the resulting job is observed and recorded in the system's job history",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: authorized administrators monitor backup jobs",
+            "When: the actor initiates the operation on the named object"
+          ],
+          "expected_result": "Expected: the current job status is returned and observable in the system state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: authorized administrators restore approved data",
+            "When: the actor initiates the operation on the named object"
+          ],
+          "expected_result": "Expected: the restored state is returned and observable in the system state",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "procedure": [
+            "Given: authorized administrators request backup status across multiple campus locations",
+            "When: the actor requests the named items as specified"
+          ],
+          "expected_result": "Expected: the requested items are returned for examination",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "procedure": [
+            "Given: system detects a failed or incomplete backup operation",
+            "When: the system initiates detection of a failed or incomplete backup operation"
+          ],
+          "expected_result": "Expected: The system reports an observable result indicating a detected failed or incomplete backup operation.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "procedure": [
+            "Given: system identifies an anomalous backup event",
+            "When: the system initiates alert generation for security or operational anomalies"
+          ],
+          "expected_result": "Expected: The system generates and emits a security or operational alert for the anomalous backup event",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "procedure": [
+            "Given: system records a backup or restore activity",
+            "When: the system performs a backup or restore operation"
+          ],
+          "expected_result": "Expected: The system maintains an audit log entry for the backup or restore activity",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "procedure": [
+            "Given: user attempts to perform backup administration action",
+            "When: a user with restricted role initiates a backup administration operation"
+          ],
+          "expected_result": "Expected: the request is denied and no administrative action is performed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "procedure": [
+            "Given: the system integrates with existing university storage and identity services using the defined interface",
+            "When: the system initiates a backup operation against an authenticated user's data set"
+          ],
+          "expected_result": "Expected: the resulting backup is stored in the designated university storage location and accessible only to authorized users via identity authentication",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage during backup and recovery operations.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD/uncertain."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific quantitative thresholds for security assurance are provided in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall remain secure during backup and recovery operations.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for security assurance."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "NFR-003"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall remain reliable during backup and recovery operations.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for reliability assurance."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-015",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall remain scalable during backup and recovery operations.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for scalability assurance."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-016",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall remain manageable during backup and recovery operations.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for manageability assurance."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Access restoration",
+          "detail": "Returning access that was previously restricted, within the source-defined permission boundary.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Incremental",
+      "justification": "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-002, E-003); Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-002); Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004).",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions.",
+        "Proposed suitability recommendation; confirm delivery constraints and team capacity before adopting this lifecycle. Missing factors are not assumed."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services.; FR-002: The system shall allow authorized administrators to define backup policies.; FR-003: The system shall allow authorized administrators to initiate backup jobs.; FR-004: The system shall allow authorized administrators to monitor backup jobs.; FR-005: The system shall allow authorized administrators to restore approved data.; FR-006: The system shall allow authorized administrators to review backup status across multiple campus locations.; FR-007: The system shall detect failed or incomplete backup operations.; FR-008: The system shall generate security and operational alerts.; FR-009: The system shall maintain audit logs of backup and restore activities.; FR-010: The system shall restrict backup administration based on user roles.; FR-011: The system shall integrate with existing university storage and identity services.",
+            "Review and baseline the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-008: The system shall generate security and operational alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Incremental delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall protect critical data from academic departments, administrative systems, research platforms, and shared services.; FR-002: The system shall allow authorized administrators to define backup policies.; FR-003: The system shall allow authorized administrators to initiate backup jobs.; FR-004: The system shall allow authorized administrators to monitor backup jobs.; FR-005: The system shall allow authorized administrators to restore approved data.; FR-006: The system shall allow authorized administrators to review backup status across multiple campus locations.; FR-007: The system shall detect failed or incomplete backup operations.; FR-008: The system shall generate security and operational alerts.; FR-009: The system shall maintain audit logs of backup and restore activities.; FR-010: The system shall restrict backup administration based on user roles.; FR-011: The system shall integrate with existing university storage and identity services.",
+            "Implement the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "In an authorized isolated test environment, execute TEST-001: Given: the system protects critical data from academic departments, administrative systems, research platforms, and shared services When: the system initiates a protection operation for designated data assets Expected: the protected data remains accessible and intact without unauthorized modification or loss",
+            "In an authorized isolated test environment, execute TEST-002: Given: authorized administrators define backup policies When: the actor initiates the operation on the named object Expected: authorized administrators define backup policies; the resulting backup policy is observed and recorded in the system's policy registry",
+            "In an authorized isolated test environment, execute TEST-003: Given: authorized administrators initiate backup jobs When: the actor initiates the operation on the named object Expected: authorized administrators initiate backup jobs; the resulting job is observed and recorded in the system's job history",
+            "In an authorized isolated test environment, execute TEST-004: Given: authorized administrators monitor backup jobs When: the actor initiates the operation on the named object Expected: the current job status is returned and observable in the system state",
+            "In an authorized isolated test environment, execute TEST-005: Given: authorized administrators restore approved data When: the actor initiates the operation on the named object Expected: the restored state is returned and observable in the system state",
+            "In an authorized isolated test environment, execute TEST-006: Given: authorized administrators request backup status across multiple campus locations When: the actor requests the named items as specified Expected: the requested items are returned for examination",
+            "In an authorized isolated test environment, execute TEST-007: Given: system detects a failed or incomplete backup operation When: the system initiates detection of a failed or incomplete backup operation Expected: The system reports an observable result indicating a detected failed or incomplete backup operation.",
+            "In an authorized isolated test environment, execute TEST-008: Given: system identifies an anomalous backup event When: the system initiates alert generation for security or operational anomalies Expected: The system generates and emits a security or operational alert for the anomalous backup event",
+            "In an authorized isolated test environment, execute TEST-009: Given: system records a backup or restore activity When: the system performs a backup or restore operation Expected: The system maintains an audit log entry for the backup or restore activity",
+            "In an authorized isolated test environment, execute TEST-010: Given: user attempts to perform backup administration action When: a user with restricted role initiates a backup administration operation Expected: the request is denied and no administrative action is performed",
+            "In an authorized isolated test environment, execute TEST-011: Given: the system integrates with existing university storage and identity services using the defined interface When: the system initiates a backup operation against an authenticated user's data set Expected: the resulting backup is stored in the designated university storage location and accessible only to authorized users via identity authentication",
+            "In an authorized isolated test environment, execute TEST-012: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage during backup and recovery operations. When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD/uncertain. Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific quantitative thresholds for security assurance are provided in the current draft.",
+            "In an authorized isolated test environment, execute TEST-013: Given: A draft acceptance plan for this quality goal: the system shall remain secure during backup and recovery operations. When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for security assurance. Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+            "In an authorized isolated test environment, execute TEST-014: Given: A draft acceptance plan for this quality goal: the system shall remain reliable during backup and recovery operations. When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for reliability assurance. Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+            "In an authorized isolated test environment, execute TEST-015: Given: A draft acceptance plan for this quality goal: the system shall remain scalable during backup and recovery operations. When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for scalability assurance. Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+            "In an authorized isolated test environment, execute TEST-016: Given: A draft acceptance plan for this quality goal: the system shall remain manageable during backup and recovery operations. When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for manageability assurance. Expected: The plan's measurable targets remain TBD or unconfirmed; no specific metric, threshold, or test case is defined in the current draft.",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-008: The system shall generate security and operational alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-008: The system shall generate security and operational alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "quality": {
+      "validation_policy_version": "source-grounding-1.17",
+      "status": "needs_review",
+      "checks_passed": 21,
+      "checks_total": 21,
+      "findings": [
+        {
+          "code": "human_semantic_review_required",
+          "severity": "warning",
+          "section": "document",
+          "item_id": "",
+          "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+        }
+      ],
+      "evidence_coverage": {
+        "E-001": [
+          "FR-001",
+          "NFR-001"
+        ],
+        "E-002": [
+          "FR-002",
+          "FR-003",
+          "FR-004",
+          "FR-005",
+          "FR-006"
+        ],
+        "E-003": [
+          "FR-007",
+          "FR-008",
+          "FR-009",
+          "FR-010"
+        ],
+        "E-004": [
+          "FR-011",
+          "NFR-002",
+          "NFR-003",
+          "NFR-004",
+          "NFR-005"
+        ]
+      },
+      "traceability": [
+        {
+          "requirement_id": "FR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-001"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-002",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-001"
+          ],
+          "test_ids": [
+            "TEST-002"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-003",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-002"
+          ],
+          "test_ids": [
+            "TEST-003"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-004",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-003"
+          ],
+          "test_ids": [
+            "TEST-004"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-005",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-004"
+          ],
+          "test_ids": [
+            "TEST-005"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-006",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-005"
+          ],
+          "test_ids": [
+            "TEST-006"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-007",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-007"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-008",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-008"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-009",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-009"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-010",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-010"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-011",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-011"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-012"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-002",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-013"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-003",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-014"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-004",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-015"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-005",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-016"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        }
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-30T03:03:11.953776+00:00",
+  "updated_at": "2026-10-30T03:05:27.396439+00:00"
+}

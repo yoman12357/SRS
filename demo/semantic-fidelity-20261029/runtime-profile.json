@@ -1,0 +1,9 @@
+{
+  "model_name": "cybersrs-qwen3-4b-ft:latest",
+  "base_model_name": "qwen3:4b-instruct-2507-q4_K_M",
+  "backend_port": 8011,
+  "section_timeout_seconds": 120.0,
+  "llm_max_retries": 0,
+  "compact_requirements_enabled": true,
+  "atomic_test_repair_limit": 2
+}

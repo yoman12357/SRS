@@ -1,0 +1,84 @@
+{
+  "E-001": {
+    "statement": "The system shall collect system events, authentication activity, process information, and security alerts from multiple departments.",
+    "tests": [
+      {
+        "given": "A university server department generates system events, authentication logs, process spawns, and security alerts",
+        "when": "The monitoring platform initiates data collection",
+        "then": "All event types are captured and stored in the platform's ingestion pipeline",
+        "method": "test",
+        "observable_evidence": "Test capture of collected event streams from server departments"
+      }
+    ],
+    "unresolved_decisions": [
+      "Data retention policy for events"
+    ]
+  },
+  "E-002": {
+    "statement": "The platform shall detect unusual login behavior, repeated failed authentication, suspicious process activity, and unauthorized configuration changes.",
+    "tests": [
+      {
+        "given": "A user attempts multiple failed logins from a new IP address",
+        "when": "The monitoring platform processes authentication events",
+        "then": "An alert is generated for unusual login behavior",
+        "method": "test",
+        "observable_evidence": "Test capture of the generated alert for repeated failed logins"
+      },
+      {
+        "given": "A process spawns with an unknown command-line argument on a managed endpoint",
+        "when": "The platform analyzes process activity",
+        "then": "An alert is triggered for suspicious process activity",
+        "method": "test",
+        "observable_evidence": "Test capture of the generated alert for suspicious process activity"
+      },
+      {
+        "given": "A configuration change is made to a system without approval",
+        "when": "The platform monitors endpoint configurations",
+        "then": "An alert is raised for unauthorized configuration changes",
+        "method": "test",
+        "observable_evidence": "Test capture of the generated alert for unauthorized configuration change"
+      }
+    ],
+    "unresolved_decisions": [
+      "Thresholds for defining unusual behavior",
+      "False positive suppression rules"
+    ]
+  },
+  "E-003": {
+    "statement": "Security administrators should be able to review alerts, investigate affected devices, record investigation notes, change alert status, and isolate compromised endpoints when necessary.",
+    "tests": [
+      {
+        "given": "An operator accesses the monitoring interface with valid credentials",
+        "when": "The operator requests to review a security alert",
+        "then": "The requested alert is returned in full detail",
+        "method": "test",
+        "observable_evidence": "Test capture of the alert response"
+      },
+      {
+        "given": "An administrator selects an affected device from an alert list",
+        "when": "The administrator initiates a device investigation",
+        "then": "The system displays device-level activity logs and current state",
+        "method": "test",
+        "observable_evidence": "Test capture of the device investigation interface response"
+      },
+      {
+        "given": "An administrator records notes during an investigation",
+        "when": "The administrator submits a note entry",
+        "then": "The note is saved and associated with the alert and device",
+        "method": "test",
+        "observable_evidence": "Test capture of the note submission and persistence"
+      },
+      {
+        "given": "An administrator identifies a compromised endpoint in an alert",
+        "when": "The administrator selects 'isolate' action",
+        "then": "The endpoint is marked as isolated and its access is restricted",
+        "method": "test",
+        "observable_evidence": "Test capture of the isolation action and device state change"
+      }
+    ],
+    "unresolved_decisions": [
+      "Permissions for changing alert status",
+      "Isolation duration policy"
+    ]
+  }
+}

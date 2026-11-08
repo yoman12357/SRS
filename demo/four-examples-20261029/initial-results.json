@@ -1,0 +1,404 @@
+[
+  {
+    "case": "wifi",
+    "project_id": "5427bbe4-1c44-491b-94f8-e91cc6905f78",
+    "label": "initial",
+    "started_local": "2026-10-29T18:46:45.770960+05:30",
+    "analysis": {
+      "run_id": "da1c013f-b98d-44ab-8359-064cca765633",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T13:16:29.515648+00:00",
+      "terminal_at": "2026-10-29T13:16:44.847453+00:00",
+      "total_seconds": 15.332,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 15.249,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 15.249,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "manual_retries": 0,
+    "status": "completed",
+    "generation": {
+      "run_id": "7408e09b-26df-4445-bc78-1d305f5dd615",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T13:16:45.779961+00:00",
+      "terminal_at": "2026-10-29T13:18:20.091286+00:00",
+      "total_seconds": 94.311,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 1.133,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "completed",
+          "seconds": 37.779,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "nonfunctional": {
+          "status": "completed",
+          "seconds": 9.166,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "security": {
+          "status": "completed",
+          "seconds": 0.047,
+          "models": []
+        },
+        "data": {
+          "status": "completed",
+          "seconds": 0.028,
+          "models": []
+        },
+        "network": {
+          "status": "completed",
+          "seconds": 0.027,
+          "models": []
+        },
+        "compliance": {
+          "status": "completed",
+          "seconds": 12.585,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "architecture": {
+          "status": "completed",
+          "seconds": 10.313,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "threats": {
+          "status": "completed",
+          "seconds": 1.648,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "risks": {
+          "status": "completed",
+          "seconds": 1.57,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "scenarios": {
+          "status": "completed",
+          "seconds": 0.857,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "verification": {
+          "status": "completed",
+          "seconds": 4.191,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "glossary": {
+          "status": "completed",
+          "seconds": 1.028,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "sdlc": {
+          "status": "completed",
+          "seconds": 13.444,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        }
+      },
+      "maximum_section_seconds": 37.779,
+      "completed_srs": true,
+      "human_approval": false
+    },
+    "error": null,
+    "pdf_pages": 5,
+    "version_id": "59313808-8827-47b0-9cfb-82932164ec8d",
+    "content_hash": "450fae646a146ddeb9bf39d5bff8892f8cf6f06f08ef897a8ad6c6f5e867640c",
+    "quality": "needs_review",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "pdf": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Four Examples\\1 - Campus Wi-Fi SRS.pdf",
+    "total_wall_seconds": 111.39,
+    "source_unchanged": true
+  },
+  {
+    "case": "email",
+    "project_id": "45030d8f-3960-4de3-ac19-ee6539724aee",
+    "label": "initial",
+    "started_local": "2026-10-29T18:48:31.004048+05:30",
+    "analysis": {
+      "run_id": "098e0502-88f8-409b-81ca-33dc7b085b51",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T13:18:20.916954+00:00",
+      "terminal_at": "2026-10-29T13:18:30.690962+00:00",
+      "total_seconds": 9.774,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 9.683,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 9.683,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "manual_retries": 0,
+    "status": "completed",
+    "generation": {
+      "run_id": "2e65c3a3-275c-4ec7-bf20-46e3a4c375f0",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T13:18:31.006049+00:00",
+      "terminal_at": "2026-10-29T13:20:05.382625+00:00",
+      "total_seconds": 94.377,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 1.136,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "completed",
+          "seconds": 28.651,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "nonfunctional": {
+          "status": "completed",
+          "seconds": 18.611,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "security": {
+          "status": "completed",
+          "seconds": 18.643,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "data": {
+          "status": "completed",
+          "seconds": 0.026,
+          "models": []
+        },
+        "network": {
+          "status": "completed",
+          "seconds": 0.025,
+          "models": []
+        },
+        "compliance": {
+          "status": "completed",
+          "seconds": 8.359,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "architecture": {
+          "status": "completed",
+          "seconds": 4.869,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "threats": {
+          "status": "completed",
+          "seconds": 1.225,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "risks": {
+          "status": "completed",
+          "seconds": 1.188,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "scenarios": {
+          "status": "completed",
+          "seconds": 1.614,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "verification": {
+          "status": "completed",
+          "seconds": 6.235,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "glossary": {
+          "status": "completed",
+          "seconds": 0.87,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "sdlc": {
+          "status": "completed",
+          "seconds": 2.539,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 28.651,
+      "completed_srs": true,
+      "human_approval": false
+    },
+    "error": null,
+    "pdf_pages": 5,
+    "version_id": "5b3705de-97b3-4e92-b748-6a8d14aa787c",
+    "content_hash": "858db8978f93fa4a7076061d301d331e44788750a47ec74ce3567c442a408577",
+    "quality": "needs_review",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "pdf": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Four Examples\\2 - Email Security Gateway SRS.pdf",
+    "total_wall_seconds": 107.187,
+    "source_unchanged": true
+  },
+  {
+    "case": "endpoint",
+    "project_id": "8750ab53-b713-41de-ad19-0d2dff0d23fd",
+    "label": "initial",
+    "started_local": "2026-10-29T18:50:16.198941+05:30",
+    "analysis": {
+      "run_id": "3578c43e-5e8a-488b-95e1-ba13a536b168",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T13:20:08.126242+00:00",
+      "terminal_at": "2026-10-29T13:20:15.354856+00:00",
+      "total_seconds": 7.229,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 7.141,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 7.141,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "manual_retries": 0,
+    "status": "failed",
+    "generation": {
+      "run_id": "6c4f18dd-ce55-4a40-8b06-21a1443c7f56",
+      "status": "failed",
+      "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-001:missing_functional_behavior_monitoring;FR-003:unrequested_product_logging_use_test_instrumented_state_capture",
+      "created_at": "2026-10-29T13:20:16.201938+00:00",
+      "terminal_at": "2026-10-29T13:20:49.836565+00:00",
+      "total_seconds": 33.635,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 1.331,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "failed",
+          "seconds": 32.176
+        }
+      },
+      "maximum_section_seconds": 32.176,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-001:missing_functional_behavior_monitoring;FR-003:unrequested_product_logging_use_test_instrumented_state_capture",
+    "total_wall_seconds": 42.219,
+    "source_unchanged": true
+  },
+  {
+    "case": "firewall",
+    "project_id": "55cb98bb-c27f-445f-a847-79a53076b9ef",
+    "label": "initial",
+    "started_local": "2026-10-29T18:51:12.520132+05:30",
+    "analysis": {
+      "run_id": "fc4250c0-45b0-40e7-a1df-d34258fdfc55",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T13:20:50.376188+00:00",
+      "terminal_at": "2026-10-29T13:21:12.504189+00:00",
+      "total_seconds": 22.128,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 22.043,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        }
+      },
+      "maximum_section_seconds": 22.043,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "manual_retries": 0,
+    "status": "failed",
+    "generation": {
+      "run_id": "8eabda13-c417-4713-b5b7-d49c6a4791d1",
+      "status": "failed",
+      "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-002:missing_functional_behavior_firewall;E-002:missing_functional_behavior_modification;E-002:missing_functional_behavior_review;FR-001:unsupported_response_time_commitment;functional:unsupported_quantitative_commitment",
+      "created_at": "2026-10-29T13:21:12.535644+00:00",
+      "terminal_at": "2026-10-29T13:21:50.098410+00:00",
+      "total_seconds": 37.563,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 4.325,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "failed",
+          "seconds": 33.16
+        }
+      },
+      "maximum_section_seconds": 33.16,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-002:missing_functional_behavior_firewall;E-002:missing_functional_behavior_modification;E-002:missing_functional_behavior_review;FR-001:unsupported_response_time_commitment;functional:unsupported_quantitative_commitment",
+    "total_wall_seconds": 60.313,
+    "source_unchanged": true
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "case": "firewall",
+  "project_id": "55cb98bb-c27f-445f-a847-79a53076b9ef",
+  "label": "initial",
+  "started_local": "2026-10-29T18:51:12.520132+05:30",
+  "analysis": {
+    "run_id": "fc4250c0-45b0-40e7-a1df-d34258fdfc55",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T13:20:50.376188+00:00",
+    "terminal_at": "2026-10-29T13:21:12.504189+00:00",
+    "total_seconds": 22.128,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 22.043,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      }
+    },
+    "maximum_section_seconds": 22.043,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "8eabda13-c417-4713-b5b7-d49c6a4791d1",
+    "status": "failed",
+    "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-002:missing_functional_behavior_firewall;E-002:missing_functional_behavior_modification;E-002:missing_functional_behavior_review;FR-001:unsupported_response_time_commitment;functional:unsupported_quantitative_commitment",
+    "created_at": "2026-10-29T13:21:12.535644+00:00",
+    "terminal_at": "2026-10-29T13:21:50.098410+00:00",
+    "total_seconds": 37.563,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 4.325,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 33.16
+      }
+    },
+    "maximum_section_seconds": 33.16,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-002:missing_functional_behavior_firewall;E-002:missing_functional_behavior_modification;E-002:missing_functional_behavior_review;FR-001:unsupported_response_time_commitment;functional:unsupported_quantitative_commitment",
+  "total_wall_seconds": 60.313,
+  "source_unchanged": true
+}

@@ -1,0 +1,108 @@
+{
+  "run_id": "32395ae8-d715-4310-9f3e-3f3a3306fe9e",
+  "status": "completed",
+  "error": null,
+  "created_at": "2026-10-29T03:07:25.340308+00:00",
+  "terminal_at": "2026-10-29T03:08:26.366312+00:00",
+  "total_seconds": 61.026,
+  "sections": {
+    "introduction": {
+      "status": "reused",
+      "seconds": 0,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "reused",
+      "seconds": 0,
+      "models": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "nonfunctional": {
+      "status": "reused",
+      "seconds": 0,
+      "models": []
+    },
+    "security": {
+      "status": "completed",
+      "seconds": 30.261,
+      "models": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "data": {
+      "status": "completed",
+      "seconds": 0.023,
+      "models": []
+    },
+    "network": {
+      "status": "completed",
+      "seconds": 0.02,
+      "models": []
+    },
+    "compliance": {
+      "status": "completed",
+      "seconds": 10.32,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "architecture": {
+      "status": "completed",
+      "seconds": 3.509,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "threats": {
+      "status": "completed",
+      "seconds": 2.065,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "risks": {
+      "status": "completed",
+      "seconds": 1.879,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "scenarios": {
+      "status": "completed",
+      "seconds": 2.08,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "verification": {
+      "status": "completed",
+      "seconds": 5.193,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "glossary": {
+      "status": "completed",
+      "seconds": 1.768,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "sdlc": {
+      "status": "completed",
+      "seconds": 3.452,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    }
+  },
+  "maximum_section_seconds": 30.261,
+  "completed_srs": true,
+  "human_approval": false,
+  "version_id": "0b0c29a0-be8a-41fe-aae9-ba35746ba3d9",
+  "quality": "needs_review",
+  "pdf_export_seconds": 0.906
+}

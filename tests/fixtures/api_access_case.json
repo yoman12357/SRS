@@ -1,0 +1,4 @@
+{
+  "name": "Secure University API Access Management System",
+  "description": "Design a secure university API access management system that controls access to internal APIs used by student portals, administrative applications, research systems, and campus services. Authorized administrators should be able to register APIs, define access permissions, approve or revoke application access, and review active API clients. The system should authenticate API clients, enforce role- or policy-based access, detect repeated failed authentication and unauthorized API requests, generate security alerts, and maintain audit logs of access decisions, permission changes, and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+}

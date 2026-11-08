@@ -1,0 +1,1096 @@
+{
+  "id": "c878ade4-70f8-4d5b-b9ba-aeb1833177c2",
+  "project_id": "6fba6a71-7322-4882-984c-b08c1c2cd226",
+  "kind": "generate",
+  "status": "completed",
+  "input_hash": "b2bbb64366fff852b6559a2736ef34719cde36e510bacd2534ac1c8ed9d448ef",
+  "events": [
+    {
+      "at": "2026-10-29T13:35:24.452798+00:00",
+      "agent": "introduction",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:35:25.555736+00:00",
+      "agent": "introduction",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.109,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "introduction_projection_version": "source-fact-introduction-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:35:25.569683+00:00",
+      "agent": "functional",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:35:59.862933+00:00",
+      "agent": "functional",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 3,
+      "elapsed_seconds": 34.281,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "continued_rejected_author": true,
+      "base_repair_used": true,
+      "repaired_test_keys": [
+        "E-003_test_2"
+      ],
+      "repaired_source_ids": [],
+      "compact_requirements_version": "source-batch-1.2",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:35:59.876457+00:00",
+      "agent": "nonfunctional",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:20.868782+00:00",
+      "agent": "nonfunctional",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 3,
+      "elapsed_seconds": 21.0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "continued_rejected_author": true,
+      "base_repair_used": true,
+      "repaired_test_keys": [
+        "E-004_test_2"
+      ],
+      "repaired_source_ids": [],
+      "compact_requirements_version": "source-batch-1.2",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:20.879099+00:00",
+      "agent": "security",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:20.898463+00:00",
+      "agent": "security",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.2",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:20.909625+00:00",
+      "agent": "data",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:20.929080+00:00",
+      "agent": "data",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.2",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:20.939288+00:00",
+      "agent": "network",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:20.958719+00:00",
+      "agent": "network",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.2",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:20.969997+00:00",
+      "agent": "compliance",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:28.949538+00:00",
+      "agent": "compliance",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 7.985,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:28.962956+00:00",
+      "agent": "architecture",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:33.512978+00:00",
+      "agent": "architecture",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 2,
+      "elapsed_seconds": 4.547,
+      "architecture_stages": [
+        {
+          "stage": "components",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 2.078,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "internal_interactions",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 2.438,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        }
+      ],
+      "architecture_layout_version": "source-backed-layout-1.1",
+      "source_paths_compiled": true,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:33.526604+00:00",
+      "agent": "threats",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:34.804550+00:00",
+      "agent": "threats",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.281,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:34.815548+00:00",
+      "agent": "risks",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:36.082737+00:00",
+      "agent": "risks",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.266,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:36.095734+00:00",
+      "agent": "scenarios",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:36.840837+00:00",
+      "agent": "scenarios",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 0.75,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "scenario_projection_version": "canonical-scenarios-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:36.853073+00:00",
+      "agent": "verification",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:40.539737+00:00",
+      "agent": "verification",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 3.688,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "verification_projection_version": "canonical-criteria-verification-1.1",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:40.553903+00:00",
+      "agent": "glossary",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:41.584841+00:00",
+      "agent": "glossary",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.031,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:41.597664+00:00",
+      "agent": "sdlc",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:36:53.937725+00:00",
+      "agent": "sdlc",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 2,
+      "elapsed_seconds": 12.344,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "primary_attempts": 1,
+      "correction_attempts": 1,
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": true,
+      "primary_failure_code": "section_validation_failed:sdlc:work_groups_must_not_duplicate_requirements",
+      "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+      "lifecycle_projection_version": "source-linked-lifecycle-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:36:54.018261+00:00",
+      "agent": "document",
+      "state": "completed",
+      "version_id": "b2ce4c51-b17a-439e-bd82-11965df6770b"
+    }
+  ],
+  "checkpoints": {
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": [
+        "How will device-level policies be enforced on personal devices?",
+        "What specific authentication protocols (e.g., 802.1X) are required for internal access?",
+        "How will repeated authentication failures trigger alerts or automated actions?",
+        "What is the retention period and access control for audit logs?"
+      ]
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "statement": "The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user in an academic building attempts to connect to the campus Wi-Fi",
+              "when": "The user selects the university Wi-Fi network and enters credentials",
+              "then": "The system establishes a wireless connection for the user",
+              "method": "test",
+              "observable_evidence": "Test capture of successful device association and IP assignment"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "statement": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user with invalid credentials repeatedly attempts to authenticate",
+              "when": "The system processes the authentication requests",
+              "then": "The system detects repeated failure and generates a security alert",
+              "method": "test",
+              "observable_evidence": "Test capture of generated security alert in real-time"
+            },
+            {
+              "given": "A device attempts to access internal university resources without proper authorization",
+              "when": "The system evaluates the request against role-based policies",
+              "then": "The system blocks unauthorized access.",
+              "method": "test",
+              "observable_evidence": "Test capture of blocked session and before/after state of device connectivity"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "statement": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator accesses the management interface",
+              "when": "The administrator configures a new access policy for guest users",
+              "then": "The system applies the policy and updates device access rules",
+              "method": "test",
+              "observable_evidence": "Test capture of policy configuration and applied rule state"
+            },
+            {
+              "given": "An administrator initiates a revocation request for a connected device",
+              "when": "The system processes the revocation command",
+              "then": "The system processes the revocation command",
+              "method": "test",
+              "observable_evidence": "Test capture of permission state"
+            },
+            {
+              "given": "An administrator requests audit log inspection",
+              "when": "The administrator accesses the logs interface",
+              "then": "The system returns a list of recent access events with timestamps and user identifiers",
+              "method": "inspection",
+              "observable_evidence": "Test capture of returned audit log entries"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "statement": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A university employee uses a personally owned device that has been pre-approved by the IT department",
+              "when": "The device connects to the campus wireless network",
+              "then": "The system shall authenticate the device using university-managed credentials and enforce security policies consistent with approved device configurations",
+              "method": "test",
+              "observable_evidence": "Test capture of device authentication response and policy enforcement state"
+            },
+            {
+              "given": "A personal device is not pre-approved by the IT department",
+              "when": "The device attempts to connect to the campus wireless network",
+              "then": "The device is denied access to the campus wireless network",
+              "method": "test",
+              "observable_evidence": "Test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'approved personal devices' including hardware, OS versions, and security posture thresholds",
+            "Thresholds for scalability under concurrent device load across campus locations",
+            "Mechanism for real-time monitoring of device health and compliance status during operation"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-003",
+        "NFR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How will device-level policies be enforced on personal devices?",
+        "What specific authentication protocols (e.g., 802.1X) are required for internal access?",
+        "How will repeated authentication failures trigger alerts or automated actions?",
+        "What is the retention period and access control for audit logs?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Wireless Access Gateway",
+          "detail": "Proposed logical owner for FR-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-001"
+          ],
+          "component_name": "Wireless Access Gateway",
+          "responsibility": "The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        },
+        {
+          "title": "Centralized Authentication Engine",
+          "detail": "Proposed logical owner for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "component_name": "Centralized Authentication Engine",
+          "responsibility": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Policy and Device Management Interface",
+          "detail": "Proposed logical owner for FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003",
+            "NFR-001"
+          ],
+          "component_name": "Policy and Device Management Interface",
+          "responsibility": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs. The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Wireless Access Gateway",
+          "to_component": "Policy and Device Management Interface",
+          "data_or_action": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Policy and Device Management Interface",
+          "to_component": "Wireless Access Gateway",
+          "data_or_action": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "untrusted_component": "Wireless Access Gateway",
+          "trusted_component": "Policy and Device Management Interface",
+          "enforcement": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: A user in an academic building attempts to connect to the campus Wi-Fi",
+            "When: The user selects the university Wi-Fi network and enters credentials"
+          ],
+          "expected_result": "Expected: The system establishes a wireless connection for the user",
+          "evidence_to_record": "Evidence: Test capture of successful device association and IP assignment",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A user with invalid credentials repeatedly attempts to authenticate",
+            "When: The system processes the authentication requests"
+          ],
+          "expected_result": "Expected: The system detects repeated failure and generates a security alert",
+          "evidence_to_record": "Evidence: Test capture of generated security alert in real-time",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A device attempts to access internal university resources without proper authorization",
+            "When: The system evaluates the request against role-based policies"
+          ],
+          "expected_result": "Expected: The system blocks unauthorized access.",
+          "evidence_to_record": "Evidence: Test capture of blocked session and before/after state of device connectivity",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator accesses the management interface",
+            "When: The administrator configures a new access policy for guest users"
+          ],
+          "expected_result": "Expected: The system applies the policy and updates device access rules",
+          "evidence_to_record": "Evidence: Test capture of policy configuration and applied rule state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator initiates a revocation request for a connected device",
+            "When: The system processes the revocation command"
+          ],
+          "expected_result": "Expected: The system processes the revocation command",
+          "evidence_to_record": "Evidence: Test capture of permission state",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator requests audit log inspection",
+            "When: The administrator accesses the logs interface"
+          ],
+          "expected_result": "Expected: The system returns a list of recent access events with timestamps and user identifiers",
+          "evidence_to_record": "Evidence: Test capture of returned audit log entries",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A university employee uses a personally owned device that has been pre-approved by the IT department",
+            "When: The device connects to the campus wireless network"
+          ],
+          "expected_result": "Expected: The system shall authenticate the device using university-managed credentials and enforce security policies consistent with approved device configurations",
+          "evidence_to_record": "Evidence: Test capture of device authentication response and policy enforcement state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A personal device is not pre-approved by the IT department",
+            "When: The device attempts to connect to the campus wireless network"
+          ],
+          "expected_result": "Expected: The device is denied access to the campus wireless network",
+          "evidence_to_record": "Evidence: Test capture of the resulting state",
+          "test_type": "negative"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Access control",
+          "detail": "Rules and enforcement governing which principals may perform actions on resources.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "The selection of Agile as the required model is based on a uniform score of 40 across all candidates, with no differentiating input evidence provided to favor one methodology over another. Given the absence of explicit factors such as budget, delivery timelines, failure consequences, feedback mechanisms, legacy systems, regulation, schedule constraints, stability needs, uncertainty levels, or verification requirements, no candidate model can be objectively ranked for suitability. The equal scores indicate a lack of evidence to support any specific lifecycle model. As a result, Agile is provisionally selected due to its iterative nature and alignment with dynamic security and access control requirements—particularly in environments where rapid feedback and adaptation are needed. However, this decision remains provisional pending resolution of the unknown factors listed. Without clear input on these factors, no model can be definitively justified beyond equal suitability. The existing requirements emphasize real-time monitoring, role-based access, policy configuration, and audit log inspection—all of which benefit from iterative development and continuous feedback loops inherent in Agile. Nevertheless, without evidence to support or exclude any model, the selection remains unvalidated and subject to reevaluation if new data becomes available.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.; FR-002: The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.; FR-003: Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.; NFR-001: The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.; FR-002: The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.; FR-003: Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.; NFR-001: The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "In an authorized isolated test environment, execute TEST-001: Given: A user in an academic building attempts to connect to the campus Wi-Fi When: The user selects the university Wi-Fi network and enters credentials Expected: The system establishes a wireless connection for the user",
+            "In an authorized isolated test environment, execute TEST-002: Given: A user with invalid credentials repeatedly attempts to authenticate When: The system processes the authentication requests Expected: The system detects repeated failure and generates a security alert",
+            "In an authorized isolated test environment, execute TEST-003: Given: A device attempts to access internal university resources without proper authorization When: The system evaluates the request against role-based policies Expected: The system blocks unauthorized access.",
+            "In an authorized isolated test environment, execute TEST-004: Given: An administrator accesses the management interface When: The administrator configures a new access policy for guest users Expected: The system applies the policy and updates device access rules",
+            "In an authorized isolated test environment, execute TEST-005: Given: An administrator initiates a revocation request for a connected device When: The system processes the revocation command Expected: The system processes the revocation command",
+            "In an authorized isolated test environment, execute TEST-006: Given: An administrator requests audit log inspection When: The administrator accesses the logs interface Expected: The system returns a list of recent access events with timestamps and user identifiers",
+            "In an authorized isolated test environment, execute TEST-007: Given: A university employee uses a personally owned device that has been pre-approved by the IT department When: The device connects to the campus wireless network Expected: The system shall authenticate the device using university-managed credentials and enforce security policies consistent with approved device configurations",
+            "In an authorized isolated test environment, execute TEST-008: Given: A personal device is not pre-approved by the IT department When: The device attempts to connect to the campus wireless network Expected: The device is denied access to the campus wireless network",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "quality": {
+      "validation_policy_version": "source-grounding-1.15",
+      "status": "needs_review",
+      "checks_passed": 21,
+      "checks_total": 21,
+      "findings": [
+        {
+          "code": "human_semantic_review_required",
+          "severity": "warning",
+          "section": "document",
+          "item_id": "",
+          "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+        }
+      ],
+      "evidence_coverage": {
+        "E-001": [
+          "FR-001"
+        ],
+        "E-002": [
+          "FR-002"
+        ],
+        "E-003": [
+          "FR-003"
+        ],
+        "E-004": [
+          "NFR-001"
+        ]
+      },
+      "traceability": [
+        {
+          "requirement_id": "FR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-001"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-002",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-002",
+            "TEST-003"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-003",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-004",
+            "TEST-005",
+            "TEST-006"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-001",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-007",
+            "TEST-008"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        }
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T13:35:24.381949+00:00",
+  "updated_at": "2026-10-29T13:36:54.030470+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "case": "email",
+  "project_id": "d5fb1291-dc04-43c0-8f3c-d9842992da92",
+  "label": "semantic3",
+  "started_local": "2026-10-29T21:51:25.944834+05:30",
+  "analysis": {
+    "run_id": "1072f463-d599-4e80-b22a-a68b5614700f",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T16:21:13.836710+00:00",
+    "terminal_at": "2026-10-29T16:21:25.167186+00:00",
+    "total_seconds": 11.33,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 11.24,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 11.24,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "91079d3b-4ad3-4c31-8560-c6f3f0da1631",
+    "status": "failed",
+    "error": "section_validation_failed:E-002_O03.then: string_too_long;E-002_O05.then: string_too_long",
+    "created_at": "2026-10-29T16:21:25.948324+00:00",
+    "terminal_at": "2026-10-29T16:22:01.497420+00:00",
+    "total_seconds": 35.549,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.321,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 34.112
+      }
+    },
+    "maximum_section_seconds": 34.112,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-002_O03.then: string_too_long;E-002_O05.then: string_too_long",
+  "total_wall_seconds": 48.312,
+  "source_unchanged": true
+}

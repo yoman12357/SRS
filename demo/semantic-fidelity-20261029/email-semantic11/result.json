@@ -1,0 +1,112 @@
+{
+  "case": "email",
+  "project_id": "ff63a4e3-449d-43c7-8552-97ae9adeddf9",
+  "label": "semantic11",
+  "started_local": "2026-10-30T01:09:30.705469+05:30",
+  "analysis": {
+    "run_id": "ac929314-0eef-40b9-b53f-b8db1ce8bc68",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T19:39:18.610979+00:00",
+    "terminal_at": "2026-10-29T19:39:29.892681+00:00",
+    "total_seconds": 11.282,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 11.187,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 11.187,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "e830e91b-6424-4f65-b879-60e7314c3982",
+    "status": "failed",
+    "error": "section_validation_failed:scenarios:interaction_requires_a_primary_flow",
+    "created_at": "2026-10-29T19:39:30.707453+00:00",
+    "terminal_at": "2026-10-29T19:41:29.086707+00:00",
+    "total_seconds": 118.379,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.13,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 79.796,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 12.778,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.029,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.026,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.026,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 8.166,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 5.459,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 1.304,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 1.216,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "failed",
+        "seconds": 8.242
+      }
+    },
+    "maximum_section_seconds": 79.796,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:scenarios:interaction_requires_a_primary_flow",
+  "total_wall_seconds": 130.532,
+  "source_unchanged": true
+}

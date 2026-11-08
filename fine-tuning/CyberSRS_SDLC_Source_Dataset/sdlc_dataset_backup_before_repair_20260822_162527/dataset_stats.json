@@ -1,0 +1,22 @@
+{
+  "target": 300,
+  "generated": 300,
+  "split": {
+    "train": 240,
+    "validation": 30
+  },
+  "method_counts": {
+    "Agile/Scrum": 29,
+    "DevOps": 30,
+    "DevSecOps": 29,
+    "Hybrid": 30,
+    "Incremental": 29,
+    "Iterative/Evolutionary": 31,
+    "Prototyping": 31,
+    "Spiral": 30,
+    "V-Model": 30,
+    "Waterfall": 31
+  },
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "seed": 42
+}

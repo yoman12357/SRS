@@ -1,0 +1,112 @@
+{
+  "case": "firewall",
+  "project_id": "93112cb9-4b6f-4691-ab2e-d3bcafaf3e73",
+  "label": "semantic11",
+  "started_local": "2026-10-30T01:14:01.816709+05:30",
+  "analysis": {
+    "run_id": "29b8eaef-951c-41a2-8c2d-0ea121acfad6",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T19:43:37.702964+00:00",
+    "terminal_at": "2026-10-29T19:44:00.127584+00:00",
+    "total_seconds": 22.425,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 22.34,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      }
+    },
+    "maximum_section_seconds": 22.34,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "305fd0ed-9cf7-4513-8bc1-4a5f258bc466",
+    "status": "failed",
+    "error": "scenarios:source_actor_requires_clarification",
+    "created_at": "2026-10-29T19:44:01.819707+00:00",
+    "terminal_at": "2026-10-29T19:45:45.122128+00:00",
+    "total_seconds": 103.302,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 4.871,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 65.751,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 16.889,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.027,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.028,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.028,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 7.505,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 5.475,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 1.235,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 1.255,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "failed",
+        "seconds": 0.015
+      }
+    },
+    "maximum_section_seconds": 65.751,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "scenarios:source_actor_requires_clarification",
+  "total_wall_seconds": 128.531,
+  "source_unchanged": true
+}

@@ -1,0 +1,86 @@
+{
+  "id": "0be3abbd-5e01-433f-a5a9-4e6ad1e62410",
+  "project_id": "d0094aa2-597b-499f-81f9-70eafd6892ea",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "3ce14e2fdb26cfd26e7de87ac626b5ee7f20ea91fe017c63551c94c108620940",
+  "events": [
+    {
+      "at": "2026-10-29T16:45:49.483919+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-29T16:46:00.471565+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 10.953,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Email Security Gateway Requirements",
+      "domain": "security",
+      "supported": true,
+      "summary": "A secure email security gateway shall inspect incoming and outgoing email traffic to detect phishing, malicious attachments, spoofed messages, and suspicious links; it shall quarantine potentially harmful emails and generate alerts for authorized administrators to review and release quarantined messages. The system shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring security events.",
+      "stakeholders": [
+        "university administrators",
+        "IT staff",
+        "faculty",
+        "students"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security",
+            "nonfunctional"
+          ],
+          "explanation": "The system must protect users from phishing, malicious attachments, spoofed messages, and suspicious links as a core security function."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Email traffic inspection and quarantine actions are required to detect threats and allow administrator review of quarantined content."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "security",
+            "functional"
+          ],
+          "explanation": "Audit logs and integration with identity systems support accountability and access control for email security operations."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional"
+          ],
+          "explanation": "The system must be secure, reliable, scalable, and manageable to support university-wide deployment."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T16:45:49.402143+00:00",
+  "updated_at": "2026-10-29T16:46:00.483565+00:00"
+}

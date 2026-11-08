@@ -1,0 +1,35 @@
+{
+  "case": "configuration",
+  "label": "final",
+  "source_profile": "source-profile.json",
+  "user_folder": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Backup and Configuration - 30 Oct 2026\\Secure Network Configuration Management System",
+  "human_approval": false,
+  "project_id": "d39150eb-f59a-4d4c-9be6-0193cca63193",
+  "status": "failed",
+  "error": "section_validation_failed:E-004_O01:criterion_must_observe_result_not_display_initiation",
+  "generation": {
+    "run_id": "87aaa6dc-129a-498d-9563-e2fefe993bf6",
+    "status": "failed",
+    "error": "section_validation_failed:E-004_O01:criterion_must_observe_result_not_display_initiation",
+    "created_at": "2026-10-30T03:19:28.679199+00:00",
+    "terminal_at": "2026-10-30T03:20:32.687779+00:00",
+    "total_seconds": 64.009,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 4.348,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 59.54
+      }
+    },
+    "maximum_section_seconds": 59.54,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "wall_seconds": 64.547
+}

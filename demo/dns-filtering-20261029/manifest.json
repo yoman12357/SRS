@@ -1,0 +1,10 @@
+{
+  "project_id": "359e7293-04dd-4a32-9e11-82ee2a09414a",
+  "description": "Design a secure DNS and web-access filtering system for a university that protects students, faculty, staff, and administrative users from malicious or unauthorized internet destinations. The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected. The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices. The solution should be secure, scalable, reliable, and manageable.",
+  "generation_runs": [
+    "906f9bb1-5e41-4453-8e5f-c83506f650b6",
+    "c0704c0f-cf81-4f2a-87f6-4280ba8dd189",
+    "defa0366-2d5a-4cf7-a5b0-9351fe2812c0"
+  ],
+  "analysis_run_id": "556c0a60-50df-40f2-92dd-55a43a40eda7"
+}

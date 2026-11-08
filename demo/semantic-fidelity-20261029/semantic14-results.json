@@ -1,0 +1,170 @@
+[
+  {
+    "case": "wifi",
+    "project_id": "ed74b2bb-13c7-4d3d-bad3-4f5b92ad6e9f",
+    "label": "semantic14",
+    "started_local": "2026-10-30T01:46:28.431617+05:30",
+    "analysis": {
+      "run_id": "3171740b-f083-4600-a31b-661b63b7e2ab",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T20:16:14.331332+00:00",
+      "terminal_at": "2026-10-29T20:16:27.712015+00:00",
+      "total_seconds": 13.381,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 13.286,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 13.286,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "manual_retries": 0,
+    "status": "failed",
+    "generation": {
+      "run_id": "9afb46c4-2c72-4387-896c-709905ea9af1",
+      "status": "failed",
+      "error": "scenarios:source_actor_requires_clarification",
+      "created_at": "2026-10-29T20:16:28.437624+00:00",
+      "terminal_at": "2026-10-29T20:18:24.816777+00:00",
+      "total_seconds": 116.379,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 1.36,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "completed",
+          "seconds": 83.363,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest",
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "nonfunctional": {
+          "status": "completed",
+          "seconds": 7.97,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "security": {
+          "status": "completed",
+          "seconds": 0.061,
+          "models": []
+        },
+        "data": {
+          "status": "completed",
+          "seconds": 0.039,
+          "models": []
+        },
+        "network": {
+          "status": "completed",
+          "seconds": 0.044,
+          "models": []
+        },
+        "compliance": {
+          "status": "completed",
+          "seconds": 4.123,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "architecture": {
+          "status": "completed",
+          "seconds": 15.952,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "threats": {
+          "status": "completed",
+          "seconds": 1.612,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "risks": {
+          "status": "completed",
+          "seconds": 1.548,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "scenarios": {
+          "status": "failed",
+          "seconds": 0.016
+        }
+      },
+      "maximum_section_seconds": 83.363,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "error": "scenarios:source_actor_requires_clarification",
+    "total_wall_seconds": 130.719,
+    "source_unchanged": true
+  },
+  {
+    "case": "email",
+    "project_id": "d06948dd-4b0f-4a96-9e40-263c75d845c8",
+    "label": "semantic14",
+    "started_local": "2026-10-30T01:48:33.135279+05:30",
+    "analysis": {
+      "run_id": "886b7bc8-df65-4577-a0b0-c952847418ab",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-29T20:18:25.060436+00:00",
+      "terminal_at": "2026-10-29T20:18:31.604601+00:00",
+      "total_seconds": 6.544,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 6.438,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 6.438,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "manual_retries": 0,
+    "status": "failed",
+    "generation": {
+      "run_id": "eaeb6967-8dec-4a48-9c24-80cd90d852e5",
+      "status": "failed",
+      "error": "section_validation_failed:FR-004:unconfirmed_automatic_response",
+      "created_at": "2026-10-29T20:18:33.138662+00:00",
+      "terminal_at": "2026-10-29T20:19:12.473476+00:00",
+      "total_seconds": 39.335,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 1.37,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "failed",
+          "seconds": 37.882
+        }
+      },
+      "maximum_section_seconds": 37.882,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "error": "section_validation_failed:FR-004:unconfirmed_automatic_response",
+    "total_wall_seconds": 48.265,
+    "source_unchanged": true
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "purpose": "Separate real-provider schema diagnostic, not a generated SRS or human approval",
+  "content": {
+    "access": {
+      "then": "Deny for a role without permission"
+    },
+    "detection": {
+      "then": "Recognize repeated authentication failure"
+    }
+  },
+  "provenance": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "correction_policy_version": "bounded-corrective-history-1.0",
+    "attempts": 1,
+    "elapsed_seconds": 5.078,
+    "input_tokens": null,
+    "output_tokens": null,
+    "done_reason": "complete_json"
+  }
+}

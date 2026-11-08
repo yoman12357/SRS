@@ -1,0 +1,7 @@
+{
+  "requested_client_date": "2026-10-30",
+  "client_timezone": "Asia/Calcutta",
+  "mode": "Running site as-is; no service restart or product edits",
+  "manual_retries": 0,
+  "note": "Source snapshots describe files on disk, not an attestation of loaded server modules. API run events and private model audit retain actual request evidence."
+}

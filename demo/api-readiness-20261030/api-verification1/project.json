@@ -1,0 +1,61 @@
+{
+  "id": "c13979ef-bf80-4f30-a09b-58c4969f2c2e",
+  "name": "API access management system",
+  "description": "Design a secure university API access management system that controls access to internal APIs used by student portals, administrative applications, research systems, and campus services. Authorized administrators should be able to register APIs, define access permissions, approve or revoke application access, and review active API clients. The system should authenticate API clients, enforce role- or policy-based access, detect repeated failed authentication and unauthorized API requests, generate security alerts, and maintain audit logs of access decisions, permission changes, and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": {
+    "title": "Secure University API Access Management",
+    "domain": "security",
+    "supported": true,
+    "summary": "A secure university API access management system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services. The system shall authenticate API clients, enforce role- or policy-based access, detect repeated failed authentication and unauthorized requests, generate security alerts, and maintain audit logs of access decisions and administrator actions.",
+    "stakeholders": [
+      "university administrators",
+      "API developers",
+      "security officers"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security",
+          "nonfunctional"
+        ],
+        "explanation": "The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional"
+        ],
+        "explanation": "Authorized administrators shall be able to register APIs, define access permissions, approve or revoke application access, and review active API clients."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "requirement",
+        "sections": [
+          "security",
+          "nonfunctional",
+          "functional"
+        ],
+        "explanation": "The system shall authenticate API clients, enforce role- or policy-based access, detect repeated failed authentication and unauthorized requests, generate security alerts, and maintain audit logs of access decisions and administrator actions."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "nonfunctional"
+        ],
+        "explanation": "The platform shall provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": []
+  },
+  "created_at": "2026-10-30T03:51:38.601130+00:00",
+  "updated_at": "2026-10-30T03:51:51.078698+00:00",
+  "reference_hashes": []
+}

@@ -1,0 +1,159 @@
+{
+  "project_id": "359e7293-04dd-4a32-9e11-82ee2a09414a",
+  "run_id": "defa0366-2d5a-4cf7-a5b0-9351fe2812c0",
+  "version_id": "c599ff2d-80ba-4634-bed1-6be9c6e60aa4",
+  "generation_seconds": 107.266,
+  "completed_sections": 14,
+  "reused_sections": 0,
+  "section_seconds": {
+    "introduction": 4.89,
+    "functional": 27.953,
+    "nonfunctional": 20.75,
+    "security": 0.015,
+    "data": 21.813,
+    "network": 0.015,
+    "compliance": 7.062,
+    "architecture": 10.297,
+    "threats": 1.532,
+    "risks": 1.515,
+    "scenarios": 1.281,
+    "verification": 6.203,
+    "glossary": 0.937,
+    "sdlc": 2.75
+  },
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 22,
+    "checks_total": 22,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002"
+      ],
+      "E-003": [
+        "FR-003"
+      ],
+      "E-004": [
+        "DR-001"
+      ],
+      "E-005": [
+        "NFR-001"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-002",
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001",
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-004",
+          "TEST-005",
+          "TEST-006"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-005"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-007",
+          "TEST-008",
+          "TEST-009",
+          "TEST-010"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "DR-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-011",
+          "TEST-012",
+          "TEST-013",
+          "TEST-014"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "source_unchanged": true,
+  "human_reviews": [],
+  "models_used": [
+    "cybersrs-qwen3-4b-ft:latest",
+    "qwen3:4b-instruct-2507-q4_K_M"
+  ],
+  "sdlc": "Agile",
+  "content_hash": "bad6625ad3214c7431f456a00a11950c8c3cc765d7a5a6c79f6c6e95ae9ab581",
+  "pdf_pages": 26
+}

@@ -1,0 +1,3950 @@
+{
+  "origin": "C:\\Users\\Aryan Bokolia\\Desktop\\NITK\\sem 5\\Projects\\cyber srs",
+  "files": [
+    {
+      "path": "fine-tuning/build_dataset.py",
+      "bytes": 36769,
+      "sha256": "3505d9785f88d87414c70765454cad29fe63f672fccc6ce2e26aaa272d982816"
+    },
+    {
+      "path": "fine-tuning/build_srs_dataset.py",
+      "bytes": 22680,
+      "sha256": "32a614bd3d1ee58c6abaa9e482d84275625a7b6e222b4a8541fd30a25472b012"
+    },
+    {
+      "path": "fine-tuning/build_srs_dataset_4chunks.py",
+      "bytes": 13056,
+      "sha256": "3797011846d04db0b05abe152f18e7b577499ca957b0b98fd117281437df54a2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/01_Governance_Risk_Compliance/001_NIST_CSF_2.0.pdf",
+      "bytes": 1518858,
+      "sha256": "3c31f46fee98cac0c4323453e5109291a213b4de7fef8c058af9bf67f717433c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/01_Governance_Risk_Compliance/002_NIST_SP_800-53r5.pdf",
+      "bytes": 6073678,
+      "sha256": "fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/01_Governance_Risk_Compliance/008_NIST_SP_800-30r1.pdf",
+      "bytes": 826897,
+      "sha256": "f214087f0bdb35932a28c16eb93932a33c67a6edfb5e6f1638866bd201c98e04"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/01_Governance_Risk_Compliance/009_NIST_SP_800-37r2.pdf",
+      "bytes": 2270327,
+      "sha256": "4f75e1136bb905a654f1bcd9eefefb4108f47597276ee5eec0688f6d96f6a01d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/01_Governance_Risk_Compliance/010_NIST_SP_800-40r4.pdf",
+      "bytes": 562944,
+      "sha256": "351f4a828d6c0bc8bf98f25ba3f87ec5add0ed8cf8bb4a6e6cb4e7e4a9731833"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/004_NIST_SP_800-63-4.pdf",
+      "bytes": 858054,
+      "sha256": "2f5b107de218a0fc3fe7f7e91b2ece5babb001eda5745b7c568a3cc876002f2d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/005_NIST_SP_800-207.pdf",
+      "bytes": 966908,
+      "sha256": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/036_OWASP_Authentication_Cheat_Sheet.md",
+      "bytes": 38285,
+      "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/038_OWASP_Authorization_Cheat_Sheet.md",
+      "bytes": 32216,
+      "sha256": "e78a10eb9759a1fc7593ba1fc89a05b017e7e795ac16ad5496bdba86138d891f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/045_OWASP_Credential_Stuffing_Prevention_Cheat_Sheet.md",
+      "bytes": 17596,
+      "sha256": "0b09e71e540a88457c3e29f43d5f5d23f6aabc30820ce7eac8bb1809a7982162"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/057_OWASP_Forgot_Password_Cheat_Sheet.md",
+      "bytes": 9566,
+      "sha256": "b10808d3a6653fc72f149d8b60a6f5bc1259575df8264cc34eb7d2ab3083ee47"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/067_OWASP_JSON_Web_Token_Cheat_Sheet.md",
+      "bytes": 21062,
+      "sha256": "b5172f067316198036bed95af9f4e7b89a9f7bfe64be0075442d58f5840b3847"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/081_OWASP_Multifactor_Authentication_Cheat_Sheet.md",
+      "bytes": 32339,
+      "sha256": "0c1de91561bd8b449f5a27033e799c6928df3f24cb48a965994f615671612490"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/085_OWASP_OAuth2_Cheat_Sheet.md",
+      "bytes": 15197,
+      "sha256": "b7c2717110cd913ba5008a6b7aa825bdf8e04acd78378c18708c49c3d14fc8bb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/087_OWASP_Password_Storage_Cheat_Sheet.md",
+      "bytes": 20169,
+      "sha256": "59e6ce03452bb2607e690010487389db388af969d43ce6acb535a3e2f128e14e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/093_OWASP_SAML_Security_Cheat_Sheet.md",
+      "bytes": 30436,
+      "sha256": "181891d7a4b3f18d90a3f902c4b2ae00fb9255f5041427b018dd6002e1a626fc"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/104_OWASP_Session_Management_Cheat_Sheet.md",
+      "bytes": 54326,
+      "sha256": "dd0f44ee671cea7be58ab51e045392e90a4d40509d6b540456dd952a0521e4e4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+      "bytes": 30756,
+      "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC6749_The_OAuth_2_0_Authorization_Framework.txt",
+      "bytes": 163498,
+      "sha256": "f204fc8661d6c92d2ec6e0b54808f961a9ad26e792f57f312d9528335519bd71"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC7523_JSON_Web_Token_JWT_Profile_for_OAuth_2_0_Client_Authentication_and_Authorization_Grants.txt",
+      "bytes": 26459,
+      "sha256": "ae24f77a8fc4338903c805c6ace38def1f23d40194aea87b123b13c5b3d2d915"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC7636_Proof_Key_for_Code_Exchange_by_OAuth_Public_Clients.txt",
+      "bytes": 39482,
+      "sha256": "1972e5d81cbaba7066cfd46374207bc2b4546b085ed5dd9b034e79e023e0ca31"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC8252_OAuth_2_0_for_Native_Apps.txt",
+      "bytes": 49680,
+      "sha256": "4233c0650ec7e7918c20e0fde2dc565f85e2aa2d4c18123e3cd834295c2f68d0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC8414_OAuth_2_0_Authorization_Server_Metadata.txt",
+      "bytes": 53831,
+      "sha256": "16c816e4e0fdbffb7e910ff3017867bf39debe9cb7f52f5cbc508a052ed660e8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC8705_OAuth_2_0_Mutual_TLS_Client_Authentication_and_Certificate_Bound_Access_Tokens.txt",
+      "bytes": 60285,
+      "sha256": "6e45a1ee94c6a6a177a4cb077fe67d74bd70c1218c9362f2db2f153239612414"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC9068_JSON_Web_Token_JWT_Profile_for_OAuth_2_0_Access_Tokens.txt",
+      "bytes": 35141,
+      "sha256": "68d3ff3910c0f2340fd7b93b430e00053da845b6eebe095ebef0c8bfda5e14c5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC9101_The_OAuth_2_0_Authorization_Framework_JWT_Secured_Authorization_Request_JAR.txt",
+      "bytes": 57664,
+      "sha256": "a1400b5b8d27cfabb127325458a88415f83bb04b2ff9e6facbe50b8ef4ea2b60"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC9200_Authentication_and_Authorization_for_Constrained_Environments_Using_the_OAuth_2_0_Framework_ACE_OAuth.txt",
+      "bytes": 186494,
+      "sha256": "92f37f6eaa160c970a4899836b9562eb7050ad3c7bd1187f28c6404e18dca1ba"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/02_Identity_Access_Zero_Trust/RFC9449_OAuth_2_0_Demonstrating_Proof_of_Possession_DPoP.txt",
+      "bytes": 92478,
+      "sha256": "3842c58e1f6043389416023b9bb8d765048266024982fbbd90640e05943f4e13"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC4106_The_Use_of_Galois_Counter_Mode_GCM_in_IPsec_Encapsulating_Security_Payload_ESP.txt",
+      "bytes": 23399,
+      "sha256": "2a0d8b0274cf307156e18708a13e6f9bfd0ed5124dca234b0a1ed1590a5a886a"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC4301_Security_Architecture_for_the_Internet_Protocol.txt",
+      "bytes": 262123,
+      "sha256": "a2411e90515f59665e1059b1bb66d8123bd9e384ccfc8b7ccca65db85d5d7736"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC4302_IP_Authentication_Header.txt",
+      "bytes": 82328,
+      "sha256": "c9de28181a78bb85ec6d1e6bda86da133307310de736632f26aa890e1f08e56b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC4303_IP_Encapsulating_Security_Payload_ESP.txt",
+      "bytes": 114315,
+      "sha256": "d22f9d4120e5645525b63ac7bbf8ef78c334fe003a2c48bf1e25ac25f6e7dc58"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC7296_Internet_Key_Exchange_Protocol_Version_2_IKEv2.txt",
+      "bytes": 354358,
+      "sha256": "b6c1bf3921e85dd3674f427ffcaded0209e1f9718e8d601e2f918371f46329a1"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC7383_Internet_Key_Exchange_Protocol_Version_2_IKEv2_Message_Fragmentation.txt",
+      "bytes": 47354,
+      "sha256": "4815b1deb8e62d2b42d4d38bce9e95e612c389b1e4f8143df40cfd179a61504c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC7427_Signature_Authentication_in_the_Internet_Key_Exchange_Version_2_IKEv2.txt",
+      "bytes": 39041,
+      "sha256": "6a67b6c2b2e4f471350178c77214e329408e315fa9027a4ef5af1af67bb9a4a7"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC8247_Algorithm_Implementation_Requirements_and_Usage_Guidance_for_the_Internet_Key_Exchange_Protocol_Version_2_IKEv2.txt",
+      "bytes": 44739,
+      "sha256": "e1e6a86cfddcb2ebbe39ba1c2cf5516b8cb5f39fd0d53dea468a522a3b7a7250"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/03_VPN_IPsec_Secure_Tunneling/RFC8784_Mixing_Preshared_Keys_in_the_Internet_Key_Exchange_Protocol_Version_2_IKEv2_for_Post_quantum_Security.txt",
+      "bytes": 42663,
+      "sha256": "e12eae449f9a96743d8edb38a944d438815b01592314a46731a8fa380f676538"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/011_NIST_SP_800-52r2.pdf",
+      "bytes": 814862,
+      "sha256": "f9a4dbb9cc6ac6778bb9f4e6be9272c2f14d113f3ad241a295684ac6bd71f257"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/012_NIST_SP_800-57pt1r5.pdf",
+      "bytes": 1688080,
+      "sha256": "cc32391022c1382ac7c91490f6bcc8838e0f889925270da23ef4e800e2ecb7ad"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/021_RFC8446_TLS_1.3.txt",
+      "bytes": 337736,
+      "sha256": "47871bc8820a2c3b6ea89f061055577058862cf543686b82d10131239702b3bd"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/022_RFC9325_TLS_DTLS_Recommendations.txt",
+      "bytes": 96608,
+      "sha256": "e3475381d056bde1eed65252954cce68250168454387f6799b38660806f215bc"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/023_RFC8996_Deprecating_TLS_1.0_1.1.txt",
+      "bytes": 49676,
+      "sha256": "a8250792df7fc533328f2021dbdcce847bbdfbc703de89a93e18ce165d4b8d14"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/024_RFC5246_TLS_1.2.txt",
+      "bytes": 222395,
+      "sha256": "2ebe1b8e651696aeacc8ab3848bedb465505737901ea3b691acf40c392958feb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/025_RFC6066_TLS_Extensions.txt",
+      "bytes": 55079,
+      "sha256": "6a33cceaa5e1b6518923d9d04ffaa738bad0417806b3c94a995484e140f5cbc0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/026_RFC7301_ALPN.txt",
+      "bytes": 17439,
+      "sha256": "ba122aee58871c604c9e98e2c9f81d5042e4056bd497cd41e23ad80fe3123222"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/027_RFC7465_Prohibiting_RC4.txt",
+      "bytes": 8397,
+      "sha256": "0c619db38176f199f739dc696a2d3faabbe658ee82d59621c6d040d0b7cce2dd"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/028_RFC7919_FFDHE_TLS.txt",
+      "bytes": 61937,
+      "sha256": "e7ffd3d8109670aa48d218964ceccf82cc6d2fd36132403c89589434bf8a4d72"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/029_RFC8447_TLS_Registry_Updates.txt",
+      "bytes": 44773,
+      "sha256": "45ea188a76b41dffce472324923dd208b9440732f9003271242131b6f74deb6a"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/030_RFC8701_GREASE.txt",
+      "bytes": 24972,
+      "sha256": "47334d907d7c269e4bcc8257a87116ecae0bf8e0a90ccbd5a8f62ae38e8921e6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/048_OWASP_Cryptographic_Storage_Cheat_Sheet.md",
+      "bytes": 19979,
+      "sha256": "0f4b2e0c298b21cba95463218f3537306a96cfb49d1330e9b0a79389f9b061e6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/062_OWASP_HTTP_Strict_Transport_Security_Cheat_Sheet.md",
+      "bytes": 4017,
+      "sha256": "029644962ed49536c214e3614f6d91b0d89b1f68f36b4df178d75616a4b527fc"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/068_OWASP_Key_Management_Cheat_Sheet.md",
+      "bytes": 23308,
+      "sha256": "5c0081b8f00476e68618e4eb956b5a1968cc4d225c11943fe9ca8f6b148b6229"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/088_OWASP_Pinning_Cheat_Sheet.md",
+      "bytes": 16158,
+      "sha256": "dafef347fa3f09fe9f1ce6adf54f879f23da49bde832b955077256ce4137e542"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/106_OWASP_Transport_Layer_Security_Cheat_Sheet.md",
+      "bytes": 23872,
+      "sha256": "bba73b7235823959a0129c8a15bf06fb95c9211d5ec74d3d267c9ebc0ebd022b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC4252_The_Secure_Shell_SSH_Authentication_Protocol.txt",
+      "bytes": 34268,
+      "sha256": "a36b882cf77b107335d49921b5e955b4ba78e253205dfbce5096ebc0e78bdf14"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC4253_The_Secure_Shell_SSH_Transport_Layer_Protocol.txt",
+      "bytes": 68263,
+      "sha256": "b471173305154f6c66facffcf7a4a25fc5c32765cb30542120be6c20a88f1ed3"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC5280_Internet_X_509_Public_Key_Infrastructure_Certificate_and_Certificate_Revocation_List_CRL_Profile.txt",
+      "bytes": 352580,
+      "sha256": "a2f2628c0a83b873fc4786abd921f9b2c02395954b655d190bf16b831633345d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC6960_X_509_Internet_Public_Key_Infrastructure_Online_Certificate_Status_Protocol_OCSP.txt",
+      "bytes": 82037,
+      "sha256": "7e63ffa1ea2ce2737d9aaf895a63776e9105ddbdfc97b8ae4029e3e825b4cdea"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC7250_Using_Raw_Public_Keys_in_Transport_Layer_Security_TLS_and_Datagram_Transport_Layer_Security_DTLS.txt",
+      "bytes": 38040,
+      "sha256": "834f7695e5258237efd4638f573203b325dbe8bce66a5690f6ff730fb00538dd"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC8442_ECDHE_PSK_with_AES_GCM_and_AES_CCM_Cipher_Suites_for_TLS_1_2_and_DTLS_1_2.txt",
+      "bytes": 14317,
+      "sha256": "4c8ae40be4f9250ee036a122e2c1e535b1a2201b2cbd1a7a0433a03ec87a1730"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC8555_Automatic_Certificate_Management_Environment_ACME.txt",
+      "bytes": 196903,
+      "sha256": "a40983bbf91f2bd3a976d1c16520aa4418c02ba6d6f1ddcaf772881f823b2497"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC8879_TLS_Certificate_Compression.txt",
+      "bytes": 15350,
+      "sha256": "8e30b047e20762ea3de13fb3487d93ee416712b62cab2993900368438c8d20db"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC9180_Hybrid_Public_Key_Encryption.txt",
+      "bytes": 192749,
+      "sha256": "f45a8b7c30231b26d668b1e8168074e5ab514b174d656b67e859895117f1f8f6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/04_TLS_PKI_Cryptography/RFC9525_Service_Identity_in_TLS.txt",
+      "bytes": 69260,
+      "sha256": "ed8116c2435376dffe37ec2ca688c3a8515e36820852b29e0b6cdfbe92abd2c5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC4033_DNS_Security_Introduction_and_Requirements.txt",
+      "bytes": 52445,
+      "sha256": "b6803149a879dff56cbaffcb8c5a1795d2a2d2facdc3400ebd9937e38724e4cd"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC4034_Resource_Records_for_the_DNS_Security_Extensions.txt",
+      "bytes": 63879,
+      "sha256": "6c32963b76808ec4e5f1282b5e13c5216df4670d21e1590bf29af4066f49b355"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC4035_Protocol_Modifications_for_the_DNS_Security_Extensions.txt",
+      "bytes": 130589,
+      "sha256": "8978b120636c69b2080b12768266ec48cd4c0879583310863a62f7c409908084"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC5011_Automated_Updates_of_DNS_Security_DNSSEC_Trust_Anchors.txt",
+      "bytes": 30138,
+      "sha256": "e00a848ca0fb6da1925ea828ea893a746f4d02528d70fedaab44b447c0778ed1"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC5155_DNS_Security_DNSSEC_Hashed_Authenticated_Denial_of_Existence.txt",
+      "bytes": 112140,
+      "sha256": "c3083458ed7ef69360397a7a6ec44374b245e4e5a03725c834c54908cb7f77ff"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC6781_DNSSEC_Operational_Practices_Version_2.txt",
+      "bytes": 161581,
+      "sha256": "ca64c97f753bc68bba1e78048bafa37d4f86dd2432bdd40ebff7b9758a54cf04"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC7671_The_DNS_Based_Authentication_of_Named_Entities_DANE_Protocol_Updates_and_Operational_Guidance.txt",
+      "bytes": 80496,
+      "sha256": "56547af092d9c7b31e3ec89762329953f513e354f23d556d82161773d41f5037"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC7858_Specification_for_DNS_over_Transport_Layer_Security_TLS.txt",
+      "bytes": 42138,
+      "sha256": "872e634c8d5ca4219a90147d356570e7d10046ad12d560e7d8b24f3aa340fdf0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC8484_DNS_Queries_over_HTTPS_DoH.txt",
+      "bytes": 46879,
+      "sha256": "c2cb41fb72bf45935ba7372fef9d83478ed2ecc7f3749ea9a16b52b06ef0f343"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/05_DNS_DNSSEC_Name_Security/RFC8659_DNS_Certification_Authority_Authorization_CAA_Resource_Record.txt",
+      "bytes": 35766,
+      "sha256": "5f0e193e3bfad5273fe8dd1086d060bdec951505d61bfd0111ae832c1f3e293d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/006_NIST_SP_800-41r1.pdf",
+      "bytes": 339557,
+      "sha256": "06642409a8f0dcc9de8725f2d76d6feedea2d4d1faa860c2ee18488863dd1f4f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/013_NIST_SP_800-82r3.pdf",
+      "bytes": 8584345,
+      "sha256": "608f554514d381853e24e0b33123b7080fbd757826f460032690aade63394616"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/015_NIST_SP_800-115.pdf",
+      "bytes": 544047,
+      "sha256": "58e5ed41e5c8ca34ce14fd80b70f118f2c6d613d1647bc307edca30bcc45f063"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/083_OWASP_Network_Segmentation_Cheat_Sheet.md",
+      "bytes": 9244,
+      "sha256": "2b91c4e103da8e53c98e3b6006b23c2bb02e8c55e5805a56f0068c7b31a477d8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC2328_OSPFv2.txt",
+      "bytes": 524985,
+      "sha256": "981690e297fbba9e8ef655802552b5529cb17f1ffe790ad2d55706cc522ff50c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC4271_A_Border_Gateway_Protocol_4_BGP_4.txt",
+      "bytes": 222702,
+      "sha256": "98b851146abcd56ecbb398dd1a818bcde2dcac6fde3d901c423d988f86eaab76"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC4443_Internet_Control_Message_Protocol_ICMPv6_for_the_Internet_Protocol_Version_6_IPv6_Specification.txt",
+      "bytes": 48969,
+      "sha256": "f20d1de8878e1142000bfeaa3ad1b0540fab7653a395cf7b07e81d2da2f650bf"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC4861_Neighbor_Discovery_for_IP_version_6_IPv6.txt",
+      "bytes": 235106,
+      "sha256": "1a4309c117d765a7c0edfcb2297fc90c3c09f0fcae255f15e53b20748bcc09fb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC4862_IPv6_Stateless_Address_Autoconfiguration.txt",
+      "bytes": 72482,
+      "sha256": "6d3d2af5d2f6c9109b4ebd038ff7a6cec56771bbb0b5d8bd520357e03f097aa2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC6105_IPv6_Router_Advertisement_Guard.txt",
+      "bytes": 20817,
+      "sha256": "1f640f5c5b63e33bc7e1318bbb1cdbf1e6497458e189a064b1526effbb41f779"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC6480_An_Infrastructure_to_Support_Secure_Internet_Routing.txt",
+      "bytes": 62127,
+      "sha256": "e0e23a18c0e40ed96c4a169b7323c4157230bb9b1b8906aa4871b8a713921e3e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC6481_A_Profile_for_Resource_Certificate_Repository_Structure.txt",
+      "bytes": 36117,
+      "sha256": "f71a5535b8e1d9113534bb58b6687727cc365c92b47299da7ae54f52c19ffcab"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC6811_BGP_Prefix_Origin_Validation.txt",
+      "bytes": 20082,
+      "sha256": "05d3b68f6750fd1c6090a9132212a31bad711e513765c47ce6f8fe10fd1e68e5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC6980_Security_Implications_of_IPv6_Fragmentation_with_IPv6_Neighbor_Discovery.txt",
+      "bytes": 20849,
+      "sha256": "b4a487ba91fb46dab67334e6adb6fc363555446f9305f7218bfcdd862d962093"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC7113_Implementation_Advice_for_IPv6_Router_Advertisement_Guard_RA_Guard.txt",
+      "bytes": 29272,
+      "sha256": "ce21dc999874c1c4eddc5aa2ff1002ff0114344e0a4f255882d740b27bbc5d33"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC7115_Origin_Validation_Operation_Based_on_the_Resource_Public_Key_Infrastructure_RPKI.txt",
+      "bytes": 26033,
+      "sha256": "89ea6ca39b65dafb8bd90f634c7561647bfbcef5a534d60dda1d4826c1bf498d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC8064_Recommendation_on_Stable_IPv6_Interface_Identifiers.txt",
+      "bytes": 19179,
+      "sha256": "894054810bdc10b76a39907b72e28c2f7980a729949f2b85a0b52bf99ca52592"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC8200_Internet_Protocol_Version_6_IPv6_Specification.txt",
+      "bytes": 93162,
+      "sha256": "371ae3f133d562db5d6385e6def4ca9914c4f831be228ea7779fd28799c2f490"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC8205_BGPsec_Protocol_Specification.txt",
+      "bytes": 115900,
+      "sha256": "bb190974d0d8ea1cfa523d9ec3d20c0fa32e136b555cbe29e7c14007d40847fe"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC8210_The_Resource_Public_Key_Infrastructure_RPKI_to_Router_Protocol_Version_1.txt",
+      "bytes": 78467,
+      "sha256": "f2d6905b6c27c81fbcec3767d17b13e8a076f9712868e3c759bcfbe7a4f2149b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC8212_Default_External_BGP_EBGP_Route_Propagation_Behavior_without_Policies.txt",
+      "bytes": 12552,
+      "sha256": "73d16f16d6c4d37edd8cb6cd484e4acc4b53ac9ad53ce4bff6279e873cc646f3"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC8981_Temporary_Address_Extensions_for_Stateless_Address_Autoconfiguration_in_IPv6.txt",
+      "bytes": 54912,
+      "sha256": "18f61209d7abc7a9aa8f758ca823de10c1c3a24b272c4262064b84dd703c9a01"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC9099_Operational_Security_Considerations_for_IPv6_Networks.txt",
+      "bytes": 130713,
+      "sha256": "6deca72e1902172b598a9897ea6952c85cba26264e84faed4e75614e7f130254"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC9234_Route_Leak_Prevention_and_Detection_Using_Roles_in_UPDATE_and_OPEN_Messages.txt",
+      "bytes": 29154,
+      "sha256": "3934af354c672133337c5ce731282f97c00587d63ec1267c824c3fb5dcb39775"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/06_Routing_IPv6_Network_Security/RFC9582_A_Profile_for_Route_Origin_Authorizations_ROAs.txt",
+      "bytes": 30581,
+      "sha256": "d221d55c9e8b8ac24f1feb57eab96772e18d111ec2fdfb3237978e8590f131be"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/020_OWASP_Top10_2025_Introduction.md",
+      "bytes": 14973,
+      "sha256": "71e4b9124e768a954b4d5b9b6f952dd39fa6044688e8dd5ef7b5aa990a3c7c16"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/031_RFC9000_QUIC_Transport.txt",
+      "bytes": 403442,
+      "sha256": "f88aae47f8b18e102024916e975e919201d8dde689cba79b01079eaedd402e22"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/032_RFC9001_QUIC_TLS.txt",
+      "bytes": 126175,
+      "sha256": "3bbaecdf5afd278052a2c48348ce118c4ff8d0cf6b9915549858171b3f98a591"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/033_RFC9110_HTTP_Semantics.txt",
+      "bytes": 502941,
+      "sha256": "21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/034_RFC9112_HTTP_1.1.txt",
+      "bytes": 109913,
+      "sha256": "e4f426bac6206b67fdf9e0da826154f70588db2133a0a86b15cde4ff725d8937"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/035_RFC9113_HTTP_2.txt",
+      "bytes": 191811,
+      "sha256": "a00ef91b64e111a282e77ec66980f5242e77c0bb5e33e0927e3b6757080506de"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/042_OWASP_Clickjacking_Defense_Cheat_Sheet.md",
+      "bytes": 15368,
+      "sha256": "2331ef1ced95d52cca031d8603d00af281f8a8595b481176d92a49d658931bd2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/044_OWASP_Cookie_Theft_Mitigation_Cheat_Sheet.md",
+      "bytes": 7344,
+      "sha256": "f02ae9e09dee0b4196969ecdbd94bf9267d50d7eaf5bb264cb7d702acea83d74"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/046_OWASP_Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+      "bytes": 73464,
+      "sha256": "8dafa056758968bcf6fdd46096a41ceba7969f755872324a6073979cead3dbee"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/050_OWASP_Database_Security_Cheat_Sheet.md",
+      "bytes": 9117,
+      "sha256": "2ac2bc9cdf558a9173c60b4dfd52ebd696c0b418be785c9bf0392249e107990b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/053_OWASP_Deserialization_Cheat_Sheet.md",
+      "bytes": 23431,
+      "sha256": "16b75d075f4c4ab19f1cb46763ec8697aeb24d7660cbcd6ebb5a1d6f15b3f0f4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/056_OWASP_File_Upload_Cheat_Sheet.md",
+      "bytes": 12000,
+      "sha256": "0f527b1636adb44e305c97657b5cf84c0b5b60895ee5091f4b26baee0e271b6d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/059_OWASP_GraphQL_Cheat_Sheet.md",
+      "bytes": 28323,
+      "sha256": "644ff319f6c2643cdf2dc33666951132904223e01ed69e627755c93288557114"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/060_OWASP_HTML5_Security_Cheat_Sheet.md",
+      "bytes": 16118,
+      "sha256": "652acdef0041c56551a2c02dbc18ac53ae98cb72f3afbc0675c601365b012e75"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/061_OWASP_HTTP_Headers_Cheat_Sheet.md",
+      "bytes": 22115,
+      "sha256": "bbb5aaff5e7a37cb06fe1132a41552ce21ccc699bc3cc5e94de8900eef3cdefa"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/064_OWASP_Injection_Prevention_Cheat_Sheet.md",
+      "bytes": 20658,
+      "sha256": "210c95345ef2abbcd9d079d9a9fc1d3408769f5c72a5ef5a4e6aba7956031bc2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/066_OWASP_Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.md",
+      "bytes": 5397,
+      "sha256": "0a0056b89acc452b4e4fece79511387406480e912f4fce8247b1381446fc4bda"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/070_OWASP_LDAP_Injection_Prevention_Cheat_Sheet.md",
+      "bytes": 9460,
+      "sha256": "603a3f65ca8b86101f9069728273ed62de5ed7513b1377238052b56b3828861d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/077_OWASP_Microservices_Security_Cheat_Sheet.md",
+      "bytes": 22222,
+      "sha256": "2d1f46e36dcfcf357685ef667da902e45d879d983f33bd1f8abebe4884f99446"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/078_OWASP_Microservices_based_Security_Arch_Doc_Cheat_Sheet.md",
+      "bytes": 14709,
+      "sha256": "7bdf8380d36d4c9a49744aa8da35505594f984b017b6ab197f8371b054ebbe0d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/079_OWASP_Mobile_Application_Security_Cheat_Sheet.md",
+      "bytes": 16642,
+      "sha256": "3d28c64baa3dbdc105854587af5a65bc11b610f8e3cf0f8f5a1a321cdc8e43ac"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/086_OWASP_OS_Command_Injection_Defense_Cheat_Sheet.md",
+      "bytes": 11615,
+      "sha256": "050a5c1cbccfe2a72140f9f30916ab0a2e32f2657beda1c38e552b2a3d898068"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/089_OWASP_Query_Parameterization_Cheat_Sheet.md",
+      "bytes": 7971,
+      "sha256": "924ce01dfb7be9f051f16f9c10e19eea06ef285439977ec52955c924735b5c00"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/091_OWASP_REST_Assessment_Cheat_Sheet.md",
+      "bytes": 6239,
+      "sha256": "caf5611ea6c55c11b614dcd944b10b6f1f10dbf1be2ac80e293c9cac5c442beb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/092_OWASP_REST_Security_Cheat_Sheet.md",
+      "bytes": 24846,
+      "sha256": "73185bf1a1163fb8b9cfcb7e034f84e32171289becc857f66947a61a87a4bb1d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/094_OWASP_SQL_Injection_Prevention_Cheat_Sheet.md",
+      "bytes": 19384,
+      "sha256": "77924b56a036b072bbc7a2b3bfc4f9f59fa5da92790c6690681574cb9457ec14"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/102_OWASP_SSRF_Prevention_Cheat_Sheet.md",
+      "bytes": 27433,
+      "sha256": "d9323c8d09e4259ea597524fb1513422b8c82f96b287b79405f424b599e74da2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC6265_HTTP_State_Management_Mechanism.txt",
+      "bytes": 79724,
+      "sha256": "dc4177094813e85a44a7897b892b76bc09160b3a03aea44f0f511f3a98f91933"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC6454_The_Web_Origin_Concept.txt",
+      "bytes": 41363,
+      "sha256": "6a42d01bf407e87255e3bd8d870fda0f473e09f3272592ba438b57c983bc5399"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC6455_The_WebSocket_Protocol.txt",
+      "bytes": 162067,
+      "sha256": "765775326aee0ecca9b04bde3fd1f52932d498e33e34e428bd61b8a24da0fa3b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC6797_HTTP_Strict_Transport_Security_HSTS.txt",
+      "bytes": 103554,
+      "sha256": "7cefa03f77547532580b7f877b4e6388bb66c20631b624667a0065c14ae3d364"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC8441_Bootstrapping_WebSockets_with_HTTP_2.txt",
+      "bytes": 16639,
+      "sha256": "209ea84eae8866098587726a9a78e3d513539afe71fd4fd7cbcffe133a83d535"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC9111_HTTP_Caching.txt",
+      "bytes": 84477,
+      "sha256": "aeb52adb3279d5f23dae34f68af11bd5cef0a0aff7ffcd014c9ca93c5302cf3e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC9114_HTTP_3.txt",
+      "bytes": 155206,
+      "sha256": "6b84555c88eeebcf5d2b2e1d9d7b58630abc97ab877b2cf62dee4cd635db34e4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC9204_QPACK_Field_Compression_for_HTTP_3.txt",
+      "bytes": 99258,
+      "sha256": "926b4d7e9772b5c316fe87a1e160f5ced118101459ede5b13d11bf9a9273c931"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC9218_Extensible_Prioritization_Scheme_for_HTTP.txt",
+      "bytes": 53974,
+      "sha256": "b7ae1a59fde881e839f947e2fbd01f7a859e9ffedbaf0a38e78a97aeea01d190"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/07_Web_API_Application_Security/RFC9220_Bootstrapping_WebSockets_with_HTTP_3.txt",
+      "bytes": 6619,
+      "sha256": "4bac5e1368db199468345dbd2d31ebb4abb7509732b1ae08108cc4860e8967db"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/041_OWASP_CI_CD_Security_Cheat_Sheet.md",
+      "bytes": 26663,
+      "sha256": "935b4e2949ccd98d81bbd948a759fc9d3f56c9f9d26313ff7948f654606b7ef9"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/052_OWASP_Dependency_Graph_SBOM_Cheat_Sheet.md",
+      "bytes": 8866,
+      "sha256": "46edbd8974536a41b7b764b49490c965004e4d7bb021a5733f24f5f09c3e214c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/054_OWASP_Docker_Security_Cheat_Sheet.md",
+      "bytes": 24976,
+      "sha256": "3442288cd44dda71aed39e82d6abb7d1d6ffb12350ad1a667d8299c2b5488a43"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/058_OWASP_GitHub_Actions_Security_Cheat_Sheet.md",
+      "bytes": 20379,
+      "sha256": "241c43a49aa6853f0a1688efb885f3ced52290771309a3ee403d612f47a81fda"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/063_OWASP_Infrastructure_as_Code_Security_Cheat_Sheet.md",
+      "bytes": 7813,
+      "sha256": "770141b32c3035f520b2ffe5a3100fccba09845d85e4f79e6ab69939a6006726"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/069_OWASP_Kubernetes_Security_Cheat_Sheet.md",
+      "bytes": 69794,
+      "sha256": "c8f1a573eac5aa88240b4550f4daf106591e6bef3e673ef51109ce28a4dcbc1c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/075_OWASP_MCP_Security_Cheat_Sheet.md",
+      "bytes": 13021,
+      "sha256": "480aac4cbfd3c6c05f02f6f9c936b5d34902e39700b0eb520a050de283e4da68"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/082_OWASP_NPM_Security_Cheat_Sheet.md",
+      "bytes": 27056,
+      "sha256": "0579f6df85963f8d7dec5aed6cce0dd73a488a60893a5f9f009683882bc13ebb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/090_OWASP_RAG_Security_Cheat_Sheet.md",
+      "bytes": 28096,
+      "sha256": "e48ca77c8cd69bc9a102facf64cc826a75c9f53253a3eda2e90d45d18ba07d72"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/096_OWASP_Secure_AI_Model_Ops_Cheat_Sheet.md",
+      "bytes": 8026,
+      "sha256": "ea14f19e78e129efd82007c43cc9e68b3ed8f17cbbbfaac82b58562b69d18f49"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/097_OWASP_Secure_Cloud_Architecture_Cheat_Sheet.md",
+      "bytes": 29991,
+      "sha256": "4ff8d09b970f5c6c9bbb12a7b4ec6f2d927ccde005a2297097fc7b834bdf7e6e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/08_Cloud_Container_Supply_Chain/099_OWASP_Software_Supply_Chain_Security_Cheat_Sheet.md",
+      "bytes": 21523,
+      "sha256": "33716fb50209675933705e8945d606b5e73c17a6e8a3bb1e0090958bc3fa0786"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/003_NIST_SP_800-61r3.pdf",
+      "bytes": 1040566,
+      "sha256": "e5593d6bb85daecec7e8d9549400c7b3473bcc3f06e469c82218073afa7fba2d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/007_NIST_SP_800-92.pdf",
+      "bytes": 1759842,
+      "sha256": "466c3ab1580bc3b2e25d11bbd4b2ac92fd1762b3c5b10596924981bc1b9e61e1"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/014_NIST_SP_800-94.pdf",
+      "bytes": 1060429,
+      "sha256": "289c2ed27f7e3aac41624bf2e6fad268642bad2dabe352a5ab28fa169824a96e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/016_NIST_SP_800-137.pdf",
+      "bytes": 986916,
+      "sha256": "2d1c0bf459f5e1bfd41ceb5eac83bf62e4c34bf08e2e7088b37cb73a11442b98"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/037_OWASP_Attack_Surface_Analysis_Cheat_Sheet.md",
+      "bytes": 13518,
+      "sha256": "c8bde4a8ab46ed3523ff3aa5b864909e129c576ac5bcf3284cdc22cd24b8d70b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/051_OWASP_Denial_of_Service_Cheat_Sheet.md",
+      "bytes": 14655,
+      "sha256": "1d5e3eefddb17d3c6a7f73d2339b6711bb877e04aab5a266d917fa5b77478d85"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/073_OWASP_Logging_Cheat_Sheet.md",
+      "bytes": 28990,
+      "sha256": "e3965a340b575bd232c7f5c7bf24d96a4e22bace1783a7a3a11a84d409e0b560"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/074_OWASP_Logging_Vocabulary_Cheat_Sheet.md",
+      "bytes": 39117,
+      "sha256": "8c1929cdc2a7afafb8b1150ed72a6777cc8b4dd52b969468fb92479de55f4458"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/105_OWASP_Threat_Modeling_Cheat_Sheet.md",
+      "bytes": 19929,
+      "sha256": "2fbfffaa2b9d734271d7e84ccb550290858586171a5807db7b2bf13bf24aa093"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/108_OWASP_Vulnerability_Disclosure_Cheat_Sheet.md",
+      "bytes": 24622,
+      "sha256": "bd5c5803a5c4a39e63ce1370a7baf8219e62a4cb52b5473456adbba777279206"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC2827_Network_Ingress_Filtering_Defeating_Denial_of_Service_Attacks_which_employ_IP_Source_Address_Spoofing.txt",
+      "bytes": 21258,
+      "sha256": "6eaa66f058ad3b7b6ddb7010e1a71939e2085b0604d0e1950d43609642135c44"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC3704_Ingress_Filtering_for_Multihomed_Networks.txt",
+      "bytes": 35942,
+      "sha256": "79aadfe01455bcb96b1663b0bd299c93649f12e623e20105ee0810839a128f89"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC4732_Internet_Denial_of_Service_Considerations.txt",
+      "bytes": 91844,
+      "sha256": "27b3234d711d81f19c004c9387de4741ebd54ed6dd4c4c541587c064d5151eff"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC4890_Recommendations_for_Filtering_ICMPv6_Messages_in_Firewalls.txt",
+      "bytes": 83479,
+      "sha256": "d95ca8bd14a0a7e139e77d3b29c430b65ff1360c013e3f02185dfbc1d636e7b9"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC5358_Preventing_Use_of_Recursive_Nameservers_in_Reflector_Attacks.txt",
+      "bytes": 14957,
+      "sha256": "8a36f76328a6e7c10f262c284d9e594b154f3346a7625b525856cc386a8e1161"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC6192_Protecting_the_Router_Control_Plane.txt",
+      "bytes": 49422,
+      "sha256": "ad1525dd06297fc0fb8406a72a403081fe979ad3ea03dd6998e08a305ab2386c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC7454_BGP_Operations_and_Security.txt",
+      "bytes": 56946,
+      "sha256": "2d7da1e1dfa15b6324be245ca509023c6b9de098f0c431a6994753aff5a8a2e6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC7970_The_Incident_Object_Description_Exchange_Format_Version_2.txt",
+      "bytes": 331061,
+      "sha256": "63e23655024199260e1deba59c9d4e2ae154f3e95bfc34aa2fae95e6826acd63"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC8704_Enhanced_Feasible_Path_Unicast_Reverse_Path_Forwarding.txt",
+      "bytes": 43485,
+      "sha256": "b2f9d3bf437af1d15b2dba81ddb39a936065dfba91b7f136169d894f55e75ded"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/09_Logging_Monitoring_Incident_Response/RFC9132_Distributed_Denial_of_Service_Open_Threat_Signaling_DOTS_Signal_Channel_Specification.txt",
+      "bytes": 248782,
+      "sha256": "95c68785fbfc0dce78ca14da6f0c073802dc3581529970fa2962925f62135222"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC1918_Private_Internets.txt",
+      "bytes": 22271,
+      "sha256": "56c43465298772bc4d899923f1785b7b7bf8dd2c9f2f9a53422800ddc5cf9337"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC2131_DHCP.txt",
+      "bytes": 113738,
+      "sha256": "a043b705785b81762505ded4cf71d61392b2b1da2b4ce1e32c13bc984de5f4a5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC2132_DHCP_Options.txt",
+      "bytes": 63670,
+      "sha256": "0cfbedab7cfe859624ae78c07a722bc51bf8ea123a7b43b099fc546ddcf00b90"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC3414_User_based_Security_Model_USM_for_version_3_of_the_Simple_Network_Management_Protocol_SNMPv3.txt",
+      "bytes": 193558,
+      "sha256": "636ffdf3f44222d4295e52a846075a3fea826604cd8ba88ae8e69d87664cbb5f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC3415_View_based_Access_Control_Model_VACM_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 82046,
+      "sha256": "b1f997fd36eb82c49bcc9a3b6faf64f040272401853d3d1ea8fd5e3cce579da9"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC3416_Version_2_of_the_Protocol_Operations_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 70043,
+      "sha256": "e310ccf5a9cbbcb6c47d2fc0b50316889588d85447c7be0d40ddf74be70c8ac8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC3417_Transport_Mappings_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 38650,
+      "sha256": "874be9c26a2ae30bb1ae17405ca53fa493dc40a0a8bda98fa659b82985e943c0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC3418_Management_Information_Base_MIB_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 49096,
+      "sha256": "7f3313e0581b841e25ed6785f97d392e2718c51a137018e9e8c8773df20895bf"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC6241_Network_Configuration_Protocol_NETCONF.txt",
+      "bytes": 209465,
+      "sha256": "989b44560e4663267618b4b6bfc4cf0c7772fa2b59b5980936d9b073cbbd5314"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC6242_Using_the_NETCONF_Protocol_over_Secure_Shell_SSH.txt",
+      "bytes": 22704,
+      "sha256": "5329ead0bd518e2f4551eab270da40913119ff85f4941fcfa9dadff612be459c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC7950_The_YANG_1_1_Data_Modeling_Language.txt",
+      "bytes": 393155,
+      "sha256": "b71ae68e7aaff84a3321e1538a0cd788f549e4889ac375bf891f67cd8876908d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC8040_RESTCONF_Protocol.txt",
+      "bytes": 238832,
+      "sha256": "ab4b8cf15065cf34a6dd982dbaaf8db794fca90cdba795de452d8384a4b7e15c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/10_Network_Management_Operations/RFC8341_Network_Configuration_Access_Control_Model.txt",
+      "bytes": 109849,
+      "sha256": "9f4beb2222ea87c00b45345faa213c184f31279083192ead500a333f1669a34f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/017_NIST_SP_800-218.pdf",
+      "bytes": 739891,
+      "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/018_OWASP_ASVS_5.0.0.pdf",
+      "bytes": 514062,
+      "sha256": "a2fa1bbe38f12cac86d3a0f0023327e9772201f65a7f741f282f5e785d268fc5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/019_OWASP_ASVS_5.0.0.csv",
+      "bytes": 105100,
+      "sha256": "98c8fe911b9edb403af8ee05d3ce8201ecac2659e313b053890a62847cdcf680"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/040_OWASP_Business_Logic_Security_Cheat_Sheet.md",
+      "bytes": 26497,
+      "sha256": "72c3b258f18362f740bd4ab00893e8b7d4fb61e97ddf2be26c1b0ee341f52ee4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/072_OWASP_Legacy_Application_Management_Cheat_Sheet.md",
+      "bytes": 13565,
+      "sha256": "9711f16fd37a0d97d738106447786ba2d6dcea34cf612061456fa3869ffa1e67"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/098_OWASP_Secure_Code_Review_Cheat_Sheet.md",
+      "bytes": 20764,
+      "sha256": "a3a2c91851dceaccff8ab684a56cdafa1006c9bb943c8d085622270f7872e34d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/100_OWASP_Secure_Product_Design_Cheat_Sheet.md",
+      "bytes": 10848,
+      "sha256": "a725b1092ac5b6bd33949bdf48983a026b1720c469192f0c48a93e1b31fe49da"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/11_Secure_Development_Requirements/101_OWASP_Secure_Coding_with_AI_Cheat_Sheet.md",
+      "bytes": 26808,
+      "sha256": "be07355a3bb0c077cea6ca6beef912b4abda712864e90645f46c29419e539505"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC5321_Simple_Mail_Transfer_Protocol.txt",
+      "bytes": 225929,
+      "sha256": "7d560eddff1b213c17d4e1e5f95005728b2f05bc2b3947f0fcc91717c6707634"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC6376_DomainKeys_Identified_Mail_DKIM_Signatures.txt",
+      "bytes": 176999,
+      "sha256": "00ae1e26aa19e0b8a6087435a524d23e824e2c31ebd62544dd714923bf8553f0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC6409_Message_Submission_for_Mail.txt",
+      "bytes": 40153,
+      "sha256": "66ed4284fbd7bdc47aa1896f2898204111a09f83061cf02ebeb056961fb9cadf"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC7208_Sender_Policy_Framework_SPF_for_Authorizing_Use_of_Domains_in_Email_Version_1.txt",
+      "bytes": 144189,
+      "sha256": "3cca3f2551f50d24a7b6423a7451d285df077863dab4bb261080ee87844f2d5b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC7672_SMTP_Security_via_Opportunistic_DNS_Based_Authentication_of_Named_Entities_DANE_Transport_Layer_Security_TLS.txt",
+      "bytes": 87943,
+      "sha256": "f42a3a4e0eada0c82195659c8e8b691d9e82bd51399009ed7ce1c173d8163ce7"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC8314_Cleartext_Considered_Obsolete_Use_of_Transport_Layer_Security_TLS_for_Email_Submission_and_Access.txt",
+      "bytes": 62605,
+      "sha256": "d626efa01a2176206b81742b77ca8f0d61e4a669f9ae7798e7ae556afc65aae6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC8460_SMTP_TLS_Reporting.txt",
+      "bytes": 67126,
+      "sha256": "ee9bd333ca729ebeff46432d26e52e11d87f57d035028f0cf349fa1559fbaae3"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC8461_SMTP_MTA_Strict_Transport_Security_MTA_STS.txt",
+      "bytes": 59461,
+      "sha256": "31296488efa6ce89fb3a8a26a17ffe3b75f9379acc709aa5f82af6c9ae71283e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC8617_The_Authenticated_Received_Chain_ARC_Protocol.txt",
+      "bytes": 70573,
+      "sha256": "8eca988e695d12350ce1f5bf79c6ebf62037a26832a9c95c39d89b8779e43304"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/12_Email_Messaging_Security/RFC9989_Domain_Based_Message_Authentication_Reporting_and_Conformance_DMARC.txt",
+      "bytes": 186641,
+      "sha256": "cdd78e2918a210ca0f1bcd167dfd9e5555a9331506bcea988432793b71fd0c1e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/CORPUS_SUMMARY.json",
+      "bytes": 924,
+      "sha256": "21370dc62eeca6f477d66b629f37c8b2f7448c013dfb9e9c16f1f03a789729be"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/README.md",
+      "bytes": 2426,
+      "sha256": "11b9e772379f0137ed544f21afbe3230b741f7661e55dab518d5e25fe9682756"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/RESOURCE_LINKS.csv",
+      "bytes": 84978,
+      "sha256": "43b56a9663489ebf50a13eea17a80c8ead0ae41fab08bab5f8f6fd0272e5cec4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_FineTuning_Source_Corpus_200/RESOURCE_LINKS.md",
+      "bytes": 62508,
+      "sha256": "08afbae78d4c658d216d10bec22e8c4d2912fd6327e67b8acedb10553bfd0a18"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/adapter_config.json",
+      "bytes": 1314,
+      "sha256": "3a981dba312829dabd8dd63fe85ab6e5fc9aade79b871bf207dd91ae0ceff0e5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/adapter_model.safetensors",
+      "bytes": 132187888,
+      "sha256": "46e6e36d6477eca11c398dcaabd1f1032102ba7213a5ebec250610db3a3b1a7f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/added_tokens.json",
+      "bytes": 707,
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/chat_template.jinja",
+      "bytes": 4007,
+      "sha256": "db733d157125e57af0ab7b0529d50bd2abd61315b431c53213221930db441edb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/merges.txt",
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/README.md",
+      "bytes": 5270,
+      "sha256": "3f6d4f3d6cca5bc2854324969ac96a2348accbebcc59329f17a9dbee06f3c1f6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/special_tokens_map.json",
+      "bytes": 614,
+      "sha256": "b5acd1507cb3a3539e63369cb4a2b675a599cf13afe62282d371518288967797"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/tokenizer_config.json",
+      "bytes": 5431,
+      "sha256": "b1baec1adc418ae1ed442ac5f6de95590a40453d09886a39b20b6529d27ca6bd"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Qwen3_4B_LoRA_Adapter/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/build_sdlc_dataset.py",
+      "bytes": 45006,
+      "sha256": "ab653c39ac8693bad5695b2dce9161b2dab61413d7a9207c1874eab101303946"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/dataset_stats.json",
+      "bytes": 751,
+      "sha256": "3c4da8e970f77141719582237bc1462216a51672483d9e277bb28c4901535c93"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/holdout.jsonl",
+      "bytes": 48301,
+      "sha256": "ba0a512167a2b9f62d870a0efed0cfae295e5bc40f0947e1128fc0e884f6e72e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/holdout_provenance.jsonl",
+      "bytes": 5671,
+      "sha256": "f2fca0d5984a715e7377d35286270cbf8a1b6ccbb0dd82f610180f83b990213c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/QUALITY_REPORT.json",
+      "bytes": 977,
+      "sha256": "71fc76b807f13cb4554d27d8743be1d246139db1f0a21cbce8b15615a9fe4c1a"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/README_FINAL.txt",
+      "bytes": 1334,
+      "sha256": "57b39e057601e3751258711bc067452d4397984cf5e3458e66a384c5eeef1a28"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/test.jsonl",
+      "bytes": 48745,
+      "sha256": "62d079e06b9bec7185fa39951ad7354836e1d246b3b2a3c84e1acdb65f5dc839"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/test_provenance.jsonl",
+      "bytes": 5703,
+      "sha256": "c40d3e8d9c9eec079d02256743c81b5b1d92096979a1424ca480f7ec7c588cdb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/train.jsonl",
+      "bytes": 771329,
+      "sha256": "f08587c313acddc5f71458ffd3b06a0d01afb117dd30bb090c6ac58c1afe01a0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/train_provenance.jsonl",
+      "bytes": 88739,
+      "sha256": "3e92910f36b4cbfa891538ef3e5c5b949137868091af887e2d4644f1103510f2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/validation.jsonl",
+      "bytes": 97687,
+      "sha256": "96ad19e38b5382def3fcfb4fdd85311d90ced4e0077b6688a07131bea3efc45f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/CyberSRS_SDLC_Dataset_FINAL/validation_provenance.jsonl",
+      "bytes": 11267,
+      "sha256": "cf8ecfa2f41b48283fd0e5aee176b27c85a97f5ae7499bfe3a3356803d499cf8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/README.txt",
+      "bytes": 2406,
+      "sha256": "4ad7377f65ec1f003c85caeee775e1c07bd959bb134e4a7c0daba76390f9cfe3"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/_accepted_checkpoint.jsonl",
+      "bytes": 605570,
+      "sha256": "4269b7085c77e6532e09087c60d9923fc0414db208400a6981fc46ce21a2d5b0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/dataset_stats.json",
+      "bytes": 418,
+      "sha256": "6f3eb69fc48072d5bfcad7340f5db35f2189896220753ea73c3397fb685b1f5e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/holdout.jsonl",
+      "bytes": 26681,
+      "sha256": "bb55d39a4c9bf0dc191926932423e656f64f919550de67523466e9fb42756c9f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/holdout_provenance.jsonl",
+      "bytes": 2961,
+      "sha256": "fd59b4d628150aae1c929fe97d830f96a8d049444b14d2b02227ff890163bfa4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/test.jsonl",
+      "bytes": 26340,
+      "sha256": "89a36734cd3a22bd5b360ba4bbf70507619b3514db06dbab993aa1c34b327494"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/test_provenance.jsonl",
+      "bytes": 2993,
+      "sha256": "bdfcc17f011e33179708dd49a13fd3d68a97dfcdbc1ada6c4fb98645d28d5738"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/train.jsonl",
+      "bytes": 429886,
+      "sha256": "dc846c8dbb1ea1487d07f4f708480e19a0e0cee118058d93c47af36de3663d81"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/train_provenance.jsonl",
+      "bytes": 47827,
+      "sha256": "fd7fae451649c31b6aeb64011131b81163fe208f6f050e86123a3ff920bedc1d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/validation.jsonl",
+      "bytes": 55099,
+      "sha256": "ed478a6e17df4afd52454a9a4c544723f7d1683da3a8d767254425344f3025d2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_162527/validation_provenance.jsonl",
+      "bytes": 5983,
+      "sha256": "8d89cb820c97f176edf0e29ed8fc90eba84a9dcf19f0046e97ee3a7d0eb601f8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/_accepted_checkpoint.jsonl",
+      "bytes": 605570,
+      "sha256": "4269b7085c77e6532e09087c60d9923fc0414db208400a6981fc46ce21a2d5b0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/dataset_stats.json",
+      "bytes": 418,
+      "sha256": "6f3eb69fc48072d5bfcad7340f5db35f2189896220753ea73c3397fb685b1f5e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/holdout.jsonl",
+      "bytes": 26681,
+      "sha256": "bb55d39a4c9bf0dc191926932423e656f64f919550de67523466e9fb42756c9f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/holdout_provenance.jsonl",
+      "bytes": 2961,
+      "sha256": "fd59b4d628150aae1c929fe97d830f96a8d049444b14d2b02227ff890163bfa4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/test.jsonl",
+      "bytes": 26340,
+      "sha256": "89a36734cd3a22bd5b360ba4bbf70507619b3514db06dbab993aa1c34b327494"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/test_provenance.jsonl",
+      "bytes": 2993,
+      "sha256": "bdfcc17f011e33179708dd49a13fd3d68a97dfcdbc1ada6c4fb98645d28d5738"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/train.jsonl",
+      "bytes": 429886,
+      "sha256": "dc846c8dbb1ea1487d07f4f708480e19a0e0cee118058d93c47af36de3663d81"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/train_provenance.jsonl",
+      "bytes": 47827,
+      "sha256": "fd7fae451649c31b6aeb64011131b81163fe208f6f050e86123a3ff920bedc1d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/validation.jsonl",
+      "bytes": 55099,
+      "sha256": "ed478a6e17df4afd52454a9a4c544723f7d1683da3a8d767254425344f3025d2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/sdlc_dataset_backup_before_repair_20260822_233249/validation_provenance.jsonl",
+      "bytes": 5983,
+      "sha256": "8d89cb820c97f176edf0e29ed8fc90eba84a9dcf19f0046e97ee3a7d0eb601f8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/GAO_24-105506_Agile_Assessment_Guide.pdf",
+      "bytes": 30276491,
+      "sha256": "b36fff9503c469a668807834d03ce122436d8dd010f86e8dcb1b9498800d3a1d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/NASA_Software_Engineering_Guidebook.pdf",
+      "bytes": 18803534,
+      "sha256": "2edce7ce99c49d32e6c1e0ec5e5a34135a08310f4a1b6591283b518b9f753b6c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/NASA_Systems_Engineering_Handbook.pdf",
+      "bytes": 3773440,
+      "sha256": "8eeb4887a4dc57a23049da7dd2ed556833cf98e214b240468d987873164ff688"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/NIST_SP_800-160v1r1_Engineering_Trustworthy_Secure_Systems.pdf",
+      "bytes": 8181396,
+      "sha256": "eced250e47e542698ddfd5e72bd7feae14268e72a1e9ea49af9984c0e01ff7b8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/NIST_SP_800-218_SSDF_v1.1.pdf",
+      "bytes": 739891,
+      "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/NIST_SP_800-37r2_Risk_Management_Framework.pdf",
+      "bytes": 2270327,
+      "sha256": "4f75e1136bb905a654f1bcd9eefefb4108f47597276ee5eec0688f6d96f6a01d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SDLC_Source_Documents/OWASP_Developer_Guide.pdf",
+      "bytes": 5734917,
+      "sha256": "fabee410318a2bb8a80c85caa5f1cce184bd7eeee44c6c2f5b46b50a31c647a7"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SDLC_Source_Dataset/SOURCE_MANIFEST.csv",
+      "bytes": 1830,
+      "sha256": "d6361d6a08cfef59a2aabeb5f7bf333bf69db74ddfc4185ddc85f2a10e671682"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/all_examples.jsonl",
+      "bytes": 1260772,
+      "sha256": "e0e4b2db48a6ac8160d8d983f96e89f68982727f0cdd063f19c5f93f8e261e31"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/AUDIT_REPORT.md",
+      "bytes": 1780,
+      "sha256": "f0a7d66f5f912a99aa9b5f3ff37ec2fa69f3422492cb596e4af23877728487d9"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/build_srs_dataset_4chunks.py",
+      "bytes": 13056,
+      "sha256": "3797011846d04db0b05abe152f18e7b577499ca957b0b98fd117281437df54a2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/dataset_summary.json",
+      "bytes": 1316,
+      "sha256": "b726dc734fb1ae0380fdf38f7439da9e009adfa74a5197dbe3221a2e072d7952"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/README.md",
+      "bytes": 427,
+      "sha256": "606906319e7115981e0cdcf4a405c58f942e491e79a3180502f2dffeff0be73c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/test.jsonl",
+      "bytes": 117372,
+      "sha256": "29d442ec68f915b3dbe15ffba6b6a195c720d162646c277e82368299d591b6aa"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/train.jsonl",
+      "bytes": 988242,
+      "sha256": "462495f4fd81e4df7395b1b3c1a7a9b61a75d722b42f4c8339dbbce38142706d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_SRS_Dataset_Clean/val.jsonl",
+      "bytes": 155158,
+      "sha256": "7b70f721a74a500240916e69c7a69b41187fc508dbefd0749f762663b768546c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/01_R19-11_AUTOSAR_SRS_CAN.pdf.url",
+      "bytes": 97,
+      "sha256": "18acd553fe9a4942a0e55c039e5a94e88acf24edb6c752c8d8600a3c66f9e0fa"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/02_R20-11_AUTOSAR_SRS_CAN.pdf.url",
+      "bytes": 97,
+      "sha256": "d4b70c073d65217ebe2581339bd26c63968a84edfd61c3d2ab0fb90a0876bdba"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/03_R21-11_AUTOSAR_SRS_CAN.pdf.url",
+      "bytes": 97,
+      "sha256": "d2d332e220599d122670cb4e8addb9e848bbc50e40222d344fe51eefa1fc3be8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/04_R22-11_AUTOSAR_SRS_CAN.pdf.url",
+      "bytes": 97,
+      "sha256": "763af0b07bda049f7eb5354a2861df08c5438cd2b1bf564f5991a7b23122fa33"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/05_R23-11_AUTOSAR_SRS_CAN.pdf.url",
+      "bytes": 97,
+      "sha256": "fcf710c95c1eaa4c7b87d0dbcdd772a8aff4a08d783bbc7f51d72f1d3b56a094"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/R20-11_AUTOSAR_SRS_CAN.pdf",
+      "bytes": 1532126,
+      "sha256": "d181c158df8171536de3cad25890966d5685efc122645057a62d0bbf285f1429"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/R21-11_AUTOSAR_SRS_CAN.pdf",
+      "bytes": 1538893,
+      "sha256": "80d40341262adf958ff33a74b2a3ef6e76578a285fc6260427eccedfa738f43a"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/01_CAN_Network/R22-11_AUTOSAR_SRS_CAN.pdf",
+      "bytes": 1663586,
+      "sha256": "e918cc5b0e6d8582ef034af36a4a642a58493be5fe06d788d927e6862bb7cb32"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/06_R19-11_AUTOSAR_SRS_COM.pdf.url",
+      "bytes": 97,
+      "sha256": "34a7ffaf49cb2d4e34c70aff79ddb3cd3b508570b40506dafb03609087d99aa2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/07_R20-11_AUTOSAR_SRS_COM.pdf.url",
+      "bytes": 97,
+      "sha256": "fefe1e2bb58c489b0b4678539f01e5ebc65818bca97c949f0994b81e5e1a9b05"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/08_R21-11_AUTOSAR_SRS_COM.pdf.url",
+      "bytes": 97,
+      "sha256": "14bc82a58727eaa61c0b45c575086d79bb85c891d676a665d523ecba5db6fa93"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/09_R22-11_AUTOSAR_SRS_COM.pdf.url",
+      "bytes": 97,
+      "sha256": "82247a2314e605ecae21795c02c0bb1beb1ce9b878b4a696c43c35ccb2438b76"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/10_R23-11_AUTOSAR_SRS_COM.pdf.url",
+      "bytes": 97,
+      "sha256": "d9a58b0335d90ea3d8425b05604fc0ae26bba1b17b12b7fe66c74e20c2bade56"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/R19-11_AUTOSAR_SRS_COM.pdf",
+      "bytes": 703097,
+      "sha256": "f6f27c5e9a02cea67100fbe3078d57c0a5aa6c6638b3108124fa26c602e0346e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/R20-11_AUTOSAR_SRS_COM.pdf",
+      "bytes": 958873,
+      "sha256": "5763c5a6dff4fe99e01a0bb88d5a83a721599e8b6836f27400f56d44702609ef"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/R21-11_AUTOSAR_SRS_COM.pdf",
+      "bytes": 927017,
+      "sha256": "ee4e2c1e16429652a53591fa6eb88c49640826dd9d9dce66221b2bbf6ab70ec6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/02_Communication/R22-11_AUTOSAR_SRS_COM.pdf",
+      "bytes": 928037,
+      "sha256": "bb049294762c1844bbaaaef50a0d88f2cacfefcd75d95859d6334965a3eb8707"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/11_R19-11_AUTOSAR_SRS_NetworkManagement.pdf.url",
+      "bytes": 111,
+      "sha256": "7f00de54f08cbb53a0ce40f41cd02a7d87b1b925966540cf016546563d88d9d0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/12_R20-11_AUTOSAR_SRS_NetworkManagement.pdf.url",
+      "bytes": 111,
+      "sha256": "dd2177db8e94b16e1bc594cec2d1dcaf618ecd9aad7964a6ca614dcd7da90297"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/13_R21-11_AUTOSAR_SRS_NetworkManagement.pdf.url",
+      "bytes": 111,
+      "sha256": "60b32b914f2c66df44366c69d0dabca338c882e4bae22a24ec782208cb77b7cf"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/14_R22-11_AUTOSAR_SRS_NetworkManagement.pdf.url",
+      "bytes": 111,
+      "sha256": "4bfdded53aa69053393409ab5ebb95de47ac38b9e8aeb33a087d76bc3397b4b8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/15_R23-11_AUTOSAR_SRS_NetworkManagement.pdf.url",
+      "bytes": 111,
+      "sha256": "8df3a13af2e599ef07c565ac0510ae59dab8d3d73922b171eac9e95770222823"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/R19-11_AUTOSAR_SRS_NetworkManagement.pdf",
+      "bytes": 662603,
+      "sha256": "c88267d6881279083f38c8ab033bbfe169aa7f1b006a639c0f659fdd015e704e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/03_Network_Management/R20-11_AUTOSAR_SRS_NetworkManagement.pdf",
+      "bytes": 854410,
+      "sha256": "2c70016f260a1d31fbc4eeeb9d5bd5f2d4d0f16f4bc41bd63bf34b628f73647a"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/16_R19-11_AUTOSAR_SRS_FlexRay.pdf.url",
+      "bytes": 101,
+      "sha256": "4de42f5d7467a601cd4ca6062c2a138f71764cf34942b13d43bbde1d55d8a353"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/17_R20-11_AUTOSAR_SRS_FlexRay.pdf.url",
+      "bytes": 101,
+      "sha256": "1e87d6cd58fd7efcbd2bd56b21170d6a2a7901cbe2b616947f32799494ed11b2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/18_R21-11_AUTOSAR_SRS_FlexRay.pdf.url",
+      "bytes": 101,
+      "sha256": "c2f4ec7100a9d6e1e8baf5b982b377c2ce14a8152f9e9aa755375f62fc18fea0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/19_R22-11_AUTOSAR_SRS_FlexRay.pdf.url",
+      "bytes": 101,
+      "sha256": "d0b2d1a65228571de6d56dc9a201cd3bd99d3a665f121ff749fb8db661f18322"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/20_R23-11_AUTOSAR_SRS_FlexRay.pdf.url",
+      "bytes": 101,
+      "sha256": "f7b165ca94e2268061199878bd46c909488d9640f03113a73a736c7ff8dc7468"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/R19-11_AUTOSAR_SRS_FlexRay.pdf",
+      "bytes": 1313296,
+      "sha256": "eb6efb00bbb8477c52ac80fb4264b20744ecc221338c505bab696cf98a6f5ff7"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/R20-11_AUTOSAR_SRS_FlexRay.pdf",
+      "bytes": 1558413,
+      "sha256": "0626facde2ee32f242b909bc296c9d5425e0108da7f72cce7465d3a2f2223195"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/R21-11_AUTOSAR_SRS_FlexRay.pdf",
+      "bytes": 1562348,
+      "sha256": "e5f5dd0359deb3fa27a0eff4fb05899670f82a15b5b8c094a19e328b398ea8a2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/04_FlexRay_Network/R22-11_AUTOSAR_SRS_FlexRay.pdf",
+      "bytes": 1563295,
+      "sha256": "d00e486fceef2d7bff85434760e5f2395f099d829467232a44031b1df0d1abbc"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/21_R19-11_AUTOSAR_SRS_Gateway.pdf.url",
+      "bytes": 101,
+      "sha256": "1986545cfba7b2d824588ebab458db28380366e502bfcb5ef5e5a1533404cb62"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/22_R20-11_AUTOSAR_SRS_Gateway.pdf.url",
+      "bytes": 101,
+      "sha256": "2ec17e4fdad19e2d4f1fbb5746f4c058c9b2ec68f192d6f580a02d7bee910ba5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/23_R21-11_AUTOSAR_SRS_Gateway.pdf.url",
+      "bytes": 101,
+      "sha256": "21adec7c669cc7bf01685e41b1699eab8386f635c9b9cfc8a0c775e675447b27"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/24_R22-11_AUTOSAR_SRS_Gateway.pdf.url",
+      "bytes": 101,
+      "sha256": "7772cf90ddc68eae22db8b842ec3fbb6dc636f18d673281c5e9bbb564c7b7bb2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/25_R23-11_AUTOSAR_SRS_Gateway.pdf.url",
+      "bytes": 101,
+      "sha256": "9f59bd622d71e253743f81ff8c4f91102d2593b9f67cb68798eb1edb6088917e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/R19-11_AUTOSAR_SRS_Gateway.pdf",
+      "bytes": 732323,
+      "sha256": "9631dd10e5488d092dff0cfd0d4ba8a4872964e4b4d666aceaf4e4662eedf18d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/R20-11_AUTOSAR_SRS_Gateway.pdf",
+      "bytes": 214668,
+      "sha256": "3f0a786a2bcec7dff86ff11932c464504675e6a4f202f6e385a6176290367f5d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/R21-11_AUTOSAR_SRS_Gateway.pdf",
+      "bytes": 202377,
+      "sha256": "4cea57b05e22c738486b56e512a889ea546531d20148d0b442ff3df94cdcbdf8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/05_Network_Gateway/R22-11_AUTOSAR_SRS_Gateway.pdf",
+      "bytes": 205222,
+      "sha256": "97522592100166a364ff3135f47f82e94b5728cebea3a14b8830da9c9f7e24f5"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/26_R19-11_AUTOSAR_SRS_Ethernet.pdf.url",
+      "bytes": 102,
+      "sha256": "e9cb0bf4e88880c9d107066c6b9ddf005550fc84420f0f404e8d580a34c22c0d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/27_R20-11_AUTOSAR_SRS_Ethernet.pdf.url",
+      "bytes": 102,
+      "sha256": "b0911a53d56bd11fe17abca624a6eb4433c9a314bb056aa690e32350614f31ff"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/28_R21-11_AUTOSAR_SRS_Ethernet.pdf.url",
+      "bytes": 102,
+      "sha256": "9440993278be8eac44c9c52f684ae117f2babac7dc1c51853e27eb8c0c517f13"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/29_R22-11_AUTOSAR_SRS_Ethernet.pdf.url",
+      "bytes": 102,
+      "sha256": "81eb2084aa371168ee1404c90c81d76085e04c7149a357fdb325508c17e0c75d"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/30_R23-11_AUTOSAR_SRS_Ethernet.pdf.url",
+      "bytes": 102,
+      "sha256": "dcb3d71e10b18a2572fc25141b2c46d63b12337837d133f0125cd87e1d0cfc4c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/R19-11_AUTOSAR_SRS_Ethernet.pdf",
+      "bytes": 1082290,
+      "sha256": "769e7af81a10642de302f18694b78879ab92d6012f322c6236f295ae77070983"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/R20-11_AUTOSAR_SRS_Ethernet.pdf",
+      "bytes": 1439606,
+      "sha256": "f92c8033f04ef9f9d2186ff2e0aaa60eea35ad96c4bc19c1efd3b5a77a3e10f0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/R21-11_AUTOSAR_SRS_Ethernet.pdf",
+      "bytes": 365775,
+      "sha256": "ae3b295ded5b06df79c168103497c457628b2a9c801bfe14d2b0cef9591861ed"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/06_Ethernet/R22-11_AUTOSAR_SRS_Ethernet.pdf",
+      "bytes": 369763,
+      "sha256": "86ab279f8f3785417072446459b80088dc87c2a5d48494287171a9657b8106c8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/31_R19-11_AUTOSAR_SRS_CryptoStack.pdf.url",
+      "bytes": 105,
+      "sha256": "d5b171d299948c1a0fdc2a27b4c2e4be08f89e9ea3f49215021ba7ae3f18404b"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/32_R20-11_AUTOSAR_SRS_CryptoStack.pdf.url",
+      "bytes": 105,
+      "sha256": "16f9d03f6ad8634ff1d0e5106cf56c92346293a81d1b1b21f746057563db9596"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/33_R21-11_AUTOSAR_SRS_CryptoStack.pdf.url",
+      "bytes": 105,
+      "sha256": "29886b21c49240bf0e692a0abbc130ad38dd48fee46a17f2270948da41850ee8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/34_R22-11_AUTOSAR_SRS_CryptoStack.pdf.url",
+      "bytes": 105,
+      "sha256": "b873ed8ab62ba71b4b955175dd9ea0db24a7ec8a318324e77da413a062ae02fb"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/35_R23-11_AUTOSAR_SRS_CryptoStack.pdf.url",
+      "bytes": 105,
+      "sha256": "efeec5ab1a786aae49cfbdb607629b03e521bb85ba0e4e52cab81b5e851dbd88"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/R19-11_AUTOSAR_SRS_CryptoStack.pdf",
+      "bytes": 813609,
+      "sha256": "6ec505fba345225981b40ff1e2e62774c4a39c21163647ddac0bf03eac0c9736"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/R20-11_AUTOSAR_SRS_CryptoStack.pdf",
+      "bytes": 1040296,
+      "sha256": "98bed03a8949a7d34c99a154f05faf68b58a0f7fc8c5ad9563a71764f8aa4063"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/R21-11_AUTOSAR_SRS_CryptoStack.pdf",
+      "bytes": 1043421,
+      "sha256": "b047f087b1e132d3e01408cd095dac29faf8e0e80f1cd1f539823e788b8d98b4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/07_Cryptography/R22-11_AUTOSAR_SRS_CryptoStack.pdf",
+      "bytes": 1051380,
+      "sha256": "8d4bd53efd8ad68afffc39049cf147a8d969e856c48f7ea0e8b7d97d8c28164e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/36_R19-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf.url",
+      "bytes": 120,
+      "sha256": "c38d5f89c0fcde0501ac1ac5b26fc9f3608d3436646c383469972f24ca691c56"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/37_R20-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf.url",
+      "bytes": 120,
+      "sha256": "05a694e9602e48c44bb3bdfedaf9e2efb69ba945d9f42131ab9ebc8bb9fd4081"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/38_R21-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf.url",
+      "bytes": 120,
+      "sha256": "08a107055618f28512446aa8f34a6a640f41dc56ec8503a3e7405a1940a15398"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/39_R22-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf.url",
+      "bytes": 120,
+      "sha256": "629f572a4bb3cacbc52495443aa238a1fd7e45e4186e300bdcc78b5ab53573be"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/40_R23-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf.url",
+      "bytes": 120,
+      "sha256": "c59860d9d06b2908e0f353a8597187495e485c6fe76476a85ab6abca55383147"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/R19-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf",
+      "bytes": 673595,
+      "sha256": "a8153dcf6d4cf62c2b7b29d67716aa910437644c20411fae6d61ed3e507727fa"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/R20-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf",
+      "bytes": 1178947,
+      "sha256": "0d67dcfe4c887fd2372c11153e5000387e6772b9582100635110a1b1a859c006"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/R21-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf",
+      "bytes": 1182849,
+      "sha256": "0f5810f1e6b3a212afe8c7b2785dcb0f2c1d74f4ca2fadf32399de99c6d2c856"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/08_Secure_Communication/R22-11_AUTOSAR_SRS_SecureOnboardCommunication.pdf",
+      "bytes": 1183999,
+      "sha256": "8e9ffcdaf63fc36f20bb447195726f8dc9b5d4b516c2dd6850e735e273eeab3c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/41_R19-11_AUTOSAR_SRS_V2XCommunication.pdf.url",
+      "bytes": 110,
+      "sha256": "0c9443c0e6d72d2de30e803d4f0a96830f3215b370ebe92d30f7b81be0878012"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/42_R20-11_AUTOSAR_SRS_V2XCommunication.pdf.url",
+      "bytes": 110,
+      "sha256": "ba8485aa3164197047f75cc35106bf389a94dd97e32bcd4ebd35d9fe9d9f57c0"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/43_R21-11_AUTOSAR_SRS_V2XCommunication.pdf.url",
+      "bytes": 110,
+      "sha256": "a8a1c88317d657c637e46537097de5628c15b0cb2f392185c503608ab281bb0c"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/44_R22-11_AUTOSAR_SRS_V2XCommunication.pdf.url",
+      "bytes": 110,
+      "sha256": "d82c259701200faaaf15ac221d2c43507678e13ee71fe1bf5aacc562aab4fb9f"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/45_R23-11_AUTOSAR_SRS_V2XCommunication.pdf.url",
+      "bytes": 110,
+      "sha256": "4de0c457787ec6b07dbc3614497ab2135cd2434bb6507f6634617f5c5ebf361e"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/R19-11_AUTOSAR_SRS_V2XCommunication.pdf",
+      "bytes": 216891,
+      "sha256": "409349f24fdcb198ea989d31b60e2f5769290314cd2d34295c0c5436c875face"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/R20-11_AUTOSAR_SRS_V2XCommunication.pdf",
+      "bytes": 205004,
+      "sha256": "93879a95fa6723a24728c246d0070b9b8d6098582b95e94f1820bc26af35e6ff"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/R21-11_AUTOSAR_SRS_V2XCommunication.pdf",
+      "bytes": 204090,
+      "sha256": "7f1cec484233500a20fd427e78a84827b459c7bb6f41de726d3313acadf6b3a6"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/09_V2X/R22-11_AUTOSAR_SRS_V2XCommunication.pdf",
+      "bytes": 207653,
+      "sha256": "6f1b5cf9b5dedfd52a20b617aa671260dd8240d43c9d6d9e10338bec01842496"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/46_R19-11_AUTOSAR_SRS_XCP.pdf.url",
+      "bytes": 97,
+      "sha256": "8ee5e52db2ad2fda4280458242014ba837bea93df9f2283da2ae85aea23ed297"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/47_R20-11_AUTOSAR_SRS_XCP.pdf.url",
+      "bytes": 97,
+      "sha256": "64c170fe1db40f34bf23553a41ff1f73f2997d1d760de3fe465332838ee934fc"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/48_R21-11_AUTOSAR_SRS_XCP.pdf.url",
+      "bytes": 97,
+      "sha256": "c464bc372c33c6ec863dee05f33592f67b11ea40e4d93f51e96d2a1946ee75d7"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/49_R22-11_AUTOSAR_SRS_XCP.pdf.url",
+      "bytes": 97,
+      "sha256": "6417e9b932044267f6a882b15f6e7789e131d29252f9d208d62d5db741960aa8"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/50_R23-11_AUTOSAR_SRS_XCP.pdf.url",
+      "bytes": 97,
+      "sha256": "8fe6acd53c5f3aa82ccfb7d67ab3136773bea14953ee95da6dfd1e7392706690"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/R19-11_AUTOSAR_SRS_XCP.pdf",
+      "bytes": 584704,
+      "sha256": "b92e55b969174da196850016de32f639fb7ead9c2112fb6de780a2cabeb4c7a3"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/R20-11_AUTOSAR_SRS_XCP.pdf",
+      "bytes": 827941,
+      "sha256": "e28f2b7f620e9264a82f0d53ca37e6d0157fe167082dd97fe3db99bff8e270e2"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/R21-11_AUTOSAR_SRS_XCP.pdf",
+      "bytes": 828489,
+      "sha256": "dd72dc62c032746687567e2233285a6ba98982c843668259b39d140eb2052837"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/10_XCP_Network_Protocol/R22-11_AUTOSAR_SRS_XCP.pdf",
+      "bytes": 829951,
+      "sha256": "bc9d13e15dcb1ee9788fa9a74542dd16bbf4ed34fe9d453af7abe64e0cf936d9"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/download_all.ps1",
+      "bytes": 1808,
+      "sha256": "565216dfd059b5d5d2c7460f0830a838a3482597105fa522d0e6ac65ac254eb4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/DOWNLOAD_ALL_WINDOWS.cmd",
+      "bytes": 100,
+      "sha256": "66576445d9a0ad38f93f55715a196057f1ffa1ed697dd5dbe99bfa655d17ccd4"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/DOWNLOAD_REPORT.csv",
+      "bytes": 14300,
+      "sha256": "fa0a705703f19175874a1d92a3c247d8d3bdc3bcca266ac6d5096b4b2edd0e58"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/README.md",
+      "bytes": 960,
+      "sha256": "761f123d63c92b7bd2ee3bf5464902cb1966dee8b2556012f24f47bf8be59bb7"
+    },
+    {
+      "path": "fine-tuning/CyberSRS_Strict_Cybersecurity_Networking_SRS_50/SOURCES.csv",
+      "bytes": 15548,
+      "sha256": "013a0da7c441319ed1251b4e94bbbb4be83e5477fcb7795a7dc1182687de03bf"
+    },
+    {
+      "path": "fine-tuning/dataset/dataset_manifest.csv",
+      "bytes": 32221,
+      "sha256": "a6d94955f2899031943cc314ea24a2274519925d48cb8c7922c9d733279f46c7"
+    },
+    {
+      "path": "fine-tuning/dataset/failed_items.jsonl",
+      "bytes": 28079,
+      "sha256": "ccf630244768cbac94b6e0c36f987fae07d797736ba405b9c1678dc10d78420d"
+    },
+    {
+      "path": "fine-tuning/dataset/master_dataset.jsonl",
+      "bytes": 6169750,
+      "sha256": "e5da7ee0bc3c8b10817fa9fdd025e52d20e625ec239807766351a7d488a6ad6f"
+    },
+    {
+      "path": "fine-tuning/dataset/progress.json",
+      "bytes": 50847,
+      "sha256": "949b33d673b0b69be724a68dff2140f8ffe021acaacd097274c0d476fa6c8386"
+    },
+    {
+      "path": "fine-tuning/dataset/test.jsonl",
+      "bytes": 681092,
+      "sha256": "4591148af07301820d429f0419b49496cc9123c1f9e0d8847e312b9a452bb504"
+    },
+    {
+      "path": "fine-tuning/dataset/train.jsonl",
+      "bytes": 5302974,
+      "sha256": "d4fc1a13e6f2803cf1ea9f8291cd2279327df3c437024d1b64009d860cc77f34"
+    },
+    {
+      "path": "fine-tuning/dataset/validation.jsonl",
+      "bytes": 685968,
+      "sha256": "d0b7297d7ece7080ef7ffb5251a2d9100dce28c7d5ce9fd15417209a0226c4ca"
+    },
+    {
+      "path": "fine-tuning/extracted_text/01_Governance_Risk_Compliance/001_NIST_CSF_2.0.txt",
+      "bytes": 70839,
+      "sha256": "98e3bd923a035ff7e037c7bc84acf854b12b8a6a954f814189cf50505e11bb61"
+    },
+    {
+      "path": "fine-tuning/extracted_text/01_Governance_Risk_Compliance/002_NIST_SP_800-53r5.txt",
+      "bytes": 1601797,
+      "sha256": "1d2a7a00517e1eacc5209fd1a5df284e7d566d6da963ffcd84d620eeac747d8c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/01_Governance_Risk_Compliance/008_NIST_SP_800-30r1.txt",
+      "bytes": 328484,
+      "sha256": "924ed5e8a280e28683b6e252a56b5cf99daa9e6afe2af2f5038535267d934d8e"
+    },
+    {
+      "path": "fine-tuning/extracted_text/01_Governance_Risk_Compliance/009_NIST_SP_800-37r2.txt",
+      "bytes": 615059,
+      "sha256": "498489d541be6b620f4a04b6d7ad23115240ef4269f1fb003b20c5b85d62c92c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/01_Governance_Risk_Compliance/010_NIST_SP_800-40r4.txt",
+      "bytes": 76803,
+      "sha256": "aeb5ad937c6c63cd8117dcb0b2881dac5ea72c0438fcb9ca4e5b511079cf58b9"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/004_NIST_SP_800-63-4.txt",
+      "bytes": 200661,
+      "sha256": "69fffb8fa7be1db0235b44d9120b849643b2d379759904a22052a364d19d1932"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/005_NIST_SP_800-207.txt",
+      "bytes": 158628,
+      "sha256": "ba8d7cfc31a18773ff1cec9f06a0351577f38de4a7e72f1aebaea485df1cadb1"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/036_OWASP_Authentication_Cheat_Sheet.txt",
+      "bytes": 38472,
+      "sha256": "e2843d4ce7d8d365c7c7ece4aee65ac0cf6ee4c2465320825e79c790b5e7704c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/038_OWASP_Authorization_Cheat_Sheet.txt",
+      "bytes": 32367,
+      "sha256": "e9bdf1566e62a78ef70814336be034db253cc8a968a2ee627a6211f681e4a115"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/045_OWASP_Credential_Stuffing_Prevention_Cheat_Sheet.txt",
+      "bytes": 17715,
+      "sha256": "a3bf966cefeab80a7dc5a510427443cc4af75ab570c06d0de6069841f771477b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/057_OWASP_Forgot_Password_Cheat_Sheet.txt",
+      "bytes": 9652,
+      "sha256": "008e2fbb4d9467e25cb6ad7cdb046e78ed54fd8650cad6284b99f2c3da9d5f1c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/067_OWASP_JSON_Web_Token_Cheat_Sheet.txt",
+      "bytes": 21093,
+      "sha256": "6f5925c55ae0c33af3496f038b3904af4b064536791ef2371c64ea3c778b1608"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/081_OWASP_Multifactor_Authentication_Cheat_Sheet.txt",
+      "bytes": 32833,
+      "sha256": "1e486666c0a6f77c975015b2edc669a6f92905aae26f1c9bf94a6069e6fa8091"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/085_OWASP_OAuth2_Cheat_Sheet.txt",
+      "bytes": 15299,
+      "sha256": "b30b14f8f9aae52029c939f5bd6afbd3e665714595bb98cfb916bbcd7eeab5f6"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/087_OWASP_Password_Storage_Cheat_Sheet.txt",
+      "bytes": 20367,
+      "sha256": "994eb127d5c31c2b4032bd2cdb105ef33360b9ba270909c11dae442834287304"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/093_OWASP_SAML_Security_Cheat_Sheet.txt",
+      "bytes": 30666,
+      "sha256": "0efb9562e274e3431338bf9215bbfbd22e2b5c425d31fbd2bf765d5ec194460f"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/104_OWASP_Session_Management_Cheat_Sheet.txt",
+      "bytes": 54761,
+      "sha256": "53000d7f51fa614788d338c150c6a8a8a3c547f5ea3196ba7bf4585851df5c68"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.txt",
+      "bytes": 31220,
+      "sha256": "1671274196d97d69e50a2ea27f9e8e07dd25e656c96b4bdb740abdb1198fd516"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC6749_The_OAuth_2_0_Authorization_Framework.txt",
+      "bytes": 147632,
+      "sha256": "936aff4bb892bd51d98b30f4c1593bb3c86b8939f84116c20813500d374042ae"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC7523_JSON_Web_Token_JWT_Profile_for_OAuth_2_0_Client_Authentication_and_Authorization_Grants.txt",
+      "bytes": 24187,
+      "sha256": "340594ada5600fb8760df37199abe4b08b0d649fffad7ddc352c63c3f978a073"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC7636_Proof_Key_for_Code_Exchange_by_OAuth_Public_Clients.txt",
+      "bytes": 35110,
+      "sha256": "356650d47ac7b17bbe991b4191840044c3e5cb1b71add1f2a295b72e19c066ab"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC8252_OAuth_2_0_for_Native_Apps.txt",
+      "bytes": 46619,
+      "sha256": "b85a2032980982331e99f8857c94690e57b449a4bb303ee2365449ed1b6a9f52"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC8414_OAuth_2_0_Authorization_Server_Metadata.txt",
+      "bytes": 49855,
+      "sha256": "a4a257836bff1d905559699ea2915c41f61eea06297ea731e40ffcef65efdee9"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC8705_OAuth_2_0_Mutual_TLS_Client_Authentication_and_Certificate_Bound_Access_Tokens.txt",
+      "bytes": 56435,
+      "sha256": "9a633d280be56134026c80b45fc29de44719554d73662a1eff1714a3543eb03d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC9068_JSON_Web_Token_JWT_Profile_for_OAuth_2_0_Access_Tokens.txt",
+      "bytes": 33513,
+      "sha256": "b441e85f1ba7e7b3ea2b1ac2c3ba10601e14fce7a13ec966f6ddaa3951e60d11"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC9101_The_OAuth_2_0_Authorization_Framework_JWT_Secured_Authorization_Request_JAR.txt",
+      "bytes": 54592,
+      "sha256": "1ae4b1ba5a7bebb3218971b848cdaabf5ea349774cfaa5d3a458472f8daf26c1"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC9200_Authentication_and_Authorization_for_Constrained_Environments_Using_the_OAuth_2_0_Framework_ACE_OAuth.txt",
+      "bytes": 172175,
+      "sha256": "56c2ac3a1c75c239967ba5b1c6d168a9c5989878a6f038ddf7873e2662506003"
+    },
+    {
+      "path": "fine-tuning/extracted_text/02_Identity_Access_Zero_Trust/RFC9449_OAuth_2_0_Demonstrating_Proof_of_Possession_DPoP.txt",
+      "bytes": 87256,
+      "sha256": "16ad8ae5edd317d33c22e650358bce66907499f54ae8810f57b299f63ba03def"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC4106_The_Use_of_Galois_Counter_Mode_GCM_in_IPsec_Encapsulating_Security_Payload_ESP.txt",
+      "bytes": 20801,
+      "sha256": "3cfc1f5ce7d84f710aa5420f451cc510998bb46cc90bc603a3d2908e5e65ae7b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC4301_Security_Architecture_for_the_Internet_Protocol.txt",
+      "bytes": 234892,
+      "sha256": "39892ad3274b36e83fec51ab2b7a54f4242aef359b4f276d800d5bbbf6ea0748"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC4302_IP_Authentication_Header.txt",
+      "bytes": 73796,
+      "sha256": "7544dfb3ef0fe272cb485906a793aaf61277b825f4ece638e7d47e053f7b12c5"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC4303_IP_Encapsulating_Security_Payload_ESP.txt",
+      "bytes": 101858,
+      "sha256": "7fc17671f97c89a6074cbe0d7762030f09d596860c49dfbc3a6f22a372d61669"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC7296_Internet_Key_Exchange_Protocol_Version_2_IKEv2.txt",
+      "bytes": 318862,
+      "sha256": "2e4ec9cf17ba40436c7fef21334dd6eaff55339b5fb109818cc68f8087d4b637"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC7383_Internet_Key_Exchange_Protocol_Version_2_IKEv2_Message_Fragmentation.txt",
+      "bytes": 43702,
+      "sha256": "903491a49bc52541a8779c4a3ac8952d464e6849d54d172d546fcfb11bb8b643"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC7427_Signature_Authentication_in_the_Internet_Key_Exchange_Version_2_IKEv2.txt",
+      "bytes": 34867,
+      "sha256": "5553c3d443882a760fb0367b600895ebf92bc55b85bf89f5a2c28df74ad23135"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC8247_Algorithm_Implementation_Requirements_and_Usage_Guidance_for_the_Internet_Key_Exchange_Protocol_Version_2_IKEv2.txt",
+      "bytes": 39628,
+      "sha256": "b97455a308928adf6db3874b37c562338253af453a2d8345f13e1797f82a18e8"
+    },
+    {
+      "path": "fine-tuning/extracted_text/03_VPN_IPsec_Secure_Tunneling/RFC8784_Mixing_Preshared_Keys_in_the_Internet_Key_Exchange_Protocol_Version_2_IKEv2_for_Post_quantum_Security.txt",
+      "bytes": 39625,
+      "sha256": "2468a3f9296c8729bab66695d27fe17a2eadc6f5de7b373344e88884eccdc8c5"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/011_NIST_SP_800-52r2.txt",
+      "bytes": 180742,
+      "sha256": "a1ed91e04e8d72aa2386a63975b958f4d85cc0a80b4d7170a2a2a3dcc473cc99"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/012_NIST_SP_800-57pt1r5.txt",
+      "bytes": 510592,
+      "sha256": "6e621815da38322a68fc48fc9e388c8a2ac441ec37967064d11eff6cda233ef9"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/021_RFC8446_TLS_1.3.txt",
+      "bytes": 297378,
+      "sha256": "be0046c6200e49cc083e9fdd3dc0e75a8eb04df1cadc04e4f21c85bcf444f805"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/022_RFC9325_TLS_DTLS_Recommendations.txt",
+      "bytes": 89988,
+      "sha256": "8d4907afff34916ef1993e5b3ec2ad719c074371a0ced8cb28276369ae319cc5"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/023_RFC8996_Deprecating_TLS_1.0_1.1.txt",
+      "bytes": 44420,
+      "sha256": "da3dc365d74158d21112b45d4c37466d53ded9ba70b3dd9d03119babbe17f07b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/024_RFC5246_TLS_1.2.txt",
+      "bytes": 198873,
+      "sha256": "19ffc4869a014954f3ce8f35f1a4af095abae4ce10aa097d5f7c7a769e5d3c68"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/025_RFC6066_TLS_Extensions.txt",
+      "bytes": 50935,
+      "sha256": "1e47ec792f42985aead1e0a29eecbe3ead1bbcb658c19087dc17f6b41853e7a4"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/026_RFC7301_ALPN.txt",
+      "bytes": 15285,
+      "sha256": "fbc232037207de9b947f8bd29ae6932f83fcad7c7a5b80dc21054a21cdf5f466"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/027_RFC7465_Prohibiting_RC4.txt",
+      "bytes": 7449,
+      "sha256": "7634378708b9fc63df37d0f9fd0a8a146347b009cf929213dd9e191e7bcf2365"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/028_RFC7919_FFDHE_TLS.txt",
+      "bytes": 57484,
+      "sha256": "f038e84a45edaabfefb6a83374c87ba3c14a41db75c491808d8087d913cd1d93"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/029_RFC8447_TLS_Registry_Updates.txt",
+      "bytes": 38927,
+      "sha256": "fd2931031c776bb5bb1ca3b4948d2f138a72700553ea95b385c5f2ad7ffd0518"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/030_RFC8701_GREASE.txt",
+      "bytes": 22374,
+      "sha256": "cc1522d98d4db54f8a9f93e00bc93fc3dd4a54e16fb1e1384ae144cdae20c82d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/048_OWASP_Cryptographic_Storage_Cheat_Sheet.txt",
+      "bytes": 18780,
+      "sha256": "9cea78e7623aba15eb90e4522943560e88241e998ce9680154c028f27dcfc0dc"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/062_OWASP_HTTP_Strict_Transport_Security_Cheat_Sheet.txt",
+      "bytes": 4065,
+      "sha256": "b423f2bb740993563759ed283c3f03cc28ee98efc155fe24a7925fdcd60bdb5c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/068_OWASP_Key_Management_Cheat_Sheet.txt",
+      "bytes": 23551,
+      "sha256": "387591dbb4a65158c9251180402f44f930ed35af4c513ef9f8a2ee4f23a46a33"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/088_OWASP_Pinning_Cheat_Sheet.txt",
+      "bytes": 16330,
+      "sha256": "49d973b663aaa6acca51aa5d3a567addc0534cd5c4b04d5bec81734b6a2d8d13"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/106_OWASP_Transport_Layer_Security_Cheat_Sheet.txt",
+      "bytes": 24104,
+      "sha256": "4b44152f6c73322e102483383691c74121c9bdf35d5f3d2ce7d9523400d2501e"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC4252_The_Secure_Shell_SSH_Authentication_Protocol.txt",
+      "bytes": 31670,
+      "sha256": "016806220d715914f2c9563845af17d04fd5100ffd70f77e6a132f4e3c15123e"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC4253_The_Secure_Shell_SSH_Transport_Layer_Protocol.txt",
+      "bytes": 61974,
+      "sha256": "3b4afb8dd91ba0bdb9f1a8b75a520fa81999448d4698801a8c4b2e10cc89bea1"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC5280_Internet_X_509_Public_Key_Infrastructure_Certificate_and_Certificate_Revocation_List_CRL_Profile.txt",
+      "bytes": 313406,
+      "sha256": "2efd8c3a82568a6fad4a7164cdb165b9c4772ccdd216162c9ac9405c180b0c66"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC6960_X_509_Internet_Public_Key_Infrastructure_Online_Certificate_Status_Protocol_OCSP.txt",
+      "bytes": 73064,
+      "sha256": "eb62116f3b6ae2d5cc852300f05a7d28618817f884e15e6f7f19ceae2bc12233"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC7250_Using_Raw_Public_Keys_in_Transport_Layer_Security_TLS_and_Datagram_Transport_Layer_Security_DTLS.txt",
+      "bytes": 33605,
+      "sha256": "5b75755b1c31d034fa13c1fc542a8dd24146d2a1209263b6720786fb8984a051"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC8442_ECDHE_PSK_with_AES_GCM_and_AES_CCM_Cipher_Suites_for_TLS_1_2_and_DTLS_1_2.txt",
+      "bytes": 13019,
+      "sha256": "d5018d5eeccc7c5fc2c892dc8b2f5ccbecfd91ced334d2e54f6740e270d68f37"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC8555_Automatic_Certificate_Management_Environment_ACME.txt",
+      "bytes": 170934,
+      "sha256": "8abe4ffc761727dc92bb29e3596f4a45fe44b980d99cb5ba298f60641e0db7b2"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC8879_TLS_Certificate_Compression.txt",
+      "bytes": 14232,
+      "sha256": "57d8651c2d8d9972530fd333e90419130dbcb5fbeb9eb65a7594a5eab3821d8a"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC9180_Hybrid_Public_Key_Encryption.txt",
+      "bytes": 184958,
+      "sha256": "7b04aa612609c685c930afd0ea409fe28a5483920468e650219f85a91b2f1c99"
+    },
+    {
+      "path": "fine-tuning/extracted_text/04_TLS_PKI_Cryptography/RFC9525_Service_Identity_in_TLS.txt",
+      "bytes": 65433,
+      "sha256": "d6b753f95afbc83e8ed657ee9668f8b36f887734115185f3a4b3e8f220aab971"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC4033_DNS_Security_Introduction_and_Requirements.txt",
+      "bytes": 49435,
+      "sha256": "40c06b8d10841697ad05b1185e3936ede3963a1846cb38a940187edaa36b1a7e"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC4034_Resource_Records_for_the_DNS_Security_Extensions.txt",
+      "bytes": 57256,
+      "sha256": "578a7e80b7670ec54675015957941daf97a3491e5721b9c3e9c593bfb790f9df"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC4035_Protocol_Modifications_for_the_DNS_Security_Extensions.txt",
+      "bytes": 113247,
+      "sha256": "62fdfc68652c995ecad09a4bb432a09df95473db3e274e21de9e90b26089b26c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC5011_Automated_Updates_of_DNS_Security_DNSSEC_Trust_Anchors.txt",
+      "bytes": 27781,
+      "sha256": "0424ed7134dec8a1dedb8563dd143d42b3c5da0fbe52f00391a00928dcba615d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC5155_DNS_Security_DNSSEC_Hashed_Authenticated_Denial_of_Existence.txt",
+      "bytes": 97440,
+      "sha256": "99025f8190886ce6150b9cf1079091b8b0ff2f3c3e93238e66ed97cf9248bd7a"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC6781_DNSSEC_Operational_Practices_Version_2.txt",
+      "bytes": 147128,
+      "sha256": "096ab2383db643cc1a4ec4446c6d6ccb6f04c7fd55e133a4bc10e53b5a0a3819"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC7671_The_DNS_Based_Authentication_of_Named_Entities_DANE_Protocol_Updates_and_Operational_Guidance.txt",
+      "bytes": 75115,
+      "sha256": "0dfadb0a9f3c5aaa43dbcc0cb7d461d52f899c0716cb6a6299cf132490e7a8b9"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC7858_Specification_for_DNS_over_Transport_Layer_Security_TLS.txt",
+      "bytes": 38125,
+      "sha256": "19307c3cf0cc4533e72424f04ccfe5cff5566b1616b00f998b5d3fabcc19f355"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC8484_DNS_Queries_over_HTTPS_DoH.txt",
+      "bytes": 43812,
+      "sha256": "1cf091964cc4d6a9177eafd8a1bc00fb57f8405c18e186a80c6a1e90b76cdd5e"
+    },
+    {
+      "path": "fine-tuning/extracted_text/05_DNS_DNSSEC_Name_Security/RFC8659_DNS_Certification_Authority_Authorization_CAA_Resource_Record.txt",
+      "bytes": 34056,
+      "sha256": "e79502727ff8fcd8f68234ad2e344b7009ff0607424fab17299321ee8df65c78"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/006_NIST_SP_800-41r1.txt",
+      "bytes": 142081,
+      "sha256": "1fb6f4d2cf9ba2086f7ff38ab0e40f57660873ecbd6582762b4d59248e908200"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/013_NIST_SP_800-82r3.txt",
+      "bytes": 751702,
+      "sha256": "94fda8275108dd00085c3c83902e6b0519add44885041f69ef62980a10f3dfb8"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/015_NIST_SP_800-115.txt",
+      "bytes": 256774,
+      "sha256": "c25435b4fb213a9661fabbcfcfd867ff7756f61c4984a039dd85f7495cc7f164"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/083_OWASP_Network_Segmentation_Cheat_Sheet.txt",
+      "bytes": 9398,
+      "sha256": "bbbf92ba2300240fbceb0f5a8f38ab89ada4408da80ac3d0e263b42e7e2ee0ed"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC2328_OSPFv2.txt",
+      "bytes": 422143,
+      "sha256": "0a7df2331fcec2903c8aafccbc01617ecbf2a0c44785129b496119f40aa55b26"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC4271_A_Border_Gateway_Protocol_4_BGP_4.txt",
+      "bytes": 194823,
+      "sha256": "4697941051d0f45f86c57aa0823d1d8ea61224e53b10a708721f4902ecca3e39"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC4443_Internet_Control_Message_Protocol_ICMPv6_for_the_Internet_Protocol_Version_6_IPv6_Specification.txt",
+      "bytes": 42945,
+      "sha256": "556e2acd6ee8d71cc5b6c599b6c0acd3f2d2a5ce79f67747bf6d2f104b3b69d8"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC4861_Neighbor_Discovery_for_IP_version_6_IPv6.txt",
+      "bytes": 201535,
+      "sha256": "3cd145f2e45ccdb833a9601203130ea211755bc90fb6b70d818c51303eefe1cb"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC4862_IPv6_Stateless_Address_Autoconfiguration.txt",
+      "bytes": 68222,
+      "sha256": "45aae9f0ee643b0f3f52d04a132927784f77d487f6ea0a093ff11f913f466d2b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC6105_IPv6_Router_Advertisement_Guard.txt",
+      "bytes": 18702,
+      "sha256": "f0a03774f4f8cdd93e41e780119f39ac67d5917de34900e8dbbc3cb019097d80"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC6480_An_Infrastructure_to_Support_Secure_Internet_Routing.txt",
+      "bytes": 57610,
+      "sha256": "d1e81fe0df847ebfff8d834e55c0fbcd75ccca1f5439f3e9bc3e114815987114"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC6481_A_Profile_for_Resource_Certificate_Repository_Structure.txt",
+      "bytes": 32831,
+      "sha256": "a76a565189320fae076bdfdaa8b99a79cb25b6b951b47396d809c088e3f7011d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC6811_BGP_Prefix_Origin_Validation.txt",
+      "bytes": 18326,
+      "sha256": "726c26a3253971293870d89669a763a4a766391396aecc39f83eab93adb55591"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC6980_Security_Implications_of_IPv6_Fragmentation_with_IPv6_Neighbor_Discovery.txt",
+      "bytes": 19442,
+      "sha256": "26098344334daf82bc2b4c1694f0955ca514206c39588677002b3d2013cb3de4"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC7113_Implementation_Advice_for_IPv6_Router_Advertisement_Guard_RA_Guard.txt",
+      "bytes": 25504,
+      "sha256": "839ee5900d5c6e9978d0361773af0ebf2bf2730d4878c050b96feeac9b4a1b61"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC7115_Origin_Validation_Operation_Based_on_the_Resource_Public_Key_Infrastructure_RPKI.txt",
+      "bytes": 24584,
+      "sha256": "93b1011f540b339fb8f10f6c210ebf9645ffc84e67b088fcf01a9166f2185ce0"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC8064_Recommendation_on_Stable_IPv6_Interface_Identifiers.txt",
+      "bytes": 17129,
+      "sha256": "943dc948747f7f8882036f4c70a63fb717a930265fd54d56e262276c29e36691"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC8200_Internet_Protocol_Version_6_IPv6_Specification.txt",
+      "bytes": 78309,
+      "sha256": "821555ecd4406e26aab2cfb934f1a8474c3d506581cb632fea740f4670153324"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC8205_BGPsec_Protocol_Specification.txt",
+      "bytes": 105820,
+      "sha256": "0240bca3b88050e12c23abc65732f1ea35ef987495e664201024495d02be6609"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC8210_The_Resource_Public_Key_Infrastructure_RPKI_to_Router_Protocol_Version_1.txt",
+      "bytes": 67711,
+      "sha256": "78479468a31e0de6eb2b7ec9886a4033b91d03d366820ed2e1b6d480ceac2cf8"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC8212_Default_External_BGP_EBGP_Route_Propagation_Behavior_without_Policies.txt",
+      "bytes": 11357,
+      "sha256": "7aeb85a68f6610db1fe4c9a3801621f90f055371dc978fc4a388648df74cd476"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC8981_Temporary_Address_Extensions_for_Stateless_Address_Autoconfiguration_in_IPv6.txt",
+      "bytes": 51400,
+      "sha256": "c792472b2b0727dec0cdaa7c0de60bba362f13f85189ed0dd7da877b6423938b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC9099_Operational_Security_Considerations_for_IPv6_Networks.txt",
+      "bytes": 122923,
+      "sha256": "accd07d5d1635f5d84c66ad9744417d09e582622634e7313b5323c64af0c97c5"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC9234_Route_Leak_Prevention_and_Detection_Using_Roles_in_UPDATE_and_OPEN_Messages.txt",
+      "bytes": 26659,
+      "sha256": "4accda428da45f05569eaecabc537da2eb8b8d8a83de86439157d7bff758bacd"
+    },
+    {
+      "path": "fine-tuning/extracted_text/06_Routing_IPv6_Network_Security/RFC9582_A_Profile_for_Route_Origin_Authorizations_ROAs.txt",
+      "bytes": 28187,
+      "sha256": "aee76b6a19ec62ba4977b430ac37dc5bd590dc871b8d67457e58bdfe29bffc2d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/020_OWASP_Top10_2025_Introduction.txt",
+      "bytes": 15064,
+      "sha256": "232bb0f0bd6a0e212d2716128c4064801eb34bb2e08c6c4a4fcb9a2365825cf4"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/031_RFC9000_QUIC_Transport.txt",
+      "bytes": 385582,
+      "sha256": "70580b01e681e2f6a0f16c21e7ad24dc7fa70423a0e65fb347b498543492f829"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/032_RFC9001_QUIC_TLS.txt",
+      "bytes": 119277,
+      "sha256": "73e310439010dc69f875602f440382b4b7901952d04472f41718365b3d963a1d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/033_RFC9110_HTTP_Semantics.txt",
+      "bytes": 478919,
+      "sha256": "1db0231825ffa2ee690996dbf46e7a7f9e72a71ba1c8def6cd75f0754c45e6ae"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/034_RFC9112_HTTP_1.1.txt",
+      "bytes": 104772,
+      "sha256": "d9748ed4756233577dcf4a649abbcf48a94fbedf04d47fd44973d8d33df36857"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/035_RFC9113_HTTP_2.txt",
+      "bytes": 182140,
+      "sha256": "3e6b8cb0952eaff665bd6420ca394fd09a017ec9aedacff47bec982e3a1acd14"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/042_OWASP_Clickjacking_Defense_Cheat_Sheet.txt",
+      "bytes": 15511,
+      "sha256": "c49ca36eeb93999049b1957ce7e5d556282dc4a400e537bb0c7d67dc69b920f6"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/044_OWASP_Cookie_Theft_Mitigation_Cheat_Sheet.txt",
+      "bytes": 7453,
+      "sha256": "8a590de24b9a4a26af45d43e9e72e5655b83a39ac5913ef2ac67217794627117"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/046_OWASP_Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.txt",
+      "bytes": 73275,
+      "sha256": "5ac41a81a606d12146181860df3d2af7f96e0f7d185e6a467652b25136577bc8"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/050_OWASP_Database_Security_Cheat_Sheet.txt",
+      "bytes": 9234,
+      "sha256": "b5b913460d0b2b798307c40e2791b41ca15ddff7fca1a0e88428b7ce057a790e"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/053_OWASP_Deserialization_Cheat_Sheet.txt",
+      "bytes": 23680,
+      "sha256": "b230234dd5f81119a22ef667b39ba96e9c5b3a4582518bf3f027a95e4ab5a477"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/056_OWASP_File_Upload_Cheat_Sheet.txt",
+      "bytes": 12127,
+      "sha256": "a3ec7441d20429dd5d4d1f10b372ab4880e28624de16fc275a99cf13a8e1ac81"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/059_OWASP_GraphQL_Cheat_Sheet.txt",
+      "bytes": 28356,
+      "sha256": "8e0c91a55e679b122ea15bfcb9136cf0d32152e869daded422b94c957e4f555c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/060_OWASP_HTML5_Security_Cheat_Sheet.txt",
+      "bytes": 16233,
+      "sha256": "cb97807344279d35662477f756bdcb5313c5bd469d3df74a75d6f8fe00a2a37f"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/061_OWASP_HTTP_Headers_Cheat_Sheet.txt",
+      "bytes": 22519,
+      "sha256": "a41db5218c36765d90391d2ea2f20b255cdfc67d90383eb0498764aab26eda06"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/064_OWASP_Injection_Prevention_Cheat_Sheet.txt",
+      "bytes": 20920,
+      "sha256": "5146b86901b39192ab7e56e50995f0eaac3abc07a554d50cf1dc9c3420f4b0cf"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/066_OWASP_Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.txt",
+      "bytes": 5480,
+      "sha256": "3716bba260405bb2ed0e0b497b130fcfdbc4e7c686d54681d984f84ca10e0dde"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/070_OWASP_LDAP_Injection_Prevention_Cheat_Sheet.txt",
+      "bytes": 9617,
+      "sha256": "eea9540ce2a47916cc8dd639eea91b7232d6a9adfd8c7b057091a47fa1d51c12"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/077_OWASP_Microservices_Security_Cheat_Sheet.txt",
+      "bytes": 22329,
+      "sha256": "ddd42eabdaabe090a9c90d97f819777ddabec5fe916b025a47f299e1b07a3d8d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/078_OWASP_Microservices_based_Security_Arch_Doc_Cheat_Sheet.txt",
+      "bytes": 14939,
+      "sha256": "cb65ca26bb28f2c8664e26af43b08a4fed97c03e13cdb488b81ab8cf40f2decc"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/079_OWASP_Mobile_Application_Security_Cheat_Sheet.txt",
+      "bytes": 16878,
+      "sha256": "72662d3d7315fd6d456d0e2a1a88260008173cf81c3190d33f7d0991f3e66cf9"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/086_OWASP_OS_Command_Injection_Defense_Cheat_Sheet.txt",
+      "bytes": 11751,
+      "sha256": "978cb668ba39980471f38af6aa7143ee2e5f813091d5fbf4c9f576ff1bbe90ac"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/089_OWASP_Query_Parameterization_Cheat_Sheet.txt",
+      "bytes": 8025,
+      "sha256": "5bebebc2497349854c6530e40cfc88dc6230f9a78b6d3eb62491a29823ac9b37"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/091_OWASP_REST_Assessment_Cheat_Sheet.txt",
+      "bytes": 6251,
+      "sha256": "5f8fab04b3e428ec4a8fb36a3c71cf8d7f5ed82683653e0715885a9e303fa01b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/092_OWASP_REST_Security_Cheat_Sheet.txt",
+      "bytes": 22350,
+      "sha256": "befa76803fcaeb14719f4b5e87c1f9065525b0092750bca5f25eea48dea98005"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/094_OWASP_SQL_Injection_Prevention_Cheat_Sheet.txt",
+      "bytes": 19578,
+      "sha256": "bbdc46abd97d3124da50075bee87800bb4416ca3f5d571ce8536562c7f5054fd"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/102_OWASP_SSRF_Prevention_Cheat_Sheet.txt",
+      "bytes": 27292,
+      "sha256": "f3cee93253aff2ee96b1c8a679a67db7ffde31763bde75e1aed5f0da326a483d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC6265_HTTP_State_Management_Mechanism.txt",
+      "bytes": 73892,
+      "sha256": "bf04c9d447e00d4393f99872b8ae4c235e7e4084246c109b7345872dc1910ff7"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC6454_The_Web_Origin_Concept.txt",
+      "bytes": 38113,
+      "sha256": "553de0ff9bb9433580f3b80956e6a15f584b4e1950471235cd6ade293fa805ec"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC6455_The_WebSocket_Protocol.txt",
+      "bytes": 148484,
+      "sha256": "33dd7ce5635b5da309eccc94a79fdc40e2dddd0f912cecf8c59eea0cb76e9a3d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC6797_HTTP_Strict_Transport_Security_HSTS.txt",
+      "bytes": 96280,
+      "sha256": "136ab293f90f2dc94dcf0f67bde57eb40784f26bbe47a62938e85f8ea3b9f6c4"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC8441_Bootstrapping_WebSockets_with_HTTP_2.txt",
+      "bytes": 15145,
+      "sha256": "b64595c18db53da49df00a457296b2e00267bcb619731bbcbb4b75cff35df105"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC9111_HTTP_Caching.txt",
+      "bytes": 81053,
+      "sha256": "ad8fbe93b895dce88be7240b07b3ae5cbf17a11cebd2cd99988efd57044ef4a5"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC9114_HTTP_3.txt",
+      "bytes": 145656,
+      "sha256": "9f5900082e2ef9de66a89455788c0f3354f1623ca625d049e672487fd8644ffb"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC9204_QPACK_Field_Compression_for_HTTP_3.txt",
+      "bytes": 87439,
+      "sha256": "09311c968f788bf712fd404d9f0bb9fa90610790f30b6770c2a773349df67310"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC9218_Extensible_Prioritization_Scheme_for_HTTP.txt",
+      "bytes": 52107,
+      "sha256": "31e22d394f1479b1074b4e5c5231e8ab85c1a164de0963d8fc28f65c887da7ae"
+    },
+    {
+      "path": "fine-tuning/extracted_text/07_Web_API_Application_Security/RFC9220_Bootstrapping_WebSockets_with_HTTP_3.txt",
+      "bytes": 6216,
+      "sha256": "fae84034e8c6e95744ea539b9980e8512cd3157cba15abcbf8b39edf3e901668"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/041_OWASP_CI_CD_Security_Cheat_Sheet.txt",
+      "bytes": 26833,
+      "sha256": "0bcd91a71537ef2cb872a517a89684baee64e32f83633a2fe4ed01e6af923e13"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/052_OWASP_Dependency_Graph_SBOM_Cheat_Sheet.txt",
+      "bytes": 8915,
+      "sha256": "5fa3ae61fa02a85dbe1a7f634acd14d708c1e0d3f53c20a4f1da59d17bf1ebf2"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/054_OWASP_Docker_Security_Cheat_Sheet.txt",
+      "bytes": 25174,
+      "sha256": "24d1e62b16cdf7b3cc17fb92ff68b4238278e9e84386504756a71df0b28c1a8c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/058_OWASP_GitHub_Actions_Security_Cheat_Sheet.txt",
+      "bytes": 20604,
+      "sha256": "1a0b20e2bdb031fbfd07159963cd8c0704112cd14087b03497b83964a5062755"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/063_OWASP_Infrastructure_as_Code_Security_Cheat_Sheet.txt",
+      "bytes": 7847,
+      "sha256": "4de48684855b7368cc1ba35e6c434e89d4838fdb4cf1cf48128e20a5c2a1c301"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/069_OWASP_Kubernetes_Security_Cheat_Sheet.txt",
+      "bytes": 68806,
+      "sha256": "1589154e5406997bfe9a2958cd43ffadd4f4e48f4134405975774b09cc6c05e3"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/075_OWASP_MCP_Security_Cheat_Sheet.txt",
+      "bytes": 13196,
+      "sha256": "0a6aeddcae813dde6ccf1e0fa920f8ff58b04dc5915cd3a01155e3454dcf678b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/082_OWASP_NPM_Security_Cheat_Sheet.txt",
+      "bytes": 27315,
+      "sha256": "d1f56ed018c5255aac87151dfb80cd13e902911d7acef603867729da6defbf9b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/090_OWASP_RAG_Security_Cheat_Sheet.txt",
+      "bytes": 28442,
+      "sha256": "bd438aee23a7e6f187a827660f945c283f1e887c9cd8e6e2f4e197c884c473d7"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/096_OWASP_Secure_AI_Model_Ops_Cheat_Sheet.txt",
+      "bytes": 8145,
+      "sha256": "7bc6cf4a6e6a6c514155ca8f9a4cab8b02509bcbb9a6c16f73f30ae77f311ab3"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/097_OWASP_Secure_Cloud_Architecture_Cheat_Sheet.txt",
+      "bytes": 29353,
+      "sha256": "2d55a101e3da340022f0f913653a39db99402269507cf0aabb21f2b1fd3809b0"
+    },
+    {
+      "path": "fine-tuning/extracted_text/08_Cloud_Container_Supply_Chain/099_OWASP_Software_Supply_Chain_Security_Cheat_Sheet.txt",
+      "bytes": 21680,
+      "sha256": "30071c12bf9a2d0255379c8598a5d866d9d43f26c3278a62bc768b31ec976098"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/003_NIST_SP_800-61r3.txt",
+      "bytes": 109878,
+      "sha256": "08233fb29eca05202ed0a899c0638b1688f24a2c47a4f83d6ade0ede5abee78b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/007_NIST_SP_800-92.txt",
+      "bytes": 194416,
+      "sha256": "ef8fd50bb495bd9cc942fc319716b9e1957712e1c876903557c38acf0056acef"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/014_NIST_SP_800-94.txt",
+      "bytes": 382847,
+      "sha256": "e83d6a51df5b5f716447b39316d45e2b912fb5e74858f90929d7519282bffbe2"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/016_NIST_SP_800-137.txt",
+      "bytes": 231887,
+      "sha256": "de38e3dc649d27ac3a67aeff6c3132fc024ea6750ea87d19352c35d7de1f0ea6"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/037_OWASP_Attack_Surface_Analysis_Cheat_Sheet.txt",
+      "bytes": 13627,
+      "sha256": "c9bb04729a0a68eec6055f4d02660493b3b1b41b103a79a3ed6dbb708c1581fc"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/051_OWASP_Denial_of_Service_Cheat_Sheet.txt",
+      "bytes": 14775,
+      "sha256": "1f4585513e918acdf714bfd3958885726c57d000abfac23ca896a4d9b35a2a47"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/073_OWASP_Logging_Cheat_Sheet.txt",
+      "bytes": 29271,
+      "sha256": "087ea71107eeba122b6a884f2b59beb6cd119e2dba32ca515e4469b2c34a1d2d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/074_OWASP_Logging_Vocabulary_Cheat_Sheet.txt",
+      "bytes": 39500,
+      "sha256": "47eb10d5c62463566f464dc53480a6c4cc4d3058f7c6b221c6750f41c10b203d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/105_OWASP_Threat_Modeling_Cheat_Sheet.txt",
+      "bytes": 19715,
+      "sha256": "b831528aa8c292177ade3c8afbaa14cbc7bc05d54ed3de13e05d4c901601012c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/108_OWASP_Vulnerability_Disclosure_Cheat_Sheet.txt",
+      "bytes": 24862,
+      "sha256": "a610aa5610e0c4db69c3d1879af87856633f7ac1cd4368d382d936dd7f153709"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC2827_Network_Ingress_Filtering_Defeating_Denial_of_Service_Attacks_which_employ_IP_Source_Address_Spoofing.txt",
+      "bytes": 19549,
+      "sha256": "0ba6b096202872f59d6ad7b39e3c1d61467f2e2f56ee611117527d33869d4075"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC3704_Ingress_Filtering_for_Multihomed_Networks.txt",
+      "bytes": 34318,
+      "sha256": "d587b814d7adb0335e9b5faac26f1c26746bb61f67b0932c7d1e99cebf033db2"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC4732_Internet_Denial_of_Service_Considerations.txt",
+      "bytes": 86950,
+      "sha256": "234fb8c7c795328b82ff54ea474067e09aabb72b7d35f1b8d4e5411780fc65dd"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC4890_Recommendations_for_Filtering_ICMPv6_Messages_in_Firewalls.txt",
+      "bytes": 77600,
+      "sha256": "7bc3555f456aed4f9a79c0ebe3ff98c63ff9e6793e1ef45aeff67c2c2ff12585"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC5358_Preventing_Use_of_Recursive_Nameservers_in_Reflector_Attacks.txt",
+      "bytes": 13979,
+      "sha256": "a54ddd8de90fba16e5bd535d020b2c3f60b05673020854f5c398c29ea9916357"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC6192_Protecting_the_Router_Control_Plane.txt",
+      "bytes": 40691,
+      "sha256": "772545e236e89bfcaf20f48e3530d31d8b746cc6c66e6e20ec2df38d5f9eee77"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC7454_BGP_Operations_and_Security.txt",
+      "bytes": 53320,
+      "sha256": "396948a9e2ca1c3f91fe993bea30e892941892a756f0da11d9da08b949ecb2aa"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC7970_The_Incident_Object_Description_Exchange_Format_Version_2.txt",
+      "bytes": 277423,
+      "sha256": "9f56d4b76f53bc94039e75f72f3369758bc18619c8884d8a7cea984c9cd28b52"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC8704_Enhanced_Feasible_Path_Unicast_Reverse_Path_Forwarding.txt",
+      "bytes": 38797,
+      "sha256": "3c144b72b55cd3780ed55b605d8de03acba7ccd82297f0f4274aa3ac89300e4b"
+    },
+    {
+      "path": "fine-tuning/extracted_text/09_Logging_Monitoring_Incident_Response/RFC9132_Distributed_Denial_of_Service_Open_Threat_Signaling_DOTS_Signal_Channel_Specification.txt",
+      "bytes": 211492,
+      "sha256": "9d0ae8366528492a651346e8f2dc4a805a4018abd00b10647e644c5856e434f3"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC1918_Private_Internets.txt",
+      "bytes": 20684,
+      "sha256": "0864447398be923d4450b68c944e0d16e6f0e206e61a7bdb4081f764ff8229f2"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC2131_DHCP.txt",
+      "bytes": 98682,
+      "sha256": "5a401a143a5450edf019c2bac751fb836135cf3635ff36c735cdf79286e4f510"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC2132_DHCP_Options.txt",
+      "bytes": 58967,
+      "sha256": "88f51d86ab7008d60f09a5925655097aa519f1462e68bfefae4d567149011a52"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC3414_User_based_Security_Model_USM_for_version_3_of_the_Simple_Network_Management_Protocol_SNMPv3.txt",
+      "bytes": 168657,
+      "sha256": "808f0d67bf55cc1e0d367d35738625c03d16afa48137c52bc61160868a1d3289"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC3415_View_based_Access_Control_Model_VACM_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 66326,
+      "sha256": "0def5e131905e7464f0e92c488c55583513c46752f17793750de7cac1439069f"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC3416_Version_2_of_the_Protocol_Operations_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 63257,
+      "sha256": "d17c16d4126e16cd5fbe349e2eb5c234a308d31b5aa278738b8d931da63b8a92"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC3417_Transport_Mappings_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 33471,
+      "sha256": "e5dbbf6191b26964ab7d65f68fdc125633704a97acad8dde981a1af56e7fc5c6"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC3418_Management_Information_Base_MIB_for_the_Simple_Network_Management_Protocol_SNMP.txt",
+      "bytes": 39254,
+      "sha256": "420f1c21cc00aea6065a9c8eea4794f5184788d1f24333f5959ccd42c118e69f"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC6241_Network_Configuration_Protocol_NETCONF.txt",
+      "bytes": 178321,
+      "sha256": "f74754405b570855c723d2a5b932c37c9be0369644f1eb4dfd321740dec0c86f"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC6242_Using_the_NETCONF_Protocol_over_Secure_Shell_SSH.txt",
+      "bytes": 20866,
+      "sha256": "4c228b67949e4e95e5be4c951d935580ef880c254897db77ecc8d2f1b565d114"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC7950_The_YANG_1_1_Data_Modeling_Language.txt",
+      "bytes": 323672,
+      "sha256": "48fc3009c1131b9883db2845f7256f57f72a3ad632a011c4ee0b530808369735"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC8040_RESTCONF_Protocol.txt",
+      "bytes": 202254,
+      "sha256": "3fe96925526754ac0343ea4c2142515e181961accef729f525f3a2d93f25742d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/10_Network_Management_Operations/RFC8341_Network_Configuration_Access_Control_Model.txt",
+      "bytes": 93866,
+      "sha256": "f503ef48da0f00896615aeb7e85f2c74daa454ae1e7b9c2d4ffd5e3daa8073d3"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/017_NIST_SP_800-218.txt",
+      "bytes": 109809,
+      "sha256": "1b0e82ac516f2f89c73eb41064f980e50b62f211b0efe227a3b3e14c17cd4205"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/018_OWASP_ASVS_5.0.0.txt",
+      "bytes": 247016,
+      "sha256": "56d8384d0c583b18d5f852d7f6fa5b6d3c60d40bd1d387a4d32e487d51f20420"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/040_OWASP_Business_Logic_Security_Cheat_Sheet.txt",
+      "bytes": 26844,
+      "sha256": "5345381048924a9ae1301e3c466728f2ee41d3dfe229dc2b8870eecdb2d4de73"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/072_OWASP_Legacy_Application_Management_Cheat_Sheet.txt",
+      "bytes": 13639,
+      "sha256": "e0b8111675b4d60707626061cef90cc2ef33d12d3b8805e2238d2e8d2b1bc88a"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/098_OWASP_Secure_Code_Review_Cheat_Sheet.txt",
+      "bytes": 21224,
+      "sha256": "109e025992ed4e28c6a6e0cecb0ac153fdff5e95f8c1b2d90485c1509a4dd01c"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/100_OWASP_Secure_Product_Design_Cheat_Sheet.txt",
+      "bytes": 10918,
+      "sha256": "da4e33580458a133c371f7a2ac5ade6c1758524de80391f178b6dd32f3a68e05"
+    },
+    {
+      "path": "fine-tuning/extracted_text/11_Secure_Development_Requirements/101_OWASP_Secure_Coding_with_AI_Cheat_Sheet.txt",
+      "bytes": 26601,
+      "sha256": "a09da2ecf628557ffc668b09b776fe64c815a4e54e755e59ec307a06913acc9a"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC5321_Simple_Mail_Transfer_Protocol.txt",
+      "bytes": 209989,
+      "sha256": "28f3e7cd8b92570937b0bdba64dab41df92b124b95a3662f6c9e1ac4741523f3"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC6376_DomainKeys_Identified_Mail_DKIM_Signatures.txt",
+      "bytes": 163750,
+      "sha256": "6985b5447c7a79626814fb6323627fb40b8d690510fbea9e73b8cb4575737816"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC6409_Message_Submission_for_Mail.txt",
+      "bytes": 36956,
+      "sha256": "e4162ea532f89ed6da3b3d6e95cad46bab90b039869092801bcb4bd2bb6a4afa"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC7208_Sender_Policy_Framework_SPF_for_Authorizing_Use_of_Domains_in_Email_Version_1.txt",
+      "bytes": 132782,
+      "sha256": "1cf4fd636706f05a47d575a2bfa5d238be4b6ad7becf98a8e508803b620394bf"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC7672_SMTP_Security_via_Opportunistic_DNS_Based_Authentication_of_Named_Entities_DANE_Transport_Layer_Security_TLS.txt",
+      "bytes": 83534,
+      "sha256": "54cd5905fcf14725eade345c49bf889c2511cac047b6425fdd49da8f688c2220"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC8314_Cleartext_Considered_Obsolete_Use_of_Transport_Layer_Security_TLS_for_Email_Submission_and_Access.txt",
+      "bytes": 58726,
+      "sha256": "c5f987277a3bbb42c9a569d4c36ccea262e90d056d4118da8596cabb3c1cdd5d"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC8460_SMTP_TLS_Reporting.txt",
+      "bytes": 58835,
+      "sha256": "7e1efb3720127c7e506b31fb97e3a505e0b395ea65ecc9a2d5515aecd21bf1c7"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC8461_SMTP_MTA_Strict_Transport_Security_MTA_STS.txt",
+      "bytes": 53364,
+      "sha256": "1ebeff0c00957781ee35d254c99d07184bbb70baac40ffea96be33d55664c046"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC8617_The_Authenticated_Received_Chain_ARC_Protocol.txt",
+      "bytes": 64953,
+      "sha256": "0d54faf68a13da2ef5be4c9d34d885421ef633c82e3f1abb94d029b2271c07e5"
+    },
+    {
+      "path": "fine-tuning/extracted_text/12_Email_Messaging_Security/RFC9989_Domain_Based_Message_Authentication_Reporting_and_Conformance_DMARC.txt",
+      "bytes": 174198,
+      "sha256": "109e6cada849af1405b346e113170e2c5b21e9a28588ff595622ec9b6f78ccf8"
+    },
+    {
+      "path": "fine-tuning/repair_sdlc_dataset.py",
+      "bytes": 45578,
+      "sha256": "a556da8ce2ab29ef73b3e105e4b571c2914dc8c86cc95ecf845361202f9d166d"
+    },
+    {
+      "path": "fine-tuning/repair_sdlc_dataset_resumable.py",
+      "bytes": 13943,
+      "sha256": "b7789d40c4bf1c654b39d80670aafd55cb1dd780742ddc6fc44c09344a698120"
+    },
+    {
+      "path": "fine-tuning/srs_dataset/all_examples.jsonl",
+      "bytes": 1237332,
+      "sha256": "ac260ff11b7fa5a82a39af583f34a561fc9f7139d55091c283aedc79e082d0d4"
+    },
+    {
+      "path": "fine-tuning/srs_dataset/dataset_summary.json",
+      "bytes": 248,
+      "sha256": "49fb4f1b0f795fa6e106ea38fe2ef749104a53fe51a12ce15174c0c54f5e821b"
+    },
+    {
+      "path": "fine-tuning/srs_dataset/progress.jsonl",
+      "bytes": 1696278,
+      "sha256": "3295b2bc7aa39b33a416064b3251a819c85920d9b43f19dc9bfef3a762f67753"
+    },
+    {
+      "path": "fine-tuning/srs_dataset/test.jsonl",
+      "bytes": 133352,
+      "sha256": "5832582e643252035f6e8cac0359ac76bd6bef5fdcd6f15cf1298bd4b2691fb7"
+    },
+    {
+      "path": "fine-tuning/srs_dataset/train.jsonl",
+      "bytes": 990436,
+      "sha256": "c46eb1b53ecad52c1ab76f48079d52ee47365c2a6a4b94861622d25be9336f4a"
+    },
+    {
+      "path": "fine-tuning/srs_dataset/val.jsonl",
+      "bytes": 124080,
+      "sha256": "98895f80aa7f12bc144c6d1cda01144dd4dcbfe5df7b663432778e2c7470e375"
+    },
+    {
+      "path": "ai/evaluation/comparative_runner.py",
+      "bytes": 46102,
+      "sha256": "e28090ebdceea8270eb15ed37818dd0b7d0c5fb216da931cd7fef4fc85e59060"
+    },
+    {
+      "path": "ai/evaluation/corpus_inventory.json",
+      "bytes": 14470,
+      "sha256": "40e2ce2a3552f0af296def207410964a32a5520be6a57963c7cc21cb91edfd4e"
+    },
+    {
+      "path": "ai/evaluation/dataset.json",
+      "bytes": 10393,
+      "sha256": "d14d365e0f21576d91dca3dd1bcba2d2273ac8f6f85ad3ac461ca2f1ddf49aa0"
+    },
+    {
+      "path": "ai/evaluation/metrics.py",
+      "bytes": 16930,
+      "sha256": "59bdf9323017f935609ae785d9c827c8dc78589f9b5f6db5287798aa5fc8f53b"
+    },
+    {
+      "path": "ai/evaluation/phase5_metrics.py",
+      "bytes": 12185,
+      "sha256": "ad23170571e1d8199339b50943be609e6415568b8f824be9d86730f2889a9180"
+    },
+    {
+      "path": "ai/evaluation/phase5_runner.py",
+      "bytes": 28155,
+      "sha256": "e06b739677d594611798154ddc47398eac2291086c5e35e03d24436dd2effebd"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121459-2931f7e6/aggregate_metrics.json",
+      "bytes": 1114,
+      "sha256": "eb617fd289c7bb8e22ab547d89e15f967296ff73575b01b8c55704e1c31b5877"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121459-2931f7e6/case_metrics.json",
+      "bytes": 5252,
+      "sha256": "601935d553106e1ef4989d4e93c68828d88fabd269aa88e4ac9e18e527003666"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121459-2931f7e6/run_metadata.json",
+      "bytes": 293,
+      "sha256": "ea0a65cbde929ffbe4578e8e10bf9786ab10e51e8c2ce2bca4b3116179163827"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121459-2931f7e6/summary.txt",
+      "bytes": 1300,
+      "sha256": "e9d193f81ee3116b6ed80a6c1d27b8ec64ca6666d8165bc320a1de8710b9b01f"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121738-2cf606a8/aggregate_metrics.json",
+      "bytes": 1113,
+      "sha256": "36280b7326b2b78c8a1267040a117b4bd7e924ac36a8863667c44eb0fd363861"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121738-2cf606a8/case_metrics.json",
+      "bytes": 5811,
+      "sha256": "3b112f2c54cb20629e4f4d7ea25a9cbf2cff8219a53c105cec21a313e339974c"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121738-2cf606a8/run_metadata.json",
+      "bytes": 293,
+      "sha256": "af99208b12cfe38771b8e44328302cb5bdbf99ce5d5d3ed4180e6b95d6589cd7"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121738-2cf606a8/summary.txt",
+      "bytes": 1300,
+      "sha256": "dcdf97143f178fe9db9323b935cd07f2888b6e55779a8e04c0d6e482f8e35f93"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121854-3ccc789e/aggregate_metrics.json",
+      "bytes": 1114,
+      "sha256": "dd77677816204a73ea4d39b7da0a517dd890833591729aa39b539507f17faa9e"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121854-3ccc789e/case_metrics.json",
+      "bytes": 11762,
+      "sha256": "d96606f4f45fe4f42fd430ab691ee76013343d9352ab461f8ff8009601fc8d43"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121854-3ccc789e/run_metadata.json",
+      "bytes": 293,
+      "sha256": "d307af061f889ec9b99d820d9a7851c18c7e75b2673f840ed22321cb083dea05"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-121854-3ccc789e/summary.txt",
+      "bytes": 1304,
+      "sha256": "c0f279283febe02f338e30f832d913dd08518cbd844ac02774c87b0547d97786"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122022-48711b8f/aggregate_metrics.json",
+      "bytes": 1115,
+      "sha256": "cee9a36e494110d6fab14964a65a70fd4e1c1f6371204db420f2bc343768ad15"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122022-48711b8f/case_metrics.json",
+      "bytes": 5280,
+      "sha256": "0e7cf8bbb2f9a888333812b3d9d862fb7d8a13357a6451a45926c3560e205e39"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122022-48711b8f/run_metadata.json",
+      "bytes": 293,
+      "sha256": "072e769ad25294a2b5e6c22482ac84f122d5a16f4c7c8c57cf45c9ef3221a450"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122022-48711b8f/summary.txt",
+      "bytes": 1306,
+      "sha256": "45774e2b20d12b5cb2dbd6f13cb34181dea1fc0e110041afadd5d2239c7b5d9e"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122050-c0ade9c9/aggregate_metrics.json",
+      "bytes": 1147,
+      "sha256": "cc594117ecbc0e2b3e89cd483f8243a2fff8d7070b052cc2ee0a3a97b75a75e4"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122050-c0ade9c9/case_metrics.json",
+      "bytes": 17360,
+      "sha256": "bf153e7c3a54d7827a6ad2e175d5ad92ab646c08b176442b69dc199684d700d0"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122050-c0ade9c9/run_metadata.json",
+      "bytes": 294,
+      "sha256": "00b138a9f1753f077e6996f107d38e0402caa08ad3e6332381155ef4abc277c8"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122050-c0ade9c9/summary.txt",
+      "bytes": 1308,
+      "sha256": "ffc53656840b5f489ddd8a9cb1c130580969d316569c3586d903e09a2e489aa6"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122119-0adf5daf/aggregate_metrics.json",
+      "bytes": 1132,
+      "sha256": "4c3f9575090d0cf1c8be81bb288a3f0737a5fc9601691ba970c92e71a98b9099"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122119-0adf5daf/case_metrics.json",
+      "bytes": 51179,
+      "sha256": "409b583e5296f8858d535ae8d91d4535473bd19ddb15b59a2ef8fc9af11d8539"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122119-0adf5daf/run_metadata.json",
+      "bytes": 294,
+      "sha256": "325e97cd6075ca1242dcb43d909f6a28d06c98d18fb832ba6dced39a86921c11"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-122119-0adf5daf/summary.txt",
+      "bytes": 1309,
+      "sha256": "e66d92e5a71f0347e4d48c5e356315ed3e8027f65dc7de4f8147fff622272ad2"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/base_aggregate_metrics.json",
+      "bytes": 1045,
+      "sha256": "e795ef00092f1263ede1271ea4cb767da8f7a251908f27ff75595133d96050b2"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/base_case_metrics.json",
+      "bytes": 5141,
+      "sha256": "128ca158602246153cf06818201a2f3e5d9ac907a79741210fd3c5225f95b836"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/comparison.json",
+      "bytes": 3505,
+      "sha256": "cff9c184c2e190838d3891ff84567c272399760765f3137ad0cd480795c5bba9"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/comparison_report.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/rag_aggregate_metrics.json",
+      "bytes": 1045,
+      "sha256": "e795ef00092f1263ede1271ea4cb767da8f7a251908f27ff75595133d96050b2"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/rag_case_metrics.json",
+      "bytes": 5141,
+      "sha256": "128ca158602246153cf06818201a2f3e5d9ac907a79741210fd3c5225f95b836"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223810-4b7151c7/run_metadata.json",
+      "bytes": 459,
+      "sha256": "c76db780c9e66a93931c7a5aa97a83d9d6a35d613de36e0a190c8d0f662131d8"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/base_aggregate_metrics.json",
+      "bytes": 1114,
+      "sha256": "5a25204242449cd2a412be50f8f17f57afdeace8c2fd10c223e84ca35898340c"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/base_case_metrics.json",
+      "bytes": 5285,
+      "sha256": "f3eb867833faf9f37d76fad34609e7f9a403e59ba8ca62fb4ca6dcccb7f4fb99"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/comparison.json",
+      "bytes": 3701,
+      "sha256": "87efbe4242c2294a149864a26d4361283592483630e20b05cd9ebc2f7d5204d1"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/comparison_report.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/rag_aggregate_metrics.json",
+      "bytes": 1093,
+      "sha256": "7ec5e3e9949a1347a3a9884fb4835ec3f8798eef457f23e00806acfe70789790"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/rag_case_metrics.json",
+      "bytes": 5223,
+      "sha256": "c39a0000117cd609faf6ff23f64fef7f36d4b6e4c9fdf40f24ad7ff118e2aa6f"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-223930-7b320dbf/run_metadata.json",
+      "bytes": 459,
+      "sha256": "32a4172e3b7b4492ca5feb6c892b7ad0dffd1b1903286273e0bd2f846218e670"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/base_aggregate_metrics.json",
+      "bytes": 1133,
+      "sha256": "b9dba0c017b37fc18ba996c780bf32aba736a17f556b0fbb75b12932fa69fa9f"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/base_case_metrics.json",
+      "bytes": 51311,
+      "sha256": "8533524ecce18dab78d362e8fde3bdfee49fabc62d69d629429bb34ba8de5f93"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/comparison.json",
+      "bytes": 3745,
+      "sha256": "c7f0a4cc9d2a026a6abfd7e20d06b771ee44be7107a9924cfc6196f00797879d"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/comparison_report.txt",
+      "bytes": 5227,
+      "sha256": "baf69a707e1b54a3008579e72c74e5a94f5dea355aecbd60105bd4d4e9dcb9e7"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/rag_aggregate_metrics.json",
+      "bytes": 1128,
+      "sha256": "ebda9721e9c78e110f48538507aa48683d4c1b40c8b0d5995f5dfb3d89a4bdcf"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/rag_case_metrics.json",
+      "bytes": 51196,
+      "sha256": "0281e58b6bd032c9c2a58fa936d63e5ed8f3f62f5b3978f34454c3b9cb3626b8"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260808-230341-de90da07/run_metadata.json",
+      "bytes": 461,
+      "sha256": "a8b2237567c0b27b49bf182f855ed668057c81f9647a66cfa6cb82355b1c9ce8"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/base_aggregate_metrics.json",
+      "bytes": 1154,
+      "sha256": "30ae1602ec4d2baf0b69cb8ed92b4b83fc75821ef3ef294a8e2acae5c482a4fe"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/base_case_metrics.json",
+      "bytes": 5642,
+      "sha256": "0fc15c3cf9bc683bf11bf0c28ba02d266f6a92518fbc3d964c80d38eb1c92941"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/comparison.json",
+      "bytes": 3780,
+      "sha256": "752d93a0f6f9df765af69f52e9d2f16b72753b69d663afd1932a1854a42dcf48"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/comparison_report.txt",
+      "bytes": 5235,
+      "sha256": "2907e09c995ea30b4307b952c846996a69cc7cd0dbf45d734d72ec2ba331fd5f"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/rag_aggregate_metrics.json",
+      "bytes": 1151,
+      "sha256": "764e5bc35c52a1aca4ffde55768d14f4692306cbcf01704cdd376bf239510718"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/rag_case_metrics.json",
+      "bytes": 5637,
+      "sha256": "32eb74781c3b27da26557572a4e5fc043b3b7c3d6d78f851dd1264dfd6e8f709"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-063710-79ae4dbd/run_metadata.json",
+      "bytes": 474,
+      "sha256": "a853ee65c5fb78193146c6b2e71b0f1cda6edba8f95030cdce5870adfb46164f"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/base_aggregate_metrics.json",
+      "bytes": 1114,
+      "sha256": "eec38158fd180444630e1ea8436c0894ed3c7bfab71f7e1f0b0918fb5a8fe464"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/base_case_metrics.json",
+      "bytes": 5250,
+      "sha256": "dd64d8f5c63b9afec5da6e605a7f11d24bf13f5816d4e2c25c1db8673cea1e54"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/comparison.json",
+      "bytes": 3719,
+      "sha256": "53ca48373d2bd929572f9a4c72f207f3dcf6121203d17c6e62cd619aba8eaf19"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/comparison_report.txt",
+      "bytes": 5202,
+      "sha256": "6129cd4e7cf62f38d50ca6f8028f1a285acf8c3f2e944592ce16e6d6ab90d1c1"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/rag_aggregate_metrics.json",
+      "bytes": 1107,
+      "sha256": "9fea64025224331adfc4ed55546fbb82252db9ddbccb3488156d9c1faccf4067"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/rag_case_metrics.json",
+      "bytes": 5236,
+      "sha256": "30297fc1a2f0423235969a504d9ab1d33889ef9e429b38122d9cb6f5aed3b521"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-100901-407cec7a/run_metadata.json",
+      "bytes": 459,
+      "sha256": "711e6f04b7de7df56251be3bb185fd3149a4366ffb4159f5d3e55db6763eca6f"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/base_aggregate_metrics.json",
+      "bytes": 1178,
+      "sha256": "afe14f32c3a7cd6ff2f0db1d473e21cfa4eb53c287fc09d44ee4157a827c7e9b"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/base_case_metrics.json",
+      "bytes": 5762,
+      "sha256": "571ea7e1bcf839bc4c77e4129b2ff5e0ea3c891bbb217db716f2c62c48c6da0e"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/comparison.json",
+      "bytes": 3837,
+      "sha256": "c9e683752584a9e81f4922f051ae521560b5922ececb83327d53d213d8e2fdee"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/comparison_report.txt",
+      "bytes": 5291,
+      "sha256": "f502fc8ca5421990310f1d2a6d8a987fcb74478c4ebc7b3f4c5ba9d2f46823c2"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/rag_aggregate_metrics.json",
+      "bytes": 1135,
+      "sha256": "73acc3986e2fcf644d7e38c9123523be99fa54127a949266fada064b52a97b1e"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/rag_case_metrics.json",
+      "bytes": 6145,
+      "sha256": "3c905f6432d8060421989c5c7a3c5db7f438045f29b3b76632c7e001cba7fc19"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-202841-08fea74b/run_metadata.json",
+      "bytes": 474,
+      "sha256": "8cdcc2e0472805d1f455c54afb298642e2ab20f18e8f52c22537b829ea326347"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/base_aggregate_metrics.json",
+      "bytes": 1164,
+      "sha256": "ac2382cfcbb6e0de98819505417a68ed413f7cabc33a633ba77a3b4418ee4f3d"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/base_case_metrics.json",
+      "bytes": 5296,
+      "sha256": "b0aceeff8646a9d934ff743f52da11497033fb53777cad6159bb20947e1e4110"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/comparison.json",
+      "bytes": 3878,
+      "sha256": "03408ac1a9958bdaa33996d50e4a8d074ecdb6e0c06ec2c496bc78deab7472a0"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/comparison_report.txt",
+      "bytes": 5373,
+      "sha256": "655c63991f9f967f4c70eabc8e477acf19a5f8bc87fc4cdf119f682ef818730e"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/index_sanity.json",
+      "bytes": 5856,
+      "sha256": "2feec86993f649ae4a96b8ee25c86abeac3a28200e265117dfc9a8d6b4eb76af"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/rag_aggregate_metrics.json",
+      "bytes": 1165,
+      "sha256": "4bc9a24c5d06af240860356e8feca11663dd3e8c880cd04ad066d86873851a54"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/rag_case_metrics.json",
+      "bytes": 5300,
+      "sha256": "ae5ff6d6d7cd1a5c4e6486174862f9bfd2ff69eaa5e5525de012e2d3a1161993"
+    },
+    {
+      "path": "ai/evaluation/results/eval-20260809-204147-548eb018/run_metadata.json",
+      "bytes": 474,
+      "sha256": "41516636ef5daf601b164c3a25c2f4bc7132aa41b6cef8eab7c1f31dc9af6c6c"
+    },
+    {
+      "path": "ai/evaluation/runner.py",
+      "bytes": 24034,
+      "sha256": "921158703fbb8fd226610a5abce54225b496132b8f99417f9163c19a36c34436"
+    },
+    {
+      "path": "ai/evaluation/safe_output.py",
+      "bytes": 1021,
+      "sha256": "0feefdfbde3a46eba890464b5c063738b2ea2e7c3f2f451aef892c5dc342811f"
+    },
+    {
+      "path": "ai/evaluation/srs_latency_cases.json",
+      "bytes": 8432,
+      "sha256": "cdad98b9d55f480a2bee5faf90b68c02cce9899aff92c71ca927efd88bd5c14d"
+    },
+    {
+      "path": "ai/finetuning/data_test/architecture.jsonl",
+      "bytes": 355391,
+      "sha256": "e58ee6df22f661b2c8d086f8c0561860f50868092bfa5e6245d39f2af6999e80"
+    },
+    {
+      "path": "ai/finetuning/data_test/clarification_questions.jsonl",
+      "bytes": 284996,
+      "sha256": "ad2c9fbafb147f7117ed3cb2eaba98c9161d578deefbfff4f8a2588e989394eb"
+    },
+    {
+      "path": "ai/finetuning/data_test/context_extraction.jsonl",
+      "bytes": 257659,
+      "sha256": "1b8e658150322a81bae46f974afed26234deef790de6238a0c54298b2efe6db2"
+    },
+    {
+      "path": "ai/finetuning/data_test/data_requirements.jsonl",
+      "bytes": 21129,
+      "sha256": "d9d2fdbd4fd0a4c5bd7de4be759ce34a61204cd9a72c1138c95e52469cb0cdfc"
+    },
+    {
+      "path": "ai/finetuning/data_test/functional_requirements.jsonl",
+      "bytes": 665921,
+      "sha256": "c02c1fd68453e12aca455260b68c0fc1f194a841b54aecdd8f34ee6f36acbe38"
+    },
+    {
+      "path": "ai/finetuning/data_test/MANIFEST.json",
+      "bytes": 1394,
+      "sha256": "09984cc16ef62c60c041efd86540f2b82aebfb4289f6fbd4619b9fe74f924970"
+    },
+    {
+      "path": "ai/finetuning/data_test/network_requirements.jsonl",
+      "bytes": 86740,
+      "sha256": "990eba86da4f1af04557a0760dff18e9ebe56e79fcce529a48b038d23be69286"
+    },
+    {
+      "path": "ai/finetuning/data_test/non_functional_requirements.jsonl",
+      "bytes": 477539,
+      "sha256": "5396a72ed4212da350ec2adaf90556d4062f5936efd0926ab6466ed464f58125"
+    },
+    {
+      "path": "ai/finetuning/data_test/requirement_validation.jsonl",
+      "bytes": 207184,
+      "sha256": "f68d0a2210c04f36ad8b643309c107fc59877ebefa69a2a7a12804723dacba8d"
+    },
+    {
+      "path": "ai/finetuning/data_test/security_requirements.jsonl",
+      "bytes": 486372,
+      "sha256": "e502a0900dcaf7a4b8da4e4e8e64ce8bc06ce4da32ecb2e31e18c0c178fcd727"
+    },
+    {
+      "path": "ai/finetuning/data_test/srs_generation.jsonl",
+      "bytes": 1008087,
+      "sha256": "bb9b0be7509462344da7f405d897e02e6a70fbbad3d76e6023e6c534485e8929"
+    },
+    {
+      "path": "ai/finetuning/data_test/threat_model.jsonl",
+      "bytes": 388106,
+      "sha256": "9e9687416265947c4981160ddd40de8ebec641a7d376285458ddc4e3dbc7d580"
+    },
+    {
+      "path": "ai/finetuning/data_test2/architecture.jsonl",
+      "bytes": 355391,
+      "sha256": "e58ee6df22f661b2c8d086f8c0561860f50868092bfa5e6245d39f2af6999e80"
+    },
+    {
+      "path": "ai/finetuning/data_test2/clarification_questions.jsonl",
+      "bytes": 284996,
+      "sha256": "ad2c9fbafb147f7117ed3cb2eaba98c9161d578deefbfff4f8a2588e989394eb"
+    },
+    {
+      "path": "ai/finetuning/data_test2/context_extraction.jsonl",
+      "bytes": 257659,
+      "sha256": "1b8e658150322a81bae46f974afed26234deef790de6238a0c54298b2efe6db2"
+    },
+    {
+      "path": "ai/finetuning/data_test2/data_requirements.jsonl",
+      "bytes": 21129,
+      "sha256": "d9d2fdbd4fd0a4c5bd7de4be759ce34a61204cd9a72c1138c95e52469cb0cdfc"
+    },
+    {
+      "path": "ai/finetuning/data_test2/functional_requirements.jsonl",
+      "bytes": 665921,
+      "sha256": "c02c1fd68453e12aca455260b68c0fc1f194a841b54aecdd8f34ee6f36acbe38"
+    },
+    {
+      "path": "ai/finetuning/data_test2/MANIFEST.json",
+      "bytes": 1394,
+      "sha256": "09984cc16ef62c60c041efd86540f2b82aebfb4289f6fbd4619b9fe74f924970"
+    },
+    {
+      "path": "ai/finetuning/data_test2/network_requirements.jsonl",
+      "bytes": 86740,
+      "sha256": "990eba86da4f1af04557a0760dff18e9ebe56e79fcce529a48b038d23be69286"
+    },
+    {
+      "path": "ai/finetuning/data_test2/non_functional_requirements.jsonl",
+      "bytes": 477539,
+      "sha256": "5396a72ed4212da350ec2adaf90556d4062f5936efd0926ab6466ed464f58125"
+    },
+    {
+      "path": "ai/finetuning/data_test2/requirement_validation.jsonl",
+      "bytes": 207184,
+      "sha256": "f68d0a2210c04f36ad8b643309c107fc59877ebefa69a2a7a12804723dacba8d"
+    },
+    {
+      "path": "ai/finetuning/data_test2/security_requirements.jsonl",
+      "bytes": 486372,
+      "sha256": "e502a0900dcaf7a4b8da4e4e8e64ce8bc06ce4da32ecb2e31e18c0c178fcd727"
+    },
+    {
+      "path": "ai/finetuning/data_test2/srs_generation.jsonl",
+      "bytes": 1008087,
+      "sha256": "bb9b0be7509462344da7f405d897e02e6a70fbbad3d76e6023e6c534485e8929"
+    },
+    {
+      "path": "ai/finetuning/data_test2/threat_model.jsonl",
+      "bytes": 388106,
+      "sha256": "9e9687416265947c4981160ddd40de8ebec641a7d376285458ddc4e3dbc7d580"
+    },
+    {
+      "path": "ai/finetuning/eval_exclusion_manifest.json",
+      "bytes": 8364,
+      "sha256": "56675486823150dac4c22c135a70b2acdba680752ac4853dea4668771a25bd23"
+    },
+    {
+      "path": "ai/finetuning/scripts/audit_dataset.py",
+      "bytes": 105686,
+      "sha256": "9440657a104fd1afdd93ced3e1115e9561ce96f1545b240e231df893cbd86eff"
+    },
+    {
+      "path": "ai/finetuning/scripts/generate_dataset.py",
+      "bytes": 89512,
+      "sha256": "8913a8fe5b94f7bf83bf328cb62cd31f19da93cf7de7fcb0a1d7746e3f5ceffd"
+    },
+    {
+      "path": "ai/finetuning/scripts/runtime_dataset.py",
+      "bytes": 15738,
+      "sha256": "b6eec4fb968cf8b0da82973b4f9d302d5dd06d63ad42ded9aecf63495d0ddbd1"
+    },
+    {
+      "path": "ai/finetuning/scripts/scenario_bank_a.py",
+      "bytes": 135644,
+      "sha256": "958b008b6975bc8c9321d405cd9de28de12f5bcf4b45bde33f98a0f293f0ad26"
+    },
+    {
+      "path": "ai/finetuning/scripts/scenario_bank_b.py",
+      "bytes": 105250,
+      "sha256": "e808a544e5359be6412cc0c87cbdffbc10c28ccd1ec3e543fac9e058216c347e"
+    },
+    {
+      "path": "ai/finetuning/scripts/scenario_bank_c.py",
+      "bytes": 103588,
+      "sha256": "1c9e714401b923f317cf7a3a935bde29adaeb0bb1bb71a73dd53abac0e496eab"
+    },
+    {
+      "path": "ai/finetuning/scripts/scenario_library.py",
+      "bytes": 833,
+      "sha256": "be60c97c565897f1d1262bc88e9055580843517d16b4fef466d71c2ab5d3f93f"
+    },
+    {
+      "path": "ai/finetuning/scripts/validate_scenarios.py",
+      "bytes": 3473,
+      "sha256": "229111b6e6ed75c418de986e730f7cbfb25b413cbf06a06528101528223d4828"
+    },
+    {
+      "path": "knowledge/01_NIST/001_NIST_CSF_2.0.pdf",
+      "bytes": 1518858,
+      "sha256": "3c31f46fee98cac0c4323453e5109291a213b4de7fef8c058af9bf67f717433c"
+    },
+    {
+      "path": "knowledge/01_NIST/002_NIST_SP_800-53r5.pdf",
+      "bytes": 6073678,
+      "sha256": "fc63bcd61715d0181dd8e85998b1e6201ae3515fc6626102101cab1841e11ec6"
+    },
+    {
+      "path": "knowledge/01_NIST/003_NIST_SP_800-61r3.pdf",
+      "bytes": 1040566,
+      "sha256": "e5593d6bb85daecec7e8d9549400c7b3473bcc3f06e469c82218073afa7fba2d"
+    },
+    {
+      "path": "knowledge/01_NIST/004_NIST_SP_800-63-4.pdf",
+      "bytes": 858054,
+      "sha256": "2f5b107de218a0fc3fe7f7e91b2ece5babb001eda5745b7c568a3cc876002f2d"
+    },
+    {
+      "path": "knowledge/01_NIST/005_NIST_SP_800-207.pdf",
+      "bytes": 966908,
+      "sha256": "0290d6ece24874287316f4bf430fef770aa4ec08a2227c8f2c1e5b2ff975e03d"
+    },
+    {
+      "path": "knowledge/01_NIST/006_NIST_SP_800-41r1.pdf",
+      "bytes": 339557,
+      "sha256": "06642409a8f0dcc9de8725f2d76d6feedea2d4d1faa860c2ee18488863dd1f4f"
+    },
+    {
+      "path": "knowledge/01_NIST/007_NIST_SP_800-92.pdf",
+      "bytes": 1759842,
+      "sha256": "466c3ab1580bc3b2e25d11bbd4b2ac92fd1762b3c5b10596924981bc1b9e61e1"
+    },
+    {
+      "path": "knowledge/01_NIST/008_NIST_SP_800-30r1.pdf",
+      "bytes": 826897,
+      "sha256": "f214087f0bdb35932a28c16eb93932a33c67a6edfb5e6f1638866bd201c98e04"
+    },
+    {
+      "path": "knowledge/01_NIST/009_NIST_SP_800-37r2.pdf",
+      "bytes": 2270327,
+      "sha256": "4f75e1136bb905a654f1bcd9eefefb4108f47597276ee5eec0688f6d96f6a01d"
+    },
+    {
+      "path": "knowledge/01_NIST/010_NIST_SP_800-40r4.pdf",
+      "bytes": 562944,
+      "sha256": "351f4a828d6c0bc8bf98f25ba3f87ec5add0ed8cf8bb4a6e6cb4e7e4a9731833"
+    },
+    {
+      "path": "knowledge/01_NIST/011_NIST_SP_800-52r2.pdf",
+      "bytes": 814862,
+      "sha256": "f9a4dbb9cc6ac6778bb9f4e6be9272c2f14d113f3ad241a295684ac6bd71f257"
+    },
+    {
+      "path": "knowledge/01_NIST/012_NIST_SP_800-57pt1r5.pdf",
+      "bytes": 1688080,
+      "sha256": "cc32391022c1382ac7c91490f6bcc8838e0f889925270da23ef4e800e2ecb7ad"
+    },
+    {
+      "path": "knowledge/01_NIST/013_NIST_SP_800-82r3.pdf",
+      "bytes": 8584345,
+      "sha256": "608f554514d381853e24e0b33123b7080fbd757826f460032690aade63394616"
+    },
+    {
+      "path": "knowledge/01_NIST/014_NIST_SP_800-94.pdf",
+      "bytes": 1060429,
+      "sha256": "289c2ed27f7e3aac41624bf2e6fad268642bad2dabe352a5ab28fa169824a96e"
+    },
+    {
+      "path": "knowledge/01_NIST/015_NIST_SP_800-115.pdf",
+      "bytes": 544047,
+      "sha256": "58e5ed41e5c8ca34ce14fd80b70f118f2c6d613d1647bc307edca30bcc45f063"
+    },
+    {
+      "path": "knowledge/01_NIST/016_NIST_SP_800-137.pdf",
+      "bytes": 986916,
+      "sha256": "2d1c0bf459f5e1bfd41ceb5eac83bf62e4c34bf08e2e7088b37cb73a11442b98"
+    },
+    {
+      "path": "knowledge/01_NIST/017_NIST_SP_800-218.pdf",
+      "bytes": 739891,
+      "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22"
+    },
+    {
+      "path": "knowledge/02_OWASP_Original/018_OWASP_ASVS_5.0.0.pdf",
+      "bytes": 514062,
+      "sha256": "a2fa1bbe38f12cac86d3a0f0023327e9772201f65a7f741f282f5e785d268fc5"
+    },
+    {
+      "path": "knowledge/02_OWASP_Original/019_OWASP_ASVS_5.0.0.csv",
+      "bytes": 105100,
+      "sha256": "98c8fe911b9edb403af8ee05d3ce8201ecac2659e313b053890a62847cdcf680"
+    },
+    {
+      "path": "knowledge/02_OWASP_Original/020_OWASP_Top10_2025_Introduction.md",
+      "bytes": 14973,
+      "sha256": "71e4b9124e768a954b4d5b9b6f952dd39fa6044688e8dd5ef7b5aa990a3c7c16"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+      "bytes": 38285,
+      "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/037_OWASP_Attack_Surface_Analysis_Cheat_Sheet.md",
+      "bytes": 13518,
+      "sha256": "c8bde4a8ab46ed3523ff3aa5b864909e129c576ac5bcf3284cdc22cd24b8d70b"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/038_OWASP_Authorization_Cheat_Sheet.md",
+      "bytes": 32216,
+      "sha256": "e78a10eb9759a1fc7593ba1fc89a05b017e7e795ac16ad5496bdba86138d891f"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/040_OWASP_Business_Logic_Security_Cheat_Sheet.md",
+      "bytes": 26497,
+      "sha256": "72c3b258f18362f740bd4ab00893e8b7d4fb61e97ddf2be26c1b0ee341f52ee4"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/041_OWASP_CI_CD_Security_Cheat_Sheet.md",
+      "bytes": 26663,
+      "sha256": "935b4e2949ccd98d81bbd948a759fc9d3f56c9f9d26313ff7948f654606b7ef9"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/042_OWASP_Clickjacking_Defense_Cheat_Sheet.md",
+      "bytes": 15368,
+      "sha256": "2331ef1ced95d52cca031d8603d00af281f8a8595b481176d92a49d658931bd2"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/044_OWASP_Cookie_Theft_Mitigation_Cheat_Sheet.md",
+      "bytes": 7344,
+      "sha256": "f02ae9e09dee0b4196969ecdbd94bf9267d50d7eaf5bb264cb7d702acea83d74"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/045_OWASP_Credential_Stuffing_Prevention_Cheat_Sheet.md",
+      "bytes": 17596,
+      "sha256": "0b09e71e540a88457c3e29f43d5f5d23f6aabc30820ce7eac8bb1809a7982162"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/046_OWASP_Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+      "bytes": 73464,
+      "sha256": "8dafa056758968bcf6fdd46096a41ceba7969f755872324a6073979cead3dbee"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/048_OWASP_Cryptographic_Storage_Cheat_Sheet.md",
+      "bytes": 19979,
+      "sha256": "0f4b2e0c298b21cba95463218f3537306a96cfb49d1330e9b0a79389f9b061e6"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/050_OWASP_Database_Security_Cheat_Sheet.md",
+      "bytes": 9117,
+      "sha256": "2ac2bc9cdf558a9173c60b4dfd52ebd696c0b418be785c9bf0392249e107990b"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/051_OWASP_Denial_of_Service_Cheat_Sheet.md",
+      "bytes": 14655,
+      "sha256": "1d5e3eefddb17d3c6a7f73d2339b6711bb877e04aab5a266d917fa5b77478d85"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/052_OWASP_Dependency_Graph_SBOM_Cheat_Sheet.md",
+      "bytes": 8866,
+      "sha256": "46edbd8974536a41b7b764b49490c965004e4d7bb021a5733f24f5f09c3e214c"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/053_OWASP_Deserialization_Cheat_Sheet.md",
+      "bytes": 23431,
+      "sha256": "16b75d075f4c4ab19f1cb46763ec8697aeb24d7660cbcd6ebb5a1d6f15b3f0f4"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/054_OWASP_Docker_Security_Cheat_Sheet.md",
+      "bytes": 24976,
+      "sha256": "3442288cd44dda71aed39e82d6abb7d1d6ffb12350ad1a667d8299c2b5488a43"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/056_OWASP_File_Upload_Cheat_Sheet.md",
+      "bytes": 12000,
+      "sha256": "0f527b1636adb44e305c97657b5cf84c0b5b60895ee5091f4b26baee0e271b6d"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/057_OWASP_Forgot_Password_Cheat_Sheet.md",
+      "bytes": 9566,
+      "sha256": "b10808d3a6653fc72f149d8b60a6f5bc1259575df8264cc34eb7d2ab3083ee47"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/058_OWASP_GitHub_Actions_Security_Cheat_Sheet.md",
+      "bytes": 20379,
+      "sha256": "241c43a49aa6853f0a1688efb885f3ced52290771309a3ee403d612f47a81fda"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/059_OWASP_GraphQL_Cheat_Sheet.md",
+      "bytes": 28323,
+      "sha256": "644ff319f6c2643cdf2dc33666951132904223e01ed69e627755c93288557114"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/060_OWASP_HTML5_Security_Cheat_Sheet.md",
+      "bytes": 16118,
+      "sha256": "652acdef0041c56551a2c02dbc18ac53ae98cb72f3afbc0675c601365b012e75"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/061_OWASP_HTTP_Headers_Cheat_Sheet.md",
+      "bytes": 22115,
+      "sha256": "bbb5aaff5e7a37cb06fe1132a41552ce21ccc699bc3cc5e94de8900eef3cdefa"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/062_OWASP_HTTP_Strict_Transport_Security_Cheat_Sheet.md",
+      "bytes": 4017,
+      "sha256": "029644962ed49536c214e3614f6d91b0d89b1f68f36b4df178d75616a4b527fc"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/063_OWASP_Infrastructure_as_Code_Security_Cheat_Sheet.md",
+      "bytes": 7813,
+      "sha256": "770141b32c3035f520b2ffe5a3100fccba09845d85e4f79e6ab69939a6006726"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/064_OWASP_Injection_Prevention_Cheat_Sheet.md",
+      "bytes": 20658,
+      "sha256": "210c95345ef2abbcd9d079d9a9fc1d3408769f5c72a5ef5a4e6aba7956031bc2"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/066_OWASP_Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.md",
+      "bytes": 5397,
+      "sha256": "0a0056b89acc452b4e4fece79511387406480e912f4fce8247b1381446fc4bda"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/067_OWASP_JSON_Web_Token_Cheat_Sheet.md",
+      "bytes": 21062,
+      "sha256": "b5172f067316198036bed95af9f4e7b89a9f7bfe64be0075442d58f5840b3847"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/068_OWASP_Key_Management_Cheat_Sheet.md",
+      "bytes": 23308,
+      "sha256": "5c0081b8f00476e68618e4eb956b5a1968cc4d225c11943fe9ca8f6b148b6229"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/069_OWASP_Kubernetes_Security_Cheat_Sheet.md",
+      "bytes": 69794,
+      "sha256": "c8f1a573eac5aa88240b4550f4daf106591e6bef3e673ef51109ce28a4dcbc1c"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/070_OWASP_LDAP_Injection_Prevention_Cheat_Sheet.md",
+      "bytes": 9460,
+      "sha256": "603a3f65ca8b86101f9069728273ed62de5ed7513b1377238052b56b3828861d"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/072_OWASP_Legacy_Application_Management_Cheat_Sheet.md",
+      "bytes": 13565,
+      "sha256": "9711f16fd37a0d97d738106447786ba2d6dcea34cf612061456fa3869ffa1e67"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/073_OWASP_Logging_Cheat_Sheet.md",
+      "bytes": 28990,
+      "sha256": "e3965a340b575bd232c7f5c7bf24d96a4e22bace1783a7a3a11a84d409e0b560"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/074_OWASP_Logging_Vocabulary_Cheat_Sheet.md",
+      "bytes": 39117,
+      "sha256": "8c1929cdc2a7afafb8b1150ed72a6777cc8b4dd52b969468fb92479de55f4458"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/075_OWASP_MCP_Security_Cheat_Sheet.md",
+      "bytes": 13021,
+      "sha256": "480aac4cbfd3c6c05f02f6f9c936b5d34902e39700b0eb520a050de283e4da68"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/077_OWASP_Microservices_Security_Cheat_Sheet.md",
+      "bytes": 22222,
+      "sha256": "2d1f46e36dcfcf357685ef667da902e45d879d983f33bd1f8abebe4884f99446"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/078_OWASP_Microservices_based_Security_Arch_Doc_Cheat_Sheet.md",
+      "bytes": 14709,
+      "sha256": "7bdf8380d36d4c9a49744aa8da35505594f984b017b6ab197f8371b054ebbe0d"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/079_OWASP_Mobile_Application_Security_Cheat_Sheet.md",
+      "bytes": 16642,
+      "sha256": "3d28c64baa3dbdc105854587af5a65bc11b610f8e3cf0f8f5a1a321cdc8e43ac"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/081_OWASP_Multifactor_Authentication_Cheat_Sheet.md",
+      "bytes": 32339,
+      "sha256": "0c1de91561bd8b449f5a27033e799c6928df3f24cb48a965994f615671612490"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/082_OWASP_NPM_Security_Cheat_Sheet.md",
+      "bytes": 27056,
+      "sha256": "0579f6df85963f8d7dec5aed6cce0dd73a488a60893a5f9f009683882bc13ebb"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/083_OWASP_Network_Segmentation_Cheat_Sheet.md",
+      "bytes": 9244,
+      "sha256": "2b91c4e103da8e53c98e3b6006b23c2bb02e8c55e5805a56f0068c7b31a477d8"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/085_OWASP_OAuth2_Cheat_Sheet.md",
+      "bytes": 15197,
+      "sha256": "b7c2717110cd913ba5008a6b7aa825bdf8e04acd78378c18708c49c3d14fc8bb"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/086_OWASP_OS_Command_Injection_Defense_Cheat_Sheet.md",
+      "bytes": 11615,
+      "sha256": "050a5c1cbccfe2a72140f9f30916ab0a2e32f2657beda1c38e552b2a3d898068"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/087_OWASP_Password_Storage_Cheat_Sheet.md",
+      "bytes": 20169,
+      "sha256": "59e6ce03452bb2607e690010487389db388af969d43ce6acb535a3e2f128e14e"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/088_OWASP_Pinning_Cheat_Sheet.md",
+      "bytes": 16158,
+      "sha256": "dafef347fa3f09fe9f1ce6adf54f879f23da49bde832b955077256ce4137e542"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/089_OWASP_Query_Parameterization_Cheat_Sheet.md",
+      "bytes": 7971,
+      "sha256": "924ce01dfb7be9f051f16f9c10e19eea06ef285439977ec52955c924735b5c00"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/090_OWASP_RAG_Security_Cheat_Sheet.md",
+      "bytes": 28096,
+      "sha256": "e48ca77c8cd69bc9a102facf64cc826a75c9f53253a3eda2e90d45d18ba07d72"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/091_OWASP_REST_Assessment_Cheat_Sheet.md",
+      "bytes": 6239,
+      "sha256": "caf5611ea6c55c11b614dcd944b10b6f1f10dbf1be2ac80e293c9cac5c442beb"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/092_OWASP_REST_Security_Cheat_Sheet.md",
+      "bytes": 24846,
+      "sha256": "73185bf1a1163fb8b9cfcb7e034f84e32171289becc857f66947a61a87a4bb1d"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/093_OWASP_SAML_Security_Cheat_Sheet.md",
+      "bytes": 30436,
+      "sha256": "181891d7a4b3f18d90a3f902c4b2ae00fb9255f5041427b018dd6002e1a626fc"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/094_OWASP_SQL_Injection_Prevention_Cheat_Sheet.md",
+      "bytes": 19384,
+      "sha256": "77924b56a036b072bbc7a2b3bfc4f9f59fa5da92790c6690681574cb9457ec14"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/096_OWASP_Secure_AI_Model_Ops_Cheat_Sheet.md",
+      "bytes": 8026,
+      "sha256": "ea14f19e78e129efd82007c43cc9e68b3ed8f17cbbbfaac82b58562b69d18f49"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/097_OWASP_Secure_Cloud_Architecture_Cheat_Sheet.md",
+      "bytes": 29991,
+      "sha256": "4ff8d09b970f5c6c9bbb12a7b4ec6f2d927ccde005a2297097fc7b834bdf7e6e"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/098_OWASP_Secure_Code_Review_Cheat_Sheet.md",
+      "bytes": 20764,
+      "sha256": "a3a2c91851dceaccff8ab684a56cdafa1006c9bb943c8d085622270f7872e34d"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/099_OWASP_Software_Supply_Chain_Security_Cheat_Sheet.md",
+      "bytes": 21523,
+      "sha256": "33716fb50209675933705e8945d606b5e73c17a6e8a3bb1e0090958bc3fa0786"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/100_OWASP_Secure_Product_Design_Cheat_Sheet.md",
+      "bytes": 10848,
+      "sha256": "a725b1092ac5b6bd33949bdf48983a026b1720c469192f0c48a93e1b31fe49da"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/101_OWASP_Secure_Coding_with_AI_Cheat_Sheet.md",
+      "bytes": 26808,
+      "sha256": "be07355a3bb0c077cea6ca6beef912b4abda712864e90645f46c29419e539505"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/102_OWASP_SSRF_Prevention_Cheat_Sheet.md",
+      "bytes": 27433,
+      "sha256": "d9323c8d09e4259ea597524fb1513422b8c82f96b287b79405f424b599e74da2"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/104_OWASP_Session_Management_Cheat_Sheet.md",
+      "bytes": 54326,
+      "sha256": "dd0f44ee671cea7be58ab51e045392e90a4d40509d6b540456dd952a0521e4e4"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/105_OWASP_Threat_Modeling_Cheat_Sheet.md",
+      "bytes": 19929,
+      "sha256": "2fbfffaa2b9d734271d7e84ccb550290858586171a5807db7b2bf13bf24aa093"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/106_OWASP_Transport_Layer_Security_Cheat_Sheet.md",
+      "bytes": 23872,
+      "sha256": "bba73b7235823959a0129c8a15bf06fb95c9211d5ec74d3d267c9ebc0ebd022b"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+      "bytes": 30756,
+      "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+    },
+    {
+      "path": "knowledge/03_OWASP_CheatSheets/108_OWASP_Vulnerability_Disclosure_Cheat_Sheet.md",
+      "bytes": 24622,
+      "sha256": "bd5c5803a5c4a39e63ce1370a7baf8219e62a4cb52b5473456adbba777279206"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/021_RFC8446_TLS_1.3.txt",
+      "bytes": 337736,
+      "sha256": "47871bc8820a2c3b6ea89f061055577058862cf543686b82d10131239702b3bd"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/022_RFC9325_TLS_DTLS_Recommendations.txt",
+      "bytes": 96608,
+      "sha256": "e3475381d056bde1eed65252954cce68250168454387f6799b38660806f215bc"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/023_RFC8996_Deprecating_TLS_1.0_1.1.txt",
+      "bytes": 49676,
+      "sha256": "a8250792df7fc533328f2021dbdcce847bbdfbc703de89a93e18ce165d4b8d14"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/024_RFC5246_TLS_1.2.txt",
+      "bytes": 222395,
+      "sha256": "2ebe1b8e651696aeacc8ab3848bedb465505737901ea3b691acf40c392958feb"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/025_RFC6066_TLS_Extensions.txt",
+      "bytes": 55079,
+      "sha256": "6a33cceaa5e1b6518923d9d04ffaa738bad0417806b3c94a995484e140f5cbc0"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/026_RFC7301_ALPN.txt",
+      "bytes": 17439,
+      "sha256": "ba122aee58871c604c9e98e2c9f81d5042e4056bd497cd41e23ad80fe3123222"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/027_RFC7465_Prohibiting_RC4.txt",
+      "bytes": 8397,
+      "sha256": "0c619db38176f199f739dc696a2d3faabbe658ee82d59621c6d040d0b7cce2dd"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/028_RFC7919_FFDHE_TLS.txt",
+      "bytes": 61937,
+      "sha256": "e7ffd3d8109670aa48d218964ceccf82cc6d2fd36132403c89589434bf8a4d72"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/029_RFC8447_TLS_Registry_Updates.txt",
+      "bytes": 44773,
+      "sha256": "45ea188a76b41dffce472324923dd208b9440732f9003271242131b6f74deb6a"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/030_RFC8701_GREASE.txt",
+      "bytes": 24972,
+      "sha256": "47334d907d7c269e4bcc8257a87116ecae0bf8e0a90ccbd5a8f62ae38e8921e6"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/031_RFC9000_QUIC_Transport.txt",
+      "bytes": 403442,
+      "sha256": "f88aae47f8b18e102024916e975e919201d8dde689cba79b01079eaedd402e22"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/032_RFC9001_QUIC_TLS.txt",
+      "bytes": 126175,
+      "sha256": "3bbaecdf5afd278052a2c48348ce118c4ff8d0cf6b9915549858171b3f98a591"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/033_RFC9110_HTTP_Semantics.txt",
+      "bytes": 502941,
+      "sha256": "21c1cdce6ab0e5509b04d84a28000836c7a087cf786efe6f04877ebfff47232a"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/034_RFC9112_HTTP_1.1.txt",
+      "bytes": 109913,
+      "sha256": "e4f426bac6206b67fdf9e0da826154f70588db2133a0a86b15cde4ff725d8937"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/035_RFC9113_HTTP_2.txt",
+      "bytes": 191811,
+      "sha256": "a00ef91b64e111a282e77ec66980f5242e77c0bb5e33e0927e3b6757080506de"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/RFC1918_Private_Internets.txt",
+      "bytes": 22271,
+      "sha256": "56c43465298772bc4d899923f1785b7b7bf8dd2c9f2f9a53422800ddc5cf9337"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/RFC2131_DHCP.txt",
+      "bytes": 113738,
+      "sha256": "a043b705785b81762505ded4cf71d61392b2b1da2b4ce1e32c13bc984de5f4a5"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/RFC2132_DHCP_Options.txt",
+      "bytes": 63670,
+      "sha256": "0cfbedab7cfe859624ae78c07a722bc51bf8ea123a7b43b099fc546ddcf00b90"
+    },
+    {
+      "path": "knowledge/05_IETF_RFCs/RFC2328_OSPFv2.txt",
+      "bytes": 524985,
+      "sha256": "981690e297fbba9e8ef655802552b5529cb17f1ffe790ad2d55706cc522ff50c"
+    },
+    {
+      "path": "knowledge/manifest.json",
+      "bytes": 81414,
+      "sha256": "749f5b1b58dc53026eeca0ca1c012a3cb0ac8861e24043d7e010af34c1e4fb64"
+    },
+    {
+      "path": "resources/CyberSRS_RAG_Starter_Corpus_2026-08-07.zip",
+      "bytes": 12287908,
+      "sha256": "694307997117b4be73de08be236f9f075491768b3cd73685e6af957f415f807b"
+    },
+    {
+      "path": "resources/README.md",
+      "bytes": 234,
+      "sha256": "adfa02e26589f7c179d07bcb4cf20a0f75c3a56585ea04aeaab50c29ba652e61"
+    }
+  ]
+}

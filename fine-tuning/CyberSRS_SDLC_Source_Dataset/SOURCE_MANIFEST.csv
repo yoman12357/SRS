@@ -1,0 +1,10 @@
+Included,Organization,Document,Official URL,Purpose
+Yes,NIST,NIST SP 800-160 Vol. 1 Rev. 1 - Engineering Trustworthy Secure Systems,https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1r1.pdf,System life-cycle processes; requirements; risk; verification; validation; secure systems engineering
+Yes,NIST,NIST SP 800-218 - Secure Software Development Framework (SSDF) v1.1,https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf,Secure-development practices that can be integrated into SDLCs
+Yes,NIST,NIST SP 800-37 Rev. 2 - Risk Management Framework,https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf,System-life-cycle approach to security/privacy risk management
+Yes,GAO,GAO-24-105506 Agile Assessment Guide,https://www.gao.gov/products/gao-24-105506,Agile adoption and execution; iterative/incremental delivery; requirements and risk
+Yes,NASA,NASA Software Engineering Guidebook,https://voyager.gsfc.nasa.gov/Library/Software_Guide_HSTX.pdf,Comparison and use of waterfall; spiral; incremental; evolutionary/prototyping lifecycle models
+Yes,NASA,NASA Systems Engineering Handbook,https://www.nasa.gov/reference/systems-engineering-handbook/,Requirements; design; verification; validation; project/system life-cycle processes
+Yes,OWASP,OWASP Developer Guide,https://owasp.org/www-project-developer-guide/,Secure software-development lifecycle practices and OWASP SAMM guidance
+No - license restricted,IEEE Computer Society,SWEBOK Guide v4.0a,https://www.computer.org/education/bodies-of-knowledge/software-engineering,Optional authoritative reference; not redistributed in this ZIP
+No - licensed standard,ISO/IEC/IEEE,ISO/IEC/IEEE 12207 Software life cycle processes,https://www.iso.org/standard/90219.html,Optional authoritative standard; not redistributed in this ZIP

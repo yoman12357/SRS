@@ -1,0 +1,15 @@
+{"source_file": "NASA_Systems_Engineering_Handbook.pdf", "source_chunk": 55, "source_relevance_score": 279, "recommended_sdlc": "Incremental", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 27, "source_relevance_score": 303, "recommended_sdlc": "Hybrid", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 136, "source_relevance_score": 459, "recommended_sdlc": "Waterfall", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 7, "source_relevance_score": 546, "recommended_sdlc": "Iterative/Evolutionary", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 6, "source_relevance_score": 542, "recommended_sdlc": "Spiral", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-160v1r1_Engineering_Trustworthy_Secure_Systems.pdf", "source_chunk": 42, "source_relevance_score": 185, "recommended_sdlc": "Prototyping", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 122, "source_relevance_score": 468, "recommended_sdlc": "Iterative/Evolutionary", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "OWASP_Developer_Guide.pdf", "source_chunk": 37, "source_relevance_score": 114, "recommended_sdlc": "DevOps", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 33, "source_relevance_score": 443, "recommended_sdlc": "V-Model", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 87, "source_relevance_score": 354, "recommended_sdlc": "Hybrid", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 26, "source_relevance_score": 282, "recommended_sdlc": "DevSecOps", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Systems_Engineering_Handbook.pdf", "source_chunk": 84, "source_relevance_score": 270, "recommended_sdlc": "Prototyping", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 18, "source_relevance_score": 259, "recommended_sdlc": "Spiral", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Systems_Engineering_Handbook.pdf", "source_chunk": 82, "source_relevance_score": 570, "recommended_sdlc": "Incremental", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Systems_Engineering_Handbook.pdf", "source_chunk": 134, "source_relevance_score": 403, "recommended_sdlc": "Spiral", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}

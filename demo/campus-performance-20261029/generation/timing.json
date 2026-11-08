@@ -1,0 +1,24 @@
+{
+  "run_id": "52e73040-ef25-4853-bec1-fef2c0f7fdc4",
+  "status": "failed",
+  "error": "section_validation_failed:E-007:automatic_prohibition_needs_attempt_and_unchanged_state_evidence",
+  "created_at": "2026-10-28T21:10:01.961344+00:00",
+  "terminal_at": "2026-10-28T21:10:30.819038+00:00",
+  "total_seconds": 28.858,
+  "sections": {
+    "introduction": {
+      "status": "completed",
+      "seconds": 1.658,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "failed",
+      "seconds": 27.149
+    }
+  },
+  "maximum_section_seconds": 27.149,
+  "completed_srs": false,
+  "human_approval": false
+}

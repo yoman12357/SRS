@@ -1,0 +1,90 @@
+{
+  "E-001": {
+    "statement": "The system shall allow authorized network administrators to create, review, update, and revoke firewall rules.",
+    "tests": [
+      {
+        "given": "An authorized administrator with valid credentials",
+        "when": "The administrator initiates a rule creation request for academic network segmentation",
+        "then": "The system returns a new rule configuration form with validation feedback",
+        "method": "test",
+        "observable_evidence": "Test capture of the rule creation response and form state"
+      },
+      {
+        "given": "An authorized administrator with valid credentials",
+        "when": "The administrator submits an update to an existing firewall rule for research network access",
+        "then": "The system validates the change, applies it, and confirms successful update in real-time",
+        "method": "test",
+        "observable_evidence": "Test capture of the updated rule configuration and applied state"
+      },
+      {
+        "given": "An authorized administrator with valid credentials",
+        "when": "The administrator revokes a firewall rule for hostel network access",
+        "then": "The system removes the rule and notifies affected segments of deactivation",
+        "method": "test",
+        "observable_evidence": "Test capture of the revoked rule and segment notification state"
+      }
+    ],
+    "unresolved_decisions": [
+      "Definition of 'authorized' in terms of role and access level"
+    ]
+  },
+  "E-002": {
+    "statement": "The system shall enforce access restrictions between network segments and monitor blocked and allowed traffic, generating alerts for suspicious or unauthorized communication attempts.",
+    "tests": [
+      {
+        "given": "A network segment with defined access policies",
+        "when": "An attempt is made to communicate from academic to guest network without authorization",
+        "then": "The system blocks the connection and generates an alert indicating unauthorized traffic",
+        "method": "test",
+        "observable_evidence": "Test capture of blocked traffic event and generated alert"
+      },
+      {
+        "given": "A legitimate administrative request for inter-building communication",
+        "when": "Traffic is routed between research and administrative segments via approved policy",
+        "then": "The system allows the connection and logs it as permitted traffic",
+        "method": "test",
+        "observable_evidence": "Test capture of allowed traffic event and flow state"
+      },
+      {
+        "given": "An anomalous data transfer pattern exceeding threshold behavior",
+        "when": "A communication attempt is detected with high volume or unusual timing",
+        "then": "The system triggers an alert indicating suspicious activity",
+        "method": "test",
+        "observable_evidence": "Test capture of alert generation and event metadata"
+      }
+    ],
+    "unresolved_decisions": [
+      "Thresholds for defining 'anomalous' behavior"
+    ]
+  },
+  "E-003": {
+    "statement": "The platform shall maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings.",
+    "tests": [
+      {
+        "given": "An administrator modifies a firewall rule in the research segment",
+        "when": "The change is applied to the system",
+        "then": "A log entry is created recording the action, timestamp, user, and affected policy",
+        "method": "test",
+        "observable_evidence": "Test capture of audit log entry after policy change"
+      },
+      {
+        "given": "An operator accesses the security dashboard at a campus building level",
+        "when": "The operator requests a view of recent events from the last 24 hours",
+        "then": "The system returns a list of network events with timestamps and severity levels",
+        "method": "test",
+        "observable_evidence": "Test capture of dashboard response showing security event list"
+      },
+      {
+        "given": "A new building is added to the campus network configuration",
+        "when": "The platform is updated to include the building in its segmentation model",
+        "then": "The system reflects the new segment in all dashboards and policy views",
+        "method": "test",
+        "observable_evidence": "Test capture of dashboard showing the new building segment"
+      }
+    ],
+    "unresolved_decisions": [
+      "Definition of 'security events' scope and severity levels",
+      "Method for synchronizing building-level configurations across segments"
+    ]
+  }
+}

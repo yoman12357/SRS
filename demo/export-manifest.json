@@ -1,0 +1,12 @@
+{
+  "version_id": "cff620dc-2fed-48d8-af13-7eacb7ce495b",
+  "content_hash": "d9754783bc42f0a3f4125ddb70d0ae7126c4c388817b0d0dc28565d948a41596",
+  "files_sha256": {
+    "Campus SRS and SDLC.json": "05b36e3abd124063c12e18e543250d486a905599df11996e850e0ab28d8c6587",
+    "Campus SRS and SDLC.md": "36116c3f92ef1ec6a8fa5336c1b3aa8db07176362aed55f354242b8f9dbc7c22",
+    "Campus SRS and SDLC.pdf": "93b3c295887a1c46da39a99128a3aff14c2155a922721e7d852c4658c14c5b13"
+  },
+  "human_approval": false,
+  "renderer": "readable scalar-list activities",
+  "pages": 31
+}

@@ -1,0 +1,10 @@
+{
+  "id": "43a01389-5214-4118-8242-6c358b580b44",
+  "name": "Secure University Remote Access Management System",
+  "description": "Design a secure university remote access management system that controls off-campus access to internal university applications, servers, research systems, and administrative resources. Authorized administrators should be able to define remote-access permissions, approve or revoke access for users, review active remote sessions, and terminate suspicious sessions. The system should authenticate users before access is granted, enforce role-based access restrictions, detect repeated failed login attempts and unauthorized access attempts, generate security alerts, and maintain audit logs of remote access activity and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-30T09:21:59.309839+00:00",
+  "updated_at": "2026-10-30T09:21:59.309839+00:00",
+  "reference_hashes": []
+}

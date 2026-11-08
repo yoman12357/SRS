@@ -1,0 +1,147 @@
+{
+  "case": "configuration",
+  "label": "initial",
+  "source_profile": "source-profile.json",
+  "user_folder": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Backup and Configuration - 30 Oct 2026\\Secure Network Configuration Management System",
+  "human_approval": false,
+  "project_id": "d39150eb-f59a-4d4c-9be6-0193cca63193",
+  "analysis": {
+    "run_id": "0a3ef5c4-02ad-4b3f-b0f9-292780d25a4f",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-30T03:06:49.349935+00:00",
+    "terminal_at": "2026-10-30T03:06:56.519316+00:00",
+    "total_seconds": 7.169,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 7.081,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 7.081,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "status": "completed",
+  "error": null,
+  "generation": {
+    "run_id": "ccdf5d2e-b913-42f2-8ea4-51b275cacab2",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-30T03:06:57.433412+00:00",
+    "terminal_at": "2026-10-30T03:09:00.988815+00:00",
+    "total_seconds": 123.555,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.165,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 66.498,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 11.604,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.034,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.031,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.029,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 2.639,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 21.851,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 2.735,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 2.573,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "completed",
+        "seconds": 2.181,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "verification": {
+        "status": "completed",
+        "seconds": 5.698,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "glossary": {
+        "status": "completed",
+        "seconds": 1.004,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "sdlc": {
+        "status": "completed",
+        "seconds": 5.066,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 66.498,
+    "completed_srs": true,
+    "human_approval": false
+  },
+  "pdf_pages": 17,
+  "version_id": "edc886a3-efbf-446e-83ea-7282f1dbba3b",
+  "content_hash": "dba0d7f38f6d69894392990b489c5ee9142ebf6d916cf4a1a9fd2f425ff42969",
+  "quality": "needs_review",
+  "threats": 5,
+  "risks": 5,
+  "sdlc": "Incremental",
+  "models": [
+    "cybersrs-qwen3-4b-ft:latest",
+    "qwen3:4b-instruct-2507-q4_K_M"
+  ],
+  "wall_seconds": 134.235
+}

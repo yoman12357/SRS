@@ -1,0 +1,65 @@
+{
+  "id": "d39150eb-f59a-4d4c-9be6-0193cca63193",
+  "name": "Secure Network Configuration Management System",
+  "description": "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure. Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary. The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": {
+    "title": "Network Configuration Management System",
+    "domain": "security",
+    "supported": true,
+    "summary": "A secure network configuration management system shall provide centralized control over router, switch, and wireless controller configurations with role-based access, real-time monitoring of changes, automated detection of unauthorized modifications, and audit logging to support compliance and incident response.",
+    "stakeholders": [
+      "authorized network administrators",
+      "system operators"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security",
+          "nonfunctional"
+        ],
+        "explanation": "The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Authorized administrators shall be able to review current configurations, submit changes, track history, and restore approved configurations when necessary."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "requirement",
+        "sections": [
+          "security",
+          "threats",
+          "functional"
+        ],
+        "explanation": "The system shall detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of all administrative actions, and restrict functions based on approved roles."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "nonfunctional",
+          "security"
+        ],
+        "explanation": "The platform shall provide a centralized dashboard, integrate with university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": [
+      "What makes a configuration change unauthorized?",
+      "Which fields must the audit logs contain?"
+    ]
+  },
+  "created_at": "2026-10-30T03:06:49.332402+00:00",
+  "updated_at": "2026-10-30T03:06:56.491905+00:00",
+  "reference_hashes": []
+}

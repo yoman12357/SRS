@@ -1,0 +1,300 @@
+[
+  {
+    "case": "backup",
+    "label": "final",
+    "source_profile": "source-profile.json",
+    "user_folder": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Backup and Configuration - 30 Oct 2026\\Secure Backup and Recovery Management System",
+    "human_approval": false,
+    "project_id": "195cd75c-0708-45cc-9496-e78f89c67751",
+    "status": "completed",
+    "error": null,
+    "generation": {
+      "run_id": "0620d283-418e-465e-bb00-80142480ff4b",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-30T03:16:06.007371+00:00",
+      "terminal_at": "2026-10-30T03:18:08.926563+00:00",
+      "total_seconds": 122.919,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 1.413,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "completed",
+          "seconds": 52.273,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest",
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "nonfunctional": {
+          "status": "completed",
+          "seconds": 13.588,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "security": {
+          "status": "completed",
+          "seconds": 0.029,
+          "models": []
+        },
+        "data": {
+          "status": "completed",
+          "seconds": 0.03,
+          "models": []
+        },
+        "network": {
+          "status": "completed",
+          "seconds": 0.028,
+          "models": []
+        },
+        "compliance": {
+          "status": "completed",
+          "seconds": 6.713,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "architecture": {
+          "status": "completed",
+          "seconds": 14.69,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "threats": {
+          "status": "completed",
+          "seconds": 2.644,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "risks": {
+          "status": "completed",
+          "seconds": 2.547,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "scenarios": {
+          "status": "completed",
+          "seconds": 2.404,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "verification": {
+          "status": "completed",
+          "seconds": 5.441,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "glossary": {
+          "status": "completed",
+          "seconds": 1.102,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "sdlc": {
+          "status": "completed",
+          "seconds": 19.563,
+          "models": [
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        }
+      },
+      "maximum_section_seconds": 52.273,
+      "completed_srs": true,
+      "human_approval": false
+    },
+    "pdf_pages": 18,
+    "version_id": "73ef7ad9-6e8e-43df-95ef-ade4fdb20d69",
+    "content_hash": "c9d3fb77085f6f067c8cc4b0e60b6731b45ba222e38d9cb7cf774da63250bae3",
+    "quality": "needs_review",
+    "threats": 6,
+    "risks": 6,
+    "sdlc": "Incremental",
+    "models": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "wall_seconds": 126.188,
+    "analysis": {
+      "run_id": "67ece483-b48e-4544-b946-280c22ded723",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-30T02:57:59.856098+00:00",
+      "terminal_at": "2026-10-30T02:58:23.602251+00:00",
+      "total_seconds": 23.746,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 12.388,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 12.388,
+      "completed_srs": false,
+      "human_approval": false
+    },
+    "source_unchanged": true
+  },
+  {
+    "case": "configuration",
+    "label": "verified",
+    "source_profile": "source-profile.json",
+    "user_folder": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Backup and Configuration - 30 Oct 2026\\Secure Network Configuration Management System",
+    "human_approval": false,
+    "project_id": "d39150eb-f59a-4d4c-9be6-0193cca63193",
+    "status": "completed",
+    "error": null,
+    "generation": {
+      "run_id": "769f6745-04ab-4bfb-bffd-82383f3f454d",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-30T03:24:55.600678+00:00",
+      "terminal_at": "2026-10-30T03:26:32.861317+00:00",
+      "total_seconds": 97.261,
+      "sections": {
+        "introduction": {
+          "status": "completed",
+          "seconds": 5.685,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "functional": {
+          "status": "completed",
+          "seconds": 50.089,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest",
+            "qwen3:4b-instruct-2507-q4_K_M"
+          ]
+        },
+        "nonfunctional": {
+          "status": "completed",
+          "seconds": 7.267,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "security": {
+          "status": "completed",
+          "seconds": 0.031,
+          "models": []
+        },
+        "data": {
+          "status": "completed",
+          "seconds": 0.027,
+          "models": []
+        },
+        "network": {
+          "status": "completed",
+          "seconds": 0.026,
+          "models": []
+        },
+        "compliance": {
+          "status": "completed",
+          "seconds": 4.561,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "architecture": {
+          "status": "completed",
+          "seconds": 10.997,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "threats": {
+          "status": "completed",
+          "seconds": 2.237,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "risks": {
+          "status": "completed",
+          "seconds": 2.035,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "scenarios": {
+          "status": "completed",
+          "seconds": 2.113,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "verification": {
+          "status": "completed",
+          "seconds": 5.676,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "glossary": {
+          "status": "completed",
+          "seconds": 1.01,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        },
+        "sdlc": {
+          "status": "completed",
+          "seconds": 5.062,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 50.089,
+      "completed_srs": true,
+      "human_approval": false
+    },
+    "pdf_pages": 17,
+    "version_id": "c58fca98-9b72-49dc-b101-775a09e7873e",
+    "content_hash": "10591293b98801ffc8e18c7e79a51335a37adb350b66828fe6097a414de3fda1",
+    "quality": "needs_review",
+    "threats": 5,
+    "risks": 5,
+    "sdlc": "Incremental",
+    "models": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "wall_seconds": 99.985,
+    "source_unchanged": true,
+    "analysis": {
+      "run_id": "0a3ef5c4-02ad-4b3f-b0f9-292780d25a4f",
+      "status": "completed",
+      "error": null,
+      "created_at": "2026-10-30T03:06:49.349935+00:00",
+      "terminal_at": "2026-10-30T03:06:56.519316+00:00",
+      "total_seconds": 7.169,
+      "sections": {
+        "analysis": {
+          "status": "completed",
+          "seconds": 7.081,
+          "models": [
+            "cybersrs-qwen3-4b-ft:latest"
+          ]
+        }
+      },
+      "maximum_section_seconds": 7.081,
+      "completed_srs": false,
+      "human_approval": false
+    }
+  }
+]

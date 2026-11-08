@@ -1,0 +1,2367 @@
+{
+  "id": "5df4c737-fa9d-4275-a6c8-e751eec52089",
+  "project_id": "e03d43ae-da17-4dbe-9470-4e420a627d33",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "e03d43ae-da17-4dbe-9470-4e420a627d33",
+    "title": "Firewall Management System Requirements",
+    "original_description": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks. The system should allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts. The platform should maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings. The solution should be secure, scalable, reliable, and manageable.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "The system should allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "The platform should maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The solution should be secure, scalable, reliable, and manageable.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Firewall Management System Requirements",
+      "domain": "security",
+      "supported": true,
+      "summary": "A centralized firewall management system shall allow authorized administrators to create, review, update, and revoke firewall rules; enforce access restrictions between network segments; monitor blocked and allowed traffic; generate alerts for suspicious or unauthorized communication attempts; maintain audit logs of policy changes and administrative actions; provide a dashboard for reviewing security events; support multiple campus buildings. The solution must be secure, scalable, reliable, and manageable.",
+      "stakeholders": [
+        "authorized network administrators",
+        "network operators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "network"
+          ],
+          "explanation": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks. This establishes the scope of network segmentation and policy governance within the campus infrastructure."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "The system shall allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "data",
+            "security"
+          ],
+          "explanation": "The platform shall maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional"
+          ],
+          "explanation": "The solution shall be secure, scalable, reliable, and manageable. These are nonfunctional requirements that define the system's operational qualities under varying loads and conditions."
+        }
+      ],
+      "questions": [
+        {
+          "id": "Q-66cf5513b374",
+          "question": "How are the stated roles and authorized permissions assigned?",
+          "why_needed": "To ensure proper access control, accountability, and segregation of duties within the firewall management system.",
+          "critical": true,
+          "evidence_ids": [
+            "E-002"
+          ]
+        },
+        {
+          "id": "Q-64ef2e28335c",
+          "question": "What retention period is required for the audit logs?",
+          "why_needed": "To meet compliance obligations and enable forensic analysis in case of security incidents.",
+          "critical": true,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-3aae42e94793",
+          "question": "Which fields must the audit logs contain?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-7b2e5f89a0b1",
+          "question": "Which security acceptance outcomes must be demonstrated?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-543394346815",
+          "question": "What measurable scalability targets must the system meet?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-819bb986f419",
+          "question": "What measurable reliability and recovery targets must the system meet?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-5268b96e41b0",
+          "question": "What criteria define acceptable manageability?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        }
+      ],
+      "unresolved_decisions": []
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7085,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7132,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-788cd8fba7ce0acb:3",
+        "source_document_id": "kb-788cd8fba7ce0acb",
+        "chunk_index": 3,
+        "page_or_section": "text chunk 4",
+        "relevance_score": 0.7096,
+        "text": "rvices, in the example only one server with a domain controller Contoso.com is shown;\n    - _LOGS_ - segment, designed to host servers with logs, servers centrally store application logs of an automated system.\n\n## Interservice interaction\n\nUsually some information systems of the company interact with each other. It is important to define a firewall policy for such interactions.\nThe base allowed interactions are indicated by the green arrows in the image below:\n![Interservice interaction](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Network_Segmentation_Cheat_Sheet_interservice.drawio.png)\nThe image above also shows the allowed access from the FRONTEND and MIDDLEWARE segments to external networks (the Internet, for example).\n\nFrom this image follows:\n\n1. Access between FRONTEND and MIDDLEWARE segments of different information systems is prohibited;\n2. Access from the MIDDLEWARE segment to the BACKEND segment of another service is prohibited (access to a foreign database bypassing the application server is prohibited).\n\nForbidden accesses are indicated by red arrows in the image below:\n![Prohibited Interservice Communication](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Network_Segmentation_Cheat_Sheet_interservice_deny.drawio.png)\n\n### Many applications on the same network\n\nIf you prefer to have fewer networks in your organization and host more applications on each network, it is acceptable to host the load balancer on those networks. This balancer will balance traffic to applications on the network.\nIn this case, it will be necessary to open one port to such a network, and balancing will be performed, for example, based on the HTTP request parameters.\nAn example of such segmentation:\n![Interservice Communication with",
+        "title": "03_OWASP_CheatSheets/083_OWASP_Network_Segmentation_Cheat_Sheet.md",
+        "sha256": "2b91c4e103da8e53c98e3b6006b23c2bb02e8c55e5805a56f0068c7b31a477d8"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:14",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 14,
+        "page_or_section": "text chunk 15",
+        "relevance_score": 0.7034,
+        "text": "ied. Translation gateways can convert modern authentication tokens (like SAML or OAuth) to whatever format the legacy system expects (like Kerberos or basic auth), bridging the gap between old and new security approaches.\n\n**Enhanced monitoring** becomes critical for systems that can't log properly on their own. Use network-based detection tools to monitor traffic patterns, connection attempts, and data flows for systems that don't provide detailed security logs. This won't give you the same visibility as modern applications, but it's better than having no monitoring at all.\n\n## Cloud Security\n\n### Multi-Cloud Considerations\n\nWhen using multiple cloud providers:\n\n- **Connect identities**: Use the same login across all clouds\n- **Secure connections**: Encrypt communication between cloud environments\n- **Consistent policies**: Apply the same security rules everywhere\n- **Centralized monitoring**: See security events from all clouds in one place\n\n### Container Security\n\nFor containerized applications:\n\n- **Service mesh**: Automatically handle identity and encryption between containers\n- **Network policies**: Control which containers can talk to each other\n- **Scan images**: Check container images for vulnerabilities\n- **Runtime protection**: Monitor container behavior for threats\n\n## Common Mistakes to Avoid\n\n### Technical Mistakes\n\n**Relying only on network security** - Many organizations think they can just add network controls and call it Zero Trust. But Zero Trust is fundamentally about identity-based security, not network security. If you're still thinking in terms of \"inside\" and \"outside\" the network, you're missing the point. Focus on verifying identity and device health for every access request, regardless of where it comes from.\n\n**Not monitoring enough** - Zero",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:9",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 9,
+        "page_or_section": "text chunk 10",
+        "relevance_score": 0.7019,
+        "text": "llowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security gateways**: Authenticate every API call, validate request schemas, and enforce rate limits for microservices communication using [REST security best practices](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)\n- **Secure development**: Build security into your development process\n\n### Protecting Data\n\nKeep your data safe with these methods:\n\n- **Classify data**: Label data by sensitivity level\n- **Use encryption**: Protect data whether it's stored or moving with proper [cryptographic storage](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)\n- **Prevent data loss**: Monitor and block unauthorized data transfers\n- **Log all access**: Record who accesses what data and when\n\n## Monitoring and Analytics\n\n### Security Operations\n\nSet up these monitoring capabilities:\n\n- **SIEM integration**: Collect and analyze logs from all systems\n- **Threat hunting**: Actively look for signs of attack\n- **Automated response**: Automatically block suspicious activity\n- **Behavior analysis**: Learn normal patterns and detect anomalies\n\n### Key Metrics to Track\n\nMonitor these important numbers:\n\n- How often authentication succeeds vs. fails\n- Number of security policy violations\n- How quickly you detect threats (MTTD)\n- How quickly you respond to incidents (MTTR)\n\n## Implementation Steps\n\nZero Trust implementation requires a structured approach. It's not like installing one security tool - it's more like updating your entire security approach while keeping everything running. Here's what actually works:\n\n### Phase 1: Get the Basics",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-788cd8fba7ce0acb:4",
+        "source_document_id": "kb-788cd8fba7ce0acb",
+        "chunk_index": 4,
+        "page_or_section": "text chunk 5",
+        "relevance_score": 0.7078,
+        "text": "be necessary to open one port to such a network, and balancing will be performed, for example, based on the HTTP request parameters.\nAn example of such segmentation:\n![Interservice Communication with balancing](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Network_Segmentation_Cheat_Sheet_interservice_balancer.drawio.png)\n\nAs you can see, there is only one incoming access to each network, access is opened up to the balancer in the network. However, in this case, segmentation no longer works, access control between applications from different network segments is performed at the 7th level of the OSI model using a balancer.\n\n## Network security policy\n\nThe organization must define a \"paper\" policy that describes firewall rules and basic allowed network access.\nThis policy is at least useful:\n\n- network administrators;\n- security representatives;\n- IT auditors;\n- architects of information systems and software;\n- developers;\n- IT administrators.\n\nIt is convenient when the policy is described by similar images. The information is presented as concisely and simply as possible.\n\n### Examples of individual policy provisions\n\nExamples in the network policy will help colleagues quickly understand what access is potentially allowed and can be requested.\n\n#### Permissions for CI/CD\n\nThe network security policy may define, for example, the basic permissions allowed for the software development system. Let's look at an example of what such a policy might look like:\n![CI-CD](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Network_Segmentation_Cheat_Sheet_repo.drawio.png)\n\n#### Secure logging\n\nIt is important that in the event of a compromise of any information system, its logs are not subsequently modified by an attacker. To do this, you",
+        "title": "03_OWASP_CheatSheets/083_OWASP_Network_Segmentation_Cheat_Sheet.md",
+        "sha256": "2b91c4e103da8e53c98e3b6006b23c2bb02e8c55e5805a56f0068c7b31a477d8"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "The platform should maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The solution should be secure, scalable, reliable, and manageable.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system",
+          "statement": "The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.",
+          "rationale": "Source obligation E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system manages firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system",
+              "when": "system initiates policy management for any network segment",
+              "then": "the requested firewall policy is applied and the resulting state is reflected in the network configuration",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "allow authorized network administrators to create firewall rules",
+          "statement": "The system shall allow authorized network administrators to create firewall rules.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized network administrators create firewall rules",
+              "when": "the operation is initiated",
+              "then": "the system returns the newly created firewall rule in the active configuration state",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "allow authorized network administrators to review firewall rules",
+          "statement": "The system shall allow authorized network administrators to review firewall rules.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized network administrators review firewall rules",
+              "when": "the operation is initiated",
+              "then": "the system returns a complete list of current firewall rules with their status and scope",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "allow authorized network administrators to update firewall rules",
+          "statement": "The system shall allow authorized network administrators to update firewall rules.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized network administrators update firewall rules",
+              "when": "the operation is initiated",
+              "then": "the system applies the updated rule and reflects the change in the active configuration state",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-005",
+          "title": "allow authorized network administrators to revoke firewall rules",
+          "statement": "The system shall allow authorized network administrators to revoke firewall rules.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "authorized network administrators revoke firewall rules",
+              "when": "the operation is initiated",
+              "then": "the system removes the rule from active enforcement and updates the configuration state accordingly",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-006",
+          "title": "enforce access restrictions between network segments",
+          "statement": "The system shall enforce access restrictions between network segments.",
+          "rationale": "Source obligation E-002_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system enforces access restrictions between network segments",
+              "when": "a communication attempt is made across segments",
+              "then": "the system blocks or permits the traffic based on configured firewall rules",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-007",
+          "title": "monitor blocked and allowed traffic",
+          "statement": "The system shall monitor blocked and allowed traffic.",
+          "rationale": "Source obligation E-002_O06.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system monitors blocked and allowed traffic",
+              "when": "traffic flows occur across network segments",
+              "then": "The system monitors blocked and allowed traffic, and external test capture shows the resulting state of traffic flow across network segments.",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-008",
+          "title": "generate alerts for suspicious or unauthorized communication attempts",
+          "statement": "The system shall generate alerts for suspicious or unauthorized communication attempts.",
+          "rationale": "Source obligation E-002_O07.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system detects suspicious or unauthorized communication attempts",
+              "when": "an anomalous traffic pattern is observed",
+              "then": "The system generates alerts for suspicious or unauthorized communication attempts when an anomalous traffic pattern is observed.",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-009",
+          "title": "maintain audit logs of firewall policy changes and administrative actions",
+          "statement": "The system shall maintain audit logs of firewall policy changes and administrative actions.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system maintains audit logs of firewall policy changes and administrative actions",
+              "when": "the system records a change to firewall policy or an administrative action",
+              "then": "the audit log contains a timestamped entry with the action type, target resource, and actor identifier",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-3aae42e94793 is TBD.",
+            "Decision Q-64ef2e28335c is TBD."
+          ]
+        },
+        {
+          "id": "FR-010",
+          "title": "provide a dashboard for reviewing network security events",
+          "statement": "The system shall provide a dashboard for reviewing network security events.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system provides a dashboard for reviewing network security events",
+              "when": "an administrator accesses the dashboard interface",
+              "then": "The administrator observes the dashboard interface displaying network security events, with output field set undecided.",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-011",
+          "title": "support multiple campus buildings",
+          "statement": "The system shall support multiple campus buildings.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system supports multiple campus buildings",
+              "when": "a user initiates a connection request from a building within the campus network",
+              "then": "The system successfully establishes a connection from a building within the campus network, with device approval criteria and implementation pending.",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for the goal 'be secure'",
+              "when": "An analyst reviews that acceptance plan",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-7b2e5f89a0b1 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-002",
+          "title": "be scalable",
+          "statement": "The system shall be scalable.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "performance"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for the goal 'be scalable'",
+              "when": "An analyst reviews that acceptance plan",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-543394346815 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-003",
+          "title": "be reliable",
+          "statement": "The system shall be reliable.",
+          "rationale": "Source obligation E-004_O03.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for the goal 'be reliable'",
+              "when": "An analyst reviews that acceptance plan",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-819bb986f419 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-004",
+          "title": "be manageable",
+          "statement": "The system shall be manageable.",
+          "rationale": "Source obligation E-004_O04.",
+          "priority": "should",
+          "dimensions": [
+            "usability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for the goal 'be manageable'",
+              "when": "An analyst reviews that acceptance plan",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-5268b96e41b0 is TBD."
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "NFR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-009",
+        "FR-010",
+        "FR-011"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-009",
+        "FR-010"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": []
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: authorized network administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: authorized network administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "component_name": "Actor: authorized network administrators",
+          "responsibility": "Represent the source-stated actor: authorized network administrators."
+        },
+        {
+          "title": "Firewall Policy Management Engine",
+          "detail": "Proposed logical owner for FR-001, FR-006, FR-011.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-006",
+            "FR-011"
+          ],
+          "component_name": "Firewall Policy Management Engine",
+          "responsibility": "The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system. The system shall enforce access restrictions between network segments. The system shall support multiple campus buildings."
+        },
+        {
+          "title": "Rule Administration Interface",
+          "detail": "Proposed logical owner for FR-002, FR-003, FR-004, FR-005, NFR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "NFR-002"
+          ],
+          "component_name": "Rule Administration Interface",
+          "responsibility": "The system shall allow authorized network administrators to create firewall rules. The system shall allow authorized network administrators to review firewall rules. The system shall allow authorized network administrators to update firewall rules. The system shall allow authorized network administrators to revoke firewall rules. The system shall be scalable."
+        },
+        {
+          "title": "Traffic Monitoring and Alerting Module",
+          "detail": "Proposed logical owner for FR-007, FR-008, NFR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "NFR-003",
+            "NFR-001"
+          ],
+          "component_name": "Traffic Monitoring and Alerting Module",
+          "responsibility": "The system shall monitor blocked and allowed traffic. The system shall generate alerts for suspicious or unauthorized communication attempts. The system shall be reliable. The system shall be secure."
+        },
+        {
+          "title": "Audit Logging and Reporting Service",
+          "detail": "Proposed logical owner for FR-009, FR-010, NFR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-009",
+            "FR-010",
+            "NFR-004"
+          ],
+          "component_name": "Audit Logging and Reporting Service",
+          "responsibility": "The system shall maintain audit logs of firewall policy changes and administrative actions. The system shall provide a dashboard for reviewing network security events. The system shall be manageable."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, FR-004, FR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "from_component": "Actor: authorized network administrators",
+          "to_component": "Rule Administration Interface",
+          "data_or_action": "The system shall allow authorized network administrators to create firewall rules. The system shall allow authorized network administrators to review firewall rules. The system shall allow authorized network administrators to update firewall rules. The system shall allow authorized network administrators to revoke firewall rules."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003, FR-004, FR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "untrusted_component": "Actor: authorized network administrators",
+          "trusted_component": "Rule Administration Interface",
+          "enforcement": "The system shall allow authorized network administrators to create firewall rules. The system shall allow authorized network administrators to review firewall rules. The system shall allow authorized network administrators to update firewall rules. The system shall allow authorized network administrators to revoke firewall rules."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "authorized network administrators",
+          "goal": "The system shall allow authorized network administrators to create firewall rules.",
+          "story": "As authorized network administrators, I need the following behavior: The system shall allow authorized network administrators to create firewall rules.",
+          "preconditions": [
+            "authorized network administrators create firewall rules"
+          ],
+          "steps": [
+            "the operation is initiated"
+          ],
+          "success_outcome": "the system returns the newly created firewall rule in the active configuration state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-002",
+          "actor": "authorized network administrators",
+          "goal": "The system shall allow authorized network administrators to review firewall rules.",
+          "story": "As authorized network administrators, I need the following behavior: The system shall allow authorized network administrators to review firewall rules.",
+          "preconditions": [
+            "authorized network administrators review firewall rules"
+          ],
+          "steps": [
+            "the operation is initiated"
+          ],
+          "success_outcome": "the system returns a complete list of current firewall rules with their status and scope",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-003",
+          "actor": "authorized network administrators",
+          "goal": "The system shall allow authorized network administrators to update firewall rules.",
+          "story": "As authorized network administrators, I need the following behavior: The system shall allow authorized network administrators to update firewall rules.",
+          "preconditions": [
+            "authorized network administrators update firewall rules"
+          ],
+          "steps": [
+            "the operation is initiated"
+          ],
+          "success_outcome": "the system applies the updated rule and reflects the change in the active configuration state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-004",
+          "actor": "authorized network administrators",
+          "goal": "The system shall allow authorized network administrators to revoke firewall rules.",
+          "story": "As authorized network administrators, I need the following behavior: The system shall allow authorized network administrators to revoke firewall rules.",
+          "preconditions": [
+            "authorized network administrators revoke firewall rules"
+          ],
+          "steps": [
+            "the operation is initiated"
+          ],
+          "success_outcome": "the system removes the rule from active enforcement and updates the configuration state accordingly",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: system manages firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system",
+            "When: system initiates policy management for any network segment"
+          ],
+          "expected_result": "Expected: the requested firewall policy is applied and the resulting state is reflected in the network configuration",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: authorized network administrators create firewall rules",
+            "When: the operation is initiated"
+          ],
+          "expected_result": "Expected: the system returns the newly created firewall rule in the active configuration state",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: authorized network administrators review firewall rules",
+            "When: the operation is initiated"
+          ],
+          "expected_result": "Expected: the system returns a complete list of current firewall rules with their status and scope",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: authorized network administrators update firewall rules",
+            "When: the operation is initiated"
+          ],
+          "expected_result": "Expected: the system applies the updated rule and reflects the change in the active configuration state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: authorized network administrators revoke firewall rules",
+            "When: the operation is initiated"
+          ],
+          "expected_result": "Expected: the system removes the rule from active enforcement and updates the configuration state accordingly",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "procedure": [
+            "Given: the system enforces access restrictions between network segments",
+            "When: a communication attempt is made across segments"
+          ],
+          "expected_result": "Expected: the system blocks or permits the traffic based on configured firewall rules",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "procedure": [
+            "Given: the system monitors blocked and allowed traffic",
+            "When: traffic flows occur across network segments"
+          ],
+          "expected_result": "Expected: The system monitors blocked and allowed traffic, and external test capture shows the resulting state of traffic flow across network segments.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "procedure": [
+            "Given: the system detects suspicious or unauthorized communication attempts",
+            "When: an anomalous traffic pattern is observed"
+          ],
+          "expected_result": "Expected: The system generates alerts for suspicious or unauthorized communication attempts when an anomalous traffic pattern is observed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "procedure": [
+            "Given: system maintains audit logs of firewall policy changes and administrative actions",
+            "When: the system records a change to firewall policy or an administrative action"
+          ],
+          "expected_result": "Expected: the audit log contains a timestamped entry with the action type, target resource, and actor identifier",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "procedure": [
+            "Given: system provides a dashboard for reviewing network security events",
+            "When: an administrator accesses the dashboard interface"
+          ],
+          "expected_result": "Expected: The administrator observes the dashboard interface displaying network security events, with output field set undecided.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "procedure": [
+            "Given: system supports multiple campus buildings",
+            "When: a user initiates a connection request from a building within the campus network"
+          ],
+          "expected_result": "Expected: The system successfully establishes a connection from a building within the campus network, with device approval criteria and implementation pending.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for the goal 'be secure'",
+            "When: An analyst reviews that acceptance plan"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for the goal 'be scalable'",
+            "When: An analyst reviews that acceptance plan"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "NFR-003"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for the goal 'be reliable'",
+            "When: An analyst reviews that acceptance plan"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-015",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for the goal 'be manageable'",
+            "When: An analyst reviews that acceptance plan"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "analysis"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Firewall",
+          "detail": "A control that permits or restricts network traffic according to rules; mentioning it does not authorize automatic changes.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "The selection of Agile as the required model is based on a uniform score of 40 across all candidates, with no differentiating input evidence provided to favor one methodology over another. This lack of distinguishing factors—such as budget constraints, failure consequences, regulatory demands, or feedback cycles—means that no candidate model can be objectively ranked for suitability beyond equal point scores. The absence of evidence on critical tradeoffs (e.g., stability, schedule, uncertainty) renders all models equally viable in a vacuum. Given the requirement for centralized policy management, real-time rule operations, and continuous monitoring across diverse campus network segments, Agile supports iterative development, rapid feedback loops, and responsive adaptation—key to managing dynamic security needs. However, without explicit evidence on legacy systems, verification cadence, or regulatory compliance, this decision remains provisional. The existing requirements emphasize operational control, auditability, and real-time visibility, which align with Agile’s emphasis on incremental delivery and stakeholder collaboration. Nevertheless, the unknown factors such as schedule, uncertainty, and regulation prevent a definitive conclusion; thus, the work groups must be structured to accommodate iterative progress while ensuring no requirement duplication, per prior validation failure.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.; FR-002: The system shall allow authorized network administrators to create firewall rules.; FR-003: The system shall allow authorized network administrators to review firewall rules.; FR-004: The system shall allow authorized network administrators to update firewall rules.; FR-005: The system shall allow authorized network administrators to revoke firewall rules.; FR-006: The system shall enforce access restrictions between network segments.; FR-007: The system shall monitor blocked and allowed traffic.; FR-008: The system shall generate alerts for suspicious or unauthorized communication attempts.; FR-009: The system shall maintain audit logs of firewall policy changes and administrative actions.; FR-010: The system shall provide a dashboard for reviewing network security events.; FR-011: The system shall support multiple campus buildings.",
+            "Review and baseline the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall be scalable.; NFR-003: The system shall be reliable.; NFR-004: The system shall be manageable.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.",
+            "Review implementation and acceptance evidence against FR-002: The system shall allow authorized network administrators to create firewall rules.",
+            "Review implementation and acceptance evidence against FR-003: The system shall allow authorized network administrators to review firewall rules.",
+            "Review implementation and acceptance evidence against FR-004: The system shall allow authorized network administrators to update firewall rules.",
+            "Review implementation and acceptance evidence against FR-005: The system shall allow authorized network administrators to revoke firewall rules.",
+            "Review implementation and acceptance evidence against FR-006: The system shall enforce access restrictions between network segments.",
+            "Review implementation and acceptance evidence against FR-008: The system shall generate alerts for suspicious or unauthorized communication attempts.",
+            "Review implementation and acceptance evidence against FR-009: The system shall maintain audit logs of firewall policy changes and administrative actions.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.; FR-002: The system shall allow authorized network administrators to create firewall rules.; FR-003: The system shall allow authorized network administrators to review firewall rules.; FR-004: The system shall allow authorized network administrators to update firewall rules.; FR-005: The system shall allow authorized network administrators to revoke firewall rules.; FR-006: The system shall enforce access restrictions between network segments.; FR-007: The system shall monitor blocked and allowed traffic.; FR-008: The system shall generate alerts for suspicious or unauthorized communication attempts.; FR-009: The system shall maintain audit logs of firewall policy changes and administrative actions.; FR-010: The system shall provide a dashboard for reviewing network security events.; FR-011: The system shall support multiple campus buildings.",
+            "Implement the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall be scalable.; NFR-003: The system shall be reliable.; NFR-004: The system shall be manageable.",
+            "In an authorized isolated test environment, execute TEST-001: Given: system manages firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system When: system initiates policy management for any network segment Expected: the requested firewall policy is applied and the resulting state is reflected in the network configuration",
+            "In an authorized isolated test environment, execute TEST-002: Given: authorized network administrators create firewall rules When: the operation is initiated Expected: the system returns the newly created firewall rule in the active configuration state",
+            "In an authorized isolated test environment, execute TEST-003: Given: authorized network administrators review firewall rules When: the operation is initiated Expected: the system returns a complete list of current firewall rules with their status and scope",
+            "In an authorized isolated test environment, execute TEST-004: Given: authorized network administrators update firewall rules When: the operation is initiated Expected: the system applies the updated rule and reflects the change in the active configuration state",
+            "In an authorized isolated test environment, execute TEST-005: Given: authorized network administrators revoke firewall rules When: the operation is initiated Expected: the system removes the rule from active enforcement and updates the configuration state accordingly",
+            "In an authorized isolated test environment, execute TEST-006: Given: the system enforces access restrictions between network segments When: a communication attempt is made across segments Expected: the system blocks or permits the traffic based on configured firewall rules",
+            "In an authorized isolated test environment, execute TEST-007: Given: the system monitors blocked and allowed traffic When: traffic flows occur across network segments Expected: The system monitors blocked and allowed traffic, and external test capture shows the resulting state of traffic flow across network segments.",
+            "In an authorized isolated test environment, execute TEST-008: Given: the system detects suspicious or unauthorized communication attempts When: an anomalous traffic pattern is observed Expected: The system generates alerts for suspicious or unauthorized communication attempts when an anomalous traffic pattern is observed.",
+            "In an authorized isolated test environment, execute TEST-009: Given: system maintains audit logs of firewall policy changes and administrative actions When: the system records a change to firewall policy or an administrative action Expected: the audit log contains a timestamped entry with the action type, target resource, and actor identifier",
+            "In an authorized isolated test environment, execute TEST-010: Given: system provides a dashboard for reviewing network security events When: an administrator accesses the dashboard interface Expected: The administrator observes the dashboard interface displaying network security events, with output field set undecided.",
+            "In an authorized isolated test environment, execute TEST-011: Given: system supports multiple campus buildings When: a user initiates a connection request from a building within the campus network Expected: The system successfully establishes a connection from a building within the campus network, with device approval criteria and implementation pending.",
+            "In an authorized isolated test environment, execute TEST-012: Given: A draft acceptance plan for the goal 'be secure' When: An analyst reviews that acceptance plan Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "In an authorized isolated test environment, execute TEST-013: Given: A draft acceptance plan for the goal 'be scalable' When: An analyst reviews that acceptance plan Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "In an authorized isolated test environment, execute TEST-014: Given: A draft acceptance plan for the goal 'be reliable' When: An analyst reviews that acceptance plan Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "In an authorized isolated test environment, execute TEST-015: Given: A draft acceptance plan for the goal 'be manageable' When: An analyst reviews that acceptance plan Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.",
+            "Review implementation and acceptance evidence against FR-002: The system shall allow authorized network administrators to create firewall rules.",
+            "Review implementation and acceptance evidence against FR-003: The system shall allow authorized network administrators to review firewall rules.",
+            "Review implementation and acceptance evidence against FR-004: The system shall allow authorized network administrators to update firewall rules.",
+            "Review implementation and acceptance evidence against FR-005: The system shall allow authorized network administrators to revoke firewall rules.",
+            "Review implementation and acceptance evidence against FR-006: The system shall enforce access restrictions between network segments.",
+            "Review implementation and acceptance evidence against FR-008: The system shall generate alerts for suspicious or unauthorized communication attempts.",
+            "Review implementation and acceptance evidence against FR-009: The system shall maintain audit logs of firewall policy changes and administrative actions.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.",
+            "Review implementation and acceptance evidence against FR-002: The system shall allow authorized network administrators to create firewall rules.",
+            "Review implementation and acceptance evidence against FR-003: The system shall allow authorized network administrators to review firewall rules.",
+            "Review implementation and acceptance evidence against FR-004: The system shall allow authorized network administrators to update firewall rules.",
+            "Review implementation and acceptance evidence against FR-005: The system shall allow authorized network administrators to revoke firewall rules.",
+            "Review implementation and acceptance evidence against FR-006: The system shall enforce access restrictions between network segments.",
+            "Review implementation and acceptance evidence against FR-008: The system shall generate alerts for suspicious or unauthorized communication attempts.",
+            "Review implementation and acceptance evidence against FR-009: The system shall maintain audit logs of firewall policy changes and administrative actions.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "security": [],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "prompt_version": "sequential-1.32",
+    "input_fingerprint": "19ea085fa6a339894b476849b6a3bd78022028a92e46b8be46910c9bdd224511"
+  },
+  "content_hash": "b2996b2dd583441b8643fb612f80f3e2603f4d224d56d206aabee45d6f31c388",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.16",
+    "status": "needs_review",
+    "checks_passed": 21,
+    "checks_total": 21,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008"
+      ],
+      "E-003": [
+        "FR-009",
+        "FR-010",
+        "FR-011"
+      ],
+      "E-004": [
+        "NFR-001",
+        "NFR-002",
+        "NFR-003",
+        "NFR-004"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-004",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-003"
+        ],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-005",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-004"
+        ],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-006",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-007",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-007"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-008",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-008"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-009",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-010",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-010"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-011",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-011"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-012"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-002",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-013"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-003",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-014"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-004",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-015"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "b049a6ce-e353-4a91-abc7-e290d4d9a71b",
+  "created_at": "2026-10-29T20:10:07.365626+00:00",
+  "presentation": {
+    "profile": "ieee-830-1998-1.0",
+    "title": "Firewall Management System Requirements",
+    "sections": [
+      {
+        "number": "1",
+        "title": "Introduction",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.1",
+        "title": "Purpose",
+        "paragraphs": [
+          "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+          "This SRS describes the software's required behavior for users, administrators and the Project Analyst reviewing the specification."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.2",
+        "title": "Scope",
+        "paragraphs": [
+          "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks. The system should allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts. The platform should maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings. The solution should be secure, scalable, reliable, and manageable."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.3",
+        "title": "Definitions, acronyms and abbreviations",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Policy",
+                "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements."
+              ],
+              [
+                "Audit record",
+                "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition."
+              ],
+              [
+                "Log",
+                "A collection of event records. This term does not itself require additional logging fields, events or access permissions."
+              ],
+              [
+                "Firewall",
+                "A control that permits or restricts network traffic according to rules; mentioning it does not authorize automatic changes."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.4",
+        "title": "References",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Reference",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Format",
+                "IEEE Std 830-1998, clauses 5 and Annex A (document organization)."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.5",
+        "title": "Overview",
+        "paragraphs": [
+          "Section 2 summarizes the product, stakeholders and open decisions. Section 3 contains the uniquely identified requirements. Detailed evidence, acceptance procedures and the SDLC plan are available in the supporting report."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2",
+        "title": "Overall description",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.1",
+        "title": "Product perspective",
+        "paragraphs": [
+          "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.2",
+        "title": "Product functions",
+        "paragraphs": [
+          "Functional topics are summarized below; section 3 retains the full requirements."
+        ],
+        "bullets": [
+          "Access permissions — FR-002, FR-003, FR-004, FR-005, FR-006",
+          "Policy controls — FR-001, FR-009",
+          "Monitoring and alerts — FR-007, FR-008",
+          "Dashboard — FR-010",
+          "Audit logging — FR-009",
+          "Network isolation — FR-006",
+          "support multiple campus buildings — FR-011"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.3",
+        "title": "User characteristics and stakeholders",
+        "paragraphs": [
+          "Labels group stakeholders for readability. They do not combine permissions.",
+          "Education, training and experience requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Role",
+              "Source user groups",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "Admin",
+                "network administrators",
+                "Performs only the role's source-defined operations in section 3."
+              ],
+              [
+                "Project Analyst",
+                "Document review role",
+                "Reviews requirements and tracks open decisions; this role grants no product access."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "2.4",
+        "title": "Constraints",
+        "paragraphs": [
+          "No additional implementation constraints were confirmed. Source-defined restrictions remain in the requirements in section 3."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.5",
+        "title": "Assumptions and dependencies",
+        "paragraphs": [
+          "Open decisions requiring confirmation:"
+        ],
+        "bullets": [
+          "How are the stated roles and authorized permissions assigned?",
+          "What retention period is required for the audit logs?",
+          "Which fields must the audit logs contain?",
+          "Which security acceptance outcomes must be demonstrated?",
+          "What measurable scalability targets must the system meet?",
+          "What measurable reliability and recovery targets must the system meet?",
+          "What criteria define acceptable manageability?"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3",
+        "title": "Specific requirements",
+        "paragraphs": [
+          "Each requirement is stated once with its original identifier and wording. Cross-references identify requirements covering more than one concern."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1",
+        "title": "External interface requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.1",
+        "title": "User interfaces",
+        "paragraphs": [
+          "Related requirements: FR-010. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.2",
+        "title": "Hardware interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.3",
+        "title": "Software interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.4",
+        "title": "Communications interfaces",
+        "paragraphs": [
+          "Related requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-010. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.2",
+        "title": "Functional requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "FR-001",
+            "statement": "The system shall manage firewall policies across academic, administrative, research, hostel, and guest networks in a centralized system.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-001"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "statement": "The system shall allow authorized network administrators to create firewall rules.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-002"
+            ]
+          },
+          {
+            "id": "FR-003",
+            "statement": "The system shall allow authorized network administrators to review firewall rules.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-003"
+            ]
+          },
+          {
+            "id": "FR-004",
+            "statement": "The system shall allow authorized network administrators to update firewall rules.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-004"
+            ]
+          },
+          {
+            "id": "FR-005",
+            "statement": "The system shall allow authorized network administrators to revoke firewall rules.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-005"
+            ]
+          },
+          {
+            "id": "FR-006",
+            "statement": "The system shall enforce access restrictions between network segments.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-006"
+            ]
+          },
+          {
+            "id": "FR-007",
+            "statement": "The system shall monitor blocked and allowed traffic.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-007"
+            ]
+          },
+          {
+            "id": "FR-008",
+            "statement": "The system shall generate alerts for suspicious or unauthorized communication attempts.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-008"
+            ]
+          },
+          {
+            "id": "FR-009",
+            "statement": "The system shall maintain audit logs of firewall policy changes and administrative actions.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-009"
+            ]
+          },
+          {
+            "id": "FR-010",
+            "statement": "The system shall provide a dashboard for reviewing network security events.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-010"
+            ]
+          },
+          {
+            "id": "FR-011",
+            "statement": "The system shall support multiple campus buildings.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-011"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.3",
+        "title": "Performance requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-002",
+            "statement": "The system shall be scalable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-013"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.4",
+        "title": "Logical database requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.5",
+        "title": "Design constraints",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6",
+        "title": "Software system attributes",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.1",
+        "title": "Reliability",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-003",
+            "statement": "The system shall be reliable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-014"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.2",
+        "title": "Availability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.3",
+        "title": "Security",
+        "paragraphs": [
+          "Also covered by: FR-006, FR-009, FR-010."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "statement": "The system shall be secure.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-012"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.4",
+        "title": "Maintainability",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-004",
+            "statement": "The system shall be manageable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-015"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.5",
+        "title": "Portability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.7",
+        "title": "Other requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      }
+    ]
+  }
+}

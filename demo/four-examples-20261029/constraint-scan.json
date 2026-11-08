@@ -1,0 +1,34 @@
+{
+  "wifi": {
+    "invented_numeric_limit": [],
+    "wifi_standard_or_protocol": [],
+    "vlan_or_ip_or_port": [],
+    "vendor_or_endpoint_product": [],
+    "os_requirement": [],
+    "specific_ml_model": []
+  },
+  "email": {
+    "invented_numeric_limit": [],
+    "wifi_standard_or_protocol": [],
+    "vlan_or_ip_or_port": [],
+    "vendor_or_endpoint_product": [],
+    "os_requirement": [],
+    "specific_ml_model": []
+  },
+  "endpoint": {
+    "invented_numeric_limit": [],
+    "wifi_standard_or_protocol": [],
+    "vlan_or_ip_or_port": [],
+    "vendor_or_endpoint_product": [],
+    "os_requirement": [],
+    "specific_ml_model": []
+  },
+  "firewall": {
+    "invented_numeric_limit": [],
+    "wifi_standard_or_protocol": [],
+    "vlan_or_ip_or_port": [],
+    "vendor_or_endpoint_product": [],
+    "os_requirement": [],
+    "specific_ml_model": []
+  }
+}

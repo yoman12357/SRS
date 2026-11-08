@@ -1,0 +1,1739 @@
+{
+  "id": "cff620dc-2fed-48d8-af13-7eacb7ce495b",
+  "project_id": "636b9250-b16f-4641-8293-f873f5c91da9",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "636b9250-b16f-4641-8293-f873f5c91da9",
+    "title": "Wireless Network Access Control Requirements",
+    "original_description": "Build a campus wireless network access-control requirements specification. Students and guests may access the internet but must not access the internal staff network. Network administrators may manually isolate a device and restore its access. Security operators may review and acknowledge alerts but may not change access policies. The system must record administrator policy changes and retain audit records for 30 days. The planning population is 2000 registered devices; concurrency is not yet decided. Do not automatically change firewall rules or isolate devices. Requirements evolve frequently and stakeholders provide weekly stakeholder feedback. Budget, delivery schedule, response-time thresholds and mandatory regulatory frameworks are undecided and must remain open decisions.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Build a campus wireless network access-control requirements specification.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "Students and guests may access the internet but must not access the internal staff network.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "Network administrators may manually isolate a device and restore its access.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "Security operators may review and acknowledge alerts but may not change access policies.",
+        "context": ""
+      },
+      {
+        "id": "E-005",
+        "source": "description",
+        "quote": "The system must record administrator policy changes and retain audit records for 30 days.",
+        "context": ""
+      },
+      {
+        "id": "E-006",
+        "source": "description",
+        "quote": "The planning population is 2000 registered devices; concurrency is not yet decided.",
+        "context": ""
+      },
+      {
+        "id": "E-007",
+        "source": "description",
+        "quote": "Do not automatically change firewall rules or isolate devices.",
+        "context": ""
+      },
+      {
+        "id": "E-008",
+        "source": "description",
+        "quote": "Requirements evolve frequently and stakeholders provide weekly stakeholder feedback.",
+        "context": ""
+      },
+      {
+        "id": "E-009",
+        "source": "description",
+        "quote": "Budget, delivery schedule, response-time thresholds and mandatory regulatory frameworks are undecided and must remain open decisions.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Wireless Network Access Control Requirements",
+      "domain": "security",
+      "supported": true,
+      "summary": "A campus wireless network must enforce access control such that students and guests may access the internet but not internal staff networks. Administrators can manually isolate devices, and security operators can review alerts without altering policies. Policy changes are logged for 30 days. No automatic isolation or firewall rule changes are permitted. Requirements evolve frequently with weekly stakeholder feedback; budget, delivery schedule, response thresholds, and regulatory compliance remain open decisions.",
+      "stakeholders": [
+        "students",
+        "guests",
+        "staff",
+        "network administrators",
+        "security operators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "The project purpose is to build a campus wireless network access-control specification."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Students and guests may access the internet but must not access internal staff networks, establishing clear boundary rules for access control."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Network administrators may manually isolate a device and restore its access, defining an exception path with explicit administrative authority."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "constraint",
+          "sections": [
+            "security"
+          ],
+          "explanation": "Security operators may review and acknowledge alerts but may not change access policies, restricting operator permissions to monitoring only."
+        },
+        {
+          "evidence_id": "E-005",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "security"
+          ],
+          "explanation": "The system must record administrator policy changes and retain audit records for 30 days, establishing a data retention requirement with audit purpose."
+        },
+        {
+          "evidence_id": "E-006",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "The planning population is 2000 registered devices; concurrency is not yet decided, indicating current scale limits but no defined performance targets."
+        },
+        {
+          "evidence_id": "E-007",
+          "kind": "exclusion",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Do not automatically change firewall rules or isolate devices, prohibiting automated actions and restricting to manual control only."
+        },
+        {
+          "evidence_id": "E-008",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "Requirements evolve frequently with weekly stakeholder feedback, indicating a dynamic requirements lifecycle but no defined evolution mechanism."
+        },
+        {
+          "evidence_id": "E-009",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "Budget, delivery schedule, response thresholds, and regulatory compliance remain open decisions, indicating these are project-level constraints, not system behaviors."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": [
+        "What is the defined concurrency level for device access?",
+        "How will frequent requirement changes be tracked or managed in the development lifecycle?",
+        "Which specific regulatory frameworks must be considered if any are later identified?",
+        "What is the process for handling device isolation when a device is found to be malicious?",
+        "Will automated alerts trigger any actions, and if so, what is the threshold or condition?"
+      ]
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7246,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.6986,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-788cd8fba7ce0acb:4",
+        "source_document_id": "kb-788cd8fba7ce0acb",
+        "chunk_index": 4,
+        "page_or_section": "text chunk 5",
+        "relevance_score": 0.7011,
+        "text": "be necessary to open one port to such a network, and balancing will be performed, for example, based on the HTTP request parameters.\nAn example of such segmentation:\n![Interservice Communication with balancing](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Network_Segmentation_Cheat_Sheet_interservice_balancer.drawio.png)\n\nAs you can see, there is only one incoming access to each network, access is opened up to the balancer in the network. However, in this case, segmentation no longer works, access control between applications from different network segments is performed at the 7th level of the OSI model using a balancer.\n\n## Network security policy\n\nThe organization must define a \"paper\" policy that describes firewall rules and basic allowed network access.\nThis policy is at least useful:\n\n- network administrators;\n- security representatives;\n- IT auditors;\n- architects of information systems and software;\n- developers;\n- IT administrators.\n\nIt is convenient when the policy is described by similar images. The information is presented as concisely and simply as possible.\n\n### Examples of individual policy provisions\n\nExamples in the network policy will help colleagues quickly understand what access is potentially allowed and can be requested.\n\n#### Permissions for CI/CD\n\nThe network security policy may define, for example, the basic permissions allowed for the software development system. Let's look at an example of what such a policy might look like:\n![CI-CD](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Network_Segmentation_Cheat_Sheet_repo.drawio.png)\n\n#### Secure logging\n\nIt is important that in the event of a compromise of any information system, its logs are not subsequently modified by an attacker. To do this, you",
+        "title": "03_OWASP_CheatSheets/083_OWASP_Network_Segmentation_Cheat_Sheet.md",
+        "sha256": "2b91c4e103da8e53c98e3b6006b23c2bb02e8c55e5805a56f0068c7b31a477d8"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:11",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 11,
+        "page_or_section": "text chunk 12",
+        "relevance_score": 0.6915,
+        "text": "y check device health, updates, and security. Devices that aren't secure automatically lose access or get limited access. This creates pressure for people to keep their devices updated.\n\n**Secure applications properly** - Add identity-aware proxies and web application firewalls (WAFs) that make security decisions based on who's trying to access what, not just where they're connecting from.\n\n### Phase 3: Advanced Capabilities (Months 18-36)\n\nBuild advanced capabilities:\n\n**Add behavior monitoring** - Use systems that learn how users and devices normally act. When behavior looks weird, the system can automatically change access or ask for more verification. This needs machine learning and lots of data.\n\n**Automate responses** - Build tools that can automatically isolate compromised accounts, quarantine suspicious devices, and update security policies based on new threats. The goal is to respond faster than humans can.\n\n**Use your data** - Take all the security data you're collecting and use it to improve your policies. This phase is about fine-tuning rather than building new stuff.\n\n### Phase 4: Keep Getting Better (Ongoing)\n\nZero Trust is never done:\n\n**Stay current** - Update threat intelligence, adjust risk scoring, and change policies based on new attack methods. What worked last year might not work now.\n\n**Plan ahead** - Start thinking about post-quantum cryptography, new authentication methods, and AI-powered security tools.\n\n**Measure what matters** - Track how fast you detect threats, how fast you respond, how many policy violations happen, and whether users are happy. Use this data to keep improving.\n\n**Reality check:** Most organizations take 3-5 years to fully implement Zero Trust, and that's with dedicated teams and management support. Don't expect quick resul",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:17",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 17,
+        "page_or_section": "text chunk 18",
+        "relevance_score": 0.6875,
+        "text": "-------------------------|\n| **SOC 2** | Strong access controls, continuous monitoring, audit logging |\n| **ISO 27001** | Risk-based access decisions, information security management |\n| **PCI DSS** | Network segmentation, encrypted communications, access monitoring |\n| **HIPAA** | Granular access controls, data encryption, audit trails |\n| **GDPR** | Privacy-by-design, data access logging, breach detection |\n| **OMB M-22-09** | Phishing-resistant MFA, device certificates, encrypted DNS |\n\n## Technology Components\n\nZero Trust requires several technology categories working together:\n\n- **Identity and Access Management**: Strong authentication (MFA) and risk-based access decisions\n- **Zero Trust Network Access (ZTNA)**: Application-level access instead of network-level VPNs\n- **Web Application Security**: Protect applications and APIs from OWASP Top 10 attacks\n- **Security Monitoring**: Real-time visibility and automated response to threats\n\n### Policy-as-Code + Continuous Verification + Telemetry Signals\n\n#### 1. Policy-as-Code (PaC)\n\nZero Trust policies should be defined as **code**, not manually, ensuring consistency, reproducibility, and auditability.\n\n**Key principles:**\n\n- Version-controlled policies\n- Tested within CI/CD pipelines\n- Automatically enforced at deployment\n- Traceable via audit logs\n\n**Recommended tools:**\n\n- Open Policy Agent (OPA) / Gatekeeper\n- Kyverno\n- Cilium Network Policies\n- Cloud provider policy engines (AWS SCP, Azure Policy, GCP Org Policy)\n\n**Use cases:**\n\n- Admission control\n- Workload security (privileges, capabilities, runtime profiles)\n- Network segmentation (L3–L7)\n- Image and artifact security\n- RBAC enforcement\n\n#### 2. Continuous Verification\n\nZero Trust requires **every access, deployment, and configuration change** to be automatic",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:22",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 22,
+        "page_or_section": "text chunk 23",
+        "relevance_score": 0.6928,
+        "text": "administrators and help desk staff should be trained to follow the prescribed process and recognize and respond to social engineering attacks. Refer to [CISA's \"Avoiding Social Engineering and Phishing Attacks\"](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) for guidance.\n\n## Adaptive or Risk Based Authentication\n\nA feature of more advanced applications is the ability to require different authentication stages depending on various environmental and contextual attributes (including but not limited to, the sensitivity of the data for which access is being requested, time of day, user location, IP address, or device fingerprint).\n\nFor example, an application may require MFA for the first login from a particular device but not for subsequent logins from that device. Alternatively, a single sign-on solution may authenticate the user and allow them to remain logged in for a day but require a reauthentication if they try to access their profile page.\n\nAnother option is the opposite approach where an application allows low risk access with just something that identifies the device (e.g., a specific mobile device fingerprint, a persistent cookie and browser fingerprint, etc. from the previous IP address) and then gradually requires stronger authentication for more sensitive operations. An example might be to allow someone to trigger something to see their current bank balance, but not the account number or anything else. If they need to see transactions, then the application puts them through some base level authentication and if they want to do any money movement, then MFA is required.\n\nQuestions that should be considered when implementing a mechanism like this include:\n\n- Are the policies being put in place in line with any corporate p",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder project context",
+          "detail": "Build a campus wireless network access-control requirements specification.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "Students and guests may access the internet but must not access the internal staff network.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Network administrators may manually isolate a device and restore its access.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "Security operators may review and acknowledge alerts but may not change access policies.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-005",
+          "detail": "The system must record administrator policy changes and retain audit records for 30 days.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Unresolved stakeholder decision",
+          "detail": "The planning population is 2000 registered devices; concurrency is not yet decided.",
+          "status": "unresolved",
+          "evidence_ids": [
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Out of scope: stakeholder exclusion",
+          "detail": "Do not automatically change firewall rules or isolate devices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-007"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder project context",
+          "detail": "Requirements evolve frequently and stakeholders provide weekly stakeholder feedback.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-008"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Unresolved stakeholder decision",
+          "detail": "Budget, delivery schedule, response-time thresholds and mandatory regulatory frameworks are undecided and must remain open decisions.",
+          "status": "unresolved",
+          "evidence_ids": [
+            "E-009"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": [
+        "What is the defined concurrency level for device access?",
+        "How will frequent requirement changes be tracked or managed in the development lifecycle?",
+        "Which specific regulatory frameworks must be considered if any are later identified?",
+        "What is the process for handling device isolation when a device is found to be malicious?",
+        "Will automated alerts trigger any actions, and if so, what is the threshold or condition?",
+        "The planning population is 2000 registered devices; concurrency is not yet decided.",
+        "Budget, delivery schedule, response-time thresholds and mandatory regulatory frameworks are undecided and must remain open decisions."
+      ]
+    },
+    "functional": {
+      "applicability_reason": "The evidence explicitly states that students and guests may access the internet but must not access the internal staff network, establishing a clear functional boundary for wireless access control. This directly supports a functional requirement in access control behavior. The source passage explicitly states that network administrators may manually isolate a device and restore its access, defining a functional administrative exception path within wireless network access control. The system shall not automatically change firewall rules or isolate devices, prohibiting automated actions and restricting to manual control only.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "Students and guests may access the internet but must not access the internal staff network",
+          "statement": "Students and guests may access the internet but must not access the internal staff network.",
+          "rationale": "This establishes a clear boundary between public-facing internet access and restricted internal staff network access, ensuring that unauthorized users do not gain entry to sensitive internal systems.",
+          "priority": "must",
+          "dimensions": [
+            "security",
+            "availability",
+            "operations"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A student or guest is authenticated and connected to the wireless network using a valid public identity.",
+              "when": "The user attempts to access the internet via standard web browsing services.",
+              "then": "The system allows successful access to publicly available internet content.",
+              "method": "test",
+              "observable_evidence": "Record of successful page load from a public website, such as google.com."
+            },
+            {
+              "given": "A student or guest is authenticated and connected to the wireless network using a valid public identity.",
+              "when": "The user attempts to access internal staff network resources via IP address or domain name (e.g., internal.staff.company.com).",
+              "then": "The system denies access and no product message is returned; traffic is blocked as evidenced by an external test capture of the network response state.",
+              "method": "inspection",
+              "observable_evidence": "Export of a test-instrumented network response state capture showing denied access to internal staff network resources, captured at the time of request and verified against known firewall rule enforcement."
+            }
+          ],
+          "unresolved_decisions": [
+            "Whether the system must enforce this boundary at the application layer or only via network-level filtering.",
+            "The specific mechanism for detecting and blocking attempts to reach internal staff network resources."
+          ]
+        },
+        {
+          "id": "FR-002",
+          "title": "Network administrators may manually isolate a device and restore its access",
+          "statement": "Network administrators may manually isolate a device and restore its access.",
+          "rationale": "This action defines an explicit administrative exception path for device management, allowing manual intervention when necessary without requiring automated or policy-driven isolation mechanisms.",
+          "priority": "must",
+          "dimensions": [
+            "security",
+            "operations"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A network administrator logs into the system with valid administrative credentials.",
+              "when": "The administrator selects a device to isolate via the manual isolation interface.",
+              "then": "The system isolates the device from wireless access and updates the access control state accordingly.",
+              "method": "test",
+              "observable_evidence": "Capture the system response state after manual isolation via API call and validate it against expected access control update."
+            },
+            {
+              "given": "A network administrator logs into the system with valid administrative credentials.",
+              "when": "The administrator selects a device that has been isolated to restore access via the manual restoration interface.",
+              "then": "The system restores wireless access for the device and updates the access control state accordingly.",
+              "method": "test",
+              "observable_evidence": "Capture the system response state after manual restoration of wireless access for the device, including the updated access control state and the timestamp of the action."
+            }
+          ],
+          "unresolved_decisions": [
+            "The specific interface or UI component used for isolation and restoration is not defined; this remains an implementation parameter."
+          ]
+        },
+        {
+          "id": "FR-003",
+          "title": "Do not automatically change firewall rules or isolate devices",
+          "statement": "The system shall not automatically change firewall rules or isolate devices.",
+          "rationale": "Explicitly prohibits automated actions such as isolation or rule modification, ensuring that all such operations are performed manually by authorized personnel.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-007"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system is configured to automatically modify firewall rules or isolate a device in response to an event",
+              "when": "An automated action such as rule modification or isolation is initiated by the system",
+              "then": "The action shall be denied and no change to firewall configuration or device state shall occur",
+              "method": "test",
+              "observable_evidence": "Capture of unchanged firewall configuration and unmodified device state before and after the attempted action"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [
+        "SEC-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Security operators may review and acknowledge alerts but may not change access policies, restricting operator permissions to monitoring only. The evidence explicitly states a requirement for recording administrator policy changes and retaining audit records for 30 days, which directly supports a security-related data retention and audit control.",
+      "requirements": [
+        {
+          "id": "SEC-001",
+          "title": "Security operators shall be permitted to review and acknowledge alerts",
+          "statement": "Security operators may review and acknowledge alerts but may not change access policies.",
+          "rationale": "The source passage explicitly states that security operators may review and acknowledge alerts but may not modify access policies, which defines their authorized actions in the system.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A security operator accesses an alert dashboard",
+              "when": "The operator views a network anomaly report",
+              "then": "The operator can acknowledge the alert and receive confirmation of acknowledgment",
+              "method": "inspection",
+              "observable_evidence": "Record of acknowledged alert with timestamp and operator identity"
+            },
+            {
+              "given": "An operator receives an alert with a visible status indicator.",
+              "when": "The operator reviews the alert and acknowledges it via the system interface.",
+              "then": "The system updates the alert status to 'acknowledged' and retains the original policy unchanged; no policy modification occurs.",
+              "method": "test",
+              "observable_evidence": "Capture of the system response showing alert status updated to 'acknowledged' with no change in access policies, as verified by a test-instrumented state capture of the alert object's properties."
+            },
+            {
+              "given": "A security operator receives an alert with a policy violation.",
+              "when": "The operator attempts to modify an access policy through the system interface.",
+              "then": "The system denies the modification request and returns a response indicating that policy modifications are not permitted for operators.",
+              "method": "test",
+              "observable_evidence": "Capture of the system's direct response shows a denial of the modification action, with no change to the access policies in storage or configuration."
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "SEC-002",
+          "title": "The system shall record administrator policy changes and retain audit records for 30 days",
+          "statement": "The system shall record administrator policy changes and retain audit records for 30 days.",
+          "rationale": "Establishes a data retention requirement with an audit purpose to ensure accountability and traceability of administrative actions affecting network access policies.",
+          "priority": "must",
+          "dimensions": [
+            "security",
+            "auditability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator modifies a network access policy, such as changing authentication requirements or access permissions.",
+              "when": "The system records the change and stores it in an audit log.",
+              "then": "The audit record is retained for 30 days and remains accessible for review by authorized personnel.",
+              "method": "inspection",
+              "observable_evidence": "Inspect the audit log to confirm that a policy change event was recorded with timestamp, actor identity, action type, and before/after state."
+            }
+          ],
+          "unresolved_decisions": [
+            "The specific format of the audit record (e.g., JSON, CSV) is not specified in the evidence.",
+            "The source gives a retention duration; minimum/maximum interpretation and deletion timing remain unconfirmed."
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "SEC-001",
+        "SEC-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "SEC-001",
+        "SEC-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "What is the defined concurrency level for device access?",
+        "How will frequent requirement changes be tracked or managed in the development lifecycle?",
+        "Which specific regulatory frameworks must be considered if any are later identified?",
+        "What is the process for handling device isolation when a device is found to be malicious?",
+        "Will automated alerts trigger any actions, and if so, what is the threshold or condition?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and access-decision paths for source-stated boundaries; unresolved implementation choices remain open.",
+      "items": [
+        {
+          "title": "Actor: Students and guests",
+          "detail": "Proposed logical endpoint for the source-stated actor: Students and guests.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "component_name": "Actor: Students and guests",
+          "responsibility": "Represent the source-stated actor: Students and guests."
+        },
+        {
+          "title": "Resource: internet",
+          "detail": "Proposed logical endpoint for the source-stated resource: internet.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "component_name": "Resource: internet",
+          "responsibility": "Represent the source-stated resource: internet."
+        },
+        {
+          "title": "Resource: internal staff network",
+          "detail": "Proposed logical endpoint for the source-stated resource: internal staff network.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "component_name": "Resource: internal staff network",
+          "responsibility": "Represent the source-stated resource: internal staff network."
+        },
+        {
+          "title": "Actor: Network administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: Network administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "component_name": "Actor: Network administrators",
+          "responsibility": "Represent the source-stated actor: Network administrators."
+        },
+        {
+          "title": "Actor: Security operators",
+          "detail": "Proposed logical endpoint for the source-stated actor: Security operators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "component_name": "Actor: Security operators",
+          "responsibility": "Represent the source-stated actor: Security operators."
+        },
+        {
+          "title": "Actor: Administrator",
+          "detail": "Proposed logical endpoint for the source-stated actor: Administrator.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-002"
+          ],
+          "component_name": "Actor: Administrator",
+          "responsibility": "Represent the source-stated actor: Administrator."
+        },
+        {
+          "title": "Access Control Engine",
+          "detail": "Proposed logical owner for FR-001, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "SEC-001"
+          ],
+          "component_name": "Access Control Engine",
+          "responsibility": "Students and guests may access the internet but must not access the internal staff network. Security operators may review and acknowledge alerts but may not change access policies."
+        },
+        {
+          "title": "Manual Isolation Module",
+          "detail": "Proposed logical owner for FR-002, FR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-007"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003"
+          ],
+          "component_name": "Manual Isolation Module",
+          "responsibility": "Network administrators may manually isolate a device and restore its access. The system shall not automatically change firewall rules or isolate devices."
+        },
+        {
+          "title": "Audit Logging Service",
+          "detail": "Proposed logical owner for SEC-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-002"
+          ],
+          "component_name": "Audit Logging Service",
+          "responsibility": "The system shall record administrator policy changes and retain audit records for 30 days."
+        }
+      ],
+      "open_issues": [
+        "The planning population is 2000 registered devices; concurrency is not yet decided.",
+        "Budget, delivery schedule, response-time thresholds and mandatory regulatory frameworks are undecided and must remain open decisions."
+      ],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Actor: Students and guests",
+          "to_component": "Access Control Engine",
+          "data_or_action": "Students and guests may access the internet but must not access the internal staff network."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "from_component": "Actor: Network administrators",
+          "to_component": "Manual Isolation Module",
+          "data_or_action": "Network administrators may manually isolate a device and restore its access."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "from_component": "Actor: Security operators",
+          "to_component": "Access Control Engine",
+          "data_or_action": "Security operators may review and acknowledge alerts but may not change access policies."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for SEC-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-002"
+          ],
+          "from_component": "Actor: Administrator",
+          "to_component": "Audit Logging Service",
+          "data_or_action": "The system shall record administrator policy changes and retain audit records for 30 days."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Access Control Engine",
+          "to_component": "Resource: internet",
+          "data_or_action": "Permitted access decision. Students and guests may access the internet but must not access the internal staff network."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Access Control Engine",
+          "to_component": "Resource: internal staff network",
+          "data_or_action": "Denied access attempt. Students and guests may access the internet but must not access the internal staff network."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "untrusted_component": "Actor: Students and guests",
+          "trusted_component": "Access Control Engine",
+          "enforcement": "Students and guests may access the internet but must not access the internal staff network."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "untrusted_component": "Actor: Network administrators",
+          "trusted_component": "Manual Isolation Module",
+          "enforcement": "Network administrators may manually isolate a device and restore its access."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "untrusted_component": "Actor: Security operators",
+          "trusted_component": "Access Control Engine",
+          "enforcement": "Security operators may review and acknowledge alerts but may not change access policies."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for SEC-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-002"
+          ],
+          "untrusted_component": "Actor: Administrator",
+          "trusted_component": "Audit Logging Service",
+          "enforcement": "The system shall record administrator policy changes and retain audit records for 30 days."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [
+        {
+          "id": "THR-001",
+          "asset": "Source-defined permissions and restricted resources",
+          "actor": "Unconfirmed actor or cause (planning hypothesis)",
+          "scenario": "A principal attempts to bypass a source-defined permission boundary. The boundary under analysis is: Students and guests may access the internet but must not access the internal staff network.",
+          "impact": "Unauthorized access or modification outside the stated permission boundary could occur.",
+          "control_requirement_ids": [
+            "FR-001"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "residual_risk": "Linked obligations define intended behavior, not proven prevention. Enforcement, misuse of permitted access and operational assumptions remain unverified until design and acceptance evidence are reviewed."
+        },
+        {
+          "id": "THR-002",
+          "asset": "Source-defined permissions and restricted resources",
+          "actor": "Unconfirmed actor or cause (planning hypothesis)",
+          "scenario": "A principal attempts to bypass a source-defined permission boundary. The boundary under analysis is: Security operators may review and acknowledge alerts but may not change access policies.",
+          "impact": "Unauthorized access or modification outside the stated permission boundary could occur.",
+          "control_requirement_ids": [
+            "SEC-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Linked obligations define intended behavior, not proven prevention. Enforcement, misuse of permitted access and operational assumptions remain unverified until design and acceptance evidence are reviewed."
+        },
+        {
+          "id": "THR-003",
+          "asset": "Source-protected network state",
+          "actor": "Unconfirmed actor or cause (planning hypothesis)",
+          "scenario": "An implementation defect or misuse triggers an excluded automatic action, contrary to the explicit source boundary: Do not automatically change firewall rules or isolate devices.",
+          "impact": "Network state could change contrary to the stakeholder's explicit exclusion.",
+          "control_requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-007"
+          ],
+          "sources": [],
+          "residual_risk": "Linked obligations define intended behavior, not proven prevention. Enforcement, misuse of permitted access and operational assumptions remain unverified until design and acceptance evidence are reviewed."
+        }
+      ],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [
+        {
+          "id": "RISK-001",
+          "description": "Implementation may fail to enforce the boundary concerning Source-defined permissions and restricted resources.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: A principal attempts to bypass a source-defined permission boundary. The boundary under analysis is: Students and guests may access the internet but must not access the internal staff network.",
+          "mitigation": "Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-002",
+          "description": "Implementation may fail to enforce the boundary concerning Source-defined permissions and restricted resources.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: A principal attempts to bypass a source-defined permission boundary. The boundary under analysis is: Security operators may review and acknowledge alerts but may not change access policies.",
+          "mitigation": "Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-003",
+          "description": "Implementation may fail to enforce the boundary concerning Source-protected network state.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: An implementation defect or misuse triggers an excluded automatic action, contrary to the explicit source boundary: Do not automatically change firewall rules or isolate devices.",
+          "mitigation": "Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-007"
+          ],
+          "owner": "TBD"
+        }
+      ],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "Students and guests",
+          "goal": "Students and guests may access the internet but must not access the internal staff network.",
+          "story": "As Students and guests, I need the following behavior: Students and guests may access the internet but must not access the internal staff network.",
+          "preconditions": [
+            "A student or guest is authenticated and connected to the wireless network using a valid public identity."
+          ],
+          "steps": [
+            "The user attempts to access the internet via standard web browsing services."
+          ],
+          "success_outcome": "The system allows successful access to publicly available internet content.",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": [
+            "Whether the system must enforce this boundary at the application layer or only via network-level filtering.",
+            "The specific mechanism for detecting and blocking attempts to reach internal staff network resources."
+          ]
+        },
+        {
+          "id": "UC-002",
+          "actor": "Students and guests",
+          "goal": "Students and guests may access the internet but must not access the internal staff network.",
+          "story": "As Students and guests, I need the following behavior: Students and guests may access the internet but must not access the internal staff network.",
+          "preconditions": [
+            "A student or guest is authenticated and connected to the wireless network using a valid public identity."
+          ],
+          "steps": [
+            "The user attempts to access internal staff network resources via IP address or domain name (e.g., internal.staff.company.com)."
+          ],
+          "success_outcome": "The system denies access and no product message is returned; traffic is blocked as evidenced by an external test capture of the network response state.",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": [
+            "Whether the system must enforce this boundary at the application layer or only via network-level filtering.",
+            "The specific mechanism for detecting and blocking attempts to reach internal staff network resources."
+          ]
+        },
+        {
+          "id": "UC-003",
+          "actor": "Network administrators",
+          "goal": "Network administrators may manually isolate a device and restore its access.",
+          "story": "As Network administrators, I need the following behavior: Network administrators may manually isolate a device and restore its access.",
+          "preconditions": [
+            "A network administrator logs into the system with valid administrative credentials."
+          ],
+          "steps": [
+            "The administrator selects a device to isolate via the manual isolation interface."
+          ],
+          "success_outcome": "The system isolates the device from wireless access and updates the access control state accordingly.",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": [
+            "The specific interface or UI component used for isolation and restoration is not defined; this remains an implementation parameter."
+          ]
+        },
+        {
+          "id": "UC-004",
+          "actor": "Network administrators",
+          "goal": "Network administrators may manually isolate a device and restore its access.",
+          "story": "As Network administrators, I need the following behavior: Network administrators may manually isolate a device and restore its access.",
+          "preconditions": [
+            "A network administrator logs into the system with valid administrative credentials."
+          ],
+          "steps": [
+            "The administrator selects a device that has been isolated to restore access via the manual restoration interface."
+          ],
+          "success_outcome": "The system restores wireless access for the device and updates the access control state accordingly.",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": [
+            "The specific interface or UI component used for isolation and restoration is not defined; this remains an implementation parameter."
+          ]
+        },
+        {
+          "id": "UC-005",
+          "actor": "Security operators",
+          "goal": "Security operators may review and acknowledge alerts but may not change access policies.",
+          "story": "As Security operators, I need the following behavior: Security operators may review and acknowledge alerts but may not change access policies.",
+          "preconditions": [
+            "A security operator accesses an alert dashboard"
+          ],
+          "steps": [
+            "The operator views a network anomaly report"
+          ],
+          "success_outcome": "The operator can acknowledge the alert and receive confirmation of acknowledgment",
+          "alternate_flows": [
+            "Given: A security operator receives an alert with a policy violation. When: The operator attempts to modify an access policy through the system interface. Then: The system denies the modification request and returns a response indicating that policy modifications are not permitted for operators. Evidence: Capture of the system's direct response shows a denial of the modification action, with no change to the access policies in storage or configuration."
+          ],
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-006",
+          "actor": "Security operators",
+          "goal": "Security operators may review and acknowledge alerts but may not change access policies.",
+          "story": "As Security operators, I need the following behavior: Security operators may review and acknowledge alerts but may not change access policies.",
+          "preconditions": [
+            "An operator receives an alert with a visible status indicator."
+          ],
+          "steps": [
+            "The operator reviews the alert and acknowledges it via the system interface."
+          ],
+          "success_outcome": "The system updates the alert status to 'acknowledged' and retains the original policy unchanged; no policy modification occurs.",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": [
+        "Whether the system must enforce this boundary at the application layer or only via network-level filtering.",
+        "The specific mechanism for detecting and blocking attempts to reach internal staff network resources.",
+        "The specific interface or UI component used for isolation and restoration is not defined; this remains an implementation parameter."
+      ]
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: A student or guest is authenticated and connected to the wireless network using a valid public identity.",
+            "When: The user attempts to access the internet via standard web browsing services."
+          ],
+          "expected_result": "Expected: The system allows successful access to publicly available internet content.",
+          "evidence_to_record": "Evidence: Record of successful page load from a public website, such as google.com.",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: A student or guest is authenticated and connected to the wireless network using a valid public identity.",
+            "When: The user attempts to access internal staff network resources via IP address or domain name (e.g., internal.staff.company.com)."
+          ],
+          "expected_result": "Expected: The system denies access and no product message is returned; traffic is blocked as evidenced by an external test capture of the network response state.",
+          "evidence_to_record": "Evidence: Export of a test-instrumented network response state capture showing denied access to internal staff network resources, captured at the time of request and verified against known firewall rule enforcement.",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A network administrator logs into the system with valid administrative credentials.",
+            "When: The administrator selects a device to isolate via the manual isolation interface."
+          ],
+          "expected_result": "Expected: The system isolates the device from wireless access and updates the access control state accordingly.",
+          "evidence_to_record": "Evidence: Capture the system response state after manual isolation via API call and validate it against expected access control update.",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A network administrator logs into the system with valid administrative credentials.",
+            "When: The administrator selects a device that has been isolated to restore access via the manual restoration interface."
+          ],
+          "expected_result": "Expected: The system restores wireless access for the device and updates the access control state accordingly.",
+          "evidence_to_record": "Evidence: Capture the system response state after manual restoration of wireless access for the device, including the updated access control state and the timestamp of the action.",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: The system is configured to automatically modify firewall rules or isolate a device in response to an event",
+            "When: An automated action such as rule modification or isolation is initiated by the system"
+          ],
+          "expected_result": "Expected: The action shall be denied and no change to firewall configuration or device state shall occur",
+          "evidence_to_record": "Evidence: Capture of unchanged firewall configuration and unmodified device state before and after the attempted action",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: A security operator accesses an alert dashboard",
+            "When: The operator views a network anomaly report"
+          ],
+          "expected_result": "Expected: The operator can acknowledge the alert and receive confirmation of acknowledgment",
+          "evidence_to_record": "Evidence: Record of acknowledged alert with timestamp and operator identity",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An operator receives an alert with a visible status indicator.",
+            "When: The operator reviews the alert and acknowledges it via the system interface."
+          ],
+          "expected_result": "Expected: The system updates the alert status to 'acknowledged' and retains the original policy unchanged; no policy modification occurs.",
+          "evidence_to_record": "Evidence: Capture of the system response showing alert status updated to 'acknowledged' with no change in access policies, as verified by a test-instrumented state capture of the alert object's properties.",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: A security operator receives an alert with a policy violation.",
+            "When: The operator attempts to modify an access policy through the system interface."
+          ],
+          "expected_result": "Expected: The system denies the modification request and returns a response indicating that policy modifications are not permitted for operators.",
+          "evidence_to_record": "Evidence: Capture of the system's direct response shows a denial of the modification action, with no change to the access policies in storage or configuration.",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "SEC-002"
+          ],
+          "procedure": [
+            "Given: An administrator modifies a network access policy, such as changing authentication requirements or access permissions.",
+            "When: The system records the change and stores it in an audit log."
+          ],
+          "expected_result": "Expected: The audit record is retained for 30 days and remains accessible for review by authorized personnel.",
+          "evidence_to_record": "Evidence: Inspect the audit log to confirm that a policy change event was recorded with timestamp, actor identity, action type, and before/after state.",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Access control",
+          "detail": "Rules and enforcement governing which principals may perform actions on resources.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Device isolation",
+          "detail": "Restriction of a device's network access; the source determines whether and by whom this action is permitted.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-007"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Access restoration",
+          "detail": "Returning access that was previously restricted, within the source-defined permission boundary.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Concurrency",
+          "detail": "Activity occurring at the same time; it is distinct from the registered planning population.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Registered population",
+          "detail": "The inventory of registered users or devices; it does not by itself establish a simultaneous load or a maximum.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Retention",
+          "detail": "The period or rule for keeping records. A bare duration does not itself specify deletion timing or minimum/maximum bounds.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Firewall",
+          "detail": "A control that permits or restricts network traffic according to rules; mentioning it does not authorize automatic changes.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-007"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "The evolving stability (E-008) and frequent feedback (E-008) favor Agile because it enables iterative delivery, continuous review, and rapid adaptation to changing requirements. The score of 90 indicates strong suitability for this context.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: Students and guests may access the internet but must not access the internal staff network.; FR-002: Network administrators may manually isolate a device and restore its access.; FR-003: The system shall not automatically change firewall rules or isolate devices.",
+            "Review and baseline the source-defined work group: SEC-001: Security operators may review and acknowledge alerts but may not change access policies.; SEC-002: The system shall record administrator policy changes and retain audit records for 30 days.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: Students and guests may access the internet but must not access the internal staff network.",
+            "Review implementation and acceptance evidence against FR-002: Network administrators may manually isolate a device and restore its access.",
+            "Review implementation and acceptance evidence against FR-003: The system shall not automatically change firewall rules or isolate devices.",
+            "Review implementation and acceptance evidence against SEC-001: Security operators may review and acknowledge alerts but may not change access policies.",
+            "Review implementation and acceptance evidence against SEC-002: The system shall record administrator policy changes and retain audit records for 30 days."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "SEC-001",
+            "SEC-002"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: Students and guests may access the internet but must not access the internal staff network.; FR-002: Network administrators may manually isolate a device and restore its access.; FR-003: The system shall not automatically change firewall rules or isolate devices.",
+            "Implement the source-defined work group: SEC-001: Security operators may review and acknowledge alerts but may not change access policies.; SEC-002: The system shall record administrator policy changes and retain audit records for 30 days.",
+            "In an authorized isolated test environment, execute TEST-001: Given: A student or guest is authenticated and connected to the wireless network using a valid public identity. When: The user attempts to access the internet via standard web browsing services. Expected: The system allows successful access to publicly available internet content.",
+            "In an authorized isolated test environment, execute TEST-002: Given: A student or guest is authenticated and connected to the wireless network using a valid public identity. When: The user attempts to access internal staff network resources via IP address or domain name (e.g., internal.staff.company.com). Expected: The system denies access and no product message is returned; traffic is blocked as evidenced by an external test capture of the network response state.",
+            "In an authorized isolated test environment, execute TEST-003: Given: A network administrator logs into the system with valid administrative credentials. When: The administrator selects a device to isolate via the manual isolation interface. Expected: The system isolates the device from wireless access and updates the access control state accordingly.",
+            "In an authorized isolated test environment, execute TEST-004: Given: A network administrator logs into the system with valid administrative credentials. When: The administrator selects a device that has been isolated to restore access via the manual restoration interface. Expected: The system restores wireless access for the device and updates the access control state accordingly.",
+            "In an authorized isolated test environment, execute TEST-005: Given: The system is configured to automatically modify firewall rules or isolate a device in response to an event When: An automated action such as rule modification or isolation is initiated by the system Expected: The action shall be denied and no change to firewall configuration or device state shall occur",
+            "In an authorized isolated test environment, execute TEST-006: Given: A security operator accesses an alert dashboard When: The operator views a network anomaly report Expected: The operator can acknowledge the alert and receive confirmation of acknowledgment",
+            "In an authorized isolated test environment, execute TEST-007: Given: An operator receives an alert with a visible status indicator. When: The operator reviews the alert and acknowledges it via the system interface. Expected: The system updates the alert status to 'acknowledged' and retains the original policy unchanged; no policy modification occurs.",
+            "In an authorized isolated test environment, execute TEST-008: Given: A security operator receives an alert with a policy violation. When: The operator attempts to modify an access policy through the system interface. Expected: The system denies the modification request and returns a response indicating that policy modifications are not permitted for operators.",
+            "In an authorized isolated test environment, execute TEST-009: Given: An administrator modifies a network access policy, such as changing authentication requirements or access permissions. When: The system records the change and stores it in an audit log. Expected: The audit record is retained for 30 days and remains accessible for review by authorized personnel.",
+            "Collect stakeholder feedback in accordance with the source: Requirements evolve frequently and stakeholders provide weekly stakeholder feedback.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: Students and guests may access the internet but must not access the internal staff network.",
+            "Review implementation and acceptance evidence against FR-002: Network administrators may manually isolate a device and restore its access.",
+            "Review implementation and acceptance evidence against FR-003: The system shall not automatically change firewall rules or isolate devices.",
+            "Review implementation and acceptance evidence against SEC-001: Security operators may review and acknowledge alerts but may not change access policies.",
+            "Review implementation and acceptance evidence against SEC-002: The system shall record administrator policy changes and retain audit records for 30 days."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "SEC-001",
+            "SEC-002"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: Students and guests may access the internet but must not access the internal staff network.",
+            "Review implementation and acceptance evidence against FR-002: Network administrators may manually isolate a device and restore its access.",
+            "Review implementation and acceptance evidence against FR-003: The system shall not automatically change firewall rules or isolate devices.",
+            "Review implementation and acceptance evidence against SEC-001: Security operators may review and acknowledge alerts but may not change access policies.",
+            "Review implementation and acceptance evidence against SEC-002: The system shall record administrator policy changes and retain audit records for 30 days."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "SEC-001",
+            "SEC-002"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "legacy",
+        "regulation",
+        "schedule",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [
+      {
+        "name": "stability",
+        "value": "evolving",
+        "evidence_ids": [
+          "E-008"
+        ]
+      },
+      {
+        "name": "feedback",
+        "value": "frequent",
+        "evidence_ids": [
+          "E-008"
+        ]
+      }
+    ],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 90,
+        "reasons": [
+          "stability=evolving (E-008)",
+          "feedback=frequent (E-008)"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 72,
+        "reasons": [
+          "stability=evolving (E-008)",
+          "feedback=frequent (E-008)"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 60,
+        "reasons": [
+          "stability=evolving (E-008)"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 15,
+        "reasons": [
+          "stability=evolving (E-008)"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "security": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "data": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "network": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "prompt_version": "sequential-1.27",
+    "input_fingerprint": "6a2f6215fad48f49daa4779ed3a0498e411e3d3d234311a39a12f9a21418e1c3"
+  },
+  "content_hash": "d9754783bc42f0a3f4125ddb70d0ae7126c4c388817b0d0dc28565d948a41596",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 26,
+    "checks_total": 26,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [],
+      "E-002": [
+        "FR-001"
+      ],
+      "E-003": [
+        "FR-002"
+      ],
+      "E-004": [
+        "SEC-001"
+      ],
+      "E-005": [
+        "SEC-002"
+      ],
+      "E-006": [],
+      "E-007": [
+        "FR-003"
+      ],
+      "E-008": [],
+      "E-009": []
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001",
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-001",
+          "TEST-002"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-003",
+          "UC-004"
+        ],
+        "test_ids": [
+          "TEST-003",
+          "TEST-004"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-007"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "SEC-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-005",
+          "UC-006"
+        ],
+        "test_ids": [
+          "TEST-006",
+          "TEST-007",
+          "TEST-008"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "SEC-002",
+        "evidence_ids": [
+          "E-005"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "b542a593-2b66-4a1f-b58d-e3dc132c66b1",
+  "created_at": "2026-10-28T17:29:49.487256+00:00"
+}

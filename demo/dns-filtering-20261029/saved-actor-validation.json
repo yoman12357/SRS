@@ -1,0 +1,98 @@
+{
+  "requirements": [
+    {
+      "id": "FR-003",
+      "title": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+      "statement": "Administrators shall be able to create, update filtering policies, allow approved exceptions, investigate repeated access attempts to blocked resources, and temporarily restrict users when suspicious behavior is detected.",
+      "rationale": "Implements stakeholder source E-003.",
+      "priority": "should",
+      "dimensions": [
+        "business"
+      ],
+      "basis": "explicit",
+      "evidence_ids": [
+        "E-003"
+      ],
+      "sources": [],
+      "dependencies": [],
+      "acceptance_criteria": [
+        {
+          "given": "An administrator creates a new filtering policy for staff",
+          "when": "The system receives the policy configuration request",
+          "then": "The policy is stored and applied to staff user sessions",
+          "method": "demonstration",
+          "observable_evidence": "Test capture of policy creation and application confirmation"
+        },
+        {
+          "given": "The system detects repeated access attempts",
+          "when": "The system detects repeated access attempts",
+          "then": "The system triggers an investigation workflow",
+          "method": "analysis",
+          "observable_evidence": "Test capture of the observed result"
+        },
+        {
+          "given": "An administrator approves an exception for a specific domain",
+          "when": "The system receives the exception request",
+          "then": "Access to that domain is permitted for the specified user or group",
+          "method": "test",
+          "observable_evidence": "Test capture of approved exception and access grant"
+        }
+      ],
+      "unresolved_decisions": [
+        "Definition of 'suspicious behavior'",
+        "Duration of temporary restriction",
+        "Workflow for investigation review"
+      ]
+    }
+  ],
+  "actor_options": {
+    "FR-003": [
+      "Administrators"
+    ]
+  },
+  "criteria": [
+    {
+      "key": "FR-003/canonical/1",
+      "requirement_id": "FR-003",
+      "criterion": {
+        "given": "An administrator creates a new filtering policy for staff",
+        "when": "The system receives the policy configuration request",
+        "then": "The policy is stored and applied to staff user sessions",
+        "method": "demonstration",
+        "observable_evidence": "Test capture of policy creation and application confirmation"
+      },
+      "allowed_test_types": [
+        "positive",
+        "negative"
+      ]
+    },
+    {
+      "key": "FR-003/canonical/2",
+      "requirement_id": "FR-003",
+      "criterion": {
+        "given": "The system detects repeated access attempts",
+        "when": "The system detects repeated access attempts",
+        "then": "The system triggers an investigation workflow",
+        "method": "analysis",
+        "observable_evidence": "Test capture of the observed result"
+      },
+      "allowed_test_types": [
+        "analysis"
+      ]
+    },
+    {
+      "key": "FR-003/canonical/3",
+      "requirement_id": "FR-003",
+      "criterion": {
+        "given": "An administrator approves an exception for a specific domain",
+        "when": "The system receives the exception request",
+        "then": "Access to that domain is permitted for the specified user or group",
+        "method": "test",
+        "observable_evidence": "Test capture of approved exception and access grant"
+      },
+      "allowed_test_types": [
+        "positive"
+      ]
+    }
+  ]
+}

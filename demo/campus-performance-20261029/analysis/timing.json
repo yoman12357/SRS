@@ -1,0 +1,20 @@
+{
+  "run_id": "382631aa-d61a-47d9-8f91-cf13c4d9af17",
+  "status": "completed",
+  "error": null,
+  "created_at": "2026-10-28T21:09:49.268742+00:00",
+  "terminal_at": "2026-10-28T21:10:01.452441+00:00",
+  "total_seconds": 12.184,
+  "sections": {
+    "analysis": {
+      "status": "completed",
+      "seconds": 12.14,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    }
+  },
+  "maximum_section_seconds": 12.14,
+  "completed_srs": false,
+  "human_approval": false
+}

@@ -1,0 +1,86 @@
+{
+  "id": "29b8eaef-951c-41a2-8c2d-0ea121acfad6",
+  "project_id": "93112cb9-4b6f-4691-ab2e-d3bcafaf3e73",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "19ea085fa6a339894b476849b6a3bd78022028a92e46b8be46910c9bdd224511",
+  "events": [
+    {
+      "at": "2026-10-29T19:43:37.774339+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-29T19:44:00.114073+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 2,
+      "elapsed_seconds": 22.296,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "primary_attempts": 1,
+      "correction_attempts": 1,
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": true,
+      "primary_failure_code": "section_validation_failed:assessments_must_cover_each_evidence_id_exactly_once"
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Firewall Management System Requirements",
+      "domain": "security",
+      "supported": true,
+      "summary": "A centralized firewall management system shall allow authorized administrators to create, review, update, and revoke firewall rules; enforce access restrictions between network segments; monitor blocked and allowed traffic; generate alerts for suspicious or unauthorized communication attempts; maintain audit logs of policy changes and administrative actions; provide a dashboard for reviewing security events; support multiple campus buildings. The solution must be secure, scalable, reliable, and manageable.",
+      "stakeholders": [
+        "authorized network administrators",
+        "network operators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "network"
+          ],
+          "explanation": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks. This establishes the scope of network segmentation and policy governance within distinct campus environments."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "The system shall allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "data",
+            "security"
+          ],
+          "explanation": "The platform shall maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional"
+          ],
+          "explanation": "The solution shall be secure, scalable, reliable, and manageable. These are nonfunctional requirements that define the system's operational qualities under varying loads and conditions."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T19:43:37.702964+00:00",
+  "updated_at": "2026-10-29T19:44:00.127584+00:00"
+}

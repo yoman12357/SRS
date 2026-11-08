@@ -1,0 +1,91 @@
+{
+  "id": "bbd782ca-5320-431d-b954-de81ae497d33",
+  "project_id": "6fba6a71-7322-4882-984c-b08c1c2cd226",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "b2bbb64366fff852b6559a2736ef34719cde36e510bacd2534ac1c8ed9d448ef",
+  "events": [
+    {
+      "at": "2026-10-29T13:35:16.387813+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-29T13:35:24.216272+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 7.797,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Secure Campus Wi-Fi Management System",
+      "domain": "security",
+      "supported": true,
+      "summary": "A university deploys a secure campus-wide Wi-Fi system that enables wireless access for students, faculty, staff, and guests while enforcing centralized authentication, role-based access control, and monitoring of unauthorized access attempts. The system supports device-level policies and provides administrators with tools to configure access rules, revoke permissions, and inspect audit logs.",
+      "stakeholders": [
+        "university network administrator",
+        "students",
+        "faculty",
+        "staff",
+        "guests"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "introduction",
+            "functional"
+          ],
+          "explanation": "The system must provide wireless access to multiple campus user groups across diverse building types, establishing a baseline for service availability and coverage."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "functional"
+          ],
+          "explanation": "Centralized authentication and role-based access control are required to ensure that only authorized users can access internal university resources, with guest access strictly separated from internal networks."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Network administrators must be able to configure policies, revoke access, and inspect audit logs, establishing explicit administrative capabilities for system governance."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional",
+            "data"
+          ],
+          "explanation": "The solution must support university-managed personal devices while maintaining security, scalability, reliability, and manageability across multiple campus locations."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": [
+        "How will device-level policies be enforced on personal devices?",
+        "What specific authentication protocols (e.g., 802.1X) are required for internal access?",
+        "How will repeated authentication failures trigger alerts or automated actions?",
+        "What is the retention period and access control for audit logs?"
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T13:35:16.295472+00:00",
+  "updated_at": "2026-10-29T13:35:24.230157+00:00"
+}

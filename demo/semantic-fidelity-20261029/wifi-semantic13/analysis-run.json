@@ -1,0 +1,88 @@
+{
+  "id": "eb02591c-22e6-4c88-b53a-28c5523bb044",
+  "project_id": "a40178b6-3ffc-493b-b05a-42999419b868",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "b2bbb64366fff852b6559a2736ef34719cde36e510bacd2534ac1c8ed9d448ef",
+  "events": [
+    {
+      "at": "2026-10-29T20:02:07.286137+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-29T20:02:18.618109+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 11.296,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Secure Campus Wi-Fi Management System",
+      "domain": "security",
+      "supported": true,
+      "summary": "A university deploys a secure campus-wide Wi-Fi system that enables wireless access for students, faculty, staff, and guests. The system uses centralized authentication with role-based access control to enforce security policies; it separates guest access from internal resources and monitors active sessions to detect anomalies such as repeated failed logins or unauthorized access attempts. Administrators can configure policies, review connected devices, revoke access, and inspect audit logs. The solution supports university-managed personal devices while maintaining a secure, scalable, and manageable architecture across multiple campus locations.",
+      "stakeholders": [
+        "university administrators",
+        "network operators",
+        "students",
+        "faculty",
+        "staff",
+        "guests"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "introduction",
+            "functional",
+            "nonfunctional"
+          ],
+          "explanation": "The system must provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "functional"
+          ],
+          "explanation": "The system shall use centralized authentication with role-based access control; it shall separate guest access from internal university resources and monitor active sessions to detect repeated authentication failures or unauthorized access attempts."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Network administrators must be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "nonfunctional"
+          ],
+          "explanation": "The solution shall support university-managed personal devices while maintaining security, scalability, reliability, and manageability across multiple campus locations."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T20:02:07.210356+00:00",
+  "updated_at": "2026-10-29T20:02:18.641543+00:00"
+}

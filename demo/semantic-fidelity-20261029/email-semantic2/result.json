@@ -1,0 +1,55 @@
+{
+  "case": "email",
+  "project_id": "f218db7c-c1bb-4ae1-bb10-ce58ab422d7b",
+  "label": "semantic2",
+  "started_local": "2026-10-29T21:39:14.480274+05:30",
+  "analysis": {
+    "run_id": "fe11afd1-9edc-4aa6-84e9-7978d4462e88",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T16:09:02.385557+00:00",
+    "terminal_at": "2026-10-29T16:09:13.694518+00:00",
+    "total_seconds": 11.309,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 11.212,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 11.212,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "40b1758a-418b-4982-a7da-053e4edd4780",
+    "status": "failed",
+    "error": "section_validation_failed:E-002_O01:criterion_missing_observed_action_result;FR-004:unconfirmed_automatic_response;FR-005:unconfirmed_production_log_witness_use_test_capture",
+    "created_at": "2026-10-29T16:09:14.486098+00:00",
+    "terminal_at": "2026-10-29T16:09:58.432340+00:00",
+    "total_seconds": 43.946,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.313,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 42.507
+      }
+    },
+    "maximum_section_seconds": 42.507,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-002_O01:criterion_missing_observed_action_result;FR-004:unconfirmed_automatic_response;FR-005:unconfirmed_production_log_witness_use_test_capture",
+  "total_wall_seconds": 56.312,
+  "source_unchanged": true
+}

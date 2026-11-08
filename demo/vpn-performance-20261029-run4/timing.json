@@ -1,0 +1,62 @@
+{
+  "run_id": "04046d7c-3752-45f0-a6c7-f8f3a14eba49",
+  "status": "failed",
+  "error": "section_validation_failed:architecture:ownership_must_cover_each_missing_requirement_once",
+  "created_at": "2026-10-28T21:01:00.350031+00:00",
+  "terminal_at": "2026-10-28T21:02:03.217321+00:00",
+  "total_seconds": 62.867,
+  "sections": {
+    "introduction": {
+      "status": "completed",
+      "seconds": 4.923,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "completed",
+      "seconds": 12.933,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "nonfunctional": {
+      "status": "completed",
+      "seconds": 16.263,
+      "models": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "security": {
+      "status": "completed",
+      "seconds": 8.408,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "data": {
+      "status": "completed",
+      "seconds": 0.027,
+      "models": []
+    },
+    "network": {
+      "status": "completed",
+      "seconds": 0.023,
+      "models": []
+    },
+    "compliance": {
+      "status": "completed",
+      "seconds": 9.97,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "architecture": {
+      "status": "failed",
+      "seconds": 10.202
+    }
+  },
+  "maximum_section_seconds": 16.263,
+  "completed_srs": false,
+  "human_approval": false
+}

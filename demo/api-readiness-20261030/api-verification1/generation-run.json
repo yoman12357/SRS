@@ -1,0 +1,2944 @@
+{
+  "id": "0ee8b869-7c69-4421-b2a9-c0686f8b66cb",
+  "project_id": "c13979ef-bf80-4f30-a09b-58c4969f2c2e",
+  "kind": "generate",
+  "status": "completed",
+  "input_hash": "ad6e8cff3336248f3f2afb78ed808e5c80e03f19b2c02572e5182416a270def5",
+  "events": [
+    {
+      "at": "2026-10-30T04:08:01.232888+00:00",
+      "agent": "introduction",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:08:03.099976+00:00",
+      "agent": "introduction",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.875,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "introduction_projection_version": "source-fact-introduction-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:08:03.157130+00:00",
+      "agent": "functional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:08:55.710796+00:00",
+      "agent": "functional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "attempts": 6,
+      "source_obligations_version": "source-obligations-1.3",
+      "atomic_source_keys": [
+        "E-001_O01",
+        "E-002_O01",
+        "E-002_O02",
+        "E-002_O03",
+        "E-002_O04",
+        "E-003_O01",
+        "E-003_O02",
+        "E-003_O03",
+        "E-003_O04",
+        "E-003_O05",
+        "E-003_O06",
+        "E-004_O01",
+        "E-004_O02",
+        "E-004_O03"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [],
+      "elapsed_seconds": 52.562,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:08:55.725916+00:00",
+      "agent": "nonfunctional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:03.163625+00:00",
+      "agent": "nonfunctional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 2,
+      "source_obligations_version": "source-obligations-1.3",
+      "atomic_source_keys": [
+        "E-001_O02",
+        "E-004_O04",
+        "E-004_O05",
+        "E-004_O06",
+        "E-004_O07"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [],
+      "elapsed_seconds": 7.438,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:03.182083+00:00",
+      "agent": "security",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:03.216852+00:00",
+      "agent": "security",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:03.232228+00:00",
+      "agent": "data",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:03.263134+00:00",
+      "agent": "data",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:03.279140+00:00",
+      "agent": "network",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:03.308886+00:00",
+      "agent": "network",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:03.326728+00:00",
+      "agent": "compliance",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:09.666598+00:00",
+      "agent": "compliance",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 6.344,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:09.682873+00:00",
+      "agent": "architecture",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:42.826140+00:00",
+      "agent": "architecture",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 3,
+      "elapsed_seconds": 33.141,
+      "architecture_stages": [
+        {
+          "stage": "components",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 3.484,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "ownership",
+          "selection_version": "source-keyed-owners-1.0",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 3.844,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "internal_interactions",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 25.75,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        }
+      ],
+      "architecture_layout_version": "source-backed-layout-1.1",
+      "source_paths_compiled": true,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:42.842848+00:00",
+      "agent": "threats",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:46.890966+00:00",
+      "agent": "threats",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 4.047,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.1",
+      "model_candidate_order": [
+        "derived/account-takeover",
+        "derived/privilege-escalation",
+        "derived/stale-access",
+        "derived/malicious-admin-change",
+        "derived/compromised-integration",
+        "derived/audit-evidence-loss",
+        "derived/detection-evasion"
+      ],
+      "retained_source_candidates": [
+        "derived/account-takeover",
+        "derived/privilege-escalation",
+        "derived/stale-access",
+        "derived/malicious-admin-change",
+        "derived/compromised-integration",
+        "derived/audit-evidence-loss",
+        "derived/detection-evasion"
+      ],
+      "composition": "Deterministic source-linked hypotheses; model orders candidates",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:46.907898+00:00",
+      "agent": "risks",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:50.561423+00:00",
+      "agent": "risks",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 3.656,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.1",
+      "model_candidate_order": [
+        "boundary-1",
+        "boundary-2",
+        "boundary-3",
+        "boundary-4",
+        "boundary-5",
+        "boundary-6",
+        "boundary-7"
+      ],
+      "retained_source_candidates": [
+        "boundary-1",
+        "boundary-2",
+        "boundary-3",
+        "boundary-4",
+        "boundary-5",
+        "boundary-6",
+        "boundary-7"
+      ],
+      "composition": "Deterministic source-linked hypotheses; model orders candidates",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:50.578813+00:00",
+      "agent": "scenarios",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:52.914029+00:00",
+      "agent": "scenarios",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.344,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "scenario_projection_version": "canonical-scenarios-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:52.930429+00:00",
+      "agent": "verification",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:09:59.306187+00:00",
+      "agent": "verification",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 6.375,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "verification_projection_version": "canonical-criteria-verification-1.1",
+      "verification_selection_version": "source-keyed-types-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:09:59.324908+00:00",
+      "agent": "glossary",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:10:00.549643+00:00",
+      "agent": "glossary",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.219,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.1",
+      "model_candidate_order": [
+        "term-2",
+        "term-3",
+        "term-4"
+      ],
+      "retained_source_candidates": [
+        "term-2",
+        "term-3",
+        "term-4"
+      ],
+      "composition": "Deterministic source-linked hypotheses; model orders candidates",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:10:00.621325+00:00",
+      "agent": "sdlc",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-30T04:10:06.837981+00:00",
+      "agent": "sdlc",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 6.218,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "sdlc_prompt_version": "sequential-sdlc-generation-2.1",
+      "lifecycle_projection_version": "source-linked-lifecycle-1.1",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-30T04:10:07.024491+00:00",
+      "agent": "document",
+      "state": "completed",
+      "version_id": "cdf2eadb-c2b5-4c18-8ddd-7615e7dfb72d"
+    }
+  ],
+  "checkpoints": {
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure university API access management system that controls access to internal APIs used by student portals, administrative applications, research systems, and campus services.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "Authorized administrators should be able to register APIs, define access permissions, approve or revoke application access, and review active API clients.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "The system should authenticate API clients, enforce role- or policy-based access, detect repeated failed authentication and unauthorized API requests, generate security alerts, and maintain audit logs of access decisions, permission changes, and administrator actions.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "control access to internal APIs used by student portals, administrative applications, research systems, and campus services",
+          "statement": "The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services.",
+          "rationale": "Source obligation E-001_O01.",
+          "priority": "must",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system receives a request to access an internal API through a student portal, administrative application, research system, or campus service",
+              "when": "the system evaluates the request against defined access policies and applies role-based restrictions",
+              "then": "the system returns a response indicating whether access is granted or denied based on the requester's authenticated identity and authorized roles",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "allow Authorized administrators to register APIs",
+          "statement": "The system shall allow Authorized administrators to register APIs.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized administrators register APIs",
+              "when": "initiate the registration of a new API endpoint",
+              "then": "the newly registered API is available in the access management system for use",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "allow Authorized administrators to define access permissions",
+          "statement": "The system shall allow Authorized administrators to define access permissions.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized administrators define access permissions",
+              "when": "define a policy for a named API resource",
+              "then": "the named policy definition is available for examination in the system interface",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "allow Authorized administrators to approve or revoke application access",
+          "statement": "The system shall allow Authorized administrators to approve or revoke application access.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized administrators approve or revoke application access",
+              "when": "approve a request for application access",
+              "then": "the approved decision is observed in the request status field",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-005",
+          "title": "allow Authorized administrators to review active API clients",
+          "statement": "The system shall allow Authorized administrators to review active API clients.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized administrators review active API clients",
+              "when": "request a list of currently active API clients",
+              "then": "the requested list of active API clients is returned for examination",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-006",
+          "title": "authenticate API clients",
+          "statement": "The system shall authenticate API clients.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system submits a controlled identity fixture for API client authentication",
+              "when": "the system initiates authentication of the principal using the source-named identity fixture",
+              "then": "the system either accepts or rejects the authentication based on the fixture's validity",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-007",
+          "title": "enforce role- or policy-based access",
+          "statement": "The system shall enforce role- or policy-based access.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system uses a controlled role or policy permission fixture",
+              "when": "the system enforces access according to that fixture",
+              "then": "the requested access is allowed or denied as defined by the fixture",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-008",
+          "title": "detect repeated failed authentication",
+          "statement": "The system shall detect repeated failed authentication.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system receives a controlled example of repeated failed authentication attempts",
+              "when": "the system detects the condition of repeated failures",
+              "then": "the system identifies that condition is met",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define repeated authentication failures?"
+          ]
+        },
+        {
+          "id": "FR-009",
+          "title": "detect unauthorized API requests",
+          "statement": "The system shall detect unauthorized API requests.",
+          "rationale": "Source obligation E-003_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system receives a controlled example of an unauthorized API request",
+              "when": "the system detects the condition of unauthorized access",
+              "then": "the system identifies that condition is met",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define repeated authentication failures?"
+          ]
+        },
+        {
+          "id": "FR-010",
+          "title": "generate security alerts",
+          "statement": "The system shall generate security alerts.",
+          "rationale": "Source obligation E-003_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system initiates a security alert condition via a controlled trigger",
+              "when": "the system generates an alert based on the trigger",
+              "then": "a security alert exists in the system as defined by the trigger",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-011",
+          "title": "maintain audit logs of access decisions, permission changes, and administrator actions",
+          "statement": "The system shall maintain audit logs of access decisions, permission changes, and administrator actions.",
+          "rationale": "Source obligation E-003_O06.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system records access decisions, permission changes, and administrator actions",
+              "when": "the system maintains logs for those events",
+              "then": "audit logs contain entries reflecting each event in chronological order",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which fields must the audit logs contain?",
+            "What retention period is required for the audit logs?"
+          ]
+        },
+        {
+          "id": "FR-012",
+          "title": "provide a centralized dashboard",
+          "statement": "The system shall provide a centralized dashboard.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a system-controlled user accesses the dashboard named in the source obligation",
+              "when": "the system opens the dashboard as specified",
+              "then": "the dashboard is displayed or available for use",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-013",
+          "title": "integrate with existing university identity services",
+          "statement": "The system shall integrate with existing university identity services.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "integration"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a system-controlled user initiates an exchange with the external identity service named in the source obligation",
+              "when": "the system performs the interoperation as specified",
+              "then": "interoperation succeeds and the service responds appropriately",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-014",
+          "title": "support multiple campus locations",
+          "statement": "The system shall support multiple campus locations.",
+          "rationale": "Source obligation E-004_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a user initiates use from each of the three stated campus locations",
+              "when": "the system processes the request as specified in the source obligation",
+              "then": "use succeeds at each location",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-001_O02.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via API endpoints.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed, as no specific metrics, thresholds, or test cases are provided in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        },
+        {
+          "id": "NFR-002",
+          "title": "remain secure",
+          "statement": "The system shall remain secure.",
+          "rationale": "Source obligation E-004_O04.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain secure under all conditions of use.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        },
+        {
+          "id": "NFR-003",
+          "title": "remain reliable",
+          "statement": "The system shall remain reliable.",
+          "rationale": "Source obligation E-004_O05.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain reliable under all conditions of use.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What measurable reliability and recovery targets must the system meet?"
+          ]
+        },
+        {
+          "id": "NFR-004",
+          "title": "remain scalable",
+          "statement": "The system shall remain scalable.",
+          "rationale": "Source obligation E-004_O06.",
+          "priority": "should",
+          "dimensions": [
+            "performance"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain scalable under all conditions of use.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "What measurable scalability targets must the system meet?"
+          ]
+        },
+        {
+          "id": "NFR-005",
+          "title": "remain manageable",
+          "statement": "The system shall remain manageable.",
+          "rationale": "Source obligation E-004_O07.",
+          "priority": "should",
+          "dimensions": [
+            "usability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain manageable under all conditions of use.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What criteria define acceptable manageability?"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "FR-013",
+        "FR-014"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-003",
+        "FR-004",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "NFR-001",
+        "NFR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-011"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How are the stated roles and authorized permissions assigned?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: Authorized administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: Authorized administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "component_name": "Actor: Authorized administrators",
+          "responsibility": "Represent the source-stated actor: Authorized administrators."
+        },
+        {
+          "title": "API Access Control Engine",
+          "detail": "Proposed logical owner for FR-001, FR-006, FR-007, FR-008, FR-009, FR-010, FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "API Access Control Engine",
+          "responsibility": "The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services. The system shall authenticate API clients. The system shall enforce role- or policy-based access. The system shall detect repeated failed authentication. The system shall detect unauthorized API requests. The system shall generate security alerts. The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Administrator Interface Module",
+          "detail": "Proposed logical owner for FR-002, FR-003, FR-004, FR-005, FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Administrator Interface Module",
+          "responsibility": "The system shall allow Authorized administrators to register APIs. The system shall allow Authorized administrators to define access permissions. The system shall allow Authorized administrators to approve or revoke application access. The system shall allow Authorized administrators to review active API clients. The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Audit and Logging Service",
+          "detail": "Proposed logical owner for FR-011, FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-011",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Audit and Logging Service",
+          "responsibility": "The system shall maintain audit logs of access decisions, permission changes, and administrator actions. The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Centralized Dashboard",
+          "detail": "Proposed logical owner for FR-012, FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-012",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Centralized Dashboard",
+          "responsibility": "The system shall provide a centralized dashboard. The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Identity Integration Layer",
+          "detail": "Proposed logical owner for FR-013, FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-013",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Identity Integration Layer",
+          "responsibility": "The system shall integrate with existing university identity services. The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, FR-004, FR-005.",
+          "from_component": "Actor: Authorized administrators",
+          "to_component": "Administrator Interface Module",
+          "data_or_action": "The system shall allow Authorized administrators to register APIs. The system shall allow Authorized administrators to define access permissions. The system shall allow Authorized administrators to approve or revoke application access. The system shall allow Authorized administrators to review active API clients."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "API Access Control Engine",
+          "to_component": "Administrator Interface Module",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "API Access Control Engine",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "API Access Control Engine",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "API Access Control Engine",
+          "to_component": "Identity Integration Layer",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Administrator Interface Module",
+          "to_component": "API Access Control Engine",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Administrator Interface Module",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Administrator Interface Module",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Administrator Interface Module",
+          "to_component": "Identity Integration Layer",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "API Access Control Engine",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Administrator Interface Module",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Identity Integration Layer",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "API Access Control Engine",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Administrator Interface Module",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Identity Integration Layer",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Identity Integration Layer",
+          "to_component": "API Access Control Engine",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Identity Integration Layer",
+          "to_component": "Administrator Interface Module",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Identity Integration Layer",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-014, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "from_component": "Identity Integration Layer",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall support multiple campus locations. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003, FR-004, FR-005.",
+          "untrusted_component": "Actor: Authorized administrators",
+          "trusted_component": "Administrator Interface Module",
+          "enforcement": "The system shall allow Authorized administrators to register APIs. The system shall allow Authorized administrators to define access permissions. The system shall allow Authorized administrators to approve or revoke application access. The system shall allow Authorized administrators to review active API clients."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [
+        {
+          "id": "THR-001",
+          "asset": "User identities and authenticated access",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "impact": "Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "control_requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-002",
+          "asset": "Role and permission boundaries",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "impact": "A lower-privilege user could access restricted functions or sensitive resources.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-003",
+          "asset": "Access grants and revocations",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A revoked or changed permission remains effective in a session or enforcement point, allowing access after authorization should have ended.",
+          "impact": "A formerly authorized principal could continue using access that is no longer approved.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-004",
+          "asset": "Administrative security decisions",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A malicious or compromised administrator misuses a source-permitted management operation to weaken protection or disrupt legitimate use through the stated administrative workflow.",
+          "impact": "Misused administrative authority could undermine protection or interrupt legitimate use.",
+          "control_requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-005",
+          "asset": "Integration trust paths",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "impact": "Untrusted integration data could cause incorrect decisions or hide security events.",
+          "control_requirement_ids": [
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-006",
+          "asset": "Security and administrative audit evidence",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "impact": "Investigators could lose reliable evidence of the events required by the brief.",
+          "control_requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-007",
+          "asset": "Monitoring and security alerts",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "impact": "Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "control_requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        }
+      ],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [
+        {
+          "id": "RISK-001",
+          "description": "Derived risk affecting User identities and authenticated access: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "mitigation": "Review impersonation and compromised-identity paths against the stated access duties; confirm any additional identity or session protections with the stakeholder. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-002",
+          "description": "Derived risk affecting Role and permission boundaries: A lower-privilege user could access restricted functions or sensitive resources.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "mitigation": "Test permitted and denied role/resource pairs against the linked authorization duties; review ambiguous permission assignments with the resource owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-003",
+          "description": "Derived risk affecting Access grants and revocations: A formerly authorized principal could continue using access that is no longer approved.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A revoked or changed permission remains effective in a session or enforcement point, allowing access after authorization should have ended.",
+          "mitigation": "Trace permission changes through subsequent access decisions and any active access; confirm revocation timing and session semantics before baselining them. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-004",
+          "description": "Derived risk affecting Administrative security decisions: Misused administrative authority could undermine protection or interrupt legitimate use.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A malicious or compromised administrator misuses a source-permitted management operation to weaken protection or disrupt legitimate use through the stated administrative workflow.",
+          "mitigation": "Review misuse cases for each source-permitted administrative operation and compare its outcomes and audit coverage with the stated management boundary. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-005",
+          "description": "Derived risk affecting Integration trust paths: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "mitigation": "Review trust assumptions at the specified integration boundaries with missing or altered input fixtures; confirm the required failure handling with the owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-006",
+          "description": "Derived risk affecting Security and administrative audit evidence: Investigators could lose reliable evidence of the events required by the brief.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "mitigation": "Compare source-required events with the resulting audit evidence; assess missing and altered-record cases and confirm unprovided protection or retention decisions. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-007",
+          "description": "Derived risk affecting Monitoring and security alerts: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "mitigation": "Evaluate the stated detection duties with representative positive and negative events; confirm undecided thresholds, alert priorities and investigation responsibilities. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        }
+      ],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "Authorized administrators",
+          "goal": "The system shall allow Authorized administrators to register APIs.",
+          "story": "As Authorized administrators, I need the following behavior: The system shall allow Authorized administrators to register APIs.",
+          "preconditions": [
+            "Authorized administrators register APIs"
+          ],
+          "steps": [
+            "initiate the registration of a new API endpoint"
+          ],
+          "success_outcome": "the newly registered API is available in the access management system for use",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-002",
+          "actor": "Authorized administrators",
+          "goal": "The system shall allow Authorized administrators to define access permissions.",
+          "story": "As Authorized administrators, I need the following behavior: The system shall allow Authorized administrators to define access permissions.",
+          "preconditions": [
+            "Authorized administrators define access permissions"
+          ],
+          "steps": [
+            "define a policy for a named API resource"
+          ],
+          "success_outcome": "the named policy definition is available for examination in the system interface",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-003",
+          "actor": "Authorized administrators",
+          "goal": "The system shall allow Authorized administrators to approve or revoke application access.",
+          "story": "As Authorized administrators, I need the following behavior: The system shall allow Authorized administrators to approve or revoke application access.",
+          "preconditions": [
+            "Authorized administrators approve or revoke application access"
+          ],
+          "steps": [
+            "approve a request for application access"
+          ],
+          "success_outcome": "the approved decision is observed in the request status field",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-004",
+          "actor": "Authorized administrators",
+          "goal": "The system shall allow Authorized administrators to review active API clients.",
+          "story": "As Authorized administrators, I need the following behavior: The system shall allow Authorized administrators to review active API clients.",
+          "preconditions": [
+            "Authorized administrators review active API clients"
+          ],
+          "steps": [
+            "request a list of currently active API clients"
+          ],
+          "success_outcome": "the requested list of active API clients is returned for examination",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: the system receives a request to access an internal API through a student portal, administrative application, research system, or campus service",
+            "When: the system evaluates the request against defined access policies and applies role-based restrictions"
+          ],
+          "expected_result": "Expected: the system returns a response indicating whether access is granted or denied based on the requester's authenticated identity and authorized roles",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: Authorized administrators register APIs",
+            "When: initiate the registration of a new API endpoint"
+          ],
+          "expected_result": "Expected: the newly registered API is available in the access management system for use",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: Authorized administrators define access permissions",
+            "When: define a policy for a named API resource"
+          ],
+          "expected_result": "Expected: the named policy definition is available for examination in the system interface",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: Authorized administrators approve or revoke application access",
+            "When: approve a request for application access"
+          ],
+          "expected_result": "Expected: the approved decision is observed in the request status field",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: Authorized administrators review active API clients",
+            "When: request a list of currently active API clients"
+          ],
+          "expected_result": "Expected: the requested list of active API clients is returned for examination",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "procedure": [
+            "Given: system submits a controlled identity fixture for API client authentication",
+            "When: the system initiates authentication of the principal using the source-named identity fixture"
+          ],
+          "expected_result": "Expected: the system either accepts or rejects the authentication based on the fixture's validity",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "procedure": [
+            "Given: system uses a controlled role or policy permission fixture",
+            "When: the system enforces access according to that fixture"
+          ],
+          "expected_result": "Expected: the requested access is allowed or denied as defined by the fixture",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "procedure": [
+            "Given: system receives a controlled example of repeated failed authentication attempts",
+            "When: the system detects the condition of repeated failures"
+          ],
+          "expected_result": "Expected: the system identifies that condition is met",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "procedure": [
+            "Given: system receives a controlled example of an unauthorized API request",
+            "When: the system detects the condition of unauthorized access"
+          ],
+          "expected_result": "Expected: the system identifies that condition is met",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "procedure": [
+            "Given: system initiates a security alert condition via a controlled trigger",
+            "When: the system generates an alert based on the trigger"
+          ],
+          "expected_result": "Expected: a security alert exists in the system as defined by the trigger",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "procedure": [
+            "Given: system records access decisions, permission changes, and administrator actions",
+            "When: the system maintains logs for those events"
+          ],
+          "expected_result": "Expected: audit logs contain entries reflecting each event in chronological order",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "FR-012"
+          ],
+          "procedure": [
+            "Given: a system-controlled user accesses the dashboard named in the source obligation",
+            "When: the system opens the dashboard as specified"
+          ],
+          "expected_result": "Expected: the dashboard is displayed or available for use",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "FR-013"
+          ],
+          "procedure": [
+            "Given: a system-controlled user initiates an exchange with the external identity service named in the source obligation",
+            "When: the system performs the interoperation as specified"
+          ],
+          "expected_result": "Expected: interoperation succeeds and the service responds appropriately",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "FR-014"
+          ],
+          "procedure": [
+            "Given: a user initiates use from each of the three stated campus locations",
+            "When: the system processes the request as specified in the source obligation"
+          ],
+          "expected_result": "Expected: use succeeds at each location",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-015",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via API endpoints.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific metrics, thresholds, or test cases are provided in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-016",
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "procedure": [
+            "Given: The system shall remain secure under all conditions of use.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-017",
+          "requirement_ids": [
+            "NFR-003"
+          ],
+          "procedure": [
+            "Given: The system shall remain reliable under all conditions of use.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-018",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "procedure": [
+            "Given: The system shall remain scalable under all conditions of use.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-019",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "procedure": [
+            "Given: The system shall remain manageable under all conditions of use.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Incremental",
+      "justification": "Security decisions benefit from security review and tests throughout delivery (E-002, E-003); monitoring and alert behavior needs validation with operational feedback (E-003); multiple deployment locations offer a staged validation and rollout opportunity (E-004); connected systems need integration verification before broader rollout (E-004). These derived factors support an Incremental lifecycle over Hybrid, DevSecOps, Spiral, Agile, V-Model, or Waterfall because continuous security assurance, staged operational feedback, deployment scalability, and integration validation are best served by iterative delivery with controlled increments. The decision remains proposed due to unknown budget, delivery frequency, failure consequences, legacy system uncertainty, and verification maturity.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions.",
+        "Proposed suitability recommendation; confirm delivery constraints and team capacity before adopting this lifecycle. Missing factors are not assumed."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services.; FR-002: The system shall allow Authorized administrators to register APIs.; FR-003: The system shall allow Authorized administrators to define access permissions.; FR-004: The system shall allow Authorized administrators to approve or revoke application access.; FR-005: The system shall allow Authorized administrators to review active API clients.; FR-006: The system shall authenticate API clients.; FR-007: The system shall enforce role- or policy-based access.; FR-008: The system shall detect repeated failed authentication.; FR-009: The system shall detect unauthorized API requests.; FR-010: The system shall generate security alerts.; FR-011: The system shall maintain audit logs of access decisions, permission changes, and administrator actions.; FR-012: The system shall provide a centralized dashboard.; FR-013: The system shall integrate with existing university identity services.; FR-014: The system shall support multiple campus locations.",
+            "Review and baseline the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services.",
+            "Review implementation and acceptance evidence against FR-003: The system shall allow Authorized administrators to define access permissions.",
+            "Review implementation and acceptance evidence against FR-004: The system shall allow Authorized administrators to approve or revoke application access.",
+            "Review implementation and acceptance evidence against FR-006: The system shall authenticate API clients.",
+            "Review implementation and acceptance evidence against FR-007: The system shall enforce role- or policy-based access.",
+            "Review implementation and acceptance evidence against FR-008: The system shall detect repeated failed authentication.",
+            "Review implementation and acceptance evidence against FR-010: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against FR-011: The system shall maintain audit logs of access decisions, permission changes, and administrator actions.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Incremental delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services.; FR-002: The system shall allow Authorized administrators to register APIs.; FR-003: The system shall allow Authorized administrators to define access permissions.; FR-004: The system shall allow Authorized administrators to approve or revoke application access.; FR-005: The system shall allow Authorized administrators to review active API clients.; FR-006: The system shall authenticate API clients.; FR-007: The system shall enforce role- or policy-based access.; FR-008: The system shall detect repeated failed authentication.; FR-009: The system shall detect unauthorized API requests.; FR-010: The system shall generate security alerts.; FR-011: The system shall maintain audit logs of access decisions, permission changes, and administrator actions.; FR-012: The system shall provide a centralized dashboard.; FR-013: The system shall integrate with existing university identity services.; FR-014: The system shall support multiple campus locations.",
+            "Implement the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "In an authorized isolated test environment, execute TEST-001: Given: the system receives a request to access an internal API through a student portal, administrative application, research system, or campus service When: the system evaluates the request against defined access policies and applies role-based restrictions Expected: the system returns a response indicating whether access is granted or denied based on the requester's authenticated identity and authorized roles",
+            "In an authorized isolated test environment, execute TEST-002: Given: Authorized administrators register APIs When: initiate the registration of a new API endpoint Expected: the newly registered API is available in the access management system for use",
+            "In an authorized isolated test environment, execute TEST-003: Given: Authorized administrators define access permissions When: define a policy for a named API resource Expected: the named policy definition is available for examination in the system interface",
+            "In an authorized isolated test environment, execute TEST-004: Given: Authorized administrators approve or revoke application access When: approve a request for application access Expected: the approved decision is observed in the request status field",
+            "In an authorized isolated test environment, execute TEST-005: Given: Authorized administrators review active API clients When: request a list of currently active API clients Expected: the requested list of active API clients is returned for examination",
+            "In an authorized isolated test environment, execute TEST-006: Given: system submits a controlled identity fixture for API client authentication When: the system initiates authentication of the principal using the source-named identity fixture Expected: the system either accepts or rejects the authentication based on the fixture's validity",
+            "In an authorized isolated test environment, execute TEST-007: Given: system uses a controlled role or policy permission fixture When: the system enforces access according to that fixture Expected: the requested access is allowed or denied as defined by the fixture",
+            "In an authorized isolated test environment, execute TEST-008: Given: system receives a controlled example of repeated failed authentication attempts When: the system detects the condition of repeated failures Expected: the system identifies that condition is met",
+            "In an authorized isolated test environment, execute TEST-009: Given: system receives a controlled example of an unauthorized API request When: the system detects the condition of unauthorized access Expected: the system identifies that condition is met",
+            "In an authorized isolated test environment, execute TEST-010: Given: system initiates a security alert condition via a controlled trigger When: the system generates an alert based on the trigger Expected: a security alert exists in the system as defined by the trigger",
+            "In an authorized isolated test environment, execute TEST-011: Given: system records access decisions, permission changes, and administrator actions When: the system maintains logs for those events Expected: audit logs contain entries reflecting each event in chronological order",
+            "In an authorized isolated test environment, execute TEST-012: Given: a system-controlled user accesses the dashboard named in the source obligation When: the system opens the dashboard as specified Expected: the dashboard is displayed or available for use",
+            "In an authorized isolated test environment, execute TEST-013: Given: a system-controlled user initiates an exchange with the external identity service named in the source obligation When: the system performs the interoperation as specified Expected: interoperation succeeds and the service responds appropriately",
+            "In an authorized isolated test environment, execute TEST-014: Given: a user initiates use from each of the three stated campus locations When: the system processes the request as specified in the source obligation Expected: use succeeds at each location",
+            "In an authorized isolated test environment, execute TEST-015: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via API endpoints. When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD. Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific metrics, thresholds, or test cases are provided in the current draft.",
+            "In an authorized isolated test environment, execute TEST-016: Given: The system shall remain secure under all conditions of use. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "In an authorized isolated test environment, execute TEST-017: Given: The system shall remain reliable under all conditions of use. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "In an authorized isolated test environment, execute TEST-018: Given: The system shall remain scalable under all conditions of use. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "In an authorized isolated test environment, execute TEST-019: Given: The system shall remain manageable under all conditions of use. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services.",
+            "Review implementation and acceptance evidence against FR-003: The system shall allow Authorized administrators to define access permissions.",
+            "Review implementation and acceptance evidence against FR-004: The system shall allow Authorized administrators to approve or revoke application access.",
+            "Review implementation and acceptance evidence against FR-006: The system shall authenticate API clients.",
+            "Review implementation and acceptance evidence against FR-007: The system shall enforce role- or policy-based access.",
+            "Review implementation and acceptance evidence against FR-008: The system shall detect repeated failed authentication.",
+            "Review implementation and acceptance evidence against FR-010: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against FR-011: The system shall maintain audit logs of access decisions, permission changes, and administrator actions.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall control access to internal APIs used by student portals, administrative applications, research systems, and campus services.",
+            "Review implementation and acceptance evidence against FR-003: The system shall allow Authorized administrators to define access permissions.",
+            "Review implementation and acceptance evidence against FR-004: The system shall allow Authorized administrators to approve or revoke application access.",
+            "Review implementation and acceptance evidence against FR-006: The system shall authenticate API clients.",
+            "Review implementation and acceptance evidence against FR-007: The system shall enforce role- or policy-based access.",
+            "Review implementation and acceptance evidence against FR-008: The system shall detect repeated failed authentication.",
+            "Review implementation and acceptance evidence against FR-010: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against FR-011: The system shall maintain audit logs of access decisions, permission changes, and administrator actions.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "quality": {
+      "validation_policy_version": "source-grounding-1.17",
+      "status": "needs_review",
+      "checks_passed": 21,
+      "checks_total": 21,
+      "findings": [
+        {
+          "code": "human_semantic_review_required",
+          "severity": "warning",
+          "section": "document",
+          "item_id": "",
+          "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+        }
+      ],
+      "evidence_coverage": {
+        "E-001": [
+          "FR-001",
+          "NFR-001"
+        ],
+        "E-002": [
+          "FR-002",
+          "FR-003",
+          "FR-004",
+          "FR-005"
+        ],
+        "E-003": [
+          "FR-006",
+          "FR-007",
+          "FR-008",
+          "FR-009",
+          "FR-010",
+          "FR-011"
+        ],
+        "E-004": [
+          "FR-012",
+          "FR-013",
+          "FR-014",
+          "NFR-002",
+          "NFR-003",
+          "NFR-004",
+          "NFR-005"
+        ]
+      },
+      "traceability": [
+        {
+          "requirement_id": "FR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-001"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-002",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-001"
+          ],
+          "test_ids": [
+            "TEST-002"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-003",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-002"
+          ],
+          "test_ids": [
+            "TEST-003"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-004",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-003"
+          ],
+          "test_ids": [
+            "TEST-004"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-005",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-004"
+          ],
+          "test_ids": [
+            "TEST-005"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-006",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-006"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-007",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-007"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-008",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-008"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-009",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-009"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-010",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-010"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-011",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-011"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-012",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-012"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-013",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-013"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-014",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-014"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-015"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-002",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-016"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-003",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-017"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-004",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-018"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-005",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-019"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Incremental delivery cycle",
+            "Release and handoff"
+          ]
+        }
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-30T04:08:01.177418+00:00",
+  "updated_at": "2026-10-30T04:10:07.042674+00:00"
+}

@@ -1,0 +1,1576 @@
+{
+  "id": "59313808-8827-47b0-9cfb-82932164ec8d",
+  "project_id": "5427bbe4-1c44-491b-94f8-e91cc6905f78",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "5427bbe4-1c44-491b-94f8-e91cc6905f78",
+    "title": "Secure Campus Wi-Fi Management System",
+    "original_description": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts. Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs. The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Secure Campus Wi-Fi Management System",
+      "domain": "security",
+      "supported": true,
+      "summary": "A university deploys a secure campus-wide Wi-Fi system that enables wireless access for students, faculty, staff, and guests while enforcing centralized authentication, role-based access control, and monitoring of unauthorized access attempts. The system supports device-level policies and provides administrators with configuration, inspection, and revocation capabilities.",
+      "stakeholders": [
+        "university network administrator",
+        "students",
+        "faculty",
+        "staff",
+        "guests"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "introduction",
+            "functional"
+          ],
+          "explanation": "The system must provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "functional"
+          ],
+          "explanation": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Network administrators must be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional",
+            "data"
+          ],
+          "explanation": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": [
+        "How will device-level policies be enforced on personal devices?",
+        "What specific thresholds or triggers define repeated authentication failures or unauthorized access attempts?",
+        "How will audit logs be stored, accessed, and retained for compliance purposes?"
+      ]
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.6857,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.6818,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:7",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 7,
+        "page_or_section": "text chunk 8",
+        "relevance_score": 0.6703,
+        "text": "Mobile apps**: TOTP-based authenticator applications\n- **Backup codes**: For when primary methods fail\n\n**Avoid:**\n\n- **SMS-based MFA**: Vulnerable to SIM swapping and phishing attacks\n\nSet up conditional access so high-risk situations require stronger authentication. [OMB M-22-09](https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf) mandates phishing-resistant MFA for U.S. federal agencies.\n\n### Managing User Accounts\n\n- **Use one identity system**: Don't have multiple user databases\n- **Automate account creation**: Set up role-based access automatically\n- **Review access regularly**: Check who has access every quarter\n- **Separate admin accounts**: Don't use regular accounts for administration\n\nFollow comprehensive [authentication best practices](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) when implementing user account management.\n\n### Access Controls\n\nFollow these rules for giving people [access](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html):\n\n- **Least privilege**: Give the minimum access needed to do the job\n- **Just-in-time access**: Provide elevated access only when needed for a specific task\n- **No permanent admin rights**: Remove always-on administrative privileges\n- **Smart decisions**: Consider user role, location, and device when granting access\n\n## Device Security\n\n### Trusting Devices\n\nBefore you trust any device, make sure it meets your standards:\n\n- **Register all devices**: Keep a list of approved devices with unique certificates\n- **Continuous health assessment**: Real-time monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate ea",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:22",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 22,
+        "page_or_section": "text chunk 23",
+        "relevance_score": 0.6767,
+        "text": "administrators and help desk staff should be trained to follow the prescribed process and recognize and respond to social engineering attacks. Refer to [CISA's \"Avoiding Social Engineering and Phishing Attacks\"](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) for guidance.\n\n## Adaptive or Risk Based Authentication\n\nA feature of more advanced applications is the ability to require different authentication stages depending on various environmental and contextual attributes (including but not limited to, the sensitivity of the data for which access is being requested, time of day, user location, IP address, or device fingerprint).\n\nFor example, an application may require MFA for the first login from a particular device but not for subsequent logins from that device. Alternatively, a single sign-on solution may authenticate the user and allow them to remain logged in for a day but require a reauthentication if they try to access their profile page.\n\nAnother option is the opposite approach where an application allows low risk access with just something that identifies the device (e.g., a specific mobile device fingerprint, a persistent cookie and browser fingerprint, etc. from the previous IP address) and then gradually requires stronger authentication for more sensitive operations. An example might be to allow someone to trigger something to see their current bank balance, but not the account number or anything else. If they need to see transactions, then the application puts them through some base level authentication and if they want to do any money movement, then MFA is required.\n\nQuestions that should be considered when implementing a mechanism like this include:\n\n- Are the policies being put in place in line with any corporate p",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-92ffa375cd05a8f5:16",
+        "source_document_id": "kb-92ffa375cd05a8f5",
+        "chunk_index": 16,
+        "page_or_section": "text chunk 17",
+        "relevance_score": 0.6789,
+        "text": "administrative staff.\n\n#### Cons\n\n- Doesn't provide any protection if the user's system is compromised.\n- Doesn't provide any protection against rogue insiders.\n- Trusted IP addresses must be carefully restricted (for example, if the open guest Wi-Fi uses the main corporate IP range).\n\n### Geolocation\n\nRather than using the exact IP address of the user, the geographic location that the IP address is registered to can be used. This is less precise, but may be more feasible to implement in environments where IP addresses are not static. A common usage would be to require additional authentication factors when an authentication attempt is made from outside of the user's normal country.\n\n#### Pros\n\n- Very easy for users.\n\n#### Cons\n\n- Doesn't provide any protection if the user's system is compromised.\n- Doesn't provide any protection against rogue insiders.\n- Easy for an attacker to bypass by obtaining IP addresses in the trusted country or location.\n- Privacy features such as Apple's [iCloud Private Relay](https://support.apple.com/en-us/102602) and VPNs can make this less accurate.\n\n### Geofencing\n\nGeofencing is a more precise version of geolocation, which allows the user to define a specific area in which they are allowed to authenticate. This is often used in mobile applications, where the user's location can be determined with a high degree of accuracy using geopositioning hardware like GPS.\n\n#### Pros\n\n- Very easy for users.\n- Provides a high level of protection against remote attackers.\n\n#### Cons\n\n- Doesn't provide any protection if the user's system is compromised.\n- Doesn't provide any protection against rogue insiders.\n- Doesn't provide any protection against attackers who are physically close to the trusted location.\n\n## Something You Do\n\nBehavior-based authent",
+        "title": "03_OWASP_CheatSheets/081_OWASP_Multifactor_Authentication_Cheat_Sheet.md",
+        "sha256": "0c1de91561bd8b449f5a27033e799c6928df3f24cb48a965994f615671612490"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": [
+        "How will device-level policies be enforced on personal devices?",
+        "What specific thresholds or triggers define repeated authentication failures or unauthorized access attempts?",
+        "How will audit logs be stored, accessed, and retained for compliance purposes?"
+      ]
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "statement": "The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user attempts to connect to the campus Wi-Fi in an academic building",
+              "when": "The system processes the connection request",
+              "then": "The system establishes a secure wireless session with valid authentication credentials",
+              "method": "test",
+              "observable_evidence": "Test capture of successful connection establishment"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'secure' in context of campus Wi-Fi"
+          ]
+        },
+        {
+          "id": "FR-002",
+          "title": "use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "statement": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user with invalid credentials repeatedly attempts to authenticate",
+              "when": "The system processes the authentication sequence",
+              "then": "The system detects repeated failure and generates a security alert",
+              "method": "test",
+              "observable_evidence": "Test capture of generated security alert"
+            },
+            {
+              "given": "A device connects to the network without proper authorization",
+              "when": "The system monitors active sessions",
+              "then": "The system identifies unauthorized access and triggers an alert",
+              "method": "test",
+              "observable_evidence": "Test capture of session detection and alert generation"
+            }
+          ],
+          "unresolved_decisions": [
+            "Threshold for defining 'repeated' authentication failures",
+            "Definition of 'unauthorized access attempts'"
+          ]
+        },
+        {
+          "id": "FR-003",
+          "title": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "statement": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator accesses the management interface",
+              "when": "The administrator configures a new wireless policy",
+              "then": "The system applies the policy to active network segments",
+              "method": "test",
+              "observable_evidence": "Test capture of policy configuration and applied state"
+            },
+            {
+              "given": "An administrator requests device list from a network segment",
+              "when": "The system retrieves connected devices",
+              "then": "The system returns a list of active devices with associated identifiers",
+              "method": "inspection",
+              "observable_evidence": "Test capture of device list response"
+            },
+            {
+              "given": "An administrator initiates access revocation for a device",
+              "when": "The system processes the revoke request",
+              "then": "The system processes the revoke request",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of permission state"
+            },
+            {
+              "given": "An administrator requests audit logs for a time period",
+              "when": "The system retrieves the log entries",
+              "then": "The system returns the requested audit records in chronological order",
+              "method": "inspection",
+              "observable_evidence": "Test capture of retrieved audit log content"
+            }
+          ],
+          "unresolved_decisions": [
+            "Scope and format of accessible audit logs",
+            "Definition of 'connected devices' for policy review"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "statement": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A university user with a personally owned device",
+              "when": "The device connects to the wireless network using university-approved configuration",
+              "then": "The connection is authenticated and the device is registered in the system's device inventory",
+              "method": "test",
+              "observable_evidence": "Test capture of device registration response"
+            },
+            {
+              "given": "A campus location with multiple buildings and high device density",
+              "when": "The network handles concurrent connections from personal devices under load",
+              "then": "No performance degradation or connectivity loss occurs during peak usage",
+              "method": "demonstration",
+              "observable_evidence": "Performance test log showing stable throughput and latency"
+            }
+          ],
+          "unresolved_decisions": [
+            "How device approval is validated",
+            "Whether personal device data is collected or shared with university systems"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-003",
+        "NFR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How will device-level policies be enforced on personal devices?",
+        "What specific thresholds or triggers define repeated authentication failures or unauthorized access attempts?",
+        "How will audit logs be stored, accessed, and retained for compliance purposes?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Wireless Access Policy Engine",
+          "detail": "Proposed logical owner for FR-002, NFR-001, FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "NFR-001",
+            "FR-001"
+          ],
+          "component_name": "Wireless Access Policy Engine",
+          "responsibility": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts. The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations. The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices."
+        },
+        {
+          "title": "Authentication and Authorization Service",
+          "detail": "Proposed logical owner for FR-002, FR-003, FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-001"
+          ],
+          "component_name": "Authentication and Authorization Service",
+          "responsibility": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts. Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs. The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices."
+        },
+        {
+          "title": "Session Monitoring and Threat Detection Module",
+          "detail": "Proposed logical owner for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "component_name": "Session Monitoring and Threat Detection Module",
+          "responsibility": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Network Administrator Console",
+          "detail": "Proposed logical owner for FR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "component_name": "Network Administrator Console",
+          "responsibility": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-002"
+          ],
+          "from_component": "Wireless Access Policy Engine",
+          "to_component": "Authentication and Authorization Service",
+          "data_or_action": "The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "from_component": "Wireless Access Policy Engine",
+          "to_component": "Session Monitoring and Threat Detection Module",
+          "data_or_action": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-002"
+          ],
+          "from_component": "Authentication and Authorization Service",
+          "to_component": "Wireless Access Policy Engine",
+          "data_or_action": "The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "from_component": "Authentication and Authorization Service",
+          "to_component": "Session Monitoring and Threat Detection Module",
+          "data_or_action": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "from_component": "Authentication and Authorization Service",
+          "to_component": "Network Administrator Console",
+          "data_or_action": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "from_component": "Session Monitoring and Threat Detection Module",
+          "to_component": "Wireless Access Policy Engine",
+          "data_or_action": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "from_component": "Session Monitoring and Threat Detection Module",
+          "to_component": "Authentication and Authorization Service",
+          "data_or_action": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "from_component": "Network Administrator Console",
+          "to_component": "Authentication and Authorization Service",
+          "data_or_action": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-002"
+          ],
+          "untrusted_component": "Wireless Access Policy Engine",
+          "trusted_component": "Authentication and Authorization Service",
+          "enforcement": "The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "untrusted_component": "Session Monitoring and Threat Detection Module",
+          "trusted_component": "Authentication and Authorization Service",
+          "enforcement": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: A user attempts to connect to the campus Wi-Fi in an academic building",
+            "When: The system processes the connection request"
+          ],
+          "expected_result": "Expected: The system establishes a secure wireless session with valid authentication credentials",
+          "evidence_to_record": "Evidence: Test capture of successful connection establishment",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A user with invalid credentials repeatedly attempts to authenticate",
+            "When: The system processes the authentication sequence"
+          ],
+          "expected_result": "Expected: The system detects repeated failure and generates a security alert",
+          "evidence_to_record": "Evidence: Test capture of generated security alert",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A device connects to the network without proper authorization",
+            "When: The system monitors active sessions"
+          ],
+          "expected_result": "Expected: The system identifies unauthorized access and triggers an alert",
+          "evidence_to_record": "Evidence: Test capture of session detection and alert generation",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator accesses the management interface",
+            "When: The administrator configures a new wireless policy"
+          ],
+          "expected_result": "Expected: The system applies the policy to active network segments",
+          "evidence_to_record": "Evidence: Test capture of policy configuration and applied state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator requests device list from a network segment",
+            "When: The system retrieves connected devices"
+          ],
+          "expected_result": "Expected: The system returns a list of active devices with associated identifiers",
+          "evidence_to_record": "Evidence: Test capture of device list response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator initiates access revocation for a device",
+            "When: The system processes the revoke request"
+          ],
+          "expected_result": "Expected: The system processes the revoke request",
+          "evidence_to_record": "Evidence: Test capture of permission state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: An administrator requests audit logs for a time period",
+            "When: The system retrieves the log entries"
+          ],
+          "expected_result": "Expected: The system returns the requested audit records in chronological order",
+          "evidence_to_record": "Evidence: Test capture of retrieved audit log content",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A university user with a personally owned device",
+            "When: The device connects to the wireless network using university-approved configuration"
+          ],
+          "expected_result": "Expected: The connection is authenticated and the device is registered in the system's device inventory",
+          "evidence_to_record": "Evidence: Test capture of device registration response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A campus location with multiple buildings and high device density",
+            "When: The network handles concurrent connections from personal devices under load"
+          ],
+          "expected_result": "Expected: No performance degradation or connectivity loss occurs during peak usage",
+          "evidence_to_record": "Evidence: Performance test log showing stable throughput and latency",
+          "test_type": "negative"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Access control",
+          "detail": "Rules and enforcement governing which principals may perform actions on resources.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "The selection of Agile as the required model is based on a uniform score of 40 across all candidates, with no differentiating input evidence provided to favor one methodology over another. Given the absence of explicit factors such as budget, delivery timelines, failure consequences, feedback mechanisms, legacy systems, regulation, schedule constraints, stability needs, uncertainty levels, or verification requirements, no candidate model can be objectively ranked for suitability. The equal scores indicate a lack of evidence to support any specific lifecycle model. As a result, Agile is provisionally selected due to its inherent adaptability and iterative nature—particularly relevant in dynamic environments like university campuses where evolving access needs and security threats require responsive adjustments. However, this decision remains provisional pending resolution of the unknown factors listed. The existing requirements emphasize secure wireless access, centralized authentication, role-based controls, monitoring, alerts, policy configuration, device inspection, and scalability—all of which align with Agile’s iterative delivery and continuous feedback loops. Without evidence to differentiate among models, no model is objectively superior; thus, the selection is not justified by data but by default alignment with operational flexibility. The previous validation failure—work_groups_must_not_duplicate_requirements—indicates a need for explicit requirement grouping to avoid redundancy, which must be addressed in implementation.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.; FR-002: The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.; FR-003: Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+            "Review and baseline the source-defined work group: NFR-001: The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.; FR-002: The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.; FR-003: Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+            "Implement the source-defined work group: NFR-001: The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "In an authorized isolated test environment, execute TEST-001: Given: A user attempts to connect to the campus Wi-Fi in an academic building When: The system processes the connection request Expected: The system establishes a secure wireless session with valid authentication credentials",
+            "In an authorized isolated test environment, execute TEST-002: Given: A user with invalid credentials repeatedly attempts to authenticate When: The system processes the authentication sequence Expected: The system detects repeated failure and generates a security alert",
+            "In an authorized isolated test environment, execute TEST-003: Given: A device connects to the network without proper authorization When: The system monitors active sessions Expected: The system identifies unauthorized access and triggers an alert",
+            "In an authorized isolated test environment, execute TEST-004: Given: An administrator accesses the management interface When: The administrator configures a new wireless policy Expected: The system applies the policy to active network segments",
+            "In an authorized isolated test environment, execute TEST-005: Given: An administrator requests device list from a network segment When: The system retrieves connected devices Expected: The system returns a list of active devices with associated identifiers",
+            "In an authorized isolated test environment, execute TEST-006: Given: An administrator initiates access revocation for a device When: The system processes the revoke request Expected: The system processes the revoke request",
+            "In an authorized isolated test environment, execute TEST-007: Given: An administrator requests audit logs for a time period When: The system retrieves the log entries Expected: The system returns the requested audit records in chronological order",
+            "In an authorized isolated test environment, execute TEST-008: Given: A university user with a personally owned device When: The device connects to the wireless network using university-approved configuration Expected: The connection is authenticated and the device is registered in the system's device inventory",
+            "In an authorized isolated test environment, execute TEST-009: Given: A campus location with multiple buildings and high device density When: The network handles concurrent connections from personal devices under load Expected: No performance degradation or connectivity loss occurs during peak usage",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review design and test evidence for violations of source-defined permissions and exclusions."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "NFR-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "security": [],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "prompt_version": "sequential-1.28",
+    "input_fingerprint": "b2bbb64366fff852b6559a2736ef34719cde36e510bacd2534ac1c8ed9d448ef"
+  },
+  "content_hash": "450fae646a146ddeb9bf39d5bff8892f8cf6f06f08ef897a8ad6c6f5e867640c",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 21,
+    "checks_total": 21,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002"
+      ],
+      "E-003": [
+        "FR-003"
+      ],
+      "E-004": [
+        "NFR-001"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-002",
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-004",
+          "TEST-005",
+          "TEST-006",
+          "TEST-007"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-008",
+          "TEST-009"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "7408e09b-26df-4445-bc78-1d305f5dd615",
+  "created_at": "2026-10-29T13:18:20.064800+00:00",
+  "presentation": {
+    "profile": "ieee-830-1998-1.0",
+    "title": "Secure Campus Wi-Fi Management System",
+    "sections": [
+      {
+        "number": "1",
+        "title": "Introduction",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.1",
+        "title": "Purpose",
+        "paragraphs": [
+          "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+          "This SRS describes the software's required behavior for users, administrators and the Project Analyst reviewing the specification."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.2",
+        "title": "Scope",
+        "paragraphs": [
+          "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts. Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs. The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.3",
+        "title": "Definitions, acronyms and abbreviations",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Access control",
+                "Rules and enforcement governing which principals may perform actions on resources."
+              ],
+              [
+                "Policy",
+                "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements."
+              ],
+              [
+                "Audit record",
+                "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition."
+              ],
+              [
+                "Log",
+                "A collection of event records. This term does not itself require additional logging fields, events or access permissions."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.4",
+        "title": "References",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Reference",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Format",
+                "IEEE Std 830-1998, clauses 5 and Annex A (document organization)."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.5",
+        "title": "Overview",
+        "paragraphs": [
+          "Section 2 summarizes the product, stakeholders and open decisions. Section 3 contains the uniquely identified requirements. Detailed evidence, acceptance procedures and the SDLC plan are available in the supporting report."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2",
+        "title": "Overall description",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.1",
+        "title": "Product perspective",
+        "paragraphs": [
+          "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.2",
+        "title": "Product functions",
+        "paragraphs": [
+          "Functional topics are summarized below; section 3 retains the full requirements."
+        ],
+        "bullets": [
+          "Access permissions — FR-001, FR-002, FR-003",
+          "Authentication — FR-002",
+          "Policy controls — FR-003",
+          "Monitoring and alerts — FR-002",
+          "Audit logging — FR-003",
+          "Device support — FR-003"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.3",
+        "title": "User characteristics and stakeholders",
+        "paragraphs": [
+          "Labels group stakeholders for readability. They do not combine permissions.",
+          "Education, training and experience requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Role",
+              "Source user groups",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "User",
+                "students, faculty, staff, guests",
+                "Uses permitted functions; each source class keeps its specified permissions."
+              ],
+              [
+                "Admin",
+                "Network administrators",
+                "Performs only the role's source-defined operations in section 3."
+              ],
+              [
+                "Project Analyst",
+                "Document review role",
+                "Reviews requirements and tracks open decisions; this role grants no product access."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "2.4",
+        "title": "Constraints",
+        "paragraphs": [
+          "No additional implementation constraints were confirmed. Source-defined restrictions remain in the requirements in section 3."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.5",
+        "title": "Assumptions and dependencies",
+        "paragraphs": [
+          "Open decisions requiring confirmation:"
+        ],
+        "bullets": [
+          "How will device-level policies be enforced on personal devices?",
+          "What specific thresholds or triggers define repeated authentication failures or unauthorized access attempts?",
+          "How will audit logs be stored, accessed, and retained for compliance purposes?",
+          "Definition of 'secure' in context of campus Wi-Fi",
+          "Threshold for defining 'repeated' authentication failures",
+          "Definition of 'unauthorized access attempts'",
+          "Scope and format of accessible audit logs",
+          "Definition of 'connected devices' for policy review",
+          "How device approval is validated",
+          "Whether personal device data is collected or shared with university systems"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3",
+        "title": "Specific requirements",
+        "paragraphs": [
+          "Each requirement is stated once with its original identifier and wording. Cross-references identify requirements covering more than one concern."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1",
+        "title": "External interface requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.1",
+        "title": "User interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.2",
+        "title": "Hardware interfaces",
+        "paragraphs": [
+          "Related requirements: FR-003, NFR-001. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.3",
+        "title": "Software interfaces",
+        "paragraphs": [
+          "Related requirements: FR-002. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.4",
+        "title": "Communications interfaces",
+        "paragraphs": [
+          "Related requirements: FR-001, FR-002, FR-003. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.2",
+        "title": "Functional requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "FR-001",
+            "statement": "The system shall provide secure wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-001"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "statement": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-002",
+              "TEST-003"
+            ]
+          },
+          {
+            "id": "FR-003",
+            "statement": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-004",
+              "TEST-005",
+              "TEST-006",
+              "TEST-007"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.3",
+        "title": "Performance requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "statement": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-008",
+              "TEST-009"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.4",
+        "title": "Logical database requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.5",
+        "title": "Design constraints",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6",
+        "title": "Software system attributes",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.1",
+        "title": "Reliability",
+        "paragraphs": [
+          "Also covered by: NFR-001."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.2",
+        "title": "Availability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.3",
+        "title": "Security",
+        "paragraphs": [
+          "Also covered by: FR-001, FR-002, FR-003, NFR-001."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.4",
+        "title": "Maintainability",
+        "paragraphs": [
+          "Also covered by: NFR-001."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.5",
+        "title": "Portability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.7",
+        "title": "Other requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": "ccd56e99-5636-4fa2-9613-ca799fc8d24a",
+  "status": "failed",
+  "error": "section_validation_failed:E-004:permitted_review_outcome_not_observed;security:unsupported_quantitative_commitment",
+  "created_at": "2026-10-28T21:14:35.508920+00:00",
+  "terminal_at": "2026-10-28T21:15:31.763393+00:00",
+  "total_seconds": 56.254,
+  "sections": {
+    "introduction": {
+      "status": "completed",
+      "seconds": 6.21,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "completed",
+      "seconds": 27.486,
+      "models": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "nonfunctional": {
+      "status": "completed",
+      "seconds": 0.014,
+      "models": []
+    },
+    "security": {
+      "status": "failed",
+      "seconds": 22.488
+    }
+  },
+  "maximum_section_seconds": 27.486,
+  "completed_srs": false,
+  "human_approval": false
+}

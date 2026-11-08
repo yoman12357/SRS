@@ -1,0 +1,3457 @@
+{
+  "id": "edc886a3-efbf-446e-83ea-7282f1dbba3b",
+  "project_id": "d39150eb-f59a-4d4c-9be6-0193cca63193",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "d39150eb-f59a-4d4c-9be6-0193cca63193",
+    "title": "Network Configuration Management System",
+    "original_description": "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure. Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary. The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Network Configuration Management System",
+      "domain": "security",
+      "supported": true,
+      "summary": "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure. Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary. The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+      "stakeholders": [
+        "authorized network administrators",
+        "system operators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security",
+            "nonfunctional"
+          ],
+          "explanation": "The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Authorized administrators shall be able to review current configurations, submit changes, track history, and restore approved configurations when necessary."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "threats",
+            "functional"
+          ],
+          "explanation": "The system shall detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of all administrative actions, and restrict functions based on approved roles."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "nonfunctional",
+            "security"
+          ],
+          "explanation": "The platform shall provide a centralized dashboard, integrate with university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+        }
+      ],
+      "questions": [
+        {
+          "id": "Q-51ce9ae15f38",
+          "question": "What makes a configuration change unauthorized?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-3aae42e94793",
+          "question": "Which fields must the audit logs contain?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-64ef2e28335c",
+          "question": "What retention period is required for the audit logs?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-7b2e5f89a0b1",
+          "question": "Which security acceptance outcomes must be demonstrated?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-819bb986f419",
+          "question": "What measurable reliability and recovery targets must the system meet?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-543394346815",
+          "question": "What measurable scalability targets must the system meet?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-5268b96e41b0",
+          "question": "What criteria define acceptable manageability?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        }
+      ],
+      "unresolved_decisions": []
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7216,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7041,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-f68d66ab02ee9ba0:14",
+        "source_document_id": "kb-f68d66ab02ee9ba0",
+        "chunk_index": 14,
+        "page_or_section": "text chunk 15",
+        "relevance_score": 0.6858,
+        "text": "t colors. Also, saving and downloading are performed by different applications.\n\nFull network segmentation cheat sheet by [sergiomarotco](https://github.com/sergiomarotco): [link](https://github.com/sergiomarotco/Network-segmentation-cheat-sheet)\n\n## Deployment and operation\n\n### Release\n\n- Provide security configuration information by adding details about the logging mechanisms to release documentation\n- Brief the application/process owner about the application logging mechanisms\n- Ensure the outputs of the monitoring (see below) are integrated with incident response processes\n\n### Operation\n\nEnable processes to detect whether logging has stopped, and to identify tampering or unauthorized access and deletion (see protection below).\n\n### Protection\n\nThe logging mechanisms and collected event data must be protected from mis-use such as tampering in transit, and unauthorized access, modification and deletion once stored. Logs may contain personal and other sensitive information, or the data may contain information regarding the application's code and logic.\n\nIn addition, the collected information in the logs may itself have business value (to competitors, gossip-mongers, journalists and activists) such as allowing the estimate of revenues, or providing performance information about employees.\n\nThis data may be held on end devices, at intermediate points, in centralized repositories and in archives and backups.\n\nConsider whether parts of the data may need to be excluded, masked, sanitized, hashed, or encrypted during examination or extraction.\n\nAt rest:\n\n- Build in tamper detection so you know if a record has been modified or deleted\n- Store or copy log data to read-only media as soon as possible\n- All access to the logs must be recorded and monitored (and may need prior a",
+        "title": "03_OWASP_CheatSheets/073_OWASP_Logging_Cheat_Sheet.md",
+        "sha256": "e3965a340b575bd232c7f5c7bf24d96a4e22bace1783a7a3a11a84d409e0b560"
+      },
+      {
+        "id": "kb-f68d66ab02ee9ba0:13",
+        "source_document_id": "kb-f68d66ab02ee9ba0",
+        "chunk_index": 13,
+        "page_or_section": "text chunk 14",
+        "relevance_score": 0.694,
+        "text": "to cause denial of service (DoS) of other users\n\n### Network architecture\n\nAs an example, the diagram below shows a service that provides business functionality to customers. We recommend creating a centralized system for collecting logs. There may be many such services, but all of them must securely collect logs in a centralized system.\n\nApplications of this business service are located in network segments:\n\n- FRONTEND 1 aka DMZ (UI)\n- MIDDLEWARE 1 (business application - service core)\n- BACKEND 1 (service database)\n\nThe service responsible for collecting IT events, including security events, is located in the following segments:\n\n- BACKEND 2 (log storage)\n- MIDDLEWARE 3 - 2 applications:\n    - log loader application that download log from storage, pre-processes, and transfer to UI\n    - log collector that accepts logs from business applications, other infrastructure, cloud applications and saves in log storage\n- FRONTEND 2 (UI for viewing business service event logs)\n- FRONTEND 3 (applications that receive logs from cloud applications and transfer logs to log collector)\n    - It is allowed to combine the functionality of two applications in one\n\nFor example, all external requests from users go through the API management service, see application in MIDDLEWARE 2 segment.\n\n![MIDDLEWARE](https://raw.githubusercontent.com/OWASP/CheatSheetSeries/master/assets/Logging_Cheat_Sheet.drawio.png)\n\nAs you can see in the image above, at the network level, the processes of saving and downloading logs require opening different network accesses (ports), arrows are highlighted in different colors. Also, saving and downloading are performed by different applications.\n\nFull network segmentation cheat sheet by [sergiomarotco](https://github.com/sergiomarotco): [link](https://github.com/s",
+        "title": "03_OWASP_CheatSheets/073_OWASP_Logging_Cheat_Sheet.md",
+        "sha256": "e3965a340b575bd232c7f5c7bf24d96a4e22bace1783a7a3a11a84d409e0b560"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:11",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 11,
+        "page_or_section": "text chunk 12",
+        "relevance_score": 0.6952,
+        "text": "y check device health, updates, and security. Devices that aren't secure automatically lose access or get limited access. This creates pressure for people to keep their devices updated.\n\n**Secure applications properly** - Add identity-aware proxies and web application firewalls (WAFs) that make security decisions based on who's trying to access what, not just where they're connecting from.\n\n### Phase 3: Advanced Capabilities (Months 18-36)\n\nBuild advanced capabilities:\n\n**Add behavior monitoring** - Use systems that learn how users and devices normally act. When behavior looks weird, the system can automatically change access or ask for more verification. This needs machine learning and lots of data.\n\n**Automate responses** - Build tools that can automatically isolate compromised accounts, quarantine suspicious devices, and update security policies based on new threats. The goal is to respond faster than humans can.\n\n**Use your data** - Take all the security data you're collecting and use it to improve your policies. This phase is about fine-tuning rather than building new stuff.\n\n### Phase 4: Keep Getting Better (Ongoing)\n\nZero Trust is never done:\n\n**Stay current** - Update threat intelligence, adjust risk scoring, and change policies based on new attack methods. What worked last year might not work now.\n\n**Plan ahead** - Start thinking about post-quantum cryptography, new authentication methods, and AI-powered security tools.\n\n**Measure what matters** - Track how fast you detect threats, how fast you respond, how many policy violations happen, and whether users are happy. Use this data to keep improving.\n\n**Reality check:** Most organizations take 3-5 years to fully implement Zero Trust, and that's with dedicated teams and management support. Don't expect quick resul",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:22",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 22,
+        "page_or_section": "text chunk 23",
+        "relevance_score": 0.6825,
+        "text": "administrators and help desk staff should be trained to follow the prescribed process and recognize and respond to social engineering attacks. Refer to [CISA's \"Avoiding Social Engineering and Phishing Attacks\"](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) for guidance.\n\n## Adaptive or Risk Based Authentication\n\nA feature of more advanced applications is the ability to require different authentication stages depending on various environmental and contextual attributes (including but not limited to, the sensitivity of the data for which access is being requested, time of day, user location, IP address, or device fingerprint).\n\nFor example, an application may require MFA for the first login from a particular device but not for subsequent logins from that device. Alternatively, a single sign-on solution may authenticate the user and allow them to remain logged in for a day but require a reauthentication if they try to access their profile page.\n\nAnother option is the opposite approach where an application allows low risk access with just something that identifies the device (e.g., a specific mobile device fingerprint, a persistent cookie and browser fingerprint, etc. from the previous IP address) and then gradually requires stronger authentication for more sensitive operations. An example might be to allow someone to trigger something to see their current bank balance, but not the account number or anything else. If they need to see transactions, then the application puts them through some base level authentication and if they want to do any money movement, then MFA is required.\n\nQuestions that should be considered when implementing a mechanism like this include:\n\n- Are the policies being put in place in line with any corporate p",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "manage configuration changes across routers, switches, wireless controllers, and other network infrastructure",
+          "statement": "The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure.",
+          "rationale": "Source obligation E-001_O01.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system manages configuration changes across routers, switches, wireless controllers, and other network infrastructure",
+              "when": "the system initiates a configuration change operation",
+              "then": "the resulting configuration is applied without error to the targeted device",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "allow Authorized network administrators to review current configurations",
+          "statement": "The system shall allow Authorized network administrators to review current configurations.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized network administrators review current configurations",
+              "when": "initiate the review of current configurations",
+              "then": "the requested configuration items are returned for examination",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "allow Authorized network administrators to submit configuration changes",
+          "statement": "The system shall allow Authorized network administrators to submit configuration changes.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized network administrators submit a configuration change",
+              "when": "initiate submission of a configuration change on the named object",
+              "then": "the object's resulting policy, job, submitted change, or history is observed as updated",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "allow Authorized network administrators to track change history",
+          "statement": "The system shall allow Authorized network administrators to track change history.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized network administrators track change history",
+              "when": "initiate tracking of change history on the named object",
+              "then": "the object's resulting policy, job, submitted change, or history is observed as accessible and accurate",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-005",
+          "title": "allow Authorized network administrators to restore previously approved configurations when necessary",
+          "statement": "The system shall allow Authorized network administrators to restore previously approved configurations when necessary.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized network administrators restore previously approved configurations",
+              "when": "initiate restoration of a previously approved configuration on the named object",
+              "then": "the object's resulting policy, job, submitted change, or restored state is observed as valid and consistent with approval records",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-006",
+          "title": "detect unauthorized or unexpected configuration changes",
+          "statement": "The system shall detect unauthorized or unexpected configuration changes.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system detects an unauthorized or unexpected configuration change",
+              "when": "the system initiates the detection process",
+              "then": "an alert is generated and logged in the audit trail",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-51ce9ae15f38 is TBD."
+          ]
+        },
+        {
+          "id": "FR-007",
+          "title": "generate security alerts",
+          "statement": "The system shall generate security alerts.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a security alert condition is triggered by an anomalous configuration event",
+              "when": "the system evaluates and responds to the alert condition",
+              "then": "the alert exists in the designated monitoring channel as captured externally",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-008",
+          "title": "maintain audit logs of configuration activity and administrator actions",
+          "statement": "The system shall maintain audit logs of configuration activity and administrator actions.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "an administrator modifies a network configuration",
+              "when": "the system records the action and all associated metadata",
+              "then": "The system records the action and all associated metadata.",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-3aae42e94793 is TBD.",
+            "Decision Q-64ef2e28335c is TBD."
+          ]
+        },
+        {
+          "id": "FR-009",
+          "title": "restrict administrative functions based on approved roles",
+          "statement": "The system shall restrict administrative functions based on approved roles.",
+          "rationale": "Source obligation E-003_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "an administrator attempts to perform a restricted administrative function",
+              "when": "the system evaluates the role-based access policy",
+              "then": "the request is denied if the role lacks approved permissions",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-010",
+          "title": "provide a centralized dashboard",
+          "statement": "The system shall provide a centralized dashboard.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system provides a centralized dashboard",
+              "when": "the system initiates the display of network configuration data",
+              "then": "The system initiates the display of network configuration data and the external test capture records the resulting response.",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-011",
+          "title": "integrate with existing university identity services",
+          "statement": "The system shall integrate with existing university identity services.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "integration"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system integrates with existing university identity services",
+              "when": "the system performs a login authentication request via university identity protocols",
+              "then": "an authenticated session is established and persisted across operations",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-012",
+          "title": "support multiple campus locations",
+          "statement": "The system shall support multiple campus locations.",
+          "rationale": "Source obligation E-004_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system supports multiple campus locations",
+              "when": "the system is initiated from each stated campus location",
+              "then": "use succeeds at all locations with consistent configuration access",
+              "method": "test",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-001_O02.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network interfaces.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or response metrics are stated in the draft plan.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-7b2e5f89a0b1 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-002",
+          "title": "remain secure",
+          "statement": "The system shall remain secure.",
+          "rationale": "Source obligation E-004_O04.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain secure under all operational conditions.",
+              "when": "An analyst reviews the security assurance plan and evaluates whether it includes measurable targets for threat detection, response time, and configuration drift",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-7b2e5f89a0b1 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-003",
+          "title": "remain reliable",
+          "statement": "The system shall remain reliable.",
+          "rationale": "Source obligation E-004_O05.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain reliable under all operational conditions.",
+              "when": "An analyst reviews the reliability assurance plan and evaluates whether it includes measurable targets for failure detection, recovery time, and service uptime",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-819bb986f419 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-004",
+          "title": "remain scalable",
+          "statement": "The system shall remain scalable.",
+          "rationale": "Source obligation E-004_O06.",
+          "priority": "should",
+          "dimensions": [
+            "performance"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain scalable under all operational conditions.",
+              "when": "An analyst reviews the scalability assurance plan and evaluates whether it includes measurable targets for throughput, latency, and resource utilization growth",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-543394346815 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-005",
+          "title": "remain manageable",
+          "statement": "The system shall remain manageable.",
+          "rationale": "Source obligation E-004_O07.",
+          "priority": "should",
+          "dimensions": [
+            "usability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain manageable under all operational conditions.",
+              "when": "An analyst reviews the manageability assurance plan and evaluates whether it includes measurable targets for configuration change frequency, audit coverage, and",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-5268b96e41b0 is TBD."
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-010",
+        "FR-011",
+        "FR-012"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "NFR-001",
+        "NFR-002",
+        "NFR-003",
+        "NFR-004",
+        "NFR-005"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-008"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "Decision Q-51ce9ae15f38 is TBD.",
+        "Decision Q-3aae42e94793 is TBD."
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: Authorized network administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: Authorized network administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "component_name": "Actor: Authorized network administrators",
+          "responsibility": "Represent the source-stated actor: Authorized network administrators."
+        },
+        {
+          "title": "Configuration Management Engine",
+          "detail": "Proposed logical owner for FR-001, FR-002, FR-003, FR-004, FR-005, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Configuration Management Engine",
+          "responsibility": "The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure. The system shall allow Authorized network administrators to review current configurations. The system shall allow Authorized network administrators to submit configuration changes. The system shall allow Authorized network administrators to track change history. The system shall allow Authorized network administrators to restore previously approved configurations when necessary. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Security Monitoring and Alerting Module",
+          "detail": "Proposed logical owner for FR-006, FR-007, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Security Monitoring and Alerting Module",
+          "responsibility": "The system shall detect unauthorized or unexpected configuration changes. The system shall generate security alerts. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Audit Logging and Compliance Engine",
+          "detail": "Proposed logical owner for FR-008, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-008",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Audit Logging and Compliance Engine",
+          "responsibility": "The system shall maintain audit logs of configuration activity and administrator actions. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Role-Based Access Control Service",
+          "detail": "Proposed logical owner for FR-009, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-009",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Role-Based Access Control Service",
+          "responsibility": "The system shall restrict administrative functions based on approved roles. The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Centralized Dashboard Interface",
+          "detail": "Proposed logical owner for FR-010.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "component_name": "Centralized Dashboard Interface",
+          "responsibility": "The system shall provide a centralized dashboard."
+        },
+        {
+          "title": "University Identity Integration Module",
+          "detail": "Proposed logical owner for FR-011.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "component_name": "University Identity Integration Module",
+          "responsibility": "The system shall integrate with existing university identity services."
+        },
+        {
+          "title": "Multi-Campus Deployment Manager",
+          "detail": "Proposed logical owner for FR-012.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-012"
+          ],
+          "component_name": "Multi-Campus Deployment Manager",
+          "responsibility": "The system shall support multiple campus locations."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, FR-004, FR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "from_component": "Actor: Authorized network administrators",
+          "to_component": "Configuration Management Engine",
+          "data_or_action": "The system shall allow Authorized network administrators to review current configurations. The system shall allow Authorized network administrators to submit configuration changes. The system shall allow Authorized network administrators to track change history. The system shall allow Authorized network administrators to restore previously approved configurations when necessary."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Configuration Management Engine",
+          "to_component": "Security Monitoring and Alerting Module",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Configuration Management Engine",
+          "to_component": "Audit Logging and Compliance Engine",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Configuration Management Engine",
+          "to_component": "Role-Based Access Control Service",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Security Monitoring and Alerting Module",
+          "to_component": "Configuration Management Engine",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Security Monitoring and Alerting Module",
+          "to_component": "Audit Logging and Compliance Engine",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Security Monitoring and Alerting Module",
+          "to_component": "Role-Based Access Control Service",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Audit Logging and Compliance Engine",
+          "to_component": "Configuration Management Engine",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Audit Logging and Compliance Engine",
+          "to_component": "Security Monitoring and Alerting Module",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Audit Logging and Compliance Engine",
+          "to_component": "Role-Based Access Control Service",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Role-Based Access Control Service",
+          "to_component": "Configuration Management Engine",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Role-Based Access Control Service",
+          "to_component": "Security Monitoring and Alerting Module",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001, NFR-002, NFR-003, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "from_component": "Role-Based Access Control Service",
+          "to_component": "Audit Logging and Compliance Engine",
+          "data_or_action": "The system shall be secure. The system shall remain secure. The system shall remain reliable. The system shall remain scalable. The system shall remain manageable."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003, FR-004, FR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005"
+          ],
+          "untrusted_component": "Actor: Authorized network administrators",
+          "trusted_component": "Configuration Management Engine",
+          "enforcement": "The system shall allow Authorized network administrators to review current configurations. The system shall allow Authorized network administrators to submit configuration changes. The system shall allow Authorized network administrators to track change history. The system shall allow Authorized network administrators to restore previously approved configurations when necessary."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [
+        {
+          "id": "THR-001",
+          "asset": "User identities and authenticated access",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "impact": "Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "control_requirement_ids": [
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-002",
+          "asset": "Role and permission boundaries",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "impact": "A lower-privilege user could access restricted functions or sensitive resources.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-003",
+          "asset": "Integration trust paths",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "impact": "Untrusted integration data could cause incorrect decisions or hide security events.",
+          "control_requirement_ids": [
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-004",
+          "asset": "Security and administrative audit evidence",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "impact": "Investigators could lose reliable evidence of the events required by the brief.",
+          "control_requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-005",
+          "asset": "Monitoring and security alerts",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "impact": "Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "control_requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        }
+      ],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [
+        {
+          "id": "RISK-001",
+          "description": "Derived risk affecting User identities and authenticated access: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "mitigation": "Review impersonation and compromised-identity paths against the stated access duties; confirm any additional identity or session protections with the stakeholder. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-002",
+          "description": "Derived risk affecting Role and permission boundaries: A lower-privilege user could access restricted functions or sensitive resources.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "mitigation": "Test permitted and denied role/resource pairs against the linked authorization duties; review ambiguous permission assignments with the resource owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-003",
+          "description": "Derived risk affecting Integration trust paths: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "mitigation": "Review trust assumptions at the specified integration boundaries with missing or altered input fixtures; confirm the required failure handling with the owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-004",
+          "description": "Derived risk affecting Security and administrative audit evidence: Investigators could lose reliable evidence of the events required by the brief.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "mitigation": "Compare source-required events with the resulting audit evidence; assess missing and altered-record cases and confirm unprovided protection or retention decisions. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-005",
+          "description": "Derived risk affecting Monitoring and security alerts: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "mitigation": "Evaluate the stated detection duties with representative positive and negative events; confirm undecided thresholds, alert priorities and investigation responsibilities. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        }
+      ],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "Authorized network administrators",
+          "goal": "The system shall allow Authorized network administrators to review current configurations.",
+          "story": "As Authorized network administrators, I need the following behavior: The system shall allow Authorized network administrators to review current configurations.",
+          "preconditions": [
+            "Authorized network administrators review current configurations"
+          ],
+          "steps": [
+            "initiate the review of current configurations"
+          ],
+          "success_outcome": "the requested configuration items are returned for examination",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-002",
+          "actor": "Authorized network administrators",
+          "goal": "The system shall allow Authorized network administrators to submit configuration changes.",
+          "story": "As Authorized network administrators, I need the following behavior: The system shall allow Authorized network administrators to submit configuration changes.",
+          "preconditions": [
+            "Authorized network administrators submit a configuration change"
+          ],
+          "steps": [
+            "initiate submission of a configuration change on the named object"
+          ],
+          "success_outcome": "the object's resulting policy, job, submitted change, or history is observed as updated",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-003",
+          "actor": "Authorized network administrators",
+          "goal": "The system shall allow Authorized network administrators to track change history.",
+          "story": "As Authorized network administrators, I need the following behavior: The system shall allow Authorized network administrators to track change history.",
+          "preconditions": [
+            "Authorized network administrators track change history"
+          ],
+          "steps": [
+            "initiate tracking of change history on the named object"
+          ],
+          "success_outcome": "the object's resulting policy, job, submitted change, or history is observed as accessible and accurate",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-004",
+          "actor": "Authorized network administrators",
+          "goal": "The system shall allow Authorized network administrators to restore previously approved configurations when necessary.",
+          "story": "As Authorized network administrators, I need the following behavior: The system shall allow Authorized network administrators to restore previously approved configurations when necessary.",
+          "preconditions": [
+            "Authorized network administrators restore previously approved configurations"
+          ],
+          "steps": [
+            "initiate restoration of a previously approved configuration on the named object"
+          ],
+          "success_outcome": "the object's resulting policy, job, submitted change, or restored state is observed as valid and consistent with approval records",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: the system manages configuration changes across routers, switches, wireless controllers, and other network infrastructure",
+            "When: the system initiates a configuration change operation"
+          ],
+          "expected_result": "Expected: the resulting configuration is applied without error to the targeted device",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: Authorized network administrators review current configurations",
+            "When: initiate the review of current configurations"
+          ],
+          "expected_result": "Expected: the requested configuration items are returned for examination",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: Authorized network administrators submit a configuration change",
+            "When: initiate submission of a configuration change on the named object"
+          ],
+          "expected_result": "Expected: the object's resulting policy, job, submitted change, or history is observed as updated",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: Authorized network administrators track change history",
+            "When: initiate tracking of change history on the named object"
+          ],
+          "expected_result": "Expected: the object's resulting policy, job, submitted change, or history is observed as accessible and accurate",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: Authorized network administrators restore previously approved configurations",
+            "When: initiate restoration of a previously approved configuration on the named object"
+          ],
+          "expected_result": "Expected: the object's resulting policy, job, submitted change, or restored state is observed as valid and consistent with approval records",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "procedure": [
+            "Given: the system detects an unauthorized or unexpected configuration change",
+            "When: the system initiates the detection process"
+          ],
+          "expected_result": "Expected: an alert is generated and logged in the audit trail",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "procedure": [
+            "Given: a security alert condition is triggered by an anomalous configuration event",
+            "When: the system evaluates and responds to the alert condition"
+          ],
+          "expected_result": "Expected: the alert exists in the designated monitoring channel as captured externally",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "procedure": [
+            "Given: an administrator modifies a network configuration",
+            "When: the system records the action and all associated metadata"
+          ],
+          "expected_result": "Expected: The system records the action and all associated metadata.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "procedure": [
+            "Given: an administrator attempts to perform a restricted administrative function",
+            "When: the system evaluates the role-based access policy"
+          ],
+          "expected_result": "Expected: the request is denied if the role lacks approved permissions",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "procedure": [
+            "Given: system provides a centralized dashboard",
+            "When: the system initiates the display of network configuration data"
+          ],
+          "expected_result": "Expected: The system initiates the display of network configuration data and the external test capture records the resulting response.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "procedure": [
+            "Given: system integrates with existing university identity services",
+            "When: the system performs a login authentication request via university identity protocols"
+          ],
+          "expected_result": "Expected: an authenticated session is established and persisted across operations",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "FR-012"
+          ],
+          "procedure": [
+            "Given: system supports multiple campus locations",
+            "When: the system is initiated from each stated campus location"
+          ],
+          "expected_result": "Expected: use succeeds at all locations with consistent configuration access",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network interfaces.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or response metrics are stated in the draft plan.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "procedure": [
+            "Given: The system shall remain secure under all operational conditions.",
+            "When: An analyst reviews the security assurance plan and evaluates whether it includes measurable targets for threat detection, response time, and configuration drift"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-015",
+          "requirement_ids": [
+            "NFR-003"
+          ],
+          "procedure": [
+            "Given: The system shall remain reliable under all operational conditions.",
+            "When: An analyst reviews the reliability assurance plan and evaluates whether it includes measurable targets for failure detection, recovery time, and service uptime"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-016",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "procedure": [
+            "Given: The system shall remain scalable under all operational conditions.",
+            "When: An analyst reviews the scalability assurance plan and evaluates whether it includes measurable targets for throughput, latency, and resource utilization growth"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-017",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "procedure": [
+            "Given: The system shall remain manageable under all operational conditions.",
+            "When: An analyst reviews the manageability assurance plan and evaluates whether it includes measurable targets for configuration change frequency, audit coverage, and"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Access restoration",
+          "detail": "Returning access that was previously restricted, within the source-defined permission boundary.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Incremental",
+      "justification": "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003) Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004) Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions.",
+        "Proposed suitability recommendation; confirm delivery constraints and team capacity before adopting this lifecycle. Missing factors are not assumed."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure.; FR-002: The system shall allow Authorized network administrators to review current configurations.; FR-003: The system shall allow Authorized network administrators to submit configuration changes.; FR-004: The system shall allow Authorized network administrators to track change history.; FR-005: The system shall allow Authorized network administrators to restore previously approved configurations when necessary.; FR-006: The system shall detect unauthorized or unexpected configuration changes.; FR-007: The system shall generate security alerts.; FR-008: The system shall maintain audit logs of configuration activity and administrator actions.; FR-009: The system shall restrict administrative functions based on approved roles.; FR-010: The system shall provide a centralized dashboard.; FR-011: The system shall integrate with existing university identity services.; FR-012: The system shall support multiple campus locations.",
+            "Review and baseline the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-007: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Incremental delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure.; FR-002: The system shall allow Authorized network administrators to review current configurations.; FR-003: The system shall allow Authorized network administrators to submit configuration changes.; FR-004: The system shall allow Authorized network administrators to track change history.; FR-005: The system shall allow Authorized network administrators to restore previously approved configurations when necessary.; FR-006: The system shall detect unauthorized or unexpected configuration changes.; FR-007: The system shall generate security alerts.; FR-008: The system shall maintain audit logs of configuration activity and administrator actions.; FR-009: The system shall restrict administrative functions based on approved roles.; FR-010: The system shall provide a centralized dashboard.; FR-011: The system shall integrate with existing university identity services.; FR-012: The system shall support multiple campus locations.",
+            "Implement the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "In an authorized isolated test environment, execute TEST-001: Given: the system manages configuration changes across routers, switches, wireless controllers, and other network infrastructure When: the system initiates a configuration change operation Expected: the resulting configuration is applied without error to the targeted device",
+            "In an authorized isolated test environment, execute TEST-002: Given: Authorized network administrators review current configurations When: initiate the review of current configurations Expected: the requested configuration items are returned for examination",
+            "In an authorized isolated test environment, execute TEST-003: Given: Authorized network administrators submit a configuration change When: initiate submission of a configuration change on the named object Expected: the object's resulting policy, job, submitted change, or history is observed as updated",
+            "In an authorized isolated test environment, execute TEST-004: Given: Authorized network administrators track change history When: initiate tracking of change history on the named object Expected: the object's resulting policy, job, submitted change, or history is observed as accessible and accurate",
+            "In an authorized isolated test environment, execute TEST-005: Given: Authorized network administrators restore previously approved configurations When: initiate restoration of a previously approved configuration on the named object Expected: the object's resulting policy, job, submitted change, or restored state is observed as valid and consistent with approval records",
+            "In an authorized isolated test environment, execute TEST-006: Given: the system detects an unauthorized or unexpected configuration change When: the system initiates the detection process Expected: an alert is generated and logged in the audit trail",
+            "In an authorized isolated test environment, execute TEST-007: Given: a security alert condition is triggered by an anomalous configuration event When: the system evaluates and responds to the alert condition Expected: the alert exists in the designated monitoring channel as captured externally",
+            "In an authorized isolated test environment, execute TEST-008: Given: an administrator modifies a network configuration When: the system records the action and all associated metadata Expected: The system records the action and all associated metadata.",
+            "In an authorized isolated test environment, execute TEST-009: Given: an administrator attempts to perform a restricted administrative function When: the system evaluates the role-based access policy Expected: the request is denied if the role lacks approved permissions",
+            "In an authorized isolated test environment, execute TEST-010: Given: system provides a centralized dashboard When: the system initiates the display of network configuration data Expected: The system initiates the display of network configuration data and the external test capture records the resulting response.",
+            "In an authorized isolated test environment, execute TEST-011: Given: system integrates with existing university identity services When: the system performs a login authentication request via university identity protocols Expected: an authenticated session is established and persisted across operations",
+            "In an authorized isolated test environment, execute TEST-012: Given: system supports multiple campus locations When: the system is initiated from each stated campus location Expected: use succeeds at all locations with consistent configuration access",
+            "In an authorized isolated test environment, execute TEST-013: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network interfaces. When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD. Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or response metrics are stated in the draft plan.",
+            "In an authorized isolated test environment, execute TEST-014: Given: The system shall remain secure under all operational conditions. When: An analyst reviews the security assurance plan and evaluates whether it includes measurable targets for threat detection, response time, and configuration drift Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "In an authorized isolated test environment, execute TEST-015: Given: The system shall remain reliable under all operational conditions. When: An analyst reviews the reliability assurance plan and evaluates whether it includes measurable targets for failure detection, recovery time, and service uptime Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "In an authorized isolated test environment, execute TEST-016: Given: The system shall remain scalable under all operational conditions. When: An analyst reviews the scalability assurance plan and evaluates whether it includes measurable targets for throughput, latency, and resource utilization growth Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "In an authorized isolated test environment, execute TEST-017: Given: The system shall remain manageable under all operational conditions. When: An analyst reviews the manageability assurance plan and evaluates whether it includes measurable targets for configuration change frequency, audit coverage, and Expected: The plan's measurable targets remain TBD or unconfirmed",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-007: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-007: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-2.0",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.1",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [
+      {
+        "name": "security_assurance",
+        "value": "integrated security review",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "basis": "derived",
+        "rationale": "Security decisions benefit from security review and tests throughout delivery."
+      },
+      {
+        "name": "operational_validation",
+        "value": "monitoring feedback",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "basis": "derived",
+        "rationale": "Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency."
+      },
+      {
+        "name": "deployment_scope",
+        "value": "staged rollout opportunity",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "basis": "derived",
+        "rationale": "Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed."
+      },
+      {
+        "name": "integration_assurance",
+        "value": "integration validation",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "basis": "derived",
+        "rationale": "Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified."
+      }
+    ],
+    "sdlc_candidates": [
+      {
+        "model": "Incremental",
+        "score": 66,
+        "reasons": [
+          "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 65,
+        "reasons": [
+          "Derived security_assurance (+8 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+5 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+8 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+4 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 63,
+        "reasons": [
+          "Derived security_assurance (+12 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+8 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+3 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 51,
+        "reasons": [
+          "Derived security_assurance (+5 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived integration_assurance (+6 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ]
+      },
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "security": [],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "prompt_version": "sequential-1.35",
+    "input_fingerprint": "9b24bac5159c91fd6fc6136f1fa9c51334ff38f67ecb4b7d3fe946ccb13fafa6"
+  },
+  "content_hash": "dba0d7f38f6d69894392990b489c5ee9142ebf6d916cf4a1a9fd2f425ff42969",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.17",
+    "status": "needs_review",
+    "checks_passed": 21,
+    "checks_total": 21,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001",
+        "NFR-001"
+      ],
+      "E-002": [
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005"
+      ],
+      "E-003": [
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009"
+      ],
+      "E-004": [
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "NFR-002",
+        "NFR-003",
+        "NFR-004",
+        "NFR-005"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-004",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-003"
+        ],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-005",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-004"
+        ],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-006",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-007",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-007"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-008",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-008"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-009",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-010",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-010"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-011",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-011"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-012",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-012"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-013"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-002",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-014"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-003",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-015"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-004",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-016"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-005",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-017"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "ccdf5d2e-b913-42f2-8ea4-51b275cacab2",
+  "created_at": "2026-10-30T03:09:00.955840+00:00",
+  "presentation": {
+    "profile": "ieee-830-1998-1.0",
+    "title": "Network Configuration Management System",
+    "sections": [
+      {
+        "number": "1",
+        "title": "Introduction",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.1",
+        "title": "Purpose",
+        "paragraphs": [
+          "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+          "This SRS describes the software's required behavior for users, administrators and the Project Analyst reviewing the specification."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.2",
+        "title": "Scope",
+        "paragraphs": [
+          "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure. Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary. The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.3",
+        "title": "Definitions, acronyms and abbreviations",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Audit record",
+                "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition."
+              ],
+              [
+                "Log",
+                "A collection of event records. This term does not itself require additional logging fields, events or access permissions."
+              ],
+              [
+                "Access restoration",
+                "Returning access that was previously restricted, within the source-defined permission boundary."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.4",
+        "title": "References",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Reference",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Format",
+                "IEEE Std 830-1998, clauses 5 and Annex A (document organization)."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.5",
+        "title": "Overview",
+        "paragraphs": [
+          "Section 2 summarizes the product, stakeholders and open decisions. Section 3 contains the uniquely identified requirements. Detailed evidence, acceptance procedures are available in the Normal report. Appendices A-C contain derived threat hypotheses, risk assessment and the proposed SDLC workflow."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2",
+        "title": "Overall description",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.1",
+        "title": "Product perspective",
+        "paragraphs": [
+          "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.2",
+        "title": "Product functions",
+        "paragraphs": [
+          "Functional topics are summarized below; section 3 retains the full requirements."
+        ],
+        "bullets": [
+          "manage configuration changes across routers, switches, wireless controllers, and other network infrastructure - FR-001",
+          "allow Authorized network administrators to review current configurations - FR-002",
+          "allow Authorized network administrators to submit configuration changes - FR-003",
+          "allow Authorized network administrators to track change history - FR-004",
+          "allow Authorized network administrators to restore previously approved configurations when necessary - FR-005",
+          "detect unauthorized or unexpected configuration changes - FR-006",
+          "generate security alerts - FR-007",
+          "maintain audit logs of configuration activity and administrator actions - FR-008",
+          "restrict administrative functions based on approved roles - FR-009",
+          "provide a centralized dashboard - FR-010",
+          "integrate with existing university identity services - FR-011",
+          "support multiple campus locations - FR-012"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.3",
+        "title": "User characteristics and stakeholders",
+        "paragraphs": [
+          "Labels group stakeholders for readability. They do not combine permissions.",
+          "Education, training and experience requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Role",
+              "Source user groups",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "Admin",
+                "network administrators, administrator",
+                "Performs only the role's source-defined operations in section 3."
+              ],
+              [
+                "Project Analyst",
+                "Document review role",
+                "Reviews requirements and tracks open decisions; this role grants no product access."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "2.4",
+        "title": "Constraints",
+        "paragraphs": [
+          "No additional implementation constraints were confirmed. Source-defined restrictions remain in the requirements in section 3."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.5",
+        "title": "Assumptions and dependencies",
+        "paragraphs": [
+          "Open decisions requiring confirmation:"
+        ],
+        "bullets": [
+          "What makes a configuration change unauthorized?",
+          "Which fields must the audit logs contain?",
+          "What retention period is required for the audit logs?",
+          "Which security acceptance outcomes must be demonstrated?",
+          "What measurable reliability and recovery targets must the system meet?",
+          "What measurable scalability targets must the system meet?",
+          "What criteria define acceptable manageability?"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3",
+        "title": "Specific requirements",
+        "paragraphs": [
+          "Each requirement is stated once with its original identifier and wording. Cross-references identify requirements covering more than one concern."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1",
+        "title": "External interface requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.1",
+        "title": "User interfaces",
+        "paragraphs": [
+          "Related requirements: FR-010. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.2",
+        "title": "Hardware interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.3",
+        "title": "Software interfaces",
+        "paragraphs": [
+          "Related requirements: FR-011. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.4",
+        "title": "Communications interfaces",
+        "paragraphs": [
+          "Related requirements: FR-001, FR-002, FR-003, FR-004, FR-005. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.2",
+        "title": "Functional requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "FR-001",
+            "statement": "The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-001"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "statement": "The system shall allow Authorized network administrators to review current configurations.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-002"
+            ]
+          },
+          {
+            "id": "FR-003",
+            "statement": "The system shall allow Authorized network administrators to submit configuration changes.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-003"
+            ]
+          },
+          {
+            "id": "FR-004",
+            "statement": "The system shall allow Authorized network administrators to track change history.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-004"
+            ]
+          },
+          {
+            "id": "FR-005",
+            "statement": "The system shall allow Authorized network administrators to restore previously approved configurations when necessary.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-005"
+            ]
+          },
+          {
+            "id": "FR-006",
+            "statement": "The system shall detect unauthorized or unexpected configuration changes.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-006"
+            ]
+          },
+          {
+            "id": "FR-007",
+            "statement": "The system shall generate security alerts.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-007"
+            ]
+          },
+          {
+            "id": "FR-008",
+            "statement": "The system shall maintain audit logs of configuration activity and administrator actions.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-008"
+            ]
+          },
+          {
+            "id": "FR-009",
+            "statement": "The system shall restrict administrative functions based on approved roles.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-009"
+            ]
+          },
+          {
+            "id": "FR-010",
+            "statement": "The system shall provide a centralized dashboard.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-010"
+            ]
+          },
+          {
+            "id": "FR-011",
+            "statement": "The system shall integrate with existing university identity services.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-011"
+            ]
+          },
+          {
+            "id": "FR-012",
+            "statement": "The system shall support multiple campus locations.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-012"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.3",
+        "title": "Performance requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-004",
+            "statement": "The system shall remain scalable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-016"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.4",
+        "title": "Logical database requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.5",
+        "title": "Design constraints",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6",
+        "title": "Software system attributes",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.1",
+        "title": "Reliability",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-003",
+            "statement": "The system shall remain reliable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-015"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.2",
+        "title": "Availability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.3",
+        "title": "Security",
+        "paragraphs": [
+          "Also covered by: FR-007, FR-008, FR-009."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "statement": "The system shall be secure.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-013"
+            ]
+          },
+          {
+            "id": "NFR-002",
+            "statement": "The system shall remain secure.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-014"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.4",
+        "title": "Maintainability",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-005",
+            "statement": "The system shall remain manageable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-017"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.5",
+        "title": "Portability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.7",
+        "title": "Other requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A",
+        "title": "Derived threat hypotheses",
+        "paragraphs": [
+          "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review.",
+          "These are planning hypotheses, not observed incidents or additional approved controls."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.1",
+        "title": "THR-001: User identities and authenticated access",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "Linked requirements: FR-010, FR-011, FR-012, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.2",
+        "title": "THR-002: Role and permission boundaries",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: A lower-privilege user could access restricted functions or sensitive resources.",
+          "Linked requirements: FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009",
+          "Original evidence: E-002, E-003",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.3",
+        "title": "THR-003: Integration trust paths",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "Linked requirements: FR-010, FR-011, FR-012, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.4",
+        "title": "THR-004: Security and administrative audit evidence",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Investigators could lose reliable evidence of the events required by the brief.",
+          "Linked requirements: FR-006, FR-007, FR-008, FR-009",
+          "Original evidence: E-003",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.5",
+        "title": "THR-005: Monitoring and security alerts",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "Linked requirements: FR-006, FR-007, FR-008, FR-009",
+          "Original evidence: E-003",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B",
+        "title": "Risk assessment",
+        "paragraphs": [
+          "Risk treatments are proposals for review. Unknown likelihood and impact ratings mean unassessed; no numeric confidence or severity is inferred."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.1",
+        "title": "RISK-001",
+        "paragraphs": [
+          "Derived risk affecting User identities and authenticated access: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "Proposed treatment: Review impersonation and compromised-identity paths against the stated access duties; confirm any additional identity or session protections with the stakeholder. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-010, FR-011, FR-012, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.2",
+        "title": "RISK-002",
+        "paragraphs": [
+          "Derived risk affecting Role and permission boundaries: A lower-privilege user could access restricted functions or sensitive resources.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "Proposed treatment: Test permitted and denied role/resource pairs against the linked authorization duties; review ambiguous permission assignments with the resource owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009",
+          "Original evidence: E-002, E-003"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.3",
+        "title": "RISK-003",
+        "paragraphs": [
+          "Derived risk affecting Integration trust paths: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "Proposed treatment: Review trust assumptions at the specified integration boundaries with missing or altered input fixtures; confirm the required failure handling with the owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-010, FR-011, FR-012, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.4",
+        "title": "RISK-004",
+        "paragraphs": [
+          "Derived risk affecting Security and administrative audit evidence: Investigators could lose reliable evidence of the events required by the brief.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "Proposed treatment: Compare source-required events with the resulting audit evidence; assess missing and altered-record cases and confirm unprovided protection or retention decisions. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-006, FR-007, FR-008, FR-009",
+          "Original evidence: E-003"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.5",
+        "title": "RISK-005",
+        "paragraphs": [
+          "Derived risk affecting Monitoring and security alerts: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "Proposed treatment: Evaluate the stated detection duties with representative positive and negative events; confirm undecided thresholds, alert priorities and investigation responsibilities. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-006, FR-007, FR-008, FR-009",
+          "Original evidence: E-003"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C",
+        "title": "SDLC recommendation and delivery workflow",
+        "paragraphs": [
+          "Proposed lifecycle: Incremental",
+          "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003) Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004) Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)",
+          "Recommendation requires human confirmation of delivery constraints and team capacity. Suitability points are deterministic rule scores, not probabilities.",
+          "Policy version: sequential-sdlc-2.0",
+          "Unconfirmed decision factors: budget, delivery, failure consequences, feedback, legacy, regulation, schedule, stability, uncertainty, verification"
+        ],
+        "bullets": [
+          "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions.",
+          "Proposed suitability recommendation; confirm delivery constraints and team capacity before adopting this lifecycle. Missing factors are not assumed."
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1",
+        "title": "Ranking and source evidence",
+        "paragraphs": [],
+        "bullets": [
+          "security_assurance = integrated security review (derived). Security decisions benefit from security review and tests throughout delivery. Original evidence: E-002.",
+          "operational_validation = monitoring feedback (derived). Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. Original evidence: E-003.",
+          "deployment_scope = staged rollout opportunity (derived). Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. Original evidence: E-004.",
+          "integration_assurance = integration validation (derived). Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. Original evidence: E-004."
+        ],
+        "tables": [
+          {
+            "columns": [
+              "Candidate",
+              "Suitability points"
+            ],
+            "rows": [
+              [
+                "Incremental",
+                "66"
+              ],
+              [
+                "Hybrid",
+                "65"
+              ],
+              [
+                "DevSecOps",
+                "63"
+              ],
+              [
+                "Spiral",
+                "51"
+              ],
+              [
+                "Agile",
+                "40"
+              ],
+              [
+                "V-Model",
+                "40"
+              ],
+              [
+                "Waterfall",
+                "40"
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "C.1.1",
+        "title": "Incremental suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.2",
+        "title": "Hybrid suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived security_assurance (+8 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+5 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+8 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+4 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.3",
+        "title": "DevSecOps suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived security_assurance (+12 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+8 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+3 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.4",
+        "title": "Spiral suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived security_assurance (+5 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived integration_assurance (+6 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.5",
+        "title": "Agile suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "No differentiating input evidence"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.6",
+        "title": "V-Model suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "No differentiating input evidence"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.7",
+        "title": "Waterfall suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "No differentiating input evidence"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2",
+        "title": "Methodology phases",
+        "paragraphs": [
+          "Activities reference the canonical requirements and proposed verification work. Human gates are pending decisions, not approval records."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2.1",
+        "title": "Requirements and verification planning",
+        "paragraphs": [
+          "Proposed roles: Proposed project owner; Proposed development lead; Proposed verification reviewer",
+          "Linked requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Human gate: Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation."
+        ],
+        "bullets": [
+          "Activity: Review and baseline the source-defined work group: FR-001: The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure.; FR-002: The system shall allow Authorized network administrators to review current configurations.; FR-003: The system shall allow Authorized network administrators to submit configuration changes.; FR-004: The system shall allow Authorized network administrators to track change history.; FR-005: The system shall allow Authorized network administrators to restore previously approved configurations when necessary.; FR-006: The system shall detect unauthorized or unexpected configuration changes.; FR-007: The system shall generate security alerts.; FR-008: The system shall maintain audit logs of configuration activity and administrator actions.; FR-009: The system shall restrict administrative functions based on approved roles.; FR-010: The system shall provide a centralized dashboard.; FR-011: The system shall integrate with existing university identity services.; FR-012: The system shall support multiple campus locations.",
+          "Activity: Review and baseline the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+          "Activity: Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion.",
+          "Deliverable: Versioned requirements baseline",
+          "Deliverable: Unit, integration, system and acceptance test plan",
+          "Deliverable: Unresolved-decision record",
+          "Entry criterion: Authoritative inputs and canonical requirements are available for review.",
+          "Exit criterion: A human reviewer has recorded the baseline decision and disposition of unresolved scope.",
+          "Security check: Review implementation and acceptance evidence against FR-007: The system shall generate security alerts.",
+          "Security check: Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+          "Security check: Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2.2",
+        "title": "Incremental delivery cycle",
+        "paragraphs": [
+          "Proposed roles: Proposed project owner; Proposed development lead; Proposed verification reviewer",
+          "Linked requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Human gate: Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation."
+        ],
+        "bullets": [
+          "Activity: Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+          "Activity: Implement the source-defined work group: FR-001: The system shall manage configuration changes across routers, switches, wireless controllers, and other network infrastructure.; FR-002: The system shall allow Authorized network administrators to review current configurations.; FR-003: The system shall allow Authorized network administrators to submit configuration changes.; FR-004: The system shall allow Authorized network administrators to track change history.; FR-005: The system shall allow Authorized network administrators to restore previously approved configurations when necessary.; FR-006: The system shall detect unauthorized or unexpected configuration changes.; FR-007: The system shall generate security alerts.; FR-008: The system shall maintain audit logs of configuration activity and administrator actions.; FR-009: The system shall restrict administrative functions based on approved roles.; FR-010: The system shall provide a centralized dashboard.; FR-011: The system shall integrate with existing university identity services.; FR-012: The system shall support multiple campus locations.",
+          "Activity: Implement the source-defined work group: NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+          "Activity: In an authorized isolated test environment, execute TEST-001: Given: the system manages configuration changes across routers, switches, wireless controllers, and other network infrastructure When: the system initiates a configuration change operation Expected: the resulting configuration is applied without error to the targeted device",
+          "Activity: In an authorized isolated test environment, execute TEST-002: Given: Authorized network administrators review current configurations When: initiate the review of current configurations Expected: the requested configuration items are returned for examination",
+          "Activity: In an authorized isolated test environment, execute TEST-003: Given: Authorized network administrators submit a configuration change When: initiate submission of a configuration change on the named object Expected: the object's resulting policy, job, submitted change, or history is observed as updated",
+          "Activity: In an authorized isolated test environment, execute TEST-004: Given: Authorized network administrators track change history When: initiate tracking of change history on the named object Expected: the object's resulting policy, job, submitted change, or history is observed as accessible and accurate",
+          "Activity: In an authorized isolated test environment, execute TEST-005: Given: Authorized network administrators restore previously approved configurations When: initiate restoration of a previously approved configuration on the named object Expected: the object's resulting policy, job, submitted change, or restored state is observed as valid and consistent with approval records",
+          "Activity: In an authorized isolated test environment, execute TEST-006: Given: the system detects an unauthorized or unexpected configuration change When: the system initiates the detection process Expected: an alert is generated and logged in the audit trail",
+          "Activity: In an authorized isolated test environment, execute TEST-007: Given: a security alert condition is triggered by an anomalous configuration event When: the system evaluates and responds to the alert condition Expected: the alert exists in the designated monitoring channel as captured externally",
+          "Activity: In an authorized isolated test environment, execute TEST-008: Given: an administrator modifies a network configuration When: the system records the action and all associated metadata Expected: The system records the action and all associated metadata.",
+          "Activity: In an authorized isolated test environment, execute TEST-009: Given: an administrator attempts to perform a restricted administrative function When: the system evaluates the role-based access policy Expected: the request is denied if the role lacks approved permissions",
+          "Activity: In an authorized isolated test environment, execute TEST-010: Given: system provides a centralized dashboard When: the system initiates the display of network configuration data Expected: The system initiates the display of network configuration data and the external test capture records the resulting response.",
+          "Activity: In an authorized isolated test environment, execute TEST-011: Given: system integrates with existing university identity services When: the system performs a login authentication request via university identity protocols Expected: an authenticated session is established and persisted across operations",
+          "Activity: In an authorized isolated test environment, execute TEST-012: Given: system supports multiple campus locations When: the system is initiated from each stated campus location Expected: use succeeds at all locations with consistent configuration access",
+          "Activity: In an authorized isolated test environment, execute TEST-013: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network interfaces. When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD. Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or response metrics are stated in the draft plan.",
+          "Activity: In an authorized isolated test environment, execute TEST-014: Given: The system shall remain secure under all operational conditions. When: An analyst reviews the security assurance plan and evaluates whether it includes measurable targets for threat detection, response time, and configuration drift Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "Activity: In an authorized isolated test environment, execute TEST-015: Given: The system shall remain reliable under all operational conditions. When: An analyst reviews the reliability assurance plan and evaluates whether it includes measurable targets for failure detection, recovery time, and service uptime Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "Activity: In an authorized isolated test environment, execute TEST-016: Given: The system shall remain scalable under all operational conditions. When: An analyst reviews the scalability assurance plan and evaluates whether it includes measurable targets for throughput, latency, and resource utilization growth Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "Activity: In an authorized isolated test environment, execute TEST-017: Given: The system shall remain manageable under all operational conditions. When: An analyst reviews the manageability assurance plan and evaluates whether it includes measurable targets for configuration change frequency, audit coverage, and Expected: The plan's measurable targets remain TBD or unconfirmed",
+          "Activity: Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+          "Activity: Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration.",
+          "Deliverable: Requirement-linked implementation increment",
+          "Deliverable: Recorded test evidence",
+          "Deliverable: Reviewed feedback and next-iteration backlog",
+          "Entry criterion: Prior work, source scope and the reviewed test plan are available for iteration planning.",
+          "Exit criterion: A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration.",
+          "Security check: Review implementation and acceptance evidence against FR-007: The system shall generate security alerts.",
+          "Security check: Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+          "Security check: Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2.3",
+        "title": "Release and handoff",
+        "paragraphs": [
+          "Proposed roles: Proposed project owner; Proposed development lead; Proposed verification reviewer",
+          "Linked requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Human gate: Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation."
+        ],
+        "bullets": [
+          "Activity: Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+          "Activity: Carry unresolved source decisions into handoff; generated text is not human approval.",
+          "Deliverable: Requirements and verification evidence package",
+          "Deliverable: Pending human release decision",
+          "Deliverable: Outstanding-decision record",
+          "Entry criterion: Verification evidence and unresolved decisions are available for human review.",
+          "Exit criterion: A human has recorded the release/handoff decision for the reviewed content.",
+          "Security check: Review implementation and acceptance evidence against FR-007: The system shall generate security alerts.",
+          "Security check: Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+          "Security check: Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+        ],
+        "tables": [],
+        "requirements": []
+      }
+    ]
+  }
+}

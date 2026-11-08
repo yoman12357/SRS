@@ -1,0 +1,92 @@
+{
+  "case": "wifi",
+  "project_id": "a40178b6-3ffc-493b-b05a-42999419b868",
+  "label": "semantic13",
+  "started_local": "2026-10-30T01:32:19.308787+05:30",
+  "analysis": {
+    "run_id": "eb02591c-22e6-4c88-b53a-28c5523bb044",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T20:02:07.210356+00:00",
+    "terminal_at": "2026-10-29T20:02:18.641543+00:00",
+    "total_seconds": 11.431,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 11.332,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 11.332,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "2577e8de-6e83-4f75-b9c3-ceb7f7ba8389",
+    "status": "failed",
+    "error": "section_validation_failed:architecture:ownership_requires_complete_distinct_links",
+    "created_at": "2026-10-29T20:02:19.314306+00:00",
+    "terminal_at": "2026-10-29T20:04:09.642832+00:00",
+    "total_seconds": 110.329,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.552,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 81.898,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest",
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 7.971,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.034,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.041,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.042,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 5.555,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "failed",
+        "seconds": 12.975
+      }
+    },
+    "maximum_section_seconds": 81.898,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:architecture:ownership_requires_complete_distinct_links",
+  "total_wall_seconds": 122.719,
+  "source_unchanged": true
+}

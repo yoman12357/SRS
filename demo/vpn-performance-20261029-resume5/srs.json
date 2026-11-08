@@ -1,0 +1,1471 @@
+{
+  "id": "6af19745-a7f6-4373-9d6e-b05032a8ba6f",
+  "project_id": "b5c32592-4cc1-4583-b348-0f42c1ca7b01",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "b5c32592-4cc1-4583-b348-0f42c1ca7b01",
+    "title": "Secure Remote Access System",
+    "original_description": "Design a secure university VPN and remote-access management system that allows students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations. The system should use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts. Sensitive administrative and research systems should only be accessible to specifically authorized users, while guest users must not receive VPN access. Network administrators should be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs. The system should also detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources. All authentication events, access decisions, policy changes, and administrator actions must be logged. The solution should be secure, scalable, reliable, and support both university-managed and approved personal devices.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure university VPN and remote-access management system that allows students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "The system should use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "Sensitive administrative and research systems should only be accessible to specifically authorized users, while guest users must not receive VPN access.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "Network administrators should be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs.",
+        "context": ""
+      },
+      {
+        "id": "E-005",
+        "source": "description",
+        "quote": "The system should also detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources.",
+        "context": ""
+      },
+      {
+        "id": "E-006",
+        "source": "description",
+        "quote": "All authentication events, access decisions, policy changes, and administrator actions must be logged.",
+        "context": ""
+      },
+      {
+        "id": "E-007",
+        "source": "description",
+        "quote": "The solution should be secure, scalable, reliable, and support both university-managed and approved personal devices.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Secure Remote Access System",
+      "domain": "security",
+      "supported": true,
+      "summary": "A university-wide secure remote access system enables off-campus access to approved campus resources using centralized authentication, role-based access control, and multi-factor authentication for privileged users. The system includes session monitoring, automated alerts for suspicious activity, and comprehensive logging of all access events and policy changes.",
+      "stakeholders": [
+        "students",
+        "faculty",
+        "researchers",
+        "administrative staff",
+        "network administrators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "introduction",
+            "functional"
+          ],
+          "explanation": "The system must allow secure off-campus access to approved campus resources for students, faculty, researchers, and administrative staff."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted connections, session monitoring, and automated alerts are required to ensure secure remote access."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "exclusion",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Guest users must not receive VPN access; only specifically authorized users may access sensitive administrative and research systems."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Network administrators must be able to create, revoke, review, terminate, and manage remote-access permissions and policies with audit log inspection capabilities."
+        },
+        {
+          "evidence_id": "E-005",
+          "kind": "requirement",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "The system must detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources as part of its active security monitoring behavior."
+        },
+        {
+          "evidence_id": "E-006",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "data"
+          ],
+          "explanation": "All authentication events, access decisions, policy changes, and administrator actions must be logged for auditability and incident investigation."
+        },
+        {
+          "evidence_id": "E-007",
+          "kind": "context",
+          "sections": [
+            "introduction",
+            "nonfunctional"
+          ],
+          "explanation": "The solution must be secure, scalable, reliable, and support both university-managed and approved personal devices as part of the overall system design."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    },
+    "sources": [
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7633,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7275,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:22",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 22,
+        "page_or_section": "text chunk 23",
+        "relevance_score": 0.7169,
+        "text": "administrators and help desk staff should be trained to follow the prescribed process and recognize and respond to social engineering attacks. Refer to [CISA's \"Avoiding Social Engineering and Phishing Attacks\"](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) for guidance.\n\n## Adaptive or Risk Based Authentication\n\nA feature of more advanced applications is the ability to require different authentication stages depending on various environmental and contextual attributes (including but not limited to, the sensitivity of the data for which access is being requested, time of day, user location, IP address, or device fingerprint).\n\nFor example, an application may require MFA for the first login from a particular device but not for subsequent logins from that device. Alternatively, a single sign-on solution may authenticate the user and allow them to remain logged in for a day but require a reauthentication if they try to access their profile page.\n\nAnother option is the opposite approach where an application allows low risk access with just something that identifies the device (e.g., a specific mobile device fingerprint, a persistent cookie and browser fingerprint, etc. from the previous IP address) and then gradually requires stronger authentication for more sensitive operations. An example might be to allow someone to trigger something to see their current bank balance, but not the account number or anything else. If they need to see transactions, then the application puts them through some base level authentication and if they want to do any money movement, then MFA is required.\n\nQuestions that should be considered when implementing a mechanism like this include:\n\n- Are the policies being put in place in line with any corporate p",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:15",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 15,
+        "page_or_section": "text chunk 16",
+        "relevance_score": 0.7153,
+        "text": "me (something you know). Furthermore, security questions are often weak and have predictable answers, so they must be carefully chosen. The [Choosing and Using Security Questions cheat sheet](Choosing_and_Using_Security_Questions_Cheat_Sheet.md) contains further guidance on this.\n\n## Logging and Monitoring\n\nEnable logging and monitoring of authentication functions to detect attacks/failures on a real-time basis\n\n- Ensure that all failures are logged and reviewed\n- Ensure that all password failures are logged and reviewed\n- Ensure that all account lockouts are logged and reviewed\n\n## Use of authentication protocols that require no password\n\nWhile authentication through a combination of username, password, and multi-factor authentication is considered generally secure, there are use cases where it isn't considered the best option or even safe. Examples of this are third-party applications that desire to connect to the web application, either from a mobile device, another website, desktop, or other situations. When this happens, it is NOT considered safe to allow the third-party application to store the user/password combo, since then it extends the attack surface into their hands, where it isn't in your control. For this and other use cases, there are several authentication protocols that can protect you from exposing your users' data to attackers.\n\n### OAuth 2.0 and 2.1\n\nOAuth is an **authorization** framework for delegated access to APIs. See also: [OAuth 2.0 Cheat Sheet](OAuth2_Cheat_Sheet.md).\n\n> **Note:** OAuth 2.1 is an IETF Working Group draft that consolidates OAuth 2.0 and widely adopted best practices and is intended to replace RFC 6749/6750; guidance in this cheat sheet applies to both OAuth 2.0 and OAuth 2.1. References: [draft-ietf-oauth-v2-1-13](https://data",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-ecd06e0e85ebe229:16",
+        "source_document_id": "kb-ecd06e0e85ebe229",
+        "chunk_index": 16,
+        "page_or_section": "text chunk 17",
+        "relevance_score": 0.7142,
+        "text": "ation being left in an unpredictable state ([CWE-280: Improper Handling of Insufficient Permissions or Privileges](https://cwe.mitre.org/data/definitions/280.html)). Specific recommendations include the following:\n\n- Ensure all exception and failed access control checks are handled no matter how unlikely they seem ([OWASP Top Ten Proactive Controls C10: Handle all errors and exceptions](https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions)). This does not mean that an application should always try to \"correct\" for a failed check; oftentimes a simple message or HTTP status code is all that is required.\n- Centralize the logic for handling failed access control checks.\n- Verify the handling of exception and authorization failures. Ensure that such failures, no matter how unlikely, do not put the software into an unstable state that could lead to authorization bypass.\n- Ensure sensitive information, such as system logs or debugging output, is not exposed in error messages. Misconfigured error messages can increase the attack surface of your application. ([CWE-209: Generation of Error Message Containing Sensitive Information](https://cwe.mitre.org/data/definitions/209.html))\n\n### Implement Appropriate Logging\n\nLogging is one of the most important detective controls in application security; insufficient logging and monitoring is recognized as among  the most critical security risks in [OWASP's Top Ten 2021](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/). Appropriate logs can not only detect malicious activity, but are also invaluable resources in post-incident investigations, can be used to troubleshoot access control and other security related problems, and are useful in security auditing. Though easy to overlook during th",
+        "title": "03_OWASP_CheatSheets/038_OWASP_Authorization_Cheat_Sheet.md",
+        "sha256": "e78a10eb9759a1fc7593ba1fc89a05b017e7e795ac16ad5496bdba86138d891f"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure university VPN and remote-access management system that allows students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Out of scope: stakeholder exclusion",
+          "detail": "Sensitive administrative and research systems should only be accessible to specifically authorized users, while guest users must not receive VPN access.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "Network administrators should be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-005",
+          "detail": "The system should also detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-006",
+          "detail": "All authentication events, access decisions, policy changes, and administrator actions must be logged.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-007",
+          "detail": "The solution should be secure, scalable, reliable, and support both university-managed and approved personal devices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-007"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.",
+          "statement": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An authenticated user attempting remote access",
+              "when": "The user connects via the university VPN",
+              "then": "The connection is established with encrypted tunneling and validated credentials",
+              "method": "test",
+              "observable_evidence": "Test capture of successful remote access session"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which specific campus resources are approved for off-campus access"
+          ]
+        },
+        {
+          "id": "FR-002",
+          "title": "use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts.",
+          "statement": "The system shall use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user with elevated privileges attempting to access a restricted resource",
+              "when": "The user performs an action requiring MFA verification",
+              "then": "The system prompts for multi-factor authentication and grants access only after successful completion",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of MFA prompt and successful access flow"
+            }
+          ],
+          "unresolved_decisions": [
+            "How role-based access is defined and updated"
+          ]
+        },
+        {
+          "id": "FR-003",
+          "title": "Sensitive administrative and research systems shall be accessible only to specifically authorized users, while guest users must not receive VPN access.",
+          "statement": "Sensitive administrative and research systems shall be accessible only to specifically authorized users, while guest users must not receive VPN access.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A guest user attempting to connect via the university VPN",
+              "when": "The system evaluates the user's authorization status",
+              "then": "The connection is denied with a clear message indicating unauthorized access",
+              "method": "test",
+              "observable_evidence": "Test capture of denial response for guest user"
+            }
+          ],
+          "unresolved_decisions": [
+            "How 'specifically authorized' users are identified and maintained"
+          ]
+        },
+        {
+          "id": "FR-004",
+          "title": "Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs.",
+          "statement": "Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator with appropriate privileges",
+              "when": "The administrator initiates a session termination for a suspicious connection",
+              "then": "The system terminates the session and updates the audit log with a timestamp and reason",
+              "method": "inspection",
+              "observable_evidence": "Test capture of session termination event in audit log"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which actions require administrative approval"
+          ]
+        },
+        {
+          "id": "FR-005",
+          "title": "detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources.",
+          "statement": "The system shall detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources.",
+          "rationale": "Implements stakeholder source E-005.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-005"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user attempting multiple failed logins from a new location",
+              "when": "The system monitors the login pattern and triggers an alert",
+              "then": "An automated security alert is generated and sent to the appropriate team",
+              "method": "analysis",
+              "observable_evidence": "Test capture of failed login sequence and subsequent alert trigger"
+            }
+          ],
+          "unresolved_decisions": [
+            "What constitutes 'excessive' session duration or 'unusual' location"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "The solution shall be secure, scalable, reliable, and support both university-managed and approved personal devices.",
+          "statement": "The solution shall be secure, scalable, reliable, and support both university-managed and approved personal devices.",
+          "rationale": "Implements stakeholder source E-007.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-007"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A user with an approved personal device attempts to access campus resources from off-campus",
+              "when": "The system evaluates device compliance and authentication status",
+              "then": "The system shall permit access only if the device is university-approved or managed, and authenticated securely",
+              "method": "test",
+              "observable_evidence": "Test capture of device eligibility determination and access decision"
+            },
+            {
+              "given": "A user with a non-university-managed personal device attempts to connect via VPN",
+              "when": "The system performs device validation against approved device policies",
+              "then": "The system shall deny access and return a policy violation message",
+              "method": "test",
+              "observable_evidence": "Test capture of access denial due to unapproved device type"
+            },
+            {
+              "given": "A network administrator configures a new device policy for personal devices",
+              "when": "The policy is applied to the system configuration",
+              "then": "The system shall enforce the updated policy during subsequent access attempts",
+              "method": "inspection",
+              "observable_evidence": "Test capture of policy enforcement behavior on next access attempt"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'approved personal devices'",
+            "Thresholds for device validation (e.g., OS version, encryption status)",
+            "Mechanism for user-level device enrollment or certification"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "SEC-001",
+          "title": "All authentication events, access decisions, policy changes, and administrator actions must be logged.",
+          "statement": "All authentication events, access decisions, policy changes, and administrator actions must be logged.",
+          "rationale": "Implements stakeholder source E-006.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-006"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An authenticated user performs a login or access decision",
+              "when": "The system processes the action",
+              "then": "A log entry is created with timestamp, user ID, action type, and outcome",
+              "method": "test",
+              "observable_evidence": "Test capture of authentication event logs"
+            },
+            {
+              "given": "An administrator modifies a policy or revokes access",
+              "when": "The change is applied to the system",
+              "then": "A log entry is generated with timestamp, actor ID, policy name, and change details",
+              "method": "inspection",
+              "observable_evidence": "Audit log record of policy modification"
+            },
+            {
+              "given": "A user attempts an action that results in failure or success",
+              "when": "The action completes",
+              "then": "A log entry is created with outcome status and relevant context",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of access decision logs"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which specific fields are required in the log entries (e.g., IP address, device type)?",
+            "What is the retention period for audit logs?",
+            "How will logs be accessed by administrators without exposing sensitive data?"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-002",
+        "FR-004"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-004",
+        "SEC-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-003",
+        "FR-004"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "Which specific campus resources are approved for off-campus access",
+        "How role-based access is defined and updated",
+        "How 'specifically authorized' users are identified and maintained",
+        "Which actions require administrative approval",
+        "What constitutes 'excessive' session duration or 'unusual' location",
+        "Definition of 'approved personal devices','Thresholds for device validation (e.g., OS version, encryption status)','Mechanism for user-level device enrollment or certification",
+        "Which specific fields are required in the log entries (e.g., IP address, device type)?",
+        "What is the retention period for audit logs?",
+        "How will logs be accessed by administrators without exposing sensitive data?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Authentication Engine",
+          "detail": "Proposed logical owner for FR-002, SEC-001, FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "SEC-001",
+            "FR-001"
+          ],
+          "component_name": "Authentication Engine",
+          "responsibility": "The system shall use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts. All authentication events, access decisions, policy changes, and administrator actions must be logged. The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        },
+        {
+          "title": "Access Control Module",
+          "detail": "Proposed logical owner for FR-003, FR-004, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004",
+            "E-007"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003",
+            "FR-004",
+            "NFR-001"
+          ],
+          "component_name": "Access Control Module",
+          "responsibility": "Sensitive administrative and research systems shall be accessible only to specifically authorized users, while guest users must not receive VPN access. Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs. The solution shall be secure, scalable, reliable, and support both university-managed and approved personal devices."
+        },
+        {
+          "title": "Session Monitoring and Alerting Service",
+          "detail": "Proposed logical owner for FR-005, SEC-001, FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-005",
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-005",
+            "SEC-001",
+            "FR-001"
+          ],
+          "component_name": "Session Monitoring and Alerting Service",
+          "responsibility": "The system shall detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources. All authentication events, access decisions, policy changes, and administrator actions must be logged. The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        },
+        {
+          "title": "Network Policy Manager",
+          "detail": "Proposed logical owner for FR-004, FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004",
+            "FR-001"
+          ],
+          "component_name": "Network Policy Manager",
+          "responsibility": "Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs. The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "SEC-001"
+          ],
+          "from_component": "Authentication Engine",
+          "to_component": "Session Monitoring and Alerting Service",
+          "data_or_action": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations. All authentication events, access decisions, policy changes, and administrator actions must be logged."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Authentication Engine",
+          "to_component": "Network Policy Manager",
+          "data_or_action": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "from_component": "Access Control Module",
+          "to_component": "Network Policy Manager",
+          "data_or_action": "Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "SEC-001"
+          ],
+          "from_component": "Session Monitoring and Alerting Service",
+          "to_component": "Authentication Engine",
+          "data_or_action": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations. All authentication events, access decisions, policy changes, and administrator actions must be logged."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Session Monitoring and Alerting Service",
+          "to_component": "Network Policy Manager",
+          "data_or_action": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Network Policy Manager",
+          "to_component": "Authentication Engine",
+          "data_or_action": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "from_component": "Network Policy Manager",
+          "to_component": "Access Control Module",
+          "data_or_action": "Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Network Policy Manager",
+          "to_component": "Session Monitoring and Alerting Service",
+          "data_or_action": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001, SEC-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "SEC-001"
+          ],
+          "untrusted_component": "Authentication Engine",
+          "trusted_component": "Session Monitoring and Alerting Service",
+          "enforcement": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations. All authentication events, access decisions, policy changes, and administrator actions must be logged."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "untrusted_component": "Authentication Engine",
+          "trusted_component": "Network Policy Manager",
+          "enforcement": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "untrusted_component": "Access Control Module",
+          "trusted_component": "Network Policy Manager",
+          "enforcement": "Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "administrative staff",
+          "goal": "The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.",
+          "story": "As administrative staff, I need the following behavior: The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.",
+          "preconditions": [
+            "An authenticated user attempting remote access"
+          ],
+          "steps": [
+            "The user connects via the university VPN"
+          ],
+          "success_outcome": "The connection is established with encrypted tunneling and validated credentials",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "unresolved_decisions": [
+            "Which specific campus resources are approved for off-campus access"
+          ]
+        }
+      ],
+      "open_issues": [
+        "Which specific campus resources are approved for off-campus access"
+      ]
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An authenticated user attempting remote access",
+            "When: The user connects via the university VPN"
+          ],
+          "expected_result": "Expected: The connection is established with encrypted tunneling and validated credentials",
+          "evidence_to_record": "Evidence: Test capture of successful remote access session",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A user with elevated privileges attempting to access a restricted resource",
+            "When: The user performs an action requiring MFA verification"
+          ],
+          "expected_result": "Expected: The system prompts for multi-factor authentication and grants access only after successful completion",
+          "evidence_to_record": "Evidence: Test capture of MFA prompt and successful access flow",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: A guest user attempting to connect via the university VPN",
+            "When: The system evaluates the user's authorization status"
+          ],
+          "expected_result": "Expected: The connection is denied with a clear message indicating unauthorized access",
+          "evidence_to_record": "Evidence: Test capture of denial response for guest user",
+          "test_type": "negative"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: An administrator with appropriate privileges",
+            "When: The administrator initiates a session termination for a suspicious connection"
+          ],
+          "expected_result": "Expected: The system terminates the session and updates the audit log with a timestamp and reason",
+          "evidence_to_record": "Evidence: Test capture of session termination event in audit log",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: A user attempting multiple failed logins from a new location",
+            "When: The system monitors the login pattern and triggers an alert"
+          ],
+          "expected_result": "Expected: An automated security alert is generated and sent to the appropriate team",
+          "evidence_to_record": "Evidence: Test capture of failed login sequence and subsequent alert trigger",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A user with an approved personal device attempts to access campus resources from off-campus",
+            "When: The system evaluates device compliance and authentication status"
+          ],
+          "expected_result": "Expected: The system shall permit access only if the device is university-approved or managed, and authenticated securely",
+          "evidence_to_record": "Evidence: Test capture of device eligibility determination and access decision",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A user with a non-university-managed personal device attempts to connect via VPN",
+            "When: The system performs device validation against approved device policies"
+          ],
+          "expected_result": "Expected: The system shall deny access and return a policy violation message",
+          "evidence_to_record": "Evidence: Test capture of access denial due to unapproved device type",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A network administrator configures a new device policy for personal devices",
+            "When: The policy is applied to the system configuration"
+          ],
+          "expected_result": "Expected: The system shall enforce the updated policy during subsequent access attempts",
+          "evidence_to_record": "Evidence: Test capture of policy enforcement behavior on next access attempt",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An authenticated user performs a login or access decision",
+            "When: The system processes the action"
+          ],
+          "expected_result": "Expected: A log entry is created with timestamp, user ID, action type, and outcome",
+          "evidence_to_record": "Evidence: Test capture of authentication event logs",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An administrator modifies a policy or revokes access",
+            "When: The change is applied to the system"
+          ],
+          "expected_result": "Expected: A log entry is generated with timestamp, actor ID, policy name, and change details",
+          "evidence_to_record": "Evidence: Audit log record of policy modification",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: A user attempts an action that results in failure or success",
+            "When: The action completes"
+          ],
+          "expected_result": "Expected: A log entry is created with outcome status and relevant context",
+          "evidence_to_record": "Evidence: Test capture of access decision logs",
+          "test_type": "negative"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Policy",
+          "detail": "A rule or decision governing permitted actions; its project-specific meaning remains defined by the source requirements.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004",
+            "E-006"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "VPN",
+          "detail": "Virtual private network: a logical private network connection over another network.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Multi-factor authentication",
+          "detail": "Authentication using more than one distinct factor; this definition does not select products or protocols.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Access control",
+          "detail": "Rules and enforcement governing which principals may perform actions on resources.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "No differentiating input evidence is provided to favor one SDLC model over others. All models receive equal suitability points (40) due to absence of factors such as budget, delivery, failure consequences, feedback, legacy, regulation, schedule, stability, uncertainty, verification. The decision remains provisional until these unknown factors are clarified.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.; FR-002: The system shall use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts.; FR-003: Sensitive administrative and research systems shall be accessible only to specifically authorized users, while guest users must not receive VPN access.; FR-004: Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs.; FR-005: The system shall detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources.",
+            "Review and baseline the source-defined work group: NFR-001: The solution shall be secure, scalable, reliable, and support both university-managed and approved personal devices.; SEC-001: All authentication events, access decisions, policy changes, and administrator actions must be logged.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: All authentication events, access decisions, policy changes, and administrator actions must be logged."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "NFR-001",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall allow students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations.; FR-002: The system shall use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts.; FR-003: Sensitive administrative and research systems shall be accessible only to specifically authorized users, while guest users must not receive VPN access.; FR-004: Network administrators shall be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs.; FR-005: The system shall detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources.",
+            "Implement the source-defined work group: NFR-001: The solution shall be secure, scalable, reliable, and support both university-managed and approved personal devices.; SEC-001: All authentication events, access decisions, policy changes, and administrator actions must be logged.",
+            "In an authorized isolated test environment, execute TEST-001: Given: An authenticated user attempting remote access When: The user connects via the university VPN Expected: The connection is established with encrypted tunneling and validated credentials",
+            "In an authorized isolated test environment, execute TEST-002: Given: A user with elevated privileges attempting to access a restricted resource When: The user performs an action requiring MFA verification Expected: The system prompts for multi-factor authentication and grants access only after successful completion",
+            "In an authorized isolated test environment, execute TEST-003: Given: A guest user attempting to connect via the university VPN When: The system evaluates the user's authorization status Expected: The connection is denied with a clear message indicating unauthorized access",
+            "In an authorized isolated test environment, execute TEST-004: Given: An administrator with appropriate privileges When: The administrator initiates a session termination for a suspicious connection Expected: The system terminates the session and updates the audit log with a timestamp and reason",
+            "In an authorized isolated test environment, execute TEST-005: Given: A user attempting multiple failed logins from a new location When: The system monitors the login pattern and triggers an alert Expected: An automated security alert is generated and sent to the appropriate team",
+            "In an authorized isolated test environment, execute TEST-006: Given: A user with an approved personal device attempts to access campus resources from off-campus When: The system evaluates device compliance and authentication status Expected: The system shall permit access only if the device is university-approved or managed, and authenticated securely",
+            "In an authorized isolated test environment, execute TEST-007: Given: A user with a non-university-managed personal device attempts to connect via VPN When: The system performs device validation against approved device policies Expected: The system shall deny access and return a policy violation message",
+            "In an authorized isolated test environment, execute TEST-008: Given: A network administrator configures a new device policy for personal devices When: The policy is applied to the system configuration Expected: The system shall enforce the updated policy during subsequent access attempts",
+            "In an authorized isolated test environment, execute TEST-009: Given: An authenticated user performs a login or access decision When: The system processes the action Expected: A log entry is created with timestamp, user ID, action type, and outcome",
+            "In an authorized isolated test environment, execute TEST-010: Given: An administrator modifies a policy or revokes access When: The change is applied to the system Expected: A log entry is generated with timestamp, actor ID, policy name, and change details",
+            "In an authorized isolated test environment, execute TEST-011: Given: A user attempts an action that results in failure or success When: The action completes Expected: A log entry is created with outcome status and relevant context",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: All authentication events, access decisions, policy changes, and administrator actions must be logged."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "NFR-001",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: All authentication events, access decisions, policy changes, and administrator actions must be logged."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "NFR-001",
+            "SEC-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "nonfunctional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "security": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "prompt_version": "sequential-1.28",
+    "input_fingerprint": "2869c12f7e0d4653b6942e619d96503444b721d33409c0e871b4cfbb3a52846d"
+  },
+  "content_hash": "e6c091ff167000e7aa4623898145ef9407b8806917f2084577f73d52b3cbc789",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 24,
+    "checks_total": 24,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002"
+      ],
+      "E-003": [
+        "FR-003"
+      ],
+      "E-004": [
+        "FR-004"
+      ],
+      "E-005": [
+        "FR-005"
+      ],
+      "E-006": [
+        "SEC-001"
+      ],
+      "E-007": [
+        "NFR-001"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001"
+        ],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-004",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-005",
+        "evidence_ids": [
+          "E-005"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-007"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-006",
+          "TEST-007",
+          "TEST-008"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "SEC-001",
+        "evidence_ids": [
+          "E-006"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-009",
+          "TEST-010",
+          "TEST-011"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "a585e517-d807-4b83-8a35-9630612b8e5b",
+  "created_at": "2026-10-28T21:06:31.993383+00:00"
+}

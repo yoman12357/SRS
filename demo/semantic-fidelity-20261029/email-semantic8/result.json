@@ -1,0 +1,55 @@
+{
+  "case": "email",
+  "project_id": "9bd3addd-2de0-4726-a09c-d8556969d4b2",
+  "label": "semantic8",
+  "started_local": "2026-10-29T22:20:44.566031+05:30",
+  "analysis": {
+    "run_id": "59d083f4-0a4a-404c-abe2-92cfd9e48bc2",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T16:50:32.474574+00:00",
+    "terminal_at": "2026-10-29T16:50:43.751963+00:00",
+    "total_seconds": 11.277,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 11.176,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 11.176,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "ac20116b-ba79-4d60-b1ae-e182bfb4b650",
+    "status": "failed",
+    "error": "section_validation_failed:E-003_O03:unsupported_live_behavior;FR-010:unsupported_response_time_commitment;FR-010:unsupported_source_detail_live_behavior",
+    "created_at": "2026-10-29T16:50:44.569337+00:00",
+    "terminal_at": "2026-10-29T16:52:02.330145+00:00",
+    "total_seconds": 77.761,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.115,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 76.546
+      }
+    },
+    "maximum_section_seconds": 76.546,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-003_O03:unsupported_live_behavior;FR-010:unsupported_response_time_commitment;FR-010:unsupported_source_detail_live_behavior",
+  "total_wall_seconds": 90.406,
+  "source_unchanged": true
+}

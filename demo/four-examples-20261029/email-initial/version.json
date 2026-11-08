@@ -1,0 +1,1627 @@
+{
+  "id": "5b3705de-97b3-4e92-b748-6a8d14aa787c",
+  "project_id": "45030d8f-3960-4de3-ac19-ee6539724aee",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "45030d8f-3960-4de3-ac19-ee6539724aee",
+    "title": "Email Security Gateway Requirements",
+    "original_description": "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages. The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events. The solution should be secure, reliable, scalable, and manageable for university-wide deployment.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The solution should be secure, reliable, scalable, and manageable for university-wide deployment.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Email Security Gateway Requirements",
+      "domain": "security",
+      "supported": true,
+      "summary": "A secure email security gateway shall inspect incoming and outgoing email traffic to detect phishing, malicious attachments, spoofed messages, and suspicious links; it shall quarantine potentially harmful emails and generate alerts for authorized administrators to review and release quarantined messages. The system shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring security events.",
+      "stakeholders": [
+        "university administrators",
+        "IT staff",
+        "faculty",
+        "students"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "The system must protect users from phishing, malicious attachments, spoofed messages, and suspicious links as a core security function."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Email traffic inspection, detection of threats, quarantine actions, and alert generation are required to enable real-time threat mitigation."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "security"
+          ],
+          "explanation": "Audit logs and integration with identity systems ensure traceability and accountability for security decisions."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "nonfunctional"
+          ],
+          "explanation": "The system must be secure, reliable, scalable, and manageable to support university-wide deployment without performance degradation."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    },
+    "sources": [
+      {
+        "id": "kb-0150d5352d0ec304:22",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 22,
+        "page_or_section": "text chunk 23",
+        "relevance_score": 0.7453,
+        "text": "administrators and help desk staff should be trained to follow the prescribed process and recognize and respond to social engineering attacks. Refer to [CISA's \"Avoiding Social Engineering and Phishing Attacks\"](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) for guidance.\n\n## Adaptive or Risk Based Authentication\n\nA feature of more advanced applications is the ability to require different authentication stages depending on various environmental and contextual attributes (including but not limited to, the sensitivity of the data for which access is being requested, time of day, user location, IP address, or device fingerprint).\n\nFor example, an application may require MFA for the first login from a particular device but not for subsequent logins from that device. Alternatively, a single sign-on solution may authenticate the user and allow them to remain logged in for a day but require a reauthentication if they try to access their profile page.\n\nAnother option is the opposite approach where an application allows low risk access with just something that identifies the device (e.g., a specific mobile device fingerprint, a persistent cookie and browser fingerprint, etc. from the previous IP address) and then gradually requires stronger authentication for more sensitive operations. An example might be to allow someone to trigger something to see their current bank balance, but not the account number or anything else. If they need to see transactions, then the application puts them through some base level authentication and if they want to do any money movement, then MFA is required.\n\nQuestions that should be considered when implementing a mechanism like this include:\n\n- Are the policies being put in place in line with any corporate p",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.71,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7076,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:14",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 14,
+        "page_or_section": "text chunk 15",
+        "relevance_score": 0.7071,
+        "text": "ied. Translation gateways can convert modern authentication tokens (like SAML or OAuth) to whatever format the legacy system expects (like Kerberos or basic auth), bridging the gap between old and new security approaches.\n\n**Enhanced monitoring** becomes critical for systems that can't log properly on their own. Use network-based detection tools to monitor traffic patterns, connection attempts, and data flows for systems that don't provide detailed security logs. This won't give you the same visibility as modern applications, but it's better than having no monitoring at all.\n\n## Cloud Security\n\n### Multi-Cloud Considerations\n\nWhen using multiple cloud providers:\n\n- **Connect identities**: Use the same login across all clouds\n- **Secure connections**: Encrypt communication between cloud environments\n- **Consistent policies**: Apply the same security rules everywhere\n- **Centralized monitoring**: See security events from all clouds in one place\n\n### Container Security\n\nFor containerized applications:\n\n- **Service mesh**: Automatically handle identity and encryption between containers\n- **Network policies**: Control which containers can talk to each other\n- **Scan images**: Check container images for vulnerabilities\n- **Runtime protection**: Monitor container behavior for threats\n\n## Common Mistakes to Avoid\n\n### Technical Mistakes\n\n**Relying only on network security** - Many organizations think they can just add network controls and call it Zero Trust. But Zero Trust is fundamentally about identity-based security, not network security. If you're still thinking in terms of \"inside\" and \"outside\" the network, you're missing the point. Focus on verifying identity and device health for every access request, regardless of where it comes from.\n\n**Not monitoring enough** - Zero",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-92ffa375cd05a8f5:14",
+        "source_document_id": "kb-92ffa375cd05a8f5",
+        "chunk_index": 14,
+        "page_or_section": "text chunk 15",
+        "relevance_score": 0.7113,
+        "text": "ber of messages to exhaust funds.\n- Susceptible to SIM swapping attacks.\n- SMS messages may be received on the same device the user is authenticating from.\n- Susceptible to phishing.\n- SMS may be previewed when the device is locked.\n- SMS may be read by malicious or insecure applications.\n\n### Email\n\nEmail verification requires that the user enters a code or clicks a link sent to their email address. There is some debate as to whether email constitutes a form of MFA, because if the user does not have MFA configured on their email account, it simply requires knowledge of the user's email password (which is often the same as their application password). However, it is included here for completeness.\n\n#### Pros\n\n- Very easy to implement.\n- No requirements for separate hardware or a mobile device.\n\n#### Cons\n\n- Relies entirely on the security of the email account, which often lacks MFA.\n- Email passwords are commonly the same as application passwords.\n- Provides no protection if the user's email is compromised first.\n- Email may be received by the same device the user is authenticating from.\n- Susceptible to phishing.\n\n## Something You Are\n\nInherence-based authentication is based on the physical attributes of the user. This is less common for web applications as it requires the user to have specific hardware, and is often considered to be the most invasive in terms of privacy. However, it is commonly used for operating system authentication, and is also used in some mobile applications.\n\n### Biometrics\n\nThe are a number of common types of biometrics that are used, including:\n\n- Fingerprint scans\n- Facial recognition\n- Iris scans\n- Voice recognition\n\n#### Pros\n\n- Well-implemented biometrics are hard to spoof, and require a targeted attack.\n- Fast and convenient for users.\n\n#",
+        "title": "03_OWASP_CheatSheets/081_OWASP_Multifactor_Authentication_Cheat_Sheet.md",
+        "sha256": "0c1de91561bd8b449f5a27033e799c6928df3f24cb48a965994f615671612490"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:15",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 15,
+        "page_or_section": "text chunk 16",
+        "relevance_score": 0.7097,
+        "text": "me (something you know). Furthermore, security questions are often weak and have predictable answers, so they must be carefully chosen. The [Choosing and Using Security Questions cheat sheet](Choosing_and_Using_Security_Questions_Cheat_Sheet.md) contains further guidance on this.\n\n## Logging and Monitoring\n\nEnable logging and monitoring of authentication functions to detect attacks/failures on a real-time basis\n\n- Ensure that all failures are logged and reviewed\n- Ensure that all password failures are logged and reviewed\n- Ensure that all account lockouts are logged and reviewed\n\n## Use of authentication protocols that require no password\n\nWhile authentication through a combination of username, password, and multi-factor authentication is considered generally secure, there are use cases where it isn't considered the best option or even safe. Examples of this are third-party applications that desire to connect to the web application, either from a mobile device, another website, desktop, or other situations. When this happens, it is NOT considered safe to allow the third-party application to store the user/password combo, since then it extends the attack surface into their hands, where it isn't in your control. For this and other use cases, there are several authentication protocols that can protect you from exposing your users' data to attackers.\n\n### OAuth 2.0 and 2.1\n\nOAuth is an **authorization** framework for delegated access to APIs. See also: [OAuth 2.0 Cheat Sheet](OAuth2_Cheat_Sheet.md).\n\n> **Note:** OAuth 2.1 is an IETF Working Group draft that consolidates OAuth 2.0 and widely adopted best practices and is intended to replace RFC 6749/6750; guidance in this cheat sheet applies to both OAuth 2.0 and OAuth 2.1. References: [draft-ietf-oauth-v2-1-13](https://data",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-92ffa375cd05a8f5:19",
+        "source_document_id": "kb-92ffa375cd05a8f5",
+        "chunk_index": 19,
+        "page_or_section": "text chunk 20",
+        "relevance_score": 0.7107,
+        "text": "ed on the context of the login attempt. This technique helps improve user experience while strengthening security by applying additional verification steps only when risk is elevated.\n\nCommon signals used to determine risk include:\n\n- Geolocation and IP reputation\n- Device fingerprinting\n- Time of access (e.g., 3 AM login)\n- Behavioral biometrics (e.g., typing speed or mouse movements)\n- Known compromised credentials\n\nIf risk is detected, the system may:\n\n- Prompt for an additional factor (e.g., OTP)\n- Enforce re-authentication\n- Deny access and trigger alerting or account protection flows\n\nFor more details on when to trigger reauthentication after high-risk events—such as account recovery or suspicious activity—see the [Reauthentication After Risk Events](Authentication_Cheat_Sheet.md#reauthentication-after-risk-events) section in the Authentication Cheat Sheet\n\nThis method is widely used in modern authentication systems to balance usability and security. However, developers must ensure that risk signals cannot be spoofed and that fallback mechanisms are not weaker than the primary MFA methods.\n\n**Example Use Case**: A user logs in from a trusted device in a usual location — no additional prompt is needed. But if they log in from a new country using a Tor exit node, the system requires SMS verification or triggers an account lock until further verification.\n\n## References and Further Reading\n\n- [NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html)\n- [Your Pa$$word doesn't matter](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Your-Pa-word-doesn-t-matter/ba-p/731984)\n- [FIDO2](https://fidoalliance.org/fido2/)\n- [ENISA Handbook on Security of Personal Data Processing](https://www.enisa.europa.eu/publications/handbook-on-security-of-pers",
+        "title": "03_OWASP_CheatSheets/081_OWASP_Multifactor_Authentication_Cheat_Sheet.md",
+        "sha256": "0c1de91561bd8b449f5a27033e799c6928df3f24cb48a965994f615671612490"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The solution should be secure, reliable, scalable, and manageable for university-wide deployment.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+          "statement": "The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An email containing a phishing link is sent to a university user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system detects the phishing content and blocks delivery",
+              "method": "test",
+              "observable_evidence": "Test capture of the blocked message with phishing indicator"
+            },
+            {
+              "given": "An email with a malicious attachment is sent to a university user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system identifies the malicious attachment and quarantines it",
+              "method": "test",
+              "observable_evidence": "Test capture of the quarantined file with malware signature"
+            },
+            {
+              "given": "An email spoofed with a fake university domain is sent to a user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system flags the sender as spoofed and alerts administrators",
+              "method": "test",
+              "observable_evidence": "Test capture of the spoofed header and alert notification"
+            },
+            {
+              "given": "An email with a suspicious link is sent to a user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system detects the suspicious URL and marks it for review",
+              "method": "test",
+              "observable_evidence": "Test capture of the flagged link and user notification"
+            }
+          ],
+          "unresolved_decisions": [
+            "Thresholds for what constitutes a 'suspicious' link or attachment"
+          ]
+        },
+        {
+          "id": "FR-002",
+          "title": "inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "statement": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An incoming email with malicious content is received by the gateway",
+              "when": "The system performs inspection on the message body and headers",
+              "then": "The system quarantines the message and generates a security alert",
+              "method": "test",
+              "observable_evidence": "Test capture of quarantine action and generated alert"
+            },
+            {
+              "given": "An outgoing email is sent from a university user to an external recipient",
+              "when": "The system inspects the content for malicious payloads or links",
+              "then": "The system detects suspicious content and blocks transmission",
+              "method": "test",
+              "observable_evidence": "Test capture of blocked outbound message with reason"
+            },
+            {
+              "given": "A quarantined email is identified by an administrator",
+              "when": "An authorized admin requests review and release of the message",
+              "then": "The system allows the administrator to view and approve or reject the message",
+              "method": "test",
+              "observable_evidence": "Test capture of admin interface response for quarantined email"
+            },
+            {
+              "given": "A suspicious message is detected during processing",
+              "when": "The system generates a security alert",
+              "then": "The alert is delivered to designated administrators via secure channel",
+              "method": "test",
+              "observable_evidence": "Test capture of alert delivery to admin console"
+            }
+          ],
+          "unresolved_decisions": [
+            "Authentication method for administrator access to quarantined messages",
+            "Definition of 'authorized' administrative role"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+          "statement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A system administrator initiates a deployment request for university-wide use",
+              "when": "The system processes the deployment request",
+              "then": "The system returns a status indicating successful validation of security, reliability, scalability, and manageability criteria",
+              "method": "test",
+              "observable_evidence": "Test capture of the system's response to deployment request with validated criteria"
+            },
+            {
+              "given": "A network operations team observes increasing load during peak hours",
+              "when": "The system handles traffic under sustained high-load conditions",
+              "then": "The system maintains service availability and performance without degradation",
+              "method": "inspection",
+              "observable_evidence": "Test capture of system performance metrics during peak load"
+            },
+            {
+              "given": "A new department requests integration with existing university services",
+              "when": "The system is configured to support new service connections",
+              "then": "The system enables configuration without requiring revalidation or manual intervention",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of configuration workflow and successful service integration"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'manageable' in context of university-wide deployment",
+            "Thresholds for scalability under concurrent user load",
+            "Validation method for reliability during failure scenarios"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "SEC-001",
+          "title": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+          "statement": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator performs a filtering action on an email message",
+              "when": "The system records the filtering decision and associated user action",
+              "then": "The audit log contains a record of the filtering decision and the administrator's identity and timestamp",
+              "method": "test",
+              "observable_evidence": "Test capture of the audit log entry"
+            },
+            {
+              "given": "An email security event occurs in the system",
+              "when": "The platform generates an alert for monitoring via its dashboard",
+              "then": "The dashboard displays the event with relevant metadata including source, severity, and timestamp",
+              "method": "inspection",
+              "observable_evidence": "Test capture of dashboard event display"
+            },
+            {
+              "given": "The university identity system is integrated with the platform",
+              "when": "An administrator logs in using their university credentials",
+              "then": "The platform authenticates the user and grants access based on role and permissions",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of authentication and access grant"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'filtering decision' in audit logs",
+            "Threshold for event severity in dashboard alerts",
+            "Authentication method used during integration with identity system"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "SEC-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How to define 'dynamic access policies' for email traffic based on user behavior and device context",
+        "What thresholds trigger a 'suspicious' link or attachment in phishing detection",
+        "Whether authentication methods for administrator access should be multi-factor",
+        "Definition of 'manageable' in the context of university-wide deployment",
+        "Thresholds for scalability under concurrent user load",
+        "Validation method for reliability during failure scenarios",
+        "How to define 'filtering decision' in audit logs",
+        "Threshold for event severity in dashboard alerts",
+        "Authentication method used during integration with identity system"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: authorized administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: authorized administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "component_name": "Actor: authorized administrators",
+          "responsibility": "Represent the source-stated actor: authorized administrators."
+        },
+        {
+          "title": "Email Security Engine",
+          "detail": "Proposed logical owner for FR-001, FR-002, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001"
+          ],
+          "component_name": "Email Security Engine",
+          "responsibility": "The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages. The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        },
+        {
+          "title": "Audit and Monitoring Dashboard",
+          "detail": "Proposed logical owner for SEC-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-001",
+            "NFR-001"
+          ],
+          "component_name": "Audit and Monitoring Dashboard",
+          "responsibility": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events. The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "from_component": "Actor: authorized administrators",
+          "to_component": "Email Security Engine",
+          "data_or_action": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "untrusted_component": "Actor: authorized administrators",
+          "trusted_component": "Email Security Engine",
+          "enforcement": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "untrusted_component": "Email Security Engine",
+          "trusted_component": "Audit and Monitoring Dashboard",
+          "enforcement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        },
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "untrusted_component": "Audit and Monitoring Dashboard",
+          "trusted_component": "Email Security Engine",
+          "enforcement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "authorized administrators",
+          "goal": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "story": "As authorized administrators, I need the following behavior: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "preconditions": [
+            "A quarantined email is identified by an administrator"
+          ],
+          "steps": [
+            "An authorized admin requests review and release of the message"
+          ],
+          "success_outcome": "The system allows the administrator to view and approve or reject the message",
+          "alternate_flows": [
+            "Given: An incoming email with malicious content is received by the gateway When: The system performs inspection on the message body and headers Then: The system quarantines the message and generates a security alert Evidence: Test capture of quarantine action and generated alert",
+            "Given: An outgoing email is sent from a university user to an external recipient When: The system inspects the content for malicious payloads or links Then: The system detects suspicious content and blocks transmission Evidence: Test capture of blocked outbound message with reason"
+          ],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": [
+            "Authentication method for administrator access to quarantined messages",
+            "Definition of 'authorized' administrative role"
+          ]
+        },
+        {
+          "id": "UC-002",
+          "actor": "authorized administrators",
+          "goal": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "story": "As authorized administrators, I need the following behavior: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "preconditions": [
+            "A suspicious message is detected during processing"
+          ],
+          "steps": [
+            "The system generates a security alert"
+          ],
+          "success_outcome": "The alert is delivered to designated administrators via secure channel",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": [
+            "Authentication method for administrator access to quarantined messages",
+            "Definition of 'authorized' administrative role"
+          ]
+        }
+      ],
+      "open_issues": [
+        "Authentication method for administrator access to quarantined messages",
+        "Definition of 'authorized' administrative role"
+      ]
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email containing a phishing link is sent to a university user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system detects the phishing content and blocks delivery",
+          "evidence_to_record": "Evidence: Test capture of the blocked message with phishing indicator",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email with a malicious attachment is sent to a university user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system identifies the malicious attachment and quarantines it",
+          "evidence_to_record": "Evidence: Test capture of the quarantined file with malware signature",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email spoofed with a fake university domain is sent to a user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system flags the sender as spoofed and alerts administrators",
+          "evidence_to_record": "Evidence: Test capture of the spoofed header and alert notification",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email with a suspicious link is sent to a user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system detects the suspicious URL and marks it for review",
+          "evidence_to_record": "Evidence: Test capture of the flagged link and user notification",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: An incoming email with malicious content is received by the gateway",
+            "When: The system performs inspection on the message body and headers"
+          ],
+          "expected_result": "Expected: The system quarantines the message and generates a security alert",
+          "evidence_to_record": "Evidence: Test capture of quarantine action and generated alert",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: An outgoing email is sent from a university user to an external recipient",
+            "When: The system inspects the content for malicious payloads or links"
+          ],
+          "expected_result": "Expected: The system detects suspicious content and blocks transmission",
+          "evidence_to_record": "Evidence: Test capture of blocked outbound message with reason",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A quarantined email is identified by an administrator",
+            "When: An authorized admin requests review and release of the message"
+          ],
+          "expected_result": "Expected: The system allows the administrator to view and approve or reject the message",
+          "evidence_to_record": "Evidence: Test capture of admin interface response for quarantined email",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A suspicious message is detected during processing",
+            "When: The system generates a security alert"
+          ],
+          "expected_result": "Expected: The alert is delivered to designated administrators via secure channel",
+          "evidence_to_record": "Evidence: Test capture of alert delivery to admin console",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A system administrator initiates a deployment request for university-wide use",
+            "When: The system processes the deployment request"
+          ],
+          "expected_result": "Expected: The system returns a status indicating successful validation of security, reliability, scalability, and manageability criteria",
+          "evidence_to_record": "Evidence: Test capture of the system's response to deployment request with validated criteria",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A network operations team observes increasing load during peak hours",
+            "When: The system handles traffic under sustained high-load conditions"
+          ],
+          "expected_result": "Expected: The system maintains service availability and performance without degradation",
+          "evidence_to_record": "Evidence: Test capture of system performance metrics during peak load",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A new department requests integration with existing university services",
+            "When: The system is configured to support new service connections"
+          ],
+          "expected_result": "Expected: The system enables configuration without requiring revalidation or manual intervention",
+          "evidence_to_record": "Evidence: Test capture of configuration workflow and successful service integration",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An administrator performs a filtering action on an email message",
+            "When: The system records the filtering decision and associated user action"
+          ],
+          "expected_result": "Expected: The audit log contains a record of the filtering decision and the administrator's identity and timestamp",
+          "evidence_to_record": "Evidence: Test capture of the audit log entry",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An email security event occurs in the system",
+            "When: The platform generates an alert for monitoring via its dashboard"
+          ],
+          "expected_result": "Expected: The dashboard displays the event with relevant metadata including source, severity, and timestamp",
+          "evidence_to_record": "Evidence: Test capture of dashboard event display",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: The university identity system is integrated with the platform",
+            "When: An administrator logs in using their university credentials"
+          ],
+          "expected_result": "Expected: The platform authenticates the user and grants access based on role and permissions",
+          "evidence_to_record": "Evidence: Test capture of authentication and access grant",
+          "test_type": "positive"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "No differentiating input evidence is provided to favor one SDLC model over others. All models receive equal suitability points (40) due to absence of factors such as budget, delivery, failure consequences, feedback, legacy, regulation, schedule, stability, uncertainty, verification. The decision remains provisional until these unknown factors are clarified.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.; FR-002: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.; SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "Review and baseline the source-defined work group: NFR-001: The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.; FR-002: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.; SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "Implement the source-defined work group: NFR-001: The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "In an authorized isolated test environment, execute TEST-001: Given: An email containing a phishing link is sent to a university user When: The email security gateway processes the incoming message Expected: The system detects the phishing content and blocks delivery",
+            "In an authorized isolated test environment, execute TEST-002: Given: An email with a malicious attachment is sent to a university user When: The email security gateway processes the incoming message Expected: The system identifies the malicious attachment and quarantines it",
+            "In an authorized isolated test environment, execute TEST-003: Given: An email spoofed with a fake university domain is sent to a user When: The email security gateway processes the incoming message Expected: The system flags the sender as spoofed and alerts administrators",
+            "In an authorized isolated test environment, execute TEST-004: Given: An email with a suspicious link is sent to a user When: The email security gateway processes the incoming message Expected: The system detects the suspicious URL and marks it for review",
+            "In an authorized isolated test environment, execute TEST-005: Given: An incoming email with malicious content is received by the gateway When: The system performs inspection on the message body and headers Expected: The system quarantines the message and generates a security alert",
+            "In an authorized isolated test environment, execute TEST-006: Given: An outgoing email is sent from a university user to an external recipient When: The system inspects the content for malicious payloads or links Expected: The system detects suspicious content and blocks transmission",
+            "In an authorized isolated test environment, execute TEST-007: Given: A quarantined email is identified by an administrator When: An authorized admin requests review and release of the message Expected: The system allows the administrator to view and approve or reject the message",
+            "In an authorized isolated test environment, execute TEST-008: Given: A suspicious message is detected during processing When: The system generates a security alert Expected: The alert is delivered to designated administrators via secure channel",
+            "In an authorized isolated test environment, execute TEST-009: Given: A system administrator initiates a deployment request for university-wide use When: The system processes the deployment request Expected: The system returns a status indicating successful validation of security, reliability, scalability, and manageability criteria",
+            "In an authorized isolated test environment, execute TEST-010: Given: A network operations team observes increasing load during peak hours When: The system handles traffic under sustained high-load conditions Expected: The system maintains service availability and performance without degradation",
+            "In an authorized isolated test environment, execute TEST-011: Given: A new department requests integration with existing university services When: The system is configured to support new service connections Expected: The system enables configuration without requiring revalidation or manual intervention",
+            "In an authorized isolated test environment, execute TEST-012: Given: An administrator performs a filtering action on an email message When: The system records the filtering decision and associated user action Expected: The audit log contains a record of the filtering decision and the administrator's identity and timestamp",
+            "In an authorized isolated test environment, execute TEST-013: Given: An email security event occurs in the system When: The platform generates an alert for monitoring via its dashboard Expected: The dashboard displays the event with relevant metadata including source, severity, and timestamp",
+            "In an authorized isolated test environment, execute TEST-014: Given: The university identity system is integrated with the platform When: An administrator logs in using their university credentials Expected: The platform authenticates the user and grants access based on role and permissions",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001",
+            "SEC-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-1.1",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [],
+    "sdlc_candidates": [
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Incremental",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "security": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "prompt_version": "sequential-1.28",
+    "input_fingerprint": "3ce14e2fdb26cfd26e7de87ac626b5ee7f20ea91fe017c63551c94c108620940"
+  },
+  "content_hash": "858db8978f93fa4a7076061d301d331e44788750a47ec74ce3567c442a408577",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.14",
+    "status": "needs_review",
+    "checks_passed": 21,
+    "checks_total": 21,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001"
+      ],
+      "E-002": [
+        "FR-002"
+      ],
+      "E-003": [
+        "SEC-001"
+      ],
+      "E-004": [
+        "NFR-001"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001",
+          "TEST-002",
+          "TEST-003",
+          "TEST-004"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001",
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-005",
+          "TEST-006",
+          "TEST-007",
+          "TEST-008"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-009",
+          "TEST-010",
+          "TEST-011"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "SEC-001",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-012",
+          "TEST-013",
+          "TEST-014"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Agile delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "2e65c3a3-275c-4ec7-bf20-46e3a4c375f0",
+  "created_at": "2026-10-29T13:20:05.340659+00:00",
+  "presentation": {
+    "profile": "ieee-830-1998-1.0",
+    "title": "Email Security Gateway Requirements",
+    "sections": [
+      {
+        "number": "1",
+        "title": "Introduction",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.1",
+        "title": "Purpose",
+        "paragraphs": [
+          "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+          "This SRS describes the software's required behavior for users, administrators and the Project Analyst reviewing the specification."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.2",
+        "title": "Scope",
+        "paragraphs": [
+          "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages. The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events. The solution should be secure, reliable, scalable, and manageable for university-wide deployment."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.3",
+        "title": "Definitions, acronyms and abbreviations",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Log",
+                "A collection of event records. This term does not itself require additional logging fields, events or access permissions."
+              ],
+              [
+                "Audit record",
+                "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.4",
+        "title": "References",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Reference",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Format",
+                "IEEE Std 830-1998, clauses 5 and Annex A (document organization)."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.5",
+        "title": "Overview",
+        "paragraphs": [
+          "Section 2 summarizes the product, stakeholders and open decisions. Section 3 contains the uniquely identified requirements. Detailed evidence, acceptance procedures and the SDLC plan are available in the supporting report."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2",
+        "title": "Overall description",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.1",
+        "title": "Product perspective",
+        "paragraphs": [
+          "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.2",
+        "title": "Product functions",
+        "paragraphs": [
+          "Functional topics are summarized below; section 3 retains the full requirements."
+        ],
+        "bullets": [
+          "Access permissions — FR-002",
+          "Monitoring and alerts — FR-002",
+          "protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. — FR-001"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.3",
+        "title": "User characteristics and stakeholders",
+        "paragraphs": [
+          "Labels group stakeholders for readability. They do not combine permissions.",
+          "Education, training and experience requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Role",
+              "Source user groups",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "User",
+                "students, faculty, staff",
+                "Uses permitted functions; each source class keeps its specified permissions."
+              ],
+              [
+                "Admin",
+                "administrators",
+                "Performs only the role's source-defined operations in section 3."
+              ],
+              [
+                "Project Analyst",
+                "Document review role",
+                "Reviews requirements and tracks open decisions; this role grants no product access."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "2.4",
+        "title": "Constraints",
+        "paragraphs": [
+          "No additional implementation constraints were confirmed. Source-defined restrictions remain in the requirements in section 3."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.5",
+        "title": "Assumptions and dependencies",
+        "paragraphs": [
+          "Open decisions requiring confirmation:"
+        ],
+        "bullets": [
+          "Thresholds for what constitutes a 'suspicious' link or attachment",
+          "Authentication method for administrator access to quarantined messages",
+          "Definition of 'authorized' administrative role",
+          "Definition of 'manageable' in context of university-wide deployment",
+          "Thresholds for scalability under concurrent user load",
+          "Validation method for reliability during failure scenarios",
+          "Definition of 'filtering decision' in audit logs",
+          "Threshold for event severity in dashboard alerts",
+          "Authentication method used during integration with identity system",
+          "How to define 'dynamic access policies' for email traffic based on user behavior and device context",
+          "What thresholds trigger a 'suspicious' link or attachment in phishing detection",
+          "Whether authentication methods for administrator access should be multi-factor",
+          "Definition of 'manageable' in the context of university-wide deployment",
+          "How to define 'filtering decision' in audit logs"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3",
+        "title": "Specific requirements",
+        "paragraphs": [
+          "Each requirement is stated once with its original identifier and wording. Cross-references identify requirements covering more than one concern."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1",
+        "title": "External interface requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.1",
+        "title": "User interfaces",
+        "paragraphs": [
+          "Related requirements: SEC-001. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.2",
+        "title": "Hardware interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.3",
+        "title": "Software interfaces",
+        "paragraphs": [
+          "Related requirements: SEC-001. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.4",
+        "title": "Communications interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.2",
+        "title": "Functional requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "FR-001",
+            "statement": "The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-001",
+              "TEST-002",
+              "TEST-003",
+              "TEST-004"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "statement": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-005",
+              "TEST-006",
+              "TEST-007",
+              "TEST-008"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.3",
+        "title": "Performance requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "statement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-009",
+              "TEST-010",
+              "TEST-011"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.4",
+        "title": "Logical database requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.5",
+        "title": "Design constraints",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6",
+        "title": "Software system attributes",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.1",
+        "title": "Reliability",
+        "paragraphs": [
+          "Also covered by: NFR-001."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.2",
+        "title": "Availability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.3",
+        "title": "Security",
+        "paragraphs": [
+          "Also covered by: FR-002, NFR-001."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "SEC-001",
+            "statement": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-012",
+              "TEST-013",
+              "TEST-014"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.4",
+        "title": "Maintainability",
+        "paragraphs": [
+          "Also covered by: NFR-001."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.5",
+        "title": "Portability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.7",
+        "title": "Other requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      }
+    ]
+  }
+}

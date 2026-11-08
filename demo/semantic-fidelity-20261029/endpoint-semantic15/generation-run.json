@@ -1,0 +1,2067 @@
+{
+  "id": "2e4ae82e-6d42-44b9-8772-cc4bd7a717b1",
+  "project_id": "6ed3af77-5e43-4fa8-92ba-6d188c8611a8",
+  "kind": "generate",
+  "status": "completed",
+  "input_hash": "f59efedcedf3b212164f3ccd7f5a2186277cc2ea6dcccf9c8289c9e182aa192c",
+  "events": [
+    {
+      "at": "2026-10-29T20:30:57.831256+00:00",
+      "agent": "introduction",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:30:59.355908+00:00",
+      "agent": "introduction",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.531,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "introduction_projection_version": "source-fact-introduction-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:30:59.374406+00:00",
+      "agent": "functional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:31:57.983654+00:00",
+      "agent": "functional",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "attempts": 8,
+      "source_obligations_version": "source-obligations-1.0",
+      "atomic_source_keys": [
+        "E-001_O01",
+        "E-002_O01",
+        "E-002_O02",
+        "E-002_O03",
+        "E-002_O04",
+        "E-003_O01",
+        "E-003_O02",
+        "E-003_O03",
+        "E-003_O04",
+        "E-003_O05",
+        "E-004_O01",
+        "E-004_O02"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [
+        "E-004_O01",
+        "E-004_O02"
+      ],
+      "elapsed_seconds": 58.609,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:31:58.003325+00:00",
+      "agent": "nonfunctional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:03.910539+00:00",
+      "agent": "nonfunctional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 1,
+      "source_obligations_version": "source-obligations-1.0",
+      "atomic_source_keys": [
+        "E-001_O02"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [],
+      "elapsed_seconds": 5.906,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:03.925989+00:00",
+      "agent": "security",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:03.967289+00:00",
+      "agent": "security",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.046,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:03.987983+00:00",
+      "agent": "data",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:04.030239+00:00",
+      "agent": "data",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.047,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:04.045971+00:00",
+      "agent": "network",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:04.093763+00:00",
+      "agent": "network",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.046,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:04.119668+00:00",
+      "agent": "compliance",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:08.349661+00:00",
+      "agent": "compliance",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 4.218,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:08.370515+00:00",
+      "agent": "architecture",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:24.789957+00:00",
+      "agent": "architecture",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 3,
+      "elapsed_seconds": 16.422,
+      "architecture_stages": [
+        {
+          "stage": "components",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 3.547,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "ownership",
+          "selection_version": "source-keyed-owners-1.0",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 1.313,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "internal_interactions",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 11.468,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        }
+      ],
+      "architecture_layout_version": "source-backed-layout-1.1",
+      "source_paths_compiled": true,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:24.815746+00:00",
+      "agent": "threats",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:26.827739+00:00",
+      "agent": "threats",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.016,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:26.847780+00:00",
+      "agent": "risks",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:28.844674+00:00",
+      "agent": "risks",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:28.863360+00:00",
+      "agent": "scenarios",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:31.372481+00:00",
+      "agent": "scenarios",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.516,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "scenario_projection_version": "canonical-scenarios-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:31.388652+00:00",
+      "agent": "verification",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:36.019834+00:00",
+      "agent": "verification",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 4.625,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "verification_projection_version": "canonical-criteria-verification-1.1",
+      "verification_selection_version": "source-keyed-types-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:36.047086+00:00",
+      "agent": "glossary",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:37.192550+00:00",
+      "agent": "glossary",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.14,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:37.219026+00:00",
+      "agent": "sdlc",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:32:41.535851+00:00",
+      "agent": "sdlc",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 4.313,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+      "lifecycle_projection_version": "source-linked-lifecycle-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:32:41.843184+00:00",
+      "agent": "document",
+      "state": "completed",
+      "version_id": "fc40d80c-9c4f-4f8b-893e-c142c80b2a38"
+    }
+  ],
+  "checkpoints": {
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure monitoring platform for university servers and managed endpoints that collects system events, authentication activity, process information, and security alerts from multiple departments.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The platform should detect unusual login behavior, repeated failed authentication, suspicious process activity, and unauthorized configuration changes.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Security administrators should be able to review alerts, investigate affected devices, record investigation notes, change alert status, and isolate compromised endpoints when necessary.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The system should maintain audit logs of security events and administrator actions and provide a centralized dashboard for monitoring security status across multiple campus locations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints",
+          "statement": "The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints.",
+          "rationale": "Source obligation E-001_O01.",
+          "priority": "must",
+          "dimensions": [
+            "business",
+            "security",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system collects system events, authentication activity, process information, and security alerts from multiple departments for university servers and mapped",
+              "when": "the system initiates the collection operation",
+              "then": "the requested input types are received by the system with no field-level representation or data structure specification",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "detect unusual login behavior",
+          "statement": "The system shall detect unusual login behavior.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system observes a login attempt with unusual timing and location",
+              "when": "system detects unusual login behavior",
+              "then": "the condition is identified and marked as anomalous in the monitoring state",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define unusual login behavior?"
+          ]
+        },
+        {
+          "id": "FR-003",
+          "title": "detect repeated failed authentication",
+          "statement": "The system shall detect repeated failed authentication.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system receives a sequence of failed authentication attempts from the same IP address",
+              "when": "system detects repeated failed authentication",
+              "then": "the condition is identified and marked as anomalous in the monitoring state",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define repeated authentication failures?"
+          ]
+        },
+        {
+          "id": "FR-004",
+          "title": "detect suspicious process activity",
+          "statement": "The system shall detect suspicious process activity.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system observes a process executing with unexpected privileges or command sequence",
+              "when": "system detects suspicious process activity",
+              "then": "the condition is identified and marked as anomalous in the monitoring state",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define suspicious process activity?"
+          ]
+        },
+        {
+          "id": "FR-005",
+          "title": "detect unauthorized configuration changes",
+          "statement": "The system shall detect unauthorized configuration changes.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system detects a configuration change initiated by an unauthorized entity",
+              "when": "system detects unauthorized configuration changes",
+              "then": "the condition is identified and marked as anomalous in the monitoring state",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What makes a configuration change unauthorized?"
+          ]
+        },
+        {
+          "id": "FR-006",
+          "title": "allow Security administrators to review alerts",
+          "statement": "The system shall allow Security administrators to review alerts.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Security administrators request alerts by name",
+              "when": "the operation 'review alerts' is initiated",
+              "then": "the requested alerts are returned for examination; an external test capture records the resulting response",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-007",
+          "title": "allow Security administrators to investigate affected devices",
+          "statement": "The system shall allow Security administrators to investigate affected devices.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Security administrators initiate an investigation on affected devices",
+              "when": "the operation 'investigate affected devices' is performed",
+              "then": "the device status and relevant data are made available for analysis; an external test capture records the resulting state",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-008",
+          "title": "allow Security administrators to record investigation notes",
+          "statement": "The system shall allow Security administrators to record investigation notes.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Security administrators prepare to document findings",
+              "when": "the operation 'record investigation notes' is initiated",
+              "then": "the notes are stored in the system; an external test capture records the inspection record",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-009",
+          "title": "allow Security administrators to change alert status",
+          "statement": "The system shall allow Security administrators to change alert status.",
+          "rationale": "Source obligation E-003_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Security administrators update alert status for a specific alert",
+              "when": "the operation 'change alert status' is performed",
+              "then": "the alert status is updated in the system; an external test capture records the resulting response",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-010",
+          "title": "allow Security administrators to isolate compromised endpoints when necessary",
+          "statement": "The system shall allow Security administrators to isolate compromised endpoints when necessary.",
+          "rationale": "Source obligation E-003_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Security administrators detect a compromised endpoint",
+              "when": "the operation 'isolate compromised endpoints when necessary' is executed",
+              "then": "the endpoint is isolated and access is blocked; an external test capture records the resulting state",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions authorize endpoint isolation?"
+          ]
+        },
+        {
+          "id": "FR-011",
+          "title": "maintain audit logs of security events and administrator actions",
+          "statement": "The system shall maintain audit logs of security events and administrator actions.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system maintains audit logs of security events and administrator actions",
+              "when": "an administrator performs a privileged action or a security event occurs",
+              "then": "audit logs are held in a secure, immutable storage mechanism and accessible to authorized personnel upon request",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which fields must the audit logs contain?",
+            "What retention period is required for the audit logs?"
+          ]
+        },
+        {
+          "id": "FR-012",
+          "title": "provide a centralized dashboard for monitoring security status across multiple campus locations",
+          "statement": "The system shall provide a centralized dashboard for monitoring security status across multiple campus locations.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system provides a centralized dashboard for monitoring security status across multiple campus locations",
+              "when": "a security event is detected or administrator updates configuration",
+              "then": "the centralized dashboard displays security status across campus locations, updated after each configuration change or event detection",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-001_O02.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network monitoring channels.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for detecting, logging, and responding to anomalous data",
+              "then": "The plan's measurable targets remain TBD or unconfirmed; no specific thresholds, detection methods, or response timelines are defined in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-011",
+        "FR-012"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-003",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "NFR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-008",
+        "FR-011",
+        "FR-012"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How are the stated roles and authorized permissions assigned?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: Security administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: Security administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "component_name": "Actor: Security administrators",
+          "responsibility": "Represent the source-stated actor: Security administrators."
+        },
+        {
+          "title": "Event Collection Module",
+          "detail": "Proposed logical owner for FR-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-001"
+          ],
+          "component_name": "Event Collection Module",
+          "responsibility": "The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints. The system shall be secure."
+        },
+        {
+          "title": "Anomaly Detection Engine",
+          "detail": "Proposed logical owner for FR-002, FR-003, FR-004, FR-005, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "NFR-001"
+          ],
+          "component_name": "Anomaly Detection Engine",
+          "responsibility": "The system shall detect unusual login behavior. The system shall detect repeated failed authentication. The system shall detect suspicious process activity. The system shall detect unauthorized configuration changes. The system shall be secure."
+        },
+        {
+          "title": "Security Investigation Workflow",
+          "detail": "Proposed logical owner for FR-006, FR-007, FR-008, FR-009, FR-010, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "NFR-001"
+          ],
+          "component_name": "Security Investigation Workflow",
+          "responsibility": "The system shall allow Security administrators to review alerts. The system shall allow Security administrators to investigate affected devices. The system shall allow Security administrators to record investigation notes. The system shall allow Security administrators to change alert status. The system shall allow Security administrators to isolate compromised endpoints when necessary. The system shall be secure."
+        },
+        {
+          "title": "Audit and Logging Service",
+          "detail": "Proposed logical owner for FR-011, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-011",
+            "NFR-001"
+          ],
+          "component_name": "Audit and Logging Service",
+          "responsibility": "The system shall maintain audit logs of security events and administrator actions. The system shall be secure."
+        },
+        {
+          "title": "Centralized Dashboard",
+          "detail": "Proposed logical owner for FR-012, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-012",
+            "NFR-001"
+          ],
+          "component_name": "Centralized Dashboard",
+          "responsibility": "The system shall provide a centralized dashboard for monitoring security status across multiple campus locations. The system shall be secure."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-006, FR-007, FR-008, FR-009, FR-010.",
+          "from_component": "Actor: Security administrators",
+          "to_component": "Security Investigation Workflow",
+          "data_or_action": "The system shall allow Security administrators to review alerts. The system shall allow Security administrators to investigate affected devices. The system shall allow Security administrators to record investigation notes. The system shall allow Security administrators to change alert status. The system shall allow Security administrators to isolate compromised endpoints when necessary."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Event Collection Module",
+          "to_component": "Anomaly Detection Engine",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Event Collection Module",
+          "to_component": "Security Investigation Workflow",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Event Collection Module",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Event Collection Module",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Anomaly Detection Engine",
+          "to_component": "Event Collection Module",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Anomaly Detection Engine",
+          "to_component": "Security Investigation Workflow",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Anomaly Detection Engine",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Anomaly Detection Engine",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Security Investigation Workflow",
+          "to_component": "Event Collection Module",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Security Investigation Workflow",
+          "to_component": "Anomaly Detection Engine",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Security Investigation Workflow",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Security Investigation Workflow",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Event Collection Module",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Anomaly Detection Engine",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Security Investigation Workflow",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Audit and Logging Service",
+          "to_component": "Centralized Dashboard",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Event Collection Module",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Anomaly Detection Engine",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Security Investigation Workflow",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Centralized Dashboard",
+          "to_component": "Audit and Logging Service",
+          "data_or_action": "The system shall be secure."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-006, FR-007, FR-008, FR-009, FR-010.",
+          "untrusted_component": "Actor: Security administrators",
+          "trusted_component": "Security Investigation Workflow",
+          "enforcement": "The system shall allow Security administrators to review alerts. The system shall allow Security administrators to investigate affected devices. The system shall allow Security administrators to record investigation notes. The system shall allow Security administrators to change alert status. The system shall allow Security administrators to isolate compromised endpoints when necessary."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "Security administrators",
+          "goal": "The system shall allow Security administrators to review alerts.",
+          "story": "As Security administrators, I need the following behavior: The system shall allow Security administrators to review alerts.",
+          "preconditions": [
+            "Security administrators request alerts by name"
+          ],
+          "steps": [
+            "the operation 'review alerts' is initiated"
+          ],
+          "success_outcome": "the requested alerts are returned for examination; an external test capture records the resulting response",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-002",
+          "actor": "Security administrators",
+          "goal": "The system shall allow Security administrators to investigate affected devices.",
+          "story": "As Security administrators, I need the following behavior: The system shall allow Security administrators to investigate affected devices.",
+          "preconditions": [
+            "Security administrators initiate an investigation on affected devices"
+          ],
+          "steps": [
+            "the operation 'investigate affected devices' is performed"
+          ],
+          "success_outcome": "the device status and relevant data are made available for analysis; an external test capture records the resulting state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-003",
+          "actor": "Security administrators",
+          "goal": "The system shall allow Security administrators to record investigation notes.",
+          "story": "As Security administrators, I need the following behavior: The system shall allow Security administrators to record investigation notes.",
+          "preconditions": [
+            "Security administrators prepare to document findings"
+          ],
+          "steps": [
+            "the operation 'record investigation notes' is initiated"
+          ],
+          "success_outcome": "the notes are stored in the system; an external test capture records the inspection record",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-004",
+          "actor": "Security administrators",
+          "goal": "The system shall allow Security administrators to change alert status.",
+          "story": "As Security administrators, I need the following behavior: The system shall allow Security administrators to change alert status.",
+          "preconditions": [
+            "Security administrators update alert status for a specific alert"
+          ],
+          "steps": [
+            "the operation 'change alert status' is performed"
+          ],
+          "success_outcome": "the alert status is updated in the system; an external test capture records the resulting response",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-005",
+          "actor": "Security administrators",
+          "goal": "The system shall allow Security administrators to isolate compromised endpoints when necessary.",
+          "story": "As Security administrators, I need the following behavior: The system shall allow Security administrators to isolate compromised endpoints when necessary.",
+          "preconditions": [
+            "Security administrators detect a compromised endpoint"
+          ],
+          "steps": [
+            "the operation 'isolate compromised endpoints when necessary' is executed"
+          ],
+          "success_outcome": "the endpoint is isolated and access is blocked; an external test capture records the resulting state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "unresolved_decisions": [
+            "What conditions authorize endpoint isolation?"
+          ]
+        }
+      ],
+      "open_issues": [
+        "What conditions authorize endpoint isolation?"
+      ]
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: the system collects system events, authentication activity, process information, and security alerts from multiple departments for university servers and mapped",
+            "When: the system initiates the collection operation"
+          ],
+          "expected_result": "Expected: the requested input types are received by the system with no field-level representation or data structure specification",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: system observes a login attempt with unusual timing and location",
+            "When: system detects unusual login behavior"
+          ],
+          "expected_result": "Expected: the condition is identified and marked as anomalous in the monitoring state",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: system receives a sequence of failed authentication attempts from the same IP address",
+            "When: system detects repeated failed authentication"
+          ],
+          "expected_result": "Expected: the condition is identified and marked as anomalous in the monitoring state",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: system observes a process executing with unexpected privileges or command sequence",
+            "When: system detects suspicious process activity"
+          ],
+          "expected_result": "Expected: the condition is identified and marked as anomalous in the monitoring state",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: system detects a configuration change initiated by an unauthorized entity",
+            "When: system detects unauthorized configuration changes"
+          ],
+          "expected_result": "Expected: the condition is identified and marked as anomalous in the monitoring state",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "procedure": [
+            "Given: Security administrators request alerts by name",
+            "When: the operation 'review alerts' is initiated"
+          ],
+          "expected_result": "Expected: the requested alerts are returned for examination; an external test capture records the resulting response",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "procedure": [
+            "Given: Security administrators initiate an investigation on affected devices",
+            "When: the operation 'investigate affected devices' is performed"
+          ],
+          "expected_result": "Expected: the device status and relevant data are made available for analysis; an external test capture records the resulting state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "procedure": [
+            "Given: Security administrators prepare to document findings",
+            "When: the operation 'record investigation notes' is initiated"
+          ],
+          "expected_result": "Expected: the notes are stored in the system; an external test capture records the inspection record",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "procedure": [
+            "Given: Security administrators update alert status for a specific alert",
+            "When: the operation 'change alert status' is performed"
+          ],
+          "expected_result": "Expected: the alert status is updated in the system; an external test capture records the resulting response",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "procedure": [
+            "Given: Security administrators detect a compromised endpoint",
+            "When: the operation 'isolate compromised endpoints when necessary' is executed"
+          ],
+          "expected_result": "Expected: the endpoint is isolated and access is blocked; an external test capture records the resulting state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "procedure": [
+            "Given: the system maintains audit logs of security events and administrator actions",
+            "When: an administrator performs a privileged action or a security event occurs"
+          ],
+          "expected_result": "Expected: audit logs are held in a secure, immutable storage mechanism and accessible to authorized personnel upon request",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "FR-012"
+          ],
+          "procedure": [
+            "Given: the system provides a centralized dashboard for monitoring security status across multiple campus locations",
+            "When: a security event is detected or administrator updates configuration"
+          ],
+          "expected_result": "Expected: the centralized dashboard displays security status across campus locations, updated after each configuration change or event detection",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network monitoring channels.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for detecting, logging, and responding to anomalous data"
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed; no specific thresholds, detection methods, or response timelines are defined in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Device isolation",
+          "detail": "Restriction of a device's network access; the source determines whether and by whom this action is permitted.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "No differentiating input evidence is provided to favor one SDLC model over others. All models receive equal suitability scores (40/100) because the decision factors are missing or unranked. The absence of explicit requirements about budget, delivery, failure consequences, feedback, legacy systems, regulation, schedule, stability, uncertainty, verification, or assurance levels prevents meaningful differentiation between lifecycle approaches.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints.; FR-002: The system shall detect unusual login behavior.; FR-003: The system shall detect repeated failed authentication.; FR-004: The system shall detect suspicious process activity.; FR-005: The system shall detect unauthorized configuration changes.; FR-006: The system shall allow Security administrators to review alerts.; FR-007: The system shall allow Security administrators to investigate affected devices.; FR-008: The system shall allow Security administrators to record investigation notes.; FR-009: The system shall allow Security administrators to change alert status.; FR-010: The system shall allow Security administrators to isolate compromised endpoints when necessary.; FR-011: The system shall maintain audit logs of security events and administrator actions.; FR-012: The system shall provide a centralized dashboard for monitoring security status across multiple campus locations.; NFR-001: The system shall be secure.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints.",
+            "Review implementation and acceptance evidence against FR-003: The system shall detect repeated failed authentication.",
+            "Review implementation and acceptance evidence against FR-006: The system shall allow Security administrators to review alerts.",
+            "Review implementation and acceptance evidence against FR-009: The system shall allow Security administrators to change alert status.",
+            "Review implementation and acceptance evidence against FR-010: The system shall allow Security administrators to isolate compromised endpoints when necessary.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints.; FR-002: The system shall detect unusual login behavior.; FR-003: The system shall detect repeated failed authentication.; FR-004: The system shall detect suspicious process activity.; FR-005: The system shall detect unauthorized configuration changes.; FR-006: The system shall allow Security administrators to review alerts.; FR-007: The system shall allow Security administrators to investigate affected devices.; FR-008: The system shall allow Security administrators to record investigation notes.; FR-009: The system shall allow Security administrators to change alert status.; FR-010: The system shall allow Security administrators to isolate compromised endpoints when necessary.; FR-011: The system shall maintain audit logs of security events and administrator actions.; FR-012: The system shall provide a centralized dashboard for monitoring security status across multiple campus locations.; NFR-001: The system shall be secure.",
+            "In an authorized isolated test environment, execute TEST-001: Given: the system collects system events, authentication activity, process information, and security alerts from multiple departments for university servers and mapped When: the system initiates the collection operation Expected: the requested input types are received by the system with no field-level representation or data structure specification",
+            "In an authorized isolated test environment, execute TEST-002: Given: system observes a login attempt with unusual timing and location When: system detects unusual login behavior Expected: the condition is identified and marked as anomalous in the monitoring state",
+            "In an authorized isolated test environment, execute TEST-003: Given: system receives a sequence of failed authentication attempts from the same IP address When: system detects repeated failed authentication Expected: the condition is identified and marked as anomalous in the monitoring state",
+            "In an authorized isolated test environment, execute TEST-004: Given: system observes a process executing with unexpected privileges or command sequence When: system detects suspicious process activity Expected: the condition is identified and marked as anomalous in the monitoring state",
+            "In an authorized isolated test environment, execute TEST-005: Given: system detects a configuration change initiated by an unauthorized entity When: system detects unauthorized configuration changes Expected: the condition is identified and marked as anomalous in the monitoring state",
+            "In an authorized isolated test environment, execute TEST-006: Given: Security administrators request alerts by name When: the operation 'review alerts' is initiated Expected: the requested alerts are returned for examination; an external test capture records the resulting response",
+            "In an authorized isolated test environment, execute TEST-007: Given: Security administrators initiate an investigation on affected devices When: the operation 'investigate affected devices' is performed Expected: the device status and relevant data are made available for analysis; an external test capture records the resulting state",
+            "In an authorized isolated test environment, execute TEST-008: Given: Security administrators prepare to document findings When: the operation 'record investigation notes' is initiated Expected: the notes are stored in the system; an external test capture records the inspection record",
+            "In an authorized isolated test environment, execute TEST-009: Given: Security administrators update alert status for a specific alert When: the operation 'change alert status' is performed Expected: the alert status is updated in the system; an external test capture records the resulting response",
+            "In an authorized isolated test environment, execute TEST-010: Given: Security administrators detect a compromised endpoint When: the operation 'isolate compromised endpoints when necessary' is executed Expected: the endpoint is isolated and access is blocked; an external test capture records the resulting state",
+            "In an authorized isolated test environment, execute TEST-011: Given: the system maintains audit logs of security events and administrator actions When: an administrator performs a privileged action or a security event occurs Expected: audit logs are held in a secure, immutable storage mechanism and accessible to authorized personnel upon request",
+            "In an authorized isolated test environment, execute TEST-012: Given: the system provides a centralized dashboard for monitoring security status across multiple campus locations When: a security event is detected or administrator updates configuration Expected: the centralized dashboard displays security status across campus locations, updated after each configuration change or event detection",
+            "In an authorized isolated test environment, execute TEST-013: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data exfiltration via network monitoring channels. When: An analyst inspects or reviews that acceptance plan to determine whether it includes measurable targets for detecting, logging, and responding to anomalous data Expected: The plan's measurable targets remain TBD or unconfirmed; no specific thresholds, detection methods, or response timelines are defined in the current draft.",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints.",
+            "Review implementation and acceptance evidence against FR-003: The system shall detect repeated failed authentication.",
+            "Review implementation and acceptance evidence against FR-006: The system shall allow Security administrators to review alerts.",
+            "Review implementation and acceptance evidence against FR-009: The system shall allow Security administrators to change alert status.",
+            "Review implementation and acceptance evidence against FR-010: The system shall allow Security administrators to isolate compromised endpoints when necessary.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-001: The system shall collect system events, authentication activity, process information, and security alerts from multiple departments for university servers and managed endpoints.",
+            "Review implementation and acceptance evidence against FR-003: The system shall detect repeated failed authentication.",
+            "Review implementation and acceptance evidence against FR-006: The system shall allow Security administrators to review alerts.",
+            "Review implementation and acceptance evidence against FR-009: The system shall allow Security administrators to change alert status.",
+            "Review implementation and acceptance evidence against FR-010: The system shall allow Security administrators to isolate compromised endpoints when necessary.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "quality": {
+      "validation_policy_version": "source-grounding-1.17",
+      "status": "needs_review",
+      "checks_passed": 21,
+      "checks_total": 21,
+      "findings": [
+        {
+          "code": "human_semantic_review_required",
+          "severity": "warning",
+          "section": "document",
+          "item_id": "",
+          "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+        }
+      ],
+      "evidence_coverage": {
+        "E-001": [
+          "FR-001",
+          "NFR-001"
+        ],
+        "E-002": [
+          "FR-002",
+          "FR-003",
+          "FR-004",
+          "FR-005"
+        ],
+        "E-003": [
+          "FR-006",
+          "FR-007",
+          "FR-008",
+          "FR-009",
+          "FR-010"
+        ],
+        "E-004": [
+          "FR-011",
+          "FR-012"
+        ]
+      },
+      "traceability": [
+        {
+          "requirement_id": "FR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-001"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-002",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-002"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-003",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-003"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-004",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-004"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-005",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-005"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-006",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-001"
+          ],
+          "test_ids": [
+            "TEST-006"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-007",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-002"
+          ],
+          "test_ids": [
+            "TEST-007"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-008",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-003"
+          ],
+          "test_ids": [
+            "TEST-008"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-009",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-004"
+          ],
+          "test_ids": [
+            "TEST-009"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-010",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-005"
+          ],
+          "test_ids": [
+            "TEST-010"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-011",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-011"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-012",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-012"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-013"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        }
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T20:30:57.723266+00:00",
+  "updated_at": "2026-10-29T20:32:41.876581+00:00"
+}

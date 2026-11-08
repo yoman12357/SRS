@@ -1,0 +1,793 @@
+[
+  {
+    "key": "wifi",
+    "name": "Secure Campus Wi-Fi Management System",
+    "filename": "1 - Campus Wi-Fi SRS",
+    "description": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts. Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs. The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+    "review_constraint": "CyberSRS should not invent specific Wi-Fi standards, VLAN IDs, authentication protocols, session limits, or alert thresholds unless confirmed.",
+    "rejected_original_sections": {
+      "functional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "FR-001",
+            "title": "provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+            "statement": "The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+            "rationale": "Implements stakeholder source E-001.",
+            "priority": "must",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-001"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A user in an academic building attempts to connect to the campus Wi-Fi",
+                "when": "The user selects the university Wi-Fi network and enters credentials",
+                "then": "The system establishes a wireless connection for the user",
+                "method": "test",
+                "observable_evidence": "Test capture of successful device association and IP assignment"
+              }
+            ],
+            "unresolved_decisions": []
+          },
+          {
+            "id": "FR-002",
+            "title": "use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+            "statement": "The system shall use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+            "rationale": "Implements stakeholder source E-002.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-002"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A user with invalid credentials repeatedly attempts to authenticate",
+                "when": "The system processes the authentication requests",
+                "then": "The system detects repeated failure and generates a security alert",
+                "method": "test",
+                "observable_evidence": "Test capture of generated security alert in real-time"
+              },
+              {
+                "given": "A device attempts to access internal university resources without proper authorization",
+                "when": "The system evaluates the request against role-based policies",
+                "then": "The system blocks unauthorized access.",
+                "method": "test",
+                "observable_evidence": "Test capture of blocked session and before/after state of device connectivity"
+              }
+            ],
+            "unresolved_decisions": []
+          },
+          {
+            "id": "FR-003",
+            "title": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+            "statement": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+            "rationale": "Implements stakeholder source E-003.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-003"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An administrator accesses the management interface",
+                "when": "The administrator configures a new access policy for guest users",
+                "then": "The system applies the policy and updates device access rules",
+                "method": "test",
+                "observable_evidence": "Test capture of policy configuration and applied rule state"
+              },
+              {
+                "given": "An administrator initiates a revocation request for a connected device",
+                "when": "The system processes the revocation command",
+                "then": "The system processes the revocation command",
+                "method": "test",
+                "observable_evidence": "Test capture of permission state"
+              },
+              {
+                "given": "An administrator requests audit log inspection",
+                "when": "The administrator accesses the logs interface",
+                "then": "The system returns a list of recent access events with timestamps and user identifiers",
+                "method": "inspection",
+                "observable_evidence": "Test capture of returned audit log entries"
+              }
+            ],
+            "unresolved_decisions": []
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "nonfunctional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "title": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "statement": "The solution shall support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+            "rationale": "Implements stakeholder source E-004.",
+            "priority": "should",
+            "dimensions": [
+              "availability"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-004"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A university employee uses a personally owned device that has been pre-approved by the IT department",
+                "when": "The device connects to the campus wireless network",
+                "then": "The system shall authenticate the device using university-managed credentials and enforce security policies consistent with approved device configurations",
+                "method": "test",
+                "observable_evidence": "Test capture of device authentication response and policy enforcement state"
+              },
+              {
+                "given": "A personal device is not pre-approved by the IT department",
+                "when": "The device attempts to connect to the campus wireless network",
+                "then": "The device is denied access to the campus wireless network",
+                "method": "test",
+                "observable_evidence": "Test capture of the resulting state"
+              }
+            ],
+            "unresolved_decisions": [
+              "Definition of 'approved personal devices' including hardware, OS versions, and security posture thresholds",
+              "Thresholds for scalability under concurrent device load across campus locations",
+              "Mechanism for real-time monitoring of device health and compliance status during operation"
+            ]
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "security": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-002",
+          "FR-003"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "data": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-003",
+          "NFR-001"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "network": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-001",
+          "FR-002",
+          "FR-003"
+        ],
+        "related_acceptance_criteria": []
+      }
+    },
+    "original_questions": [
+      "How will device-level policies be enforced on personal devices?",
+      "What specific authentication protocols (e.g., 802.1X) are required for internal access?",
+      "How will repeated authentication failures trigger alerts or automated actions?",
+      "What is the retention period and access control for audit logs?",
+      "How will device-level policies be enforced on personal devices?",
+      "What specific authentication protocols (e.g., 802.1X) are required for internal access?",
+      "How will repeated authentication failures trigger alerts or automated actions?",
+      "What is the retention period and access control for audit logs?",
+      "Definition of 'approved personal devices' including hardware, OS versions, and security posture thresholds",
+      "Thresholds for scalability under concurrent device load across campus locations",
+      "Mechanism for real-time monitoring of device health and compliance status during operation",
+      "How will device-level policies be enforced on personal devices?",
+      "What specific authentication protocols (e.g., 802.1X) are required for internal access?",
+      "How will repeated authentication failures trigger alerts or automated actions?",
+      "What is the retention period and access control for audit logs?"
+    ]
+  },
+  {
+    "key": "email",
+    "name": "Secure University Email Security Gateway",
+    "filename": "2 - Email Security Gateway SRS",
+    "description": "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages. The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events. The solution should be secure, reliable, scalable, and manageable for university-wide deployment.",
+    "review_constraint": "CyberSRS should not invent antivirus vendors, exact quarantine duration, attachment-size limits, specific ML models, or response-time SLAs unless confirmed.",
+    "rejected_original_sections": {
+      "functional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "FR-001",
+            "title": "inspect incoming and outgoing email traffic for phishing attempts, malicious attachments, spoofed messages, and suspicious links.",
+            "statement": "The system shall inspect incoming and outgoing email traffic for phishing attempts, malicious attachments, spoofed messages, and suspicious links.",
+            "rationale": "Implements stakeholder source E-001.",
+            "priority": "must",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-001"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An email with a malicious attachment is sent to a university user",
+                "when": "The email security gateway processes the message during transmission",
+                "then": "The system detects the malicious content and quarantines the message",
+                "method": "demonstration",
+                "observable_evidence": "Test capture of the quarantine action triggered by the gateway"
+              },
+              {
+                "given": "A spoofed message is received from an external sender",
+                "when": "The message arrives at the university's email server",
+                "then": "The system identifies the spoofing attempt and generates a security alert for administrators",
+                "method": "test",
+                "observable_evidence": "Test capture of the generated security alert"
+              }
+            ],
+            "unresolved_decisions": [
+              "Thresholds for what constitutes a suspicious link or attachment are not defined"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "title": "allow authorized administrators to review quarantined messages and release them if deemed safe.",
+            "statement": "The system shall allow authorized administrators to review quarantined messages and release them if deemed safe.",
+            "rationale": "Implements stakeholder source E-002.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-002"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An administrator requests access to a quarantined message",
+                "when": "The request is processed by the email security gateway",
+                "then": "The administrator receives the message for review and can approve or reject it",
+                "method": "demonstration",
+                "observable_evidence": "Test capture of the approval workflow for a quarantined message"
+              },
+              {
+                "given": "A message is released after administrative review",
+                "when": "It is delivered to the recipient's inbox",
+                "then": "The delivery occurs without error.",
+                "method": "test",
+                "observable_evidence": "Test capture of successful message delivery post-release"
+              }
+            ],
+            "unresolved_decisions": [
+              "Access controls for which administrators can approve messages are not defined"
+            ]
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "nonfunctional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "title": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "statement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "rationale": "Implements stakeholder source E-004.",
+            "priority": "should",
+            "dimensions": [
+              "availability"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-004"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A university administrator initiates a deployment request for the system across campus networks",
+                "when": "The system is configured to operate in a university-wide environment",
+                "then": "The system remains secure, reliable, scalable, and manageable under operational conditions",
+                "method": "test",
+                "observable_evidence": "Test capture of system behavior during university-wide deployment"
+              }
+            ],
+            "unresolved_decisions": [
+              "Definition of scalability in terms of message volume or user count",
+              "Criteria for reliability under network failure or high load",
+              "Specifics of manageability including interface usability and access controls"
+            ]
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "security": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "SEC-001",
+            "title": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "statement": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "rationale": "Implements stakeholder source E-003.",
+            "priority": "should",
+            "dimensions": [
+              "security"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-003"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An administrator performs a filtering action or reviews quarantined messages",
+                "when": "The system processes the request and records the decision",
+                "then": "A log entry is generated in the platform's audit database indicating the action type, timestamp, user ID, and message details",
+                "method": "test",
+                "observable_evidence": "Test capture of the audit log record after a filtering action or quarantine review"
+              },
+              {
+                "given": "An operator accesses the email security dashboard via the university identity system",
+                "when": "The operator views real-time monitoring events and alerts",
+                "then": "The dashboard displays current threats, event counts, and administrator actions with accurate timestamps",
+                "method": "demonstration",
+                "observable_evidence": "Test capture of the dashboard interface showing live threat data"
+              }
+            ],
+            "unresolved_decisions": [
+              "Whether audit logs shall be retained for 30 days or longer",
+              "How real-time monitoring thresholds are defined"
+            ]
+          }
+        ],
+        "related_requirement_ids": [
+          "FR-001",
+          "FR-002"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "data": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "SEC-001"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "network": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      }
+    },
+    "original_questions": [
+      "Thresholds for what constitutes a suspicious link or attachment are not defined",
+      "Access controls for which administrators can approve messages are not defined",
+      "Definition of scalability in terms of message volume or user count",
+      "Criteria for reliability under network failure or high load",
+      "Specifics of manageability including interface usability and access controls",
+      "Whether audit logs shall be retained for 30 days or longer",
+      "How real-time monitoring thresholds are defined",
+      "Which specific identity-based authentication mechanisms (e.g., MFA, device fingerprinting) should be implemented for email access in the university environment?",
+      "How will dynamic risk-based policies be defined and evaluated to determine whether a user should be allowed to access sensitive data or perform high-risk actions?",
+      "What thresholds will trigger quarantining of messages or generation of security alerts?",
+      "How will real-time monitoring of device health, patch levels, and network traffic be implemented for email endpoints?",
+      "Will the system use certificate-based device identity or other forms of device authentication?",
+      "How will access to sensitive data (e.g., payroll) be controlled based on user behavior and location?",
+      "What is the definition of 'scalability' in terms of message volume or number of users, and how will it be measured during deployment?",
+      "What are the specific reliability criteria under network failure or high load conditions?",
+      "How will manageability be ensured through interface usability, access controls, and operational workflows?"
+    ]
+  },
+  {
+    "key": "endpoint",
+    "name": "Secure Server and Endpoint Monitoring Platform",
+    "filename": "3 - Server and Endpoint Monitoring SRS",
+    "description": "Design a secure monitoring platform for university servers and managed endpoints that collects system events, authentication activity, process information, and security alerts from multiple departments. The platform should detect unusual login behavior, repeated failed authentication, suspicious process activity, and unauthorized configuration changes. Security administrators should be able to review alerts, investigate affected devices, record investigation notes, change alert status, and isolate compromised endpoints when necessary. The system should maintain audit logs of security events and administrator actions and provide a centralized dashboard for monitoring security status across multiple campus locations.",
+    "review_constraint": "CyberSRS should not invent exact detection thresholds, endpoint agents, operating-system requirements, log-retention periods, or isolation technologies unless confirmed.",
+    "rejected_original_sections": {
+      "functional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "FR-001",
+            "title": "collect system events, authentication activity, process information, and security alerts from multiple departments via secure data feeds.",
+            "statement": "The system shall collect system events, authentication activity, process information, and security alerts from multiple departments via secure data feeds.",
+            "rationale": "Implements stakeholder source E-001.",
+            "priority": "must",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-001"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A university server with active monitoring enabled",
+                "when": "System events are generated and transmitted to the platform",
+                "then": "All event types are received and stored in a normalized format",
+                "method": "test",
+                "observable_evidence": "Test capture of event ingestion from a simulated server"
+              }
+            ],
+            "unresolved_decisions": [
+              "Data feed encryption method",
+              "Event normalization schema"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "title": "detect unusual login behavior, repeated failed authentication, suspicious process activity, and unauthorized configuration changes using predefined behavioral thresholds.",
+            "statement": "The system shall detect unusual login behavior, repeated failed authentication, suspicious process activity, and unauthorized configuration changes using predefined behavioral thresholds.",
+            "rationale": "Implements stakeholder source E-002.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-002"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A user attempting multiple failed logins on a managed endpoint",
+                "when": "The platform processes authentication attempts and compares them to baseline behavior",
+                "then": "An alert is generated for repeated failed authentication events",
+                "method": "demonstration",
+                "observable_evidence": "Test capture of alert generation during simulated attack"
+              }
+            ],
+            "unresolved_decisions": [
+              "Threshold configuration values",
+              "Baseline data collection frequency"
+            ]
+          },
+          {
+            "id": "FR-003",
+            "title": "Security administrators shall be able to review alerts, investigate affected devices, record investigation notes, change alert status, and isolate compromised endpoints when necessary.",
+            "statement": "Security administrators shall be able to review alerts, investigate affected devices, record investigation notes, change alert status, and isolate compromised endpoints when necessary.",
+            "rationale": "Implements stakeholder source E-003.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-003"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An administrator with access privileges and a test alert from a managed device",
+                "when": "The administrator requests alert review and performs an investigation",
+                "then": "The system returns the alert details and allows status update and endpoint isolation",
+                "method": "test",
+                "observable_evidence": "Test capture of alert response and status change"
+              }
+            ],
+            "unresolved_decisions": [
+              "Endpoint isolation workflow",
+              "Access control for investigation actions"
+            ]
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "nonfunctional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "title": "maintain audit logs of security events and administrator actions and provide a centralized dashboard for monitoring security status across multiple campus locations.",
+            "statement": "The system shall maintain audit logs of security events and administrator actions and provide a centralized dashboard for monitoring security status across multiple campus locations.",
+            "rationale": "Implements stakeholder source E-004.",
+            "priority": "should",
+            "dimensions": [
+              "availability"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-004"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A security administrator accesses the system with valid credentials",
+                "when": "The administrator requests to view audit logs and security status dashboards",
+                "then": "The system returns audit logs of security events and administrator actions, and displays a centralized dashboard showing current security status across multiple campus locations",
+                "method": "test",
+                "observable_evidence": "Test capture of the dashboard display and log retrieval response"
+              }
+            ],
+            "unresolved_decisions": [
+              "The specific data fields included in audit logs",
+              "The granularity of security status indicators on the dashboard",
+              "Whether real-time updates are provided to the dashboard"
+            ]
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "security": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-001",
+          "FR-003"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "data": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-003",
+          "NFR-001"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "network": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      }
+    },
+    "original_questions": [
+      "Data feed encryption method",
+      "Event normalization schema",
+      "Threshold configuration values",
+      "Baseline data collection frequency",
+      "Endpoint isolation workflow",
+      "Access control for investigation actions",
+      "The specific data fields included in audit logs",
+      "The granularity of security status indicators on the dashboard",
+      "Whether real-time updates are provided to the dashboard",
+      "Which specific data fields should be included in audit logs?",
+      "What is the granularity of security status indicators on the centralized dashboard?",
+      "Should real-time updates be provided to the dashboard?",
+      "How will endpoint isolation workflows be defined and executed?",
+      "What access controls will govern investigation actions during incident response?",
+      "What encryption method will be used for data feeds between departments and servers?",
+      "What schema will be used to normalize collected events from multiple sources?",
+      "What threshold configuration values will trigger alerts for unusual behavior?",
+      "What baseline data collection frequency will be maintained for behavioral analysis?"
+    ]
+  },
+  {
+    "key": "firewall",
+    "name": "Secure University Network Firewall Management System",
+    "filename": "4 - Firewall Management SRS",
+    "description": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks. The system should allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts. The platform should maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings. The solution should be secure, scalable, reliable, and manageable.",
+    "review_constraint": "CyberSRS should not invent firewall vendors, port rules, IP ranges, stateful-inspection settings, exact alert thresholds, or retention durations unless explicitly provided.",
+    "rejected_original_sections": {
+      "functional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "FR-001",
+            "title": "provide a centralized firewall management interface to manage firewall policies across academic, administrative, research, hostel, and guest networks.",
+            "statement": "The system shall provide a centralized firewall management interface to manage firewall policies across academic, administrative, research, hostel, and guest networks.",
+            "rationale": "Implements stakeholder source E-001.",
+            "priority": "must",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-001"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A network administrator with access privileges",
+                "when": "The administrator initiates policy management for the academic network segment",
+                "then": "The system shall present a configuration interface for defining firewall policies specific to that segment",
+                "method": "test",
+                "observable_evidence": "Test capture of the policy creation interface response"
+              }
+            ],
+            "unresolved_decisions": []
+          },
+          {
+            "id": "FR-002",
+            "title": "allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts.",
+            "statement": "The system shall allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts.",
+            "rationale": "Implements stakeholder source E-002.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-002"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An administrator with policy creation privileges and a test environment configured",
+                "when": "The administrator creates a new rule to restrict access from hostel to research networks",
+                "then": "The system shall enforce the rule and block unauthorized traffic between segments as defined",
+                "method": "test",
+                "observable_evidence": "Test capture of traffic flow before and after rule enforcement"
+              },
+              {
+                "given": "An administrator with review privileges and a live network segment",
+                "when": "The administrator requests to review existing firewall rules for the administrative network",
+                "then": "The system shall return the current set of active rules in a readable format",
+                "method": "test",
+                "observable_evidence": "Test capture of rule response during review"
+              },
+              {
+                "given": "A network segment with abnormal traffic patterns",
+                "when": "The system detects suspicious communication attempts between guest and research networks",
+                "then": "The system shall generate an alert indicating unauthorized communication",
+                "method": "test",
+                "observable_evidence": "Test capture of the alert notification response"
+              },
+              {
+                "given": "An administrator with update privileges and a live policy in place",
+                "when": "The administrator modifies a rule to allow access from academic to administrative networks",
+                "then": "The administrator modifies a rule to allow access from academic to administrative networks",
+                "method": "test",
+                "observable_evidence": "Test capture of resulting policy state"
+              }
+            ],
+            "unresolved_decisions": []
+          },
+          {
+            "id": "FR-003",
+            "title": "The platform shall maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings.",
+            "statement": "The platform shall maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings.",
+            "rationale": "Implements stakeholder source E-003.",
+            "priority": "should",
+            "dimensions": [
+              "business"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-003"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "An administrator performs a policy change on the research network segment",
+                "when": "The action is completed successfully",
+                "then": "The system shall record the change in audit logs with timestamp, user ID, and action type",
+                "method": "test",
+                "observable_evidence": "Test capture of audit log entry after policy modification"
+              },
+              {
+                "given": "A network administrator accesses the security dashboard",
+                "when": "The dashboard is loaded for the academic building segment",
+                "then": "The dashboard is loaded for the academic building segment",
+                "method": "test",
+                "observable_evidence": "Test capture of dashboard response"
+              },
+              {
+                "given": "A campus building with multiple network segments is configured",
+                "when": "The administrator selects the hostel building in the interface",
+                "then": "The system shall present firewall policies and events specific to that building",
+                "method": "test",
+                "observable_evidence": "Test capture of segment-specific policy view for hostel"
+              }
+            ],
+            "unresolved_decisions": []
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "nonfunctional": {
+        "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "title": "The solution shall be secure, scalable, reliable, and manageable.",
+            "statement": "The solution shall be secure, scalable, reliable, and manageable.",
+            "rationale": "Implements stakeholder source E-004.",
+            "priority": "should",
+            "dimensions": [
+              "availability"
+            ],
+            "basis": "explicit",
+            "evidence_ids": [
+              "E-004"
+            ],
+            "sources": [],
+            "dependencies": [],
+            "acceptance_criteria": [
+              {
+                "given": "A system administrator evaluates the operational readiness of the network infrastructure",
+                "when": "The administrator requests an assessment of security, scalability, reliability, and manageability attributes",
+                "then": "The administrator receives an assessment of security, scalability, reliability, and manageability attributes",
+                "method": "inspection",
+                "observable_evidence": "Test capture of resulting assessment response"
+              }
+            ],
+            "unresolved_decisions": [
+              "Definition of scalability thresholds in terms of concurrent users or network traffic volume",
+              "Quantitative reliability metrics (e.g., uptime percentage) to be met during peak operations",
+              "Specific manageability criteria such as interface usability, configuration speed, and error recovery"
+            ]
+          }
+        ],
+        "related_requirement_ids": [],
+        "related_acceptance_criteria": []
+      },
+      "security": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-001",
+          "FR-002",
+          "FR-003"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "data": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-003"
+        ],
+        "related_acceptance_criteria": []
+      },
+      "network": {
+        "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+        "requirements": [],
+        "related_requirement_ids": [
+          "FR-001",
+          "FR-002",
+          "FR-003"
+        ],
+        "related_acceptance_criteria": []
+      }
+    },
+    "original_questions": [
+      "Definition of scalability thresholds in terms of concurrent users or network traffic volume",
+      "Quantitative reliability metrics (e.g., uptime percentage) to be met during peak operations",
+      "Specific manageability criteria such as interface usability, configuration speed, and error recovery",
+      "Which specific compliance framework or policy is intended to be applied to the firewall management system?",
+      "What are the defined thresholds for scalability and reliability in terms of concurrent users, network traffic volume, and uptime percentage?",
+      "How will manageability criteria such as interface usability, configuration speed, and error recovery be measured and validated?"
+    ]
+  }
+]

@@ -1,0 +1,217 @@
+{
+  "case": "firewall",
+  "project_id": "e03d43ae-da17-4dbe-9470-4e420a627d33",
+  "version_id": "5df4c737-fa9d-4275-a6c8-e751eec52089",
+  "content_hash": "b2996b2dd583441b8643fb612f80f3e2603f4d224d56d206aabee45d6f31c388",
+  "status": "verified",
+  "quality": "needs_review",
+  "functional_requirements": 11,
+  "quality_requirements": 4,
+  "obligation_matrix": {
+    "manage firewall policies across academic, administrative, research, hostel, and guest networks": [
+      {
+        "id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ]
+      }
+    ],
+    "authorized network administrators to create firewall rules": [
+      {
+        "id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "authorized network administrators to review firewall rules": [
+      {
+        "id": "FR-003",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "authorized network administrators to update firewall rules": [
+      {
+        "id": "FR-004",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "authorized network administrators to revoke firewall rules": [
+      {
+        "id": "FR-005",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "enforce access restrictions between network segments": [
+      {
+        "id": "FR-006",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "monitor blocked and allowed traffic": [
+      {
+        "id": "FR-007",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "generate alerts for suspicious": [
+      {
+        "id": "FR-008",
+        "evidence_ids": [
+          "E-002"
+        ]
+      }
+    ],
+    "maintain audit logs of firewall policy changes and administrative actions": [
+      {
+        "id": "FR-009",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "provide a dashboard": [
+      {
+        "id": "FR-010",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ],
+    "support multiple campus buildings": [
+      {
+        "id": "FR-011",
+        "evidence_ids": [
+          "E-003"
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "Q-66cf5513b374",
+      "question": "How are the stated roles and authorized permissions assigned?",
+      "why_needed": "To ensure proper access control, accountability, and segregation of duties within the firewall management system.",
+      "critical": true,
+      "evidence_ids": [
+        "E-002"
+      ]
+    },
+    {
+      "id": "Q-64ef2e28335c",
+      "question": "What retention period is required for the audit logs?",
+      "why_needed": "To meet compliance obligations and enable forensic analysis in case of security incidents.",
+      "critical": true,
+      "evidence_ids": [
+        "E-003"
+      ]
+    },
+    {
+      "id": "Q-3aae42e94793",
+      "question": "Which fields must the audit logs contain?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-003"
+      ]
+    },
+    {
+      "id": "Q-7b2e5f89a0b1",
+      "question": "Which security acceptance outcomes must be demonstrated?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-004"
+      ]
+    },
+    {
+      "id": "Q-543394346815",
+      "question": "What measurable scalability targets must the system meet?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-004"
+      ]
+    },
+    {
+      "id": "Q-819bb986f419",
+      "question": "What measurable reliability and recovery targets must the system meet?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-004"
+      ]
+    },
+    {
+      "id": "Q-5268b96e41b0",
+      "question": "What criteria define acceptable manageability?",
+      "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+      "critical": false,
+      "evidence_ids": [
+        "E-004"
+      ]
+    }
+  ],
+  "traceability": {
+    "NFR-002": [
+      "TEST-013"
+    ],
+    "NFR-003": [
+      "TEST-014"
+    ],
+    "FR-007": [
+      "TEST-007"
+    ],
+    "FR-004": [
+      "TEST-004"
+    ],
+    "FR-009": [
+      "TEST-009"
+    ],
+    "FR-011": [
+      "TEST-011"
+    ],
+    "NFR-004": [
+      "TEST-015"
+    ],
+    "FR-005": [
+      "TEST-005"
+    ],
+    "FR-002": [
+      "TEST-002"
+    ],
+    "FR-001": [
+      "TEST-001"
+    ],
+    "NFR-001": [
+      "TEST-012"
+    ],
+    "FR-006": [
+      "TEST-006"
+    ],
+    "FR-010": [
+      "TEST-010"
+    ],
+    "FR-008": [
+      "TEST-008"
+    ],
+    "FR-003": [
+      "TEST-003"
+    ]
+  },
+  "pdf_pages": 6,
+  "pdf_sha256": "2c6c10d9d0adb7e1ce25b2de6303ff44c3725835e7888683e318c504d80e6415",
+  "generation_seconds": 137.828,
+  "assistant_output_review": "pending",
+  "human_approvals": 0
+}

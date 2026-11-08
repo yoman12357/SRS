@@ -1,0 +1,145 @@
+{
+  "case": "wifi",
+  "project_id": "6fba6a71-7322-4882-984c-b08c1c2cd226",
+  "label": "final",
+  "started_local": "2026-10-29T19:05:24.377875+05:30",
+  "analysis": {
+    "run_id": "bbd782ca-5320-431d-b954-de81ae497d33",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T13:35:16.295472+00:00",
+    "terminal_at": "2026-10-29T13:35:24.230157+00:00",
+    "total_seconds": 7.935,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 7.828,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 7.828,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "completed",
+  "generation": {
+    "run_id": "c878ade4-70f8-4d5b-b9ba-aeb1833177c2",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T13:35:24.381949+00:00",
+    "terminal_at": "2026-10-29T13:36:54.030470+00:00",
+    "total_seconds": 89.649,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.103,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 34.293,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 20.992,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.019,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.019,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.019,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 7.98,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 4.55,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 1.278,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 1.267,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "completed",
+        "seconds": 0.745,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "verification": {
+        "status": "completed",
+        "seconds": 3.687,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "glossary": {
+        "status": "completed",
+        "seconds": 1.031,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "sdlc": {
+        "status": "completed",
+        "seconds": 12.34,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      }
+    },
+    "maximum_section_seconds": 34.293,
+    "completed_srs": true,
+    "human_approval": false
+  },
+  "error": null,
+  "pdf_pages": 5,
+  "version_id": "b2ce4c51-b17a-439e-bd82-11965df6770b",
+  "content_hash": "9c1bde3733f6e04eaacaee1c9fadb487db780fb35bd80c7e01dbe14f31e6fb42",
+  "quality": "needs_review",
+  "models_used": [
+    "cybersrs-qwen3-4b-ft:latest",
+    "qwen3:4b-instruct-2507-q4_K_M"
+  ],
+  "pdf": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Four Examples\\1 - Campus Wi-Fi SRS.pdf",
+  "total_wall_seconds": 99.031,
+  "source_unchanged": true
+}

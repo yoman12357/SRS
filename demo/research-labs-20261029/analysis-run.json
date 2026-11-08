@@ -1,0 +1,95 @@
+{
+  "id": "714e0939-822b-453d-b655-d7da145c68c2",
+  "project_id": "f2d054f9-dd01-4caf-b5be-8c41543ad05f",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "5bb507fed0ef368f6ea0e6c247cf2d1f8776deaac58567fe9f66e5ca82cfa15c",
+  "events": [
+    {
+      "at": "2026-10-29T09:56:37.336578+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-29T09:56:51.516785+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 14.157,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Secure Access Control and Network Monitoring for University Research Laboratories",
+      "domain": "security",
+      "supported": true,
+      "summary": "A secure access-control system is required to restrict access to research lab networks based on role, with administrator privileges to manage permissions and monitor activity. The system must maintain audit logs, isolate lab networks from general university networks, and support both university-managed and approved research devices.",
+      "stakeholders": [
+        "university administrators",
+        "research faculty",
+        "students",
+        "lab technicians"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "The system must provide secure access control for sensitive equipment and data, ensuring only authorized users can access lab systems based on role."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Access is granted only to students, faculty, researchers, and administrators with approved roles and permissions, preventing unauthorized access."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Administrators can grant/revoke access, review active sessions, monitor unusual login activity, and receive alerts for failed attempts or outside-hours access."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "network",
+            "security"
+          ],
+          "explanation": "The system must maintain audit logs of access decisions and administrator actions; isolate research lab networks from general student/guest networks; support university-managed and approved research devices."
+        },
+        {
+          "evidence_id": "E-005",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "nonfunctional"
+          ],
+          "explanation": "The solution must be reliable, secure, and manageable across multiple research buildings to ensure consistent operation."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T09:56:37.226875+00:00",
+  "updated_at": "2026-10-29T09:56:51.523785+00:00"
+}

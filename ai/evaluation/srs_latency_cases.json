@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "campus-perimeter",
+      "name": "Campus Perimeter Monitoring",
+      "description": "Design a locally managed firewall and network monitoring platform for a college campus. It must segment student, staff, laboratory, guest, and administration networks; centralize security events; alert campus IT; and continue essential filtering during an internet outage.",
+      "clarification_rules": [
+        {
+          "contains": ["scale", "device", "node", "user"],
+          "answer": "Approximately 8,000 users, 12,000 devices, 40 buildings, and two data centers are in scope."
+        },
+        {
+          "contains": ["retention", "log", "audit"],
+          "answer": "Keep searchable security logs for 180 days and archived audit records for one year."
+        },
+        {
+          "contains": ["availability", "recovery", "outage"],
+          "answer": "Filtering must continue locally during WAN outages, with a four-hour recovery objective for central monitoring."
+        },
+        {
+          "contains": [],
+          "answer": "Campus IT administrators operate the service; use role-based access, encrypted management traffic, nightly configuration backups, and staged deployment."
+        }
+      ],
+      "expected_capabilities": [
+        {"id": "segmentation", "any_of": ["segment", "vlan", "zone"]},
+        {"id": "monitoring", "any_of": ["monitor", "alert", "security event"]},
+        {"id": "resilience", "any_of": ["outage", "availability", "recovery"]}
+      ]
+    },
+    {
+      "id": "university-research-data",
+      "name": "University Research Data Protection",
+      "description": "Create a cybersecurity requirements specification for a university research-data platform holding controlled research data. Researchers, principal investigators, ethics staff, and security administrators need role-based access. The platform must produce tamper-evident audit records, retain them for seven years, encrypt transfers and storage, and support incident investigation without exposing research content.",
+      "clarification_rules": [
+        {
+          "contains": ["retention", "audit", "log"],
+          "answer": "Tamper-evident access and administrative audit records must be retained for seven years and remain searchable for investigations."
+        },
+        {
+          "contains": ["access", "role", "user", "stakeholder"],
+          "answer": "Researchers receive least-privilege project access approved by principal investigators; ethics and security reviewers have separate read-only oversight roles."
+        },
+        {
+          "contains": ["recovery", "availability", "backup"],
+          "answer": "Use encrypted daily backups, a four-hour recovery objective, and annual restoration tests."
+        },
+        {
+          "contains": [],
+          "answer": "About 2,000 researchers and 400 active projects are in scope; all data stays on university-managed infrastructure and every privileged action requires MFA."
+        }
+      ],
+      "expected_capabilities": [
+        {"id": "role_access", "any_of": ["role-based", "least privilege", "authorization"]},
+        {"id": "audit", "any_of": ["tamper-evident", "audit record", "audit log"]},
+        {"id": "retention", "any_of": ["seven years", "7 years", "retention"]}
+      ]
+    },
+    {
+      "id": "regional-clinic-zero-trust",
+      "name": "Regional Clinic Zero Trust",
+      "description": "Specify a local-first zero-trust access service for a regional clinic network. It must protect clinical workstations, medical devices, administrative systems, and remote support sessions while preserving emergency care workflows and recording privileged access for review.",
+      "clarification_rules": [
+        {
+          "contains": ["scale", "site", "device", "user"],
+          "answer": "The deployment covers six clinics, 900 staff accounts, 1,400 managed endpoints, and 350 medical devices."
+        },
+        {
+          "contains": ["emergency", "availability", "outage", "recovery"],
+          "answer": "Emergency clinical access must remain available during identity-service outages and be reviewed within 24 hours; target recovery is two hours."
+        },
+        {
+          "contains": ["retention", "audit", "log"],
+          "answer": "Retain privileged-access and emergency-access audit records for six years with integrity verification."
+        },
+        {
+          "contains": [],
+          "answer": "Require MFA for staff and vendors, isolate unmanaged medical devices, approve vendor sessions, and keep patient data on clinic-managed systems."
+        }
+      ],
+      "expected_capabilities": [
+        {"id": "zero_trust", "any_of": ["zero trust", "least privilege", "continuous verification"]},
+        {"id": "emergency_access", "any_of": ["emergency access", "break-glass", "emergency care"]},
+        {"id": "device_isolation", "any_of": ["medical device", "segment", "isolate"]}
+      ]
+    },
+    {
+      "id": "industrial-network-segmentation",
+      "name": "Industrial Network Segmentation",
+      "description": "Define requirements for passive monitoring and secure segmentation of a water utility industrial network. The solution covers control centers, treatment plants, engineering workstations, operator stations, historians, and vendor maintenance paths. It must not actively scan or disrupt operational controllers.",
+      "clarification_rules": [
+        {
+          "contains": ["site", "scale", "device", "asset"],
+          "answer": "There are two control centers, eight treatment sites, about 600 operational assets, and 60 engineering or operator workstations."
+        },
+        {
+          "contains": ["vendor", "remote", "access"],
+          "answer": "Vendor access is time-limited, MFA-protected, approved by operations, recorded, and routed through a monitored jump host."
+        },
+        {
+          "contains": ["availability", "outage", "recovery"],
+          "answer": "Monitoring failure must not affect control traffic; configuration recovery is required within four hours."
+        },
+        {
+          "contains": [],
+          "answer": "Use passive sensors only, enforce control-zone conduits, retain events for one year, and deploy changes during approved maintenance windows."
+        }
+      ],
+      "expected_capabilities": [
+        {"id": "passive_monitoring", "any_of": ["passive", "non-intrusive", "monitor"]},
+        {"id": "segmentation", "any_of": ["zone", "conduit", "segment"]},
+        {"id": "vendor_access", "any_of": ["vendor", "jump host", "remote access"]}
+      ]
+    },
+    {
+      "id": "branch-secure-connectivity",
+      "name": "Branch Secure Connectivity",
+      "description": "Produce an SRS for secure connectivity across 25 company branches and one headquarters. The system must provide encrypted site-to-site communication, separate corporate, voice, guest, and management traffic, fail over between two carriers, centralize policy, and give operations measurable service health without cloud dependencies.",
+      "clarification_rules": [
+        {
+          "contains": ["bandwidth", "traffic", "performance", "latency"],
+          "answer": "Each branch supports up to 150 users; business traffic requires under 100 ms inter-site latency and voice requires under 150 ms."
+        },
+        {
+          "contains": ["availability", "failover", "recovery", "outage"],
+          "answer": "Automatic carrier failover must complete within 60 seconds, with no single gateway failure at headquarters."
+        },
+        {
+          "contains": ["retention", "log", "audit"],
+          "answer": "Keep configuration changes and security events searchable for 180 days and archive them for one year."
+        },
+        {
+          "contains": [],
+          "answer": "Network operations and security teams use separate roles with MFA; all controllers, telemetry, and backups remain on company-managed infrastructure."
+        }
+      ],
+      "expected_capabilities": [
+        {"id": "encryption", "any_of": ["encrypted", "ipsec", "vpn"]},
+        {"id": "failover", "any_of": ["failover", "redundant", "carrier"]},
+        {"id": "traffic_separation", "any_of": ["guest", "voice", "segment"]}
+      ]
+    }
+  ]
+}

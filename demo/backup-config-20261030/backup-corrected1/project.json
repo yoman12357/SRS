@@ -1,0 +1,63 @@
+{
+  "id": "195cd75c-0708-45cc-9496-e78f89c67751",
+  "name": "Secure Backup and Recovery Management System",
+  "description": "Design a secure backup and recovery management system for a university that protects critical data from academic departments, administrative systems, research platforms, and shared services. The system should allow authorized administrators to define backup policies, initiate and monitor backup jobs, restore approved data, and review backup status across multiple campus locations. It should detect failed or incomplete backup operations, generate security and operational alerts, maintain audit logs of backup and restore activities, and restrict backup administration based on user roles. The platform should integrate with existing university storage and identity services and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": {
+    "title": "Secure Backup and Recovery Management System",
+    "domain": "security",
+    "supported": true,
+    "summary": "A secure backup and recovery management system shall allow authorized administrators to define backup policies, initiate and monitor backup jobs, restore approved data, and review backup status across multiple campus locations. The system shall detect failed or incomplete operations, generate security and operational alerts, maintain audit logs of all backup and restore activities, and restrict administration based on user roles.",
+    "stakeholders": [
+      "university administrators",
+      "academic departments",
+      "research platforms"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "introduction",
+          "functional",
+          "nonfunctional"
+        ],
+        "explanation": "The system must protect critical data from academic departments, administrative systems, research platforms, and shared services."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Authorized administrators shall be able to define backup policies, initiate and monitor jobs, restore approved data, and review status across multiple campus locations."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "requirement",
+        "sections": [
+          "security",
+          "data",
+          "functional"
+        ],
+        "explanation": "The system must detect failed or incomplete operations, generate alerts, maintain audit logs of all activities, and restrict administration based on user roles."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "network",
+          "nonfunctional"
+        ],
+        "explanation": "The platform shall integrate with existing university storage and identity services to ensure interoperability and secure access."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": []
+  },
+  "created_at": "2026-10-30T02:57:59.822367+00:00",
+  "updated_at": "2026-10-30T02:58:23.559304+00:00",
+  "reference_hashes": []
+}

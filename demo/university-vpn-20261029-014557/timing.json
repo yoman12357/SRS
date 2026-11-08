@@ -1,0 +1,17 @@
+{
+  "project_id": "b5c32592-4cc1-4583-b348-0f42c1ca7b01",
+  "run_id": "1d00c417-56ab-4cf7-82d1-6ff39b394bb1",
+  "started_by": "computer-use Retry button",
+  "ui_click_started_utc": "2026-10-28T20:15:57.960000+00:00",
+  "ui_click_started_ist": "2026-10-29T01:45:57.960000+05:30",
+  "earlier_analysis_time_included": false,
+  "source_sha256": "c56ccd36ea41b1694c22458b212ce9d7550e8c0988561d79064ff28d67fb8c66",
+  "status": "failed",
+  "human_approval": false,
+  "error": "section_validation_failed:FR-012:unconfirmed_production_log_witness_use_test_capture",
+  "terminal_observed_utc": "2026-10-28T20:20:05.287172+00:00",
+  "elapsed_to_terminal_observation_seconds": 247.327,
+  "reused_sections": [
+    "introduction"
+  ]
+}

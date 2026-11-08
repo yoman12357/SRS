@@ -1,0 +1,11 @@
+{
+  "pdf_documents_found": 37,
+  "chunks_per_document_max": 4,
+  "examples_per_chunk": 4,
+  "max_examples_per_document": 16,
+  "total_examples": 596,
+  "train_examples": 468,
+  "val_examples": 64,
+  "test_examples": 64,
+  "failures": []
+}

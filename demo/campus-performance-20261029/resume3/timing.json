@@ -1,0 +1,36 @@
+{
+  "run_id": "d479e06b-5cc8-4c25-9754-1964b7c575dd",
+  "status": "failed",
+  "error": "section_validation_failed:section_output_truncated: finish the complete assigned JSON concisely; do not repeat entries or include other sections; preserve source behavior",
+  "created_at": "2026-10-28T21:18:22.329346+00:00",
+  "terminal_at": "2026-10-28T21:19:09.809732+00:00",
+  "total_seconds": 47.48,
+  "sections": {
+    "introduction": {
+      "status": "reused",
+      "seconds": 0,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "reused",
+      "seconds": 0,
+      "models": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "nonfunctional": {
+      "status": "reused",
+      "seconds": 0,
+      "models": []
+    },
+    "security": {
+      "status": "failed",
+      "seconds": 47.383
+    }
+  },
+  "maximum_section_seconds": 47.383,
+  "completed_srs": false,
+  "human_approval": false
+}

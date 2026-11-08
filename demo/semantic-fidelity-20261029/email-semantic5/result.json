@@ -1,0 +1,55 @@
+{
+  "case": "email",
+  "project_id": "2badaa88-4459-4cd9-a8fc-3961ec8edd6b",
+  "label": "semantic5",
+  "started_local": "2026-10-29T22:07:10.482365+05:30",
+  "analysis": {
+    "run_id": "7c6d5af2-c043-41a4-a968-7ef6bc509b04",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T16:36:58.402186+00:00",
+    "terminal_at": "2026-10-29T16:37:09.913226+00:00",
+    "total_seconds": 11.511,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 11.427,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 11.427,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "f1a15c6b-4a04-4e20-8f65-63c8495501c5",
+    "status": "failed",
+    "error": "section_budget_exhausted:functional",
+    "created_at": "2026-10-29T16:37:10.485342+00:00",
+    "terminal_at": "2026-10-29T16:38:11.715059+00:00",
+    "total_seconds": 61.23,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.117,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 60.028
+      }
+    },
+    "maximum_section_seconds": 60.028,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_budget_exhausted:functional",
+  "total_wall_seconds": 74.297,
+  "source_unchanged": true
+}

@@ -1,0 +1,55 @@
+{
+  "case": "backup",
+  "label": "initial",
+  "source_profile": "source-profile.json",
+  "user_folder": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Backup and Configuration - 30 Oct 2026\\Secure Backup and Recovery Management System",
+  "human_approval": false,
+  "project_id": "195cd75c-0708-45cc-9496-e78f89c67751",
+  "analysis": {
+    "run_id": "67ece483-b48e-4544-b946-280c22ded723",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-30T02:57:59.856098+00:00",
+    "terminal_at": "2026-10-30T02:58:23.602251+00:00",
+    "total_seconds": 23.746,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 12.388,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 12.388,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "status": "cancelled",
+  "error": "generation_cancelled",
+  "generation": {
+    "run_id": "02814c84-b56d-4420-9184-07f83f6ef392",
+    "status": "cancelled",
+    "error": "generation_cancelled",
+    "created_at": "2026-10-30T02:58:24.034751+00:00",
+    "terminal_at": "2026-10-30T02:59:06.122347+00:00",
+    "total_seconds": 42.088,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.351,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "cancelled",
+        "seconds": 40.613
+      }
+    },
+    "maximum_section_seconds": 40.613,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "wall_seconds": 66.688
+}

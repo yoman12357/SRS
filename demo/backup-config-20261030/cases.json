@@ -1,0 +1,12 @@
+[
+  {
+    "key": "backup",
+    "name": "Secure Backup and Recovery Management System",
+    "description": "Design a secure backup and recovery management system for a university that protects critical data from academic departments, administrative systems, research platforms, and shared services. The system should allow authorized administrators to define backup policies, initiate and monitor backup jobs, restore approved data, and review backup status across multiple campus locations. It should detect failed or incomplete backup operations, generate security and operational alerts, maintain audit logs of backup and restore activities, and restrict backup administration based on user roles. The platform should integrate with existing university storage and identity services and remain secure, reliable, scalable, and manageable."
+  },
+  {
+    "key": "configuration",
+    "name": "Secure Network Configuration Management System",
+    "description": "Design a secure network configuration management system for a university that manages configuration changes across routers, switches, wireless controllers, and other network infrastructure. Authorized network administrators should be able to review current configurations, submit configuration changes, track change history, and restore previously approved configurations when necessary. The system should detect unauthorized or unexpected configuration changes, generate security alerts, maintain audit logs of configuration activity and administrator actions, and restrict administrative functions based on approved roles. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+  }
+]

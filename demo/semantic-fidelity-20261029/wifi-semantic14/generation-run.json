@@ -1,0 +1,1239 @@
+{
+  "id": "9afb46c4-2c72-4387-896c-709905ea9af1",
+  "project_id": "ed74b2bb-13c7-4d3d-bad3-4f5b92ad6e9f",
+  "kind": "generate",
+  "status": "failed",
+  "input_hash": "b2bbb64366fff852b6559a2736ef34719cde36e510bacd2534ac1c8ed9d448ef",
+  "events": [
+    {
+      "at": "2026-10-29T20:16:28.527283+00:00",
+      "agent": "introduction",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:16:29.887562+00:00",
+      "agent": "introduction",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.359,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "introduction_projection_version": "source-fact-introduction-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:16:29.913523+00:00",
+      "agent": "functional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:17:53.276836+00:00",
+      "agent": "functional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "attempts": 9,
+      "source_obligations_version": "source-obligations-1.0",
+      "atomic_source_keys": [
+        "E-001_O01",
+        "E-002_O01",
+        "E-002_O02",
+        "E-002_O03",
+        "E-002_O04",
+        "E-002_O05",
+        "E-002_O06",
+        "E-002_O07",
+        "E-003_O01",
+        "E-003_O02",
+        "E-003_O03",
+        "E-003_O04",
+        "E-004_O01"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [
+        "E-002_O02",
+        "E-002_O03",
+        "E-003_O04"
+      ],
+      "elapsed_seconds": 83.359,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:17:53.292666+00:00",
+      "agent": "nonfunctional",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:01.262874+00:00",
+      "agent": "nonfunctional",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 2,
+      "source_obligations_version": "source-obligations-1.0",
+      "atomic_source_keys": [
+        "E-001_O02",
+        "E-004_O02",
+        "E-004_O03",
+        "E-004_O04",
+        "E-004_O05"
+      ],
+      "compiled_canonical_index": false,
+      "compiled_source_statements": true,
+      "repaired_test_keys": [],
+      "elapsed_seconds": 7.968,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:01.287952+00:00",
+      "agent": "security",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:01.348827+00:00",
+      "agent": "security",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.062,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:01.375309+00:00",
+      "agent": "data",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:01.414542+00:00",
+      "agent": "data",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.047,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:01.439479+00:00",
+      "agent": "network",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:01.483334+00:00",
+      "agent": "network",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.4",
+      "elapsed_seconds": 0.047,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:01.500921+00:00",
+      "agent": "compliance",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:05.623874+00:00",
+      "agent": "compliance",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 4.125,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:05.648454+00:00",
+      "agent": "architecture",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:21.600408+00:00",
+      "agent": "architecture",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 3,
+      "elapsed_seconds": 15.969,
+      "architecture_stages": [
+        {
+          "stage": "components",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 4.125,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "ownership",
+          "selection_version": "source-keyed-owners-1.0",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 2.562,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "internal_interactions",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 9.219,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        }
+      ],
+      "architecture_layout_version": "source-backed-layout-1.1",
+      "source_paths_compiled": true,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:21.612512+00:00",
+      "agent": "threats",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:23.224477+00:00",
+      "agent": "threats",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.609,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:23.236670+00:00",
+      "agent": "risks",
+      "state": "running",
+      "budget_seconds": 120.0
+    },
+    {
+      "at": "2026-10-29T20:18:24.784522+00:00",
+      "agent": "risks",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.547,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T20:18:24.800282+00:00",
+      "agent": "scenarios",
+      "state": "running",
+      "budget_seconds": 120.0
+    }
+  ],
+  "checkpoints": {
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": [
+        "What conditions define repeated authentication failures?",
+        "What conditions define unauthorized access attempts?",
+        "What retention period is required for the audit logs?"
+      ]
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices",
+          "statement": "The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices.",
+          "rationale": "Source obligation E-001_O01.",
+          "priority": "must",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices",
+              "when": "the system initiates a connection request from a user in an academic building",
+              "then": "the user is granted authenticated wireless access with no service interruption observed",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "use centralized authentication",
+          "statement": "The system shall use centralized authentication.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system uses centralized authentication",
+              "when": "the system initiates an authentication request for a user",
+              "then": "the system returns a valid authentication response from the centralized authority",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "use role-based access control",
+          "statement": "The system shall use role-based access control.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system applies role-based access control",
+              "when": "a user attempts to access a resource with permissions beyond their assigned role",
+              "then": "The system observes the access decision and records the response-message wording as undecided.",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "separate guest access from internal university resources",
+          "statement": "The system shall separate guest access from internal university resources.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "guest access is separated from internal university resources",
+              "when": "a guest device attempts to access an internal university resource",
+              "then": "The guest device is denied access to the internal university resource.",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-005",
+          "title": "monitor active wireless sessions",
+          "statement": "The system shall monitor active wireless sessions.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system monitors active wireless sessions",
+              "when": "a wireless session is established on a network segment",
+              "then": "the system records the session details and maintains an active session list",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-006",
+          "title": "detect repeated authentication failures",
+          "statement": "The system shall detect repeated authentication failures.",
+          "rationale": "Source obligation E-002_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system detects repeated authentication failures",
+              "when": "a user attempts to authenticate multiple times with incorrect credentials",
+              "then": "the system identifies.",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define repeated authentication failures?"
+          ]
+        },
+        {
+          "id": "FR-007",
+          "title": "detect unauthorized access attempts",
+          "statement": "The system shall detect unauthorized access attempts.",
+          "rationale": "Source obligation E-002_O06.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system detects unauthorized access attempts",
+              "when": "a user or device accesses a resource without valid authorization",
+              "then": "the system identifies.",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What conditions define unauthorized access attempts?"
+          ]
+        },
+        {
+          "id": "FR-008",
+          "title": "generate security alerts",
+          "statement": "The system shall generate security alerts.",
+          "rationale": "Source obligation E-002_O07.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system generates security alerts",
+              "when": "a detection event occurs such as repeated failures or unauthorized access",
+              "then": "the system produces a security alert that is visible in the monitoring interface",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-009",
+          "title": "allow Network administrators to configure wireless access policies",
+          "statement": "The system shall allow Network administrators to configure wireless access policies.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Network administrators configure wireless access policies",
+              "when": "initiate configuration of wireless access policies",
+              "then": "the configured policy is applied to the wireless network and visible in the system interface",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-010",
+          "title": "allow Network administrators to review connected devices",
+          "statement": "The system shall allow Network administrators to review connected devices.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Network administrators request review of connected devices",
+              "when": "request a list of currently connected devices",
+              "then": "the requested list of connected devices is returned and displayed for examination",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-011",
+          "title": "allow Network administrators to revoke access",
+          "statement": "The system shall allow Network administrators to revoke access.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Network administrators revoke access for a device",
+              "when": "initiate revocation of access for a specific device",
+              "then": "access is removed from the device and the system reflects the updated access status",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-012",
+          "title": "allow Network administrators to inspect audit logs",
+          "statement": "The system shall allow Network administrators to inspect audit logs.",
+          "rationale": "Source obligation E-003_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Network administrators inspect audit logs",
+              "when": "request inspection of audit logs",
+              "then": "Network administrators inspect audit logs; external test capture records the inspection response.",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-013",
+          "title": "support university-managed and approved personal devices",
+          "statement": "The system shall support university-managed and approved personal devices.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system is configured with a university-managed and approved personal device from the list of supported types",
+              "when": "the system initiates a secure connection using that device",
+              "then": "the connection succeeds without security failure or service interruption",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What criteria determine whether a device is approved?"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-001_O02.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall be secure against known attack vectors and maintain confidentiality, integrity, and availability",
+              "when": "An analyst inspects or reviews that acceptance plan",
+              "then": "The plan's measurable targets remain TBD or unconfirmed",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        },
+        {
+          "id": "NFR-002",
+          "title": "remain secure across multiple campus locations",
+          "statement": "The system shall remain secure across multiple campus locations.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain secure across multiple campus locations.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Which security acceptance outcomes must be demonstrated?"
+          ]
+        },
+        {
+          "id": "NFR-003",
+          "title": "remain scalable across multiple campus locations",
+          "statement": "The system shall remain scalable across multiple campus locations.",
+          "rationale": "Source obligation E-004_O03.",
+          "priority": "should",
+          "dimensions": [
+            "performance"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain scalable across multiple campus locations.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "What measurable scalability targets must the system meet?"
+          ]
+        },
+        {
+          "id": "NFR-004",
+          "title": "remain reliable across multiple campus locations",
+          "statement": "The system shall remain reliable across multiple campus locations.",
+          "rationale": "Source obligation E-004_O04.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain reliable across multiple campus locations.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "What measurable reliability and recovery targets must the system meet?"
+          ]
+        },
+        {
+          "id": "NFR-005",
+          "title": "remain manageable across multiple campus locations",
+          "statement": "The system shall remain manageable across multiple campus locations.",
+          "rationale": "Source obligation E-004_O05.",
+          "priority": "should",
+          "dimensions": [
+            "usability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall remain manageable across multiple campus locations.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "What criteria define acceptable manageability?"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-013"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "NFR-001",
+        "NFR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-012",
+        "FR-013",
+        "NFR-002",
+        "NFR-003",
+        "NFR-004",
+        "NFR-005"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-005",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "What conditions define repeated authentication failures?",
+        "What conditions define unauthorized access attempts?",
+        "What retention period is required for the audit logs?"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Wireless Access Gateway",
+          "detail": "Proposed logical owner for FR-001, NFR-002, NFR-003, FR-013, NFR-001, NFR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-002",
+            "NFR-003",
+            "FR-013",
+            "NFR-001",
+            "NFR-004"
+          ],
+          "component_name": "Wireless Access Gateway",
+          "responsibility": "The system shall provide wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system shall remain secure across multiple campus locations. The system shall remain scalable across multiple campus locations. The system shall support university-managed and approved personal devices. The system shall be secure. The system shall remain reliable across multiple campus locations."
+        },
+        {
+          "title": "Central Authentication Service",
+          "detail": "Proposed logical owner for FR-002, FR-004, FR-005, FR-006, FR-007, FR-008, FR-013.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-013"
+          ],
+          "component_name": "Central Authentication Service",
+          "responsibility": "The system shall use centralized authentication. The system shall separate guest access from internal university resources. The system shall monitor active wireless sessions. The system shall detect repeated authentication failures. The system shall detect unauthorized access attempts. The system shall generate security alerts. The system shall support university-managed and approved personal devices."
+        },
+        {
+          "title": "Role-Based Access Control Engine",
+          "detail": "Proposed logical owner for FR-003, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-003",
+            "NFR-001"
+          ],
+          "component_name": "Role-Based Access Control Engine",
+          "responsibility": "The system shall use role-based access control. The system shall be secure."
+        },
+        {
+          "title": "Policy Configuration Interface",
+          "detail": "Proposed logical owner for FR-009, FR-010, FR-011, FR-012, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "NFR-005"
+          ],
+          "component_name": "Policy Configuration Interface",
+          "responsibility": "The system shall allow Network administrators to configure wireless access policies. The system shall allow Network administrators to review connected devices. The system shall allow Network administrators to revoke access. The system shall allow Network administrators to inspect audit logs. The system shall remain manageable across multiple campus locations."
+        },
+        {
+          "title": "Device and Session Monitoring Module",
+          "detail": "Proposed logical owner for FR-005, FR-006, FR-007, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Device and Session Monitoring Module",
+          "responsibility": "The system shall monitor active wireless sessions. The system shall detect repeated authentication failures. The system shall detect unauthorized access attempts. The system shall remain reliable across multiple campus locations. The system shall remain manageable across multiple campus locations."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-013"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-013.",
+          "from_component": "Wireless Access Gateway",
+          "to_component": "Central Authentication Service",
+          "data_or_action": "The system shall support university-managed and approved personal devices."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Wireless Access Gateway",
+          "to_component": "Role-Based Access Control Engine",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-004.",
+          "from_component": "Wireless Access Gateway",
+          "to_component": "Device and Session Monitoring Module",
+          "data_or_action": "The system shall remain reliable across multiple campus locations."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-013"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-013.",
+          "from_component": "Central Authentication Service",
+          "to_component": "Wireless Access Gateway",
+          "data_or_action": "The system shall support university-managed and approved personal devices."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-005",
+            "FR-006",
+            "FR-007"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-005, FR-006, FR-007.",
+          "from_component": "Central Authentication Service",
+          "to_component": "Device and Session Monitoring Module",
+          "data_or_action": "The system shall monitor active wireless sessions. The system shall detect repeated authentication failures. The system shall detect unauthorized access attempts."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-001.",
+          "from_component": "Role-Based Access Control Engine",
+          "to_component": "Wireless Access Gateway",
+          "data_or_action": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-005.",
+          "from_component": "Policy Configuration Interface",
+          "to_component": "Device and Session Monitoring Module",
+          "data_or_action": "The system shall remain manageable across multiple campus locations."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-004.",
+          "from_component": "Device and Session Monitoring Module",
+          "to_component": "Wireless Access Gateway",
+          "data_or_action": "The system shall remain reliable across multiple campus locations."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-005",
+            "FR-006",
+            "FR-007"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-005, FR-006, FR-007.",
+          "from_component": "Device and Session Monitoring Module",
+          "to_component": "Central Authentication Service",
+          "data_or_action": "The system shall monitor active wireless sessions. The system shall detect repeated authentication failures. The system shall detect unauthorized access attempts."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-005.",
+          "from_component": "Device and Session Monitoring Module",
+          "to_component": "Policy Configuration Interface",
+          "data_or_action": "The system shall remain manageable across multiple campus locations."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-013"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-013.",
+          "untrusted_component": "Wireless Access Gateway",
+          "trusted_component": "Central Authentication Service",
+          "enforcement": "The system shall support university-managed and approved personal devices."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "untrusted_component": "Wireless Access Gateway",
+          "trusted_component": "Role-Based Access Control Engine",
+          "enforcement": "The system shall be secure."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-005",
+            "FR-006",
+            "FR-007"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-005, FR-006, FR-007.",
+          "untrusted_component": "Device and Session Monitoring Module",
+          "trusted_component": "Central Authentication Service",
+          "enforcement": "The system shall monitor active wireless sessions. The system shall detect repeated authentication failures. The system shall detect unauthorized access attempts."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-005.",
+          "untrusted_component": "Policy Configuration Interface",
+          "trusted_component": "Device and Session Monitoring Module",
+          "enforcement": "The system shall remain manageable across multiple campus locations."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    }
+  },
+  "error": "scenarios:source_actor_requires_clarification",
+  "created_at": "2026-10-29T20:16:28.437624+00:00",
+  "updated_at": "2026-10-29T20:18:24.816777+00:00"
+}

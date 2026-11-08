@@ -1,0 +1,15 @@
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 27, "source_relevance_score": 303, "recommended_sdlc": "Hybrid", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 19, "source_relevance_score": 351, "recommended_sdlc": "Incremental", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-218_SSDF_v1.1.pdf", "source_chunk": 15, "source_relevance_score": 114, "recommended_sdlc": "Spiral", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-37r2_Risk_Management_Framework.pdf", "source_chunk": 26, "source_relevance_score": 227, "recommended_sdlc": "Prototyping", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "OWASP_Developer_Guide.pdf", "source_chunk": 36, "source_relevance_score": 87, "recommended_sdlc": "Prototyping", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 19, "source_relevance_score": 351, "recommended_sdlc": "Incremental", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 121, "source_relevance_score": 765, "recommended_sdlc": "Waterfall", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-37r2_Risk_Management_Framework.pdf", "source_chunk": 21, "source_relevance_score": 257, "recommended_sdlc": "Hybrid", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-37r2_Risk_Management_Framework.pdf", "source_chunk": 62, "source_relevance_score": 166, "recommended_sdlc": "Agile/Scrum", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Software_Engineering_Guidebook.pdf", "source_chunk": 27, "source_relevance_score": 303, "recommended_sdlc": "Hybrid", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-160v1r1_Engineering_Trustworthy_Secure_Systems.pdf", "source_chunk": 42, "source_relevance_score": 185, "recommended_sdlc": "Prototyping", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "OWASP_Developer_Guide.pdf", "source_chunk": 16, "source_relevance_score": 86, "recommended_sdlc": "DevSecOps", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NASA_Systems_Engineering_Handbook.pdf", "source_chunk": 56, "source_relevance_score": 320, "recommended_sdlc": "Iterative/Evolutionary", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "GAO_24-105506_Agile_Assessment_Guide.pdf", "source_chunk": 7, "source_relevance_score": 546, "recommended_sdlc": "Iterative/Evolutionary", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}
+{"source_file": "NIST_SP_800-160v1r1_Engineering_Trustworthy_Secure_Systems.pdf", "source_chunk": 39, "source_relevance_score": 134, "recommended_sdlc": "DevSecOps", "generator_model": "qwen3:4b-instruct-2507-q4_K_M"}

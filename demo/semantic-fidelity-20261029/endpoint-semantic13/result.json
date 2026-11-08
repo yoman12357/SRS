@@ -1,0 +1,146 @@
+{
+  "case": "endpoint",
+  "project_id": "f3936e4a-289f-4689-989a-41e2a604dab4",
+  "label": "semantic13",
+  "started_local": "2026-10-30T01:35:26.559735+05:30",
+  "analysis": {
+    "run_id": "f071bb51-46e7-4e1d-9200-26d09effaddb",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T20:05:14.467376+00:00",
+    "terminal_at": "2026-10-29T20:05:25.199215+00:00",
+    "total_seconds": 10.732,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 10.636,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 10.636,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "completed",
+  "generation": {
+    "run_id": "24312d8e-5a82-47e7-8e16-05b2fb1428f7",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T20:05:26.563964+00:00",
+    "terminal_at": "2026-10-29T20:07:17.285350+00:00",
+    "total_seconds": 110.721,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 2.054,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 62.339,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest",
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 5.917,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.048,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.034,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.038,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 4.357,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 17.713,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 2.106,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 2.43,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "completed",
+        "seconds": 2.606,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "verification": {
+        "status": "completed",
+        "seconds": 4.677,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "glossary": {
+        "status": "completed",
+        "seconds": 1.548,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "sdlc": {
+        "status": "completed",
+        "seconds": 4.175,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 62.339,
+    "completed_srs": true,
+    "human_approval": false
+  },
+  "error": null,
+  "pdf_pages": 6,
+  "version_id": "2ff0e44d-074f-4704-ba5f-721bcda108e9",
+  "content_hash": "9382877a67e00a12fe355218c2c9da52e315d531ed56b6abaaa40df175e182a8",
+  "quality": "needs_review",
+  "models_used": [
+    "cybersrs-qwen3-4b-ft:latest",
+    "qwen3:4b-instruct-2507-q4_K_M"
+  ],
+  "pdf": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Source Fidelity Checks\\3 - Server and Endpoint Monitoring SRS.pdf",
+  "total_wall_seconds": 126.906,
+  "source_unchanged": true
+}

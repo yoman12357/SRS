@@ -1,0 +1,31 @@
+{
+  "corpus_name": "CyberSRS Fine-Tuning Source Corpus 200",
+  "source_document_count": 200,
+  "original_corpus_documents": 100,
+  "additional_rfc_documents": 100,
+  "subdomain_counts": {
+    "01_Governance_Risk_Compliance": 5,
+    "02_Identity_Access_Zero_Trust": 23,
+    "03_VPN_IPsec_Secure_Tunneling": 10,
+    "04_TLS_PKI_Cryptography": 27,
+    "05_DNS_DNSSEC_Name_Security": 10,
+    "06_Routing_IPv6_Network_Security": 25,
+    "07_Web_API_Application_Security": 37,
+    "08_Cloud_Container_Supply_Chain": 12,
+    "09_Logging_Monitoring_Incident_Response": 20,
+    "10_Network_Management_Operations": 13,
+    "11_Secure_Development_Requirements": 8,
+    "12_Email_Messaging_Security": 10
+  },
+  "organization_counts": {
+    "IETF / RFC Editor": 119,
+    "NIST": 17,
+    "OWASP": 64
+  },
+  "metadata_files_not_counted": [
+    "README.md",
+    "RESOURCE_LINKS.csv",
+    "RESOURCE_LINKS.md",
+    "CORPUS_SUMMARY.json"
+  ]
+}

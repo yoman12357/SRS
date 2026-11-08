@@ -1,0 +1,55 @@
+{
+  "case": "endpoint",
+  "project_id": "8750ab53-b713-41de-ad19-0d2dff0d23fd",
+  "label": "initial",
+  "started_local": "2026-10-29T18:50:16.198941+05:30",
+  "analysis": {
+    "run_id": "3578c43e-5e8a-488b-95e1-ba13a536b168",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T13:20:08.126242+00:00",
+    "terminal_at": "2026-10-29T13:20:15.354856+00:00",
+    "total_seconds": 7.229,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 7.141,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 7.141,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "6c4f18dd-ce55-4a40-8b06-21a1443c7f56",
+    "status": "failed",
+    "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-001:missing_functional_behavior_monitoring;FR-003:unrequested_product_logging_use_test_instrumented_state_capture",
+    "created_at": "2026-10-29T13:20:16.201938+00:00",
+    "terminal_at": "2026-10-29T13:20:49.836565+00:00",
+    "total_seconds": 33.635,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.331,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "failed",
+        "seconds": 32.176
+      }
+    },
+    "maximum_section_seconds": 32.176,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-001:missing_functional_behavior_management;E-001:missing_functional_behavior_monitoring;FR-003:unrequested_product_logging_use_test_instrumented_state_capture",
+  "total_wall_seconds": 42.219,
+  "source_unchanged": true
+}

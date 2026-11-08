@@ -1,0 +1,87 @@
+{
+  "id": "b5c32592-4cc1-4583-b348-0f42c1ca7b01",
+  "name": "university VPN",
+  "description": "Design a secure university VPN and remote-access management system that allows students, faculty, researchers, and administrative staff to securely access approved campus resources from off-campus locations. The system should use centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted remote connections, session monitoring, and automatic security alerts. Sensitive administrative and research systems should only be accessible to specifically authorized users, while guest users must not receive VPN access. Network administrators should be able to create and revoke remote-access permissions, review active sessions, terminate suspicious sessions, manage VPN policies, and inspect audit logs. The system should also detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources. All authentication events, access decisions, policy changes, and administrator actions must be logged. The solution should be secure, scalable, reliable, and support both university-managed and approved personal devices.",
+  "answers": [],
+  "analysis": {
+    "title": "Secure Remote Access System",
+    "domain": "security",
+    "supported": true,
+    "summary": "A university-wide secure remote access system enables off-campus access to approved campus resources using centralized authentication, role-based access control, and multi-factor authentication for privileged users. The system includes session monitoring, automated alerts for suspicious activity, and comprehensive logging of all access events and policy changes.",
+    "stakeholders": [
+      "students",
+      "faculty",
+      "researchers",
+      "administrative staff",
+      "network administrators"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "introduction",
+          "functional"
+        ],
+        "explanation": "The system must allow secure off-campus access to approved campus resources for students, faculty, researchers, and administrative staff."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Centralized authentication, role-based access control, multi-factor authentication for privileged users, encrypted connections, session monitoring, and automated alerts are required to ensure secure remote access."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "exclusion",
+        "sections": [
+          "functional"
+        ],
+        "explanation": "Guest users must not receive VPN access; only specifically authorized users may access sensitive administrative and research systems."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Network administrators must be able to create, revoke, review, terminate, and manage remote-access permissions and policies with audit log inspection capabilities."
+      },
+      {
+        "evidence_id": "E-005",
+        "kind": "requirement",
+        "sections": [
+          "functional"
+        ],
+        "explanation": "The system must detect repeated failed login attempts, unusual login locations, excessive session duration, and unauthorized attempts to access restricted internal resources as part of its active security monitoring behavior."
+      },
+      {
+        "evidence_id": "E-006",
+        "kind": "requirement",
+        "sections": [
+          "security",
+          "data"
+        ],
+        "explanation": "All authentication events, access decisions, policy changes, and administrator actions must be logged for auditability and incident investigation."
+      },
+      {
+        "evidence_id": "E-007",
+        "kind": "context",
+        "sections": [
+          "introduction",
+          "nonfunctional"
+        ],
+        "explanation": "The solution must be secure, scalable, reliable, and support both university-managed and approved personal devices as part of the overall system design."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": []
+  },
+  "created_at": "2026-10-28T19:56:27.864924+00:00",
+  "updated_at": "2026-10-28T19:57:28.995839+00:00",
+  "reference_hashes": []
+}

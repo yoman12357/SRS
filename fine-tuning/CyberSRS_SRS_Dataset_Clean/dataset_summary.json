@@ -1,0 +1,44 @@
+{
+  "status": "APPROVED_FOR_ADAPTER_TRAINING_STRUCTURE",
+  "original_examples": 596,
+  "removed_non_srs_examples": 4,
+  "removed_source": "README.md",
+  "final_examples": 592,
+  "pdf_documents": 37,
+  "srs_families": 10,
+  "generation_policy_verified": "4 chunks per PDF x 4 examples per chunk",
+  "train_examples": 464,
+  "val_examples": 64,
+  "test_examples": 64,
+  "train_documents": 29,
+  "val_documents": 4,
+  "test_documents": 4,
+  "train_families": [
+    "01_CAN_Network",
+    "02_Communication",
+    "03_Network_Management",
+    "04_FlexRay_Network",
+    "05_Network_Gateway",
+    "06_Ethernet",
+    "08_Secure_Communication",
+    "10_XCP_Network_Protocol"
+  ],
+  "validation_family": "07_Cryptography",
+  "test_family": "09_V2X",
+  "document_overlap": {
+    "train_val": [],
+    "train_test": [],
+    "val_test": []
+  },
+  "family_overlap": {
+    "train_val": [],
+    "train_test": [],
+    "val_test": []
+  },
+  "documents_failing_4x4_check": {},
+  "duplicate_output_groups": 0,
+  "duplicate_instruction_groups": 3,
+  "message_format_mismatches": 0,
+  "all_outputs_contain_shall": true,
+  "note": "Structural/training-readiness approval. Grounding of every generated detail against the original source PDFs was not re-verified because the uploaded ZIP contains the generated dataset, not the source PDFs."
+}

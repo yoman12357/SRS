@@ -1,0 +1,62 @@
+{
+  "case": "email",
+  "project_id": "01232107-db47-4d20-a7ed-7ea8a6d600c6",
+  "label": "semantic9",
+  "started_local": "2026-10-29T22:25:15.838324+05:30",
+  "analysis": {
+    "run_id": "86de09f0-e7a1-4a4a-ae3f-5d624cd5f76d",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-29T16:55:03.755310+00:00",
+    "terminal_at": "2026-10-29T16:55:14.387928+00:00",
+    "total_seconds": 10.633,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 10.548,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 10.548,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "manual_retries": 0,
+  "status": "failed",
+  "generation": {
+    "run_id": "1d7aeb06-4109-4674-8389-06baf7a5ee40",
+    "status": "failed",
+    "error": "section_validation_failed:E-001_O02:quality_target_is_TBD_not_a_passed_benchmark",
+    "created_at": "2026-10-29T16:55:15.841308+00:00",
+    "terminal_at": "2026-10-29T16:56:48.494771+00:00",
+    "total_seconds": 92.653,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.29,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 73.255,
+        "models": [
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "failed",
+        "seconds": 17.988
+      }
+    },
+    "maximum_section_seconds": 73.255,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "error": "section_validation_failed:E-001_O02:quality_target_is_TBD_not_a_passed_benchmark",
+  "total_wall_seconds": 106.438,
+  "source_unchanged": true
+}

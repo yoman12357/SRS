@@ -1,0 +1,64 @@
+{
+  "id": "5a37532d-1e69-48b4-bcaf-ae9dbdb2cf8a",
+  "name": "Secure University Security Exception Management System",
+  "description": "Design a secure university security exception management system that tracks requests for temporary exceptions to approved security policies across academic departments, administrative units, research environments, and IT services. Authorized security administrators should be able to review exception requests, record justification and supporting evidence, approve or reject requests, assign expiration dates, review active exceptions, and revoke exceptions when conditions change. The system should restrict access based on user roles, detect unauthorized changes to exception records, identify expired exceptions, generate security alerts, and maintain audit logs of exception decisions, record changes, and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": {
+    "title": "Security Exception Management System",
+    "domain": "security",
+    "supported": true,
+    "summary": "A secure university security exception management system shall track requests for temporary exceptions to approved security policies across academic departments, administrative units, research environments, and IT services. Authorized administrators shall review, approve or reject requests with justification and evidence, assign expiration dates, maintain active records, and revoke when conditions change. The system shall detect unauthorized changes, identify expired exceptions, generate alerts, and maintain audit logs of decisions and actions.",
+    "stakeholders": [
+      "university security administrators",
+      "academic departments",
+      "administrative units",
+      "research environments",
+      "IT services"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security",
+          "nonfunctional"
+        ],
+        "explanation": "The system shall track requests for temporary exceptions to approved security policies across academic departments, administrative units, research environments, and IT services."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Authorized administrators shall review exception requests, record justification and supporting evidence, approve or reject requests, assign expiration dates, review active exceptions, and revoke exceptions when conditions change."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "requirement",
+        "sections": [
+          "security",
+          "data",
+          "functional"
+        ],
+        "explanation": "The system shall detect unauthorized changes to exception records, identify expired exceptions, generate security alerts, and maintain audit logs of exception decisions, record changes, and administrator actions."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "nonfunctional"
+        ],
+        "explanation": "The platform shall provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": []
+  },
+  "created_at": "2026-10-30T09:24:23.599198+00:00",
+  "updated_at": "2026-10-30T09:24:38.649189+00:00",
+  "reference_hashes": []
+}

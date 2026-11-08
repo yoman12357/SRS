@@ -1,0 +1,10 @@
+{
+  "id": "5a37532d-1e69-48b4-bcaf-ae9dbdb2cf8a",
+  "name": "Secure University Security Exception Management System",
+  "description": "Design a secure university security exception management system that tracks requests for temporary exceptions to approved security policies across academic departments, administrative units, research environments, and IT services. Authorized security administrators should be able to review exception requests, record justification and supporting evidence, approve or reject requests, assign expiration dates, review active exceptions, and revoke exceptions when conditions change. The system should restrict access based on user roles, detect unauthorized changes to exception records, identify expired exceptions, generate security alerts, and maintain audit logs of exception decisions, record changes, and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-30T09:24:23.599198+00:00",
+  "updated_at": "2026-10-30T09:24:23.599198+00:00",
+  "reference_hashes": []
+}

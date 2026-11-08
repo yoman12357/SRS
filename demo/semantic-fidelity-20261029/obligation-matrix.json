@@ -1,0 +1,133 @@
+{
+  "wifi": {
+    "operations": [
+      "provide wireless access to students, faculty, staff, and guests",
+      "use centralized authentication",
+      "use role-based access control",
+      "separate guest access",
+      "monitor active wireless sessions",
+      "detect repeated authentication failures",
+      "detect unauthorized access attempts",
+      "generate security alerts",
+      "configure wireless access policies",
+      "review connected devices",
+      "revoke access",
+      "inspect audit logs",
+      "support university-managed and approved personal devices"
+    ],
+    "scope_traits": [
+      "students",
+      "faculty",
+      "staff",
+      "guests",
+      "academic buildings",
+      "hostels",
+      "laboratories",
+      "administrative offices",
+      "university-managed",
+      "approved personal devices",
+      "multiple campus locations"
+    ],
+    "quality_attributes": [
+      "secure",
+      "scalable",
+      "reliable",
+      "manageable"
+    ]
+  },
+  "email": {
+    "operations": [
+      "protect students, faculty, staff, and administrators",
+      "inspect incoming and outgoing email traffic",
+      "detect suspicious messages",
+      "quarantine potentially harmful emails",
+      "generate security alerts",
+      "authorized administrators to review quarantined messages",
+      "authorized administrators to release quarantined messages",
+      "maintain audit logs of filtering decisions and administrator actions",
+      "integrate with the university identity system",
+      "provide a dashboard for monitoring email security events"
+    ],
+    "scope_traits": [
+      "students",
+      "faculty",
+      "staff",
+      "administrators",
+      "phishing",
+      "malicious attachments",
+      "spoofed messages",
+      "suspicious links",
+      "incoming and outgoing",
+      "university identity system",
+      "university-wide deployment"
+    ],
+    "quality_attributes": [
+      "secure",
+      "scalable",
+      "reliable",
+      "manageable"
+    ]
+  },
+  "endpoint": {
+    "operations": [
+      "collect system events, authentication activity, process information, and security alerts",
+      "detect unusual login behavior",
+      "detect repeated failed authentication",
+      "detect suspicious process activity",
+      "detect unauthorized configuration changes",
+      "review alerts",
+      "investigate affected devices",
+      "record investigation notes",
+      "change alert status",
+      "isolate compromised endpoints when necessary",
+      "maintain audit logs of security events and administrator actions",
+      "provide a centralized dashboard"
+    ],
+    "scope_traits": [
+      "university servers",
+      "managed endpoints",
+      "system events",
+      "authentication activity",
+      "process information",
+      "security alerts",
+      "multiple departments",
+      "when necessary",
+      "multiple campus locations"
+    ],
+    "quality_attributes": [
+      "secure"
+    ]
+  },
+  "firewall": {
+    "operations": [
+      "manage firewall policies across academic, administrative, research, hostel, and guest networks",
+      "authorized network administrators to create firewall rules",
+      "authorized network administrators to review firewall rules",
+      "authorized network administrators to update firewall rules",
+      "authorized network administrators to revoke firewall rules",
+      "enforce access restrictions between network segments",
+      "monitor blocked and allowed traffic",
+      "generate alerts for suspicious",
+      "maintain audit logs of firewall policy changes and administrative actions",
+      "provide a dashboard",
+      "support multiple campus buildings"
+    ],
+    "scope_traits": [
+      "centralized",
+      "academic",
+      "administrative",
+      "research",
+      "hostel",
+      "guest networks",
+      "authorized network administrators",
+      "blocked and allowed traffic",
+      "multiple campus buildings"
+    ],
+    "quality_attributes": [
+      "secure",
+      "scalable",
+      "reliable",
+      "manageable"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": "0b0d8b24-a171-46d7-b4d8-79112ca77e68",
+  "status": "failed",
+  "error": "section_validation_failed:E-004:permitted_review_outcome_not_observed;security:unconfirmed_product_message_contract",
+  "created_at": "2026-10-29T03:03:22.637743+00:00",
+  "terminal_at": "2026-10-29T03:03:54.429172+00:00",
+  "total_seconds": 31.791,
+  "sections": {
+    "introduction": {
+      "status": "reused",
+      "seconds": 0,
+      "models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ]
+    },
+    "functional": {
+      "status": "reused",
+      "seconds": 0,
+      "models": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "nonfunctional": {
+      "status": "reused",
+      "seconds": 0,
+      "models": []
+    },
+    "security": {
+      "status": "failed",
+      "seconds": 31.65
+    }
+  },
+  "maximum_section_seconds": 31.65,
+  "completed_srs": false,
+  "human_approval": false
+}

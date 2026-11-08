@@ -1,0 +1,12 @@
+{
+  "project_id": "f2d054f9-dd01-4caf-b5be-8c41543ad05f",
+  "analysis_run_id": "714e0939-822b-453d-b655-d7da145c68c2",
+  "description": "Design a secure access-control and network-monitoring system for university research laboratories containing sensitive equipment and research data. The system should allow only authorized students, faculty, researchers, and lab administrators to access designated lab networks and systems based on role and approved permissions. Administrative users should be able to grant or revoke access, review active sessions, monitor unusual login activity, and receive alerts for repeated failed authentication, unauthorized access attempts, and access outside approved lab hours. The system should maintain audit logs of access decisions and administrator actions, isolate research lab networks from general student and guest networks, and support both university-managed and approved research devices. The solution should be secure, reliable, and manageable across multiple research buildings.",
+  "output": "C:\\Users\\Aryan Bokolia\\Desktop\\cyber srs\\demo\\research-labs-20261029",
+  "new_generation_runs": [
+    "7a6fe1b2-f1fa-4b03-b3af-bada29dc5afd",
+    "08a89d30-2b07-4fbd-afe5-0d5266dd08e9",
+    "2904b308-36db-47a8-ad84-3af5f1b2c88d",
+    "f9dc16b1-ec0f-438b-b8eb-19163722d1d5"
+  ]
+}

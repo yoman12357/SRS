@@ -1,0 +1,78 @@
+{
+  "id": "359e7293-04dd-4a32-9e11-82ee2a09414a",
+  "name": "Example 2 - Secure University DNS and Web Filtering",
+  "description": "Design a secure DNS and web-access filtering system for a university that protects students, faculty, staff, and administrative users from malicious or unauthorized internet destinations. The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events. Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected. The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices. The solution should be secure, scalable, reliable, and manageable.",
+  "answers": [],
+  "analysis": {
+    "title": "Secure DNS and Web Access Filtering System",
+    "domain": "security",
+    "supported": true,
+    "summary": "A university deploys a secure DNS and web-access filtering system to protect users from malicious or unauthorized internet destinations. The system inspects DNS requests, blocks known malicious domains, applies role-based browsing policies, and provides administrators with tools for policy creation, exception management, and investigation of suspicious activity. Audit logs are maintained, and the solution integrates with centralized authentication and supports deployment across academic buildings, hostels, laboratories, and administrative offices.",
+    "stakeholders": [
+      "university administrators",
+      "IT security staff",
+      "faculty",
+      "students",
+      "staff"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "introduction",
+          "functional",
+          "security"
+        ],
+        "explanation": "The system must protect students, faculty, staff, and administrative users from malicious or unauthorized internet destinations."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security",
+          "data"
+        ],
+        "explanation": "The system should inspect DNS requests, block access to known malicious domains, apply different browsing policies based on user roles, and provide administrators with a dashboard for reviewing blocked requests and security events."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Administrators should be able to create and update filtering policies, allow approved exceptions, investigate repeated attempts to access blocked resources, and temporarily restrict users when suspicious behavior is detected."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "data",
+          "network",
+          "compliance"
+        ],
+        "explanation": "The platform should maintain audit logs of policy changes and filtering decisions, integrate with centralized authentication, and support deployment across academic buildings, hostels, laboratories, and administrative offices."
+      },
+      {
+        "evidence_id": "E-005",
+        "kind": "requirement",
+        "sections": [
+          "nonfunctional"
+        ],
+        "explanation": "The solution should be secure, scalable, reliable, and manageable."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": [
+      "how user roles are defined and mapped to browsing policies",
+      "what constitutes suspicious behavior and how it is detected",
+      "how audit logs are stored and accessed by authorized personnel",
+      "whether the system will support real-time threat intelligence feeds"
+    ]
+  },
+  "created_at": "2026-10-29T10:13:24.611987+00:00",
+  "updated_at": "2026-10-29T10:13:38.247044+00:00",
+  "reference_hashes": []
+}

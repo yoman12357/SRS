@@ -1,0 +1,130 @@
+{
+  "id": "382631aa-d61a-47d9-8f91-cf13c4d9af17",
+  "project_id": "c24641cb-bec8-4891-a613-02f1ad081304",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "6a2f6215fad48f49daa4779ed3a0498e411e3d3d234311a39a12f9a21418e1c3",
+  "events": [
+    {
+      "at": "2026-10-28T21:09:49.306328+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-28T21:10:01.445906+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 12.125,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Campus Wireless Network Access-Control Requirements",
+      "domain": "security",
+      "supported": true,
+      "summary": "A campus wireless network must enforce access control such that students and guests may access the internet but not internal staff networks. Administrators can manually isolate devices, and security operators can review alerts without altering policies. Policy changes are logged for 30 days. No automatic isolation or firewall rule changes are permitted. Requirements evolve frequently with weekly stakeholder feedback; budget, delivery schedule, response thresholds, and regulatory compliance remain open decisions.",
+      "stakeholders": [
+        "students",
+        "guests",
+        "staff",
+        "network administrators",
+        "security operators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "The project purpose is to build a campus wireless network access-control specification."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security"
+          ],
+          "explanation": "Students and guests may access the internet but must not access internal staff networks, establishing a clear boundary between public and private network segments."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Network administrators may manually isolate a device and restore its access, defining an exception path for administrative intervention."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "constraint",
+          "sections": [
+            "security"
+          ],
+          "explanation": "Security operators may review and acknowledge alerts but may not change access policies, restricting operator authority to monitoring only."
+        },
+        {
+          "evidence_id": "E-005",
+          "kind": "requirement",
+          "sections": [
+            "data",
+            "security"
+          ],
+          "explanation": "The system must record administrator policy changes and retain audit records for 30 days, establishing a data retention requirement with security implications."
+        },
+        {
+          "evidence_id": "E-006",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "The planning population is 2000 registered devices; concurrency is not yet decided, indicating current scale limits but no defined performance targets."
+        },
+        {
+          "evidence_id": "E-007",
+          "kind": "exclusion",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Do not automatically change firewall rules or isolate devices, prohibiting automated enforcement actions and restricting to manual control only."
+        },
+        {
+          "evidence_id": "E-008",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "Requirements evolve frequently with weekly stakeholder feedback, indicating a dynamic requirements lifecycle but no defined evolution mechanism."
+        },
+        {
+          "evidence_id": "E-009",
+          "kind": "context",
+          "sections": [
+            "introduction"
+          ],
+          "explanation": "Budget, delivery schedule, response-time thresholds and mandatory regulatory frameworks are undecided and must remain open decisions, placing these as project-level unknowns rather than system requirements."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": [
+        "What is the defined concurrency level for device access?",
+        "How will frequent requirement changes be tracked and managed in the development lifecycle?",
+        "Which specific regulatory frameworks may apply to this campus network?",
+        "What is the acceptable response time for policy change detection or alert review?",
+        "How will device isolation actions be validated before restoration?"
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-28T21:09:49.268742+00:00",
+  "updated_at": "2026-10-28T21:10:01.452441+00:00"
+}

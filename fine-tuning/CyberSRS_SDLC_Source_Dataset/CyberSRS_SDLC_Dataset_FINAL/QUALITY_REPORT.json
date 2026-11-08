@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "summary": "Final curated SDLC decision dataset for CyberSRS adapter training.",
+  "checks": {
+    "total_rows": 300,
+    "train_rows": 240,
+    "validation_rows": 30,
+    "test_rows": 15,
+    "holdout_rows": 15,
+    "all_json_valid": true,
+    "all_rows_user_assistant_pair": true,
+    "all_answers_include_recommended_sdlc": true,
+    "all_answers_include_decision_factors": true,
+    "all_answers_include_why_it_fits": true,
+    "all_answers_include_alternative_comparison": true,
+    "all_answers_include_lifecycle_mapping": true,
+    "all_answers_include_security_integration": true,
+    "all_answers_include_risks_tradeoffs": true,
+    "exact_duplicate_prompts": 0,
+    "exact_duplicate_answers": 0,
+    "repaired_scenarios": 181,
+    "normalized_answers": 300
+  },
+  "training_instruction": "Use train.jsonl for training and validation.jsonl for evaluation during training. Keep test.jsonl and holdout.jsonl completely out of adapter training."
+}

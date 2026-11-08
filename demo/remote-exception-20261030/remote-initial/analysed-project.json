@@ -1,0 +1,68 @@
+{
+  "id": "43a01389-5214-4118-8242-6c358b580b44",
+  "name": "Secure University Remote Access Management System",
+  "description": "Design a secure university remote access management system that controls off-campus access to internal university applications, servers, research systems, and administrative resources. Authorized administrators should be able to define remote-access permissions, approve or revoke access for users, review active remote sessions, and terminate suspicious sessions. The system should authenticate users before access is granted, enforce role-based access restrictions, detect repeated failed login attempts and unauthorized access attempts, generate security alerts, and maintain audit logs of remote access activity and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+  "answers": [],
+  "analysis": {
+    "title": "Secure Remote Access Management",
+    "domain": "security",
+    "supported": true,
+    "summary": "A university remote access system must authenticate users, enforce role-based access controls, detect suspicious activity, generate alerts, and maintain audit logs to ensure secure off-campus access to internal systems.",
+    "stakeholders": [
+      "authorized administrators",
+      "users",
+      "system operators"
+    ],
+    "assessments": [
+      {
+        "evidence_id": "E-001",
+        "kind": "requirement",
+        "sections": [
+          "introduction",
+          "functional",
+          "security",
+          "nonfunctional"
+        ],
+        "explanation": "The system must control off-campus access to university applications, servers, research systems, and administrative resources as a core security boundary."
+      },
+      {
+        "evidence_id": "E-002",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "security"
+        ],
+        "explanation": "Administrators must be able to define permissions, approve/revoke access, review active sessions, and terminate suspicious ones as defined operational actions."
+      },
+      {
+        "evidence_id": "E-003",
+        "kind": "requirement",
+        "sections": [
+          "security",
+          "data",
+          "nonfunctional",
+          "functional"
+        ],
+        "explanation": "Authentication, role-based restrictions, failed login detection, alert generation, and audit logging are required to meet security and reliability baselines."
+      },
+      {
+        "evidence_id": "E-004",
+        "kind": "requirement",
+        "sections": [
+          "functional",
+          "nonfunctional",
+          "network"
+        ],
+        "explanation": "The system must provide a centralized dashboard, integrate with identity services, support multiple campus locations, and maintain secure, reliable, scalable operation."
+      }
+    ],
+    "questions": [],
+    "unresolved_decisions": [
+      "What conditions define repeated authentication failures?",
+      "What conditions define unauthorized access attempts?"
+    ]
+  },
+  "created_at": "2026-10-30T09:21:59.309839+00:00",
+  "updated_at": "2026-10-30T09:22:13.297003+00:00",
+  "reference_hashes": []
+}

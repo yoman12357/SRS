@@ -1,0 +1,1302 @@
+{
+  "id": "2e65c3a3-275c-4ec7-bf20-46e3a4c375f0",
+  "project_id": "45030d8f-3960-4de3-ac19-ee6539724aee",
+  "kind": "generate",
+  "status": "completed",
+  "input_hash": "3ce14e2fdb26cfd26e7de87ac626b5ee7f20ea91fe017c63551c94c108620940",
+  "events": [
+    {
+      "at": "2026-10-29T13:18:31.095756+00:00",
+      "agent": "introduction",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:18:32.231563+00:00",
+      "agent": "introduction",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.141,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "introduction_projection_version": "source-fact-introduction-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:18:32.243756+00:00",
+      "agent": "functional",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:00.894257+00:00",
+      "agent": "functional",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 2,
+      "elapsed_seconds": 28.64,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "primary_attempts": 1,
+      "correction_attempts": 1,
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": true,
+      "primary_failure_code": "section_validation_failed:FR-001:unconfirmed_production_log_witness_use_test_capture;FR-002:unconfirmed_production_log_witness_use_test_capture",
+      "compact_requirements_version": "source-batch-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:00.908420+00:00",
+      "agent": "nonfunctional",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:19.518939+00:00",
+      "agent": "nonfunctional",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 2,
+      "elapsed_seconds": 18.609,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "primary_attempts": 1,
+      "correction_attempts": 1,
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": true,
+      "primary_failure_code": "section_validation_failed:NFR-001:unconfirmed_production_log_witness_use_test_capture",
+      "compact_requirements_version": "source-batch-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:19.532197+00:00",
+      "agent": "security",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:38.174767+00:00",
+      "agent": "security",
+      "state": "completed",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 2,
+      "elapsed_seconds": 18.641,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "primary_attempts": 1,
+      "correction_attempts": 1,
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": true,
+      "primary_failure_code": "section_validation_failed:SEC-001:unsupported_response_time_commitment",
+      "compact_requirements_version": "source-batch-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:38.186818+00:00",
+      "agent": "data",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:38.212324+00:00",
+      "agent": "data",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.0",
+      "elapsed_seconds": 0.031,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:38.224881+00:00",
+      "agent": "network",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:38.250143+00:00",
+      "agent": "network",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [],
+      "attempts": 0,
+      "compiled_canonical_index": true,
+      "compact_requirements_version": "source-batch-1.0",
+      "elapsed_seconds": 0.032,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:38.262991+00:00",
+      "agent": "compliance",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:46.622455+00:00",
+      "agent": "compliance",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 8.36,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:46.635637+00:00",
+      "agent": "architecture",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:51.504900+00:00",
+      "agent": "architecture",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "output_models": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "attempts": 3,
+      "elapsed_seconds": 4.86,
+      "architecture_stages": [
+        {
+          "stage": "components",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 1.641,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "ownership",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 1.25,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        },
+        {
+          "stage": "internal_interactions",
+          "model": "cybersrs-qwen3-4b-ft:latest",
+          "correction_policy_version": "bounded-corrective-history-1.0",
+          "attempts": 1,
+          "elapsed_seconds": 1.937,
+          "input_tokens": null,
+          "output_tokens": null,
+          "done_reason": "complete_json",
+          "requested_model": "cybersrs-qwen3-4b-ft:latest",
+          "base_repair_used": false
+        }
+      ],
+      "architecture_layout_version": "source-backed-layout-1.1",
+      "source_paths_compiled": true,
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:51.517928+00:00",
+      "agent": "threats",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:52.742710+00:00",
+      "agent": "threats",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.235,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:52.755710+00:00",
+      "agent": "risks",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:53.943298+00:00",
+      "agent": "risks",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.187,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:53.956122+00:00",
+      "agent": "scenarios",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:19:55.569942+00:00",
+      "agent": "scenarios",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 1.625,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "scenario_projection_version": "canonical-scenarios-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:19:55.583309+00:00",
+      "agent": "verification",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:20:01.817820+00:00",
+      "agent": "verification",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 6.234,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "verification_projection_version": "canonical-criteria-verification-1.1",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:20:01.830886+00:00",
+      "agent": "glossary",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:20:02.700689+00:00",
+      "agent": "glossary",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 0.875,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "source_advisory_version": "source-derived-advisory-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:20:02.714256+00:00",
+      "agent": "sdlc",
+      "state": "running",
+      "budget_seconds": 60.0
+    },
+    {
+      "at": "2026-10-29T13:20:05.253370+00:00",
+      "agent": "sdlc",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 2.532,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false,
+      "sdlc_prompt_version": "sequential-sdlc-generation-2.0",
+      "lifecycle_projection_version": "source-linked-lifecycle-1.0",
+      "retrieval_warning": null
+    },
+    {
+      "at": "2026-10-29T13:20:05.366625+00:00",
+      "agent": "document",
+      "state": "completed",
+      "version_id": "5b3705de-97b3-4e92-b748-6a8d14aa787c"
+    }
+  ],
+  "checkpoints": {
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The solution should be secure, reliable, scalable, and manageable for university-wide deployment.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+          "statement": "The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.",
+          "rationale": "Implements stakeholder source E-001.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An email containing a phishing link is sent to a university user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system detects the phishing content and blocks delivery",
+              "method": "test",
+              "observable_evidence": "Test capture of the blocked message with phishing indicator"
+            },
+            {
+              "given": "An email with a malicious attachment is sent to a university user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system identifies the malicious attachment and quarantines it",
+              "method": "test",
+              "observable_evidence": "Test capture of the quarantined file with malware signature"
+            },
+            {
+              "given": "An email spoofed with a fake university domain is sent to a user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system flags the sender as spoofed and alerts administrators",
+              "method": "test",
+              "observable_evidence": "Test capture of the spoofed header and alert notification"
+            },
+            {
+              "given": "An email with a suspicious link is sent to a user",
+              "when": "The email security gateway processes the incoming message",
+              "then": "The system detects the suspicious URL and marks it for review",
+              "method": "test",
+              "observable_evidence": "Test capture of the flagged link and user notification"
+            }
+          ],
+          "unresolved_decisions": [
+            "Thresholds for what constitutes a 'suspicious' link or attachment"
+          ]
+        },
+        {
+          "id": "FR-002",
+          "title": "inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "statement": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "rationale": "Implements stakeholder source E-002.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An incoming email with malicious content is received by the gateway",
+              "when": "The system performs inspection on the message body and headers",
+              "then": "The system quarantines the message and generates a security alert",
+              "method": "test",
+              "observable_evidence": "Test capture of quarantine action and generated alert"
+            },
+            {
+              "given": "An outgoing email is sent from a university user to an external recipient",
+              "when": "The system inspects the content for malicious payloads or links",
+              "then": "The system detects suspicious content and blocks transmission",
+              "method": "test",
+              "observable_evidence": "Test capture of blocked outbound message with reason"
+            },
+            {
+              "given": "A quarantined email is identified by an administrator",
+              "when": "An authorized admin requests review and release of the message",
+              "then": "The system allows the administrator to view and approve or reject the message",
+              "method": "test",
+              "observable_evidence": "Test capture of admin interface response for quarantined email"
+            },
+            {
+              "given": "A suspicious message is detected during processing",
+              "when": "The system generates a security alert",
+              "then": "The alert is delivered to designated administrators via secure channel",
+              "method": "test",
+              "observable_evidence": "Test capture of alert delivery to admin console"
+            }
+          ],
+          "unresolved_decisions": [
+            "Authentication method for administrator access to quarantined messages",
+            "Definition of 'authorized' administrative role"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+          "statement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+          "rationale": "Implements stakeholder source E-004.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A system administrator initiates a deployment request for university-wide use",
+              "when": "The system processes the deployment request",
+              "then": "The system returns a status indicating successful validation of security, reliability, scalability, and manageability criteria",
+              "method": "test",
+              "observable_evidence": "Test capture of the system's response to deployment request with validated criteria"
+            },
+            {
+              "given": "A network operations team observes increasing load during peak hours",
+              "when": "The system handles traffic under sustained high-load conditions",
+              "then": "The system maintains service availability and performance without degradation",
+              "method": "inspection",
+              "observable_evidence": "Test capture of system performance metrics during peak load"
+            },
+            {
+              "given": "A new department requests integration with existing university services",
+              "when": "The system is configured to support new service connections",
+              "then": "The system enables configuration without requiring revalidation or manual intervention",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of configuration workflow and successful service integration"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'manageable' in context of university-wide deployment",
+            "Thresholds for scalability under concurrent user load",
+            "Validation method for reliability during failure scenarios"
+          ]
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
+      "requirements": [
+        {
+          "id": "SEC-001",
+          "title": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+          "statement": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+          "rationale": "Implements stakeholder source E-003.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "An administrator performs a filtering action on an email message",
+              "when": "The system records the filtering decision and associated user action",
+              "then": "The audit log contains a record of the filtering decision and the administrator's identity and timestamp",
+              "method": "test",
+              "observable_evidence": "Test capture of the audit log entry"
+            },
+            {
+              "given": "An email security event occurs in the system",
+              "when": "The platform generates an alert for monitoring via its dashboard",
+              "then": "The dashboard displays the event with relevant metadata including source, severity, and timestamp",
+              "method": "inspection",
+              "observable_evidence": "Test capture of dashboard event display"
+            },
+            {
+              "given": "The university identity system is integrated with the platform",
+              "when": "An administrator logs in using their university credentials",
+              "then": "The platform authenticates the user and grants access based on role and permissions",
+              "method": "demonstration",
+              "observable_evidence": "Test capture of authentication and access grant"
+            }
+          ],
+          "unresolved_decisions": [
+            "Definition of 'filtering decision' in audit logs",
+            "Threshold for event severity in dashboard alerts",
+            "Authentication method used during integration with identity system"
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "SEC-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "How to define 'dynamic access policies' for email traffic based on user behavior and device context",
+        "What thresholds trigger a 'suspicious' link or attachment in phishing detection",
+        "Whether authentication methods for administrator access should be multi-factor",
+        "Definition of 'manageable' in the context of university-wide deployment",
+        "Thresholds for scalability under concurrent user load",
+        "Validation method for reliability during failure scenarios",
+        "How to define 'filtering decision' in audit logs",
+        "Threshold for event severity in dashboard alerts",
+        "Authentication method used during integration with identity system"
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: authorized administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: authorized administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "component_name": "Actor: authorized administrators",
+          "responsibility": "Represent the source-stated actor: authorized administrators."
+        },
+        {
+          "title": "Email Security Engine",
+          "detail": "Proposed logical owner for FR-001, FR-002, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001"
+          ],
+          "component_name": "Email Security Engine",
+          "responsibility": "The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages. The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        },
+        {
+          "title": "Audit and Monitoring Dashboard",
+          "detail": "Proposed logical owner for SEC-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "SEC-001",
+            "NFR-001"
+          ],
+          "component_name": "Audit and Monitoring Dashboard",
+          "responsibility": "The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events. The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002.",
+          "from_component": "Actor: authorized administrators",
+          "to_component": "Email Security Engine",
+          "data_or_action": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002.",
+          "untrusted_component": "Actor: authorized administrators",
+          "trusted_component": "Email Security Engine",
+          "enforcement": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "untrusted_component": "Email Security Engine",
+          "trusted_component": "Audit and Monitoring Dashboard",
+          "enforcement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        },
+        {
+          "status": "proposed",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for NFR-001.",
+          "untrusted_component": "Audit and Monitoring Dashboard",
+          "trusted_component": "Email Security Engine",
+          "enforcement": "The solution shall be secure, reliable, scalable, and manageable for university-wide deployment."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "authorized administrators",
+          "goal": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "story": "As authorized administrators, I need the following behavior: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "preconditions": [
+            "A quarantined email is identified by an administrator"
+          ],
+          "steps": [
+            "An authorized admin requests review and release of the message"
+          ],
+          "success_outcome": "The system allows the administrator to view and approve or reject the message",
+          "alternate_flows": [
+            "Given: An incoming email with malicious content is received by the gateway When: The system performs inspection on the message body and headers Then: The system quarantines the message and generates a security alert Evidence: Test capture of quarantine action and generated alert",
+            "Given: An outgoing email is sent from a university user to an external recipient When: The system inspects the content for malicious payloads or links Then: The system detects suspicious content and blocks transmission Evidence: Test capture of blocked outbound message with reason"
+          ],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": [
+            "Authentication method for administrator access to quarantined messages",
+            "Definition of 'authorized' administrative role"
+          ]
+        },
+        {
+          "id": "UC-002",
+          "actor": "authorized administrators",
+          "goal": "The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "story": "As authorized administrators, I need the following behavior: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.",
+          "preconditions": [
+            "A suspicious message is detected during processing"
+          ],
+          "steps": [
+            "The system generates a security alert"
+          ],
+          "success_outcome": "The alert is delivered to designated administrators via secure channel",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": [
+            "Authentication method for administrator access to quarantined messages",
+            "Definition of 'authorized' administrative role"
+          ]
+        }
+      ],
+      "open_issues": [
+        "Authentication method for administrator access to quarantined messages",
+        "Definition of 'authorized' administrative role"
+      ]
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email containing a phishing link is sent to a university user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system detects the phishing content and blocks delivery",
+          "evidence_to_record": "Evidence: Test capture of the blocked message with phishing indicator",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email with a malicious attachment is sent to a university user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system identifies the malicious attachment and quarantines it",
+          "evidence_to_record": "Evidence: Test capture of the quarantined file with malware signature",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email spoofed with a fake university domain is sent to a user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system flags the sender as spoofed and alerts administrators",
+          "evidence_to_record": "Evidence: Test capture of the spoofed header and alert notification",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: An email with a suspicious link is sent to a user",
+            "When: The email security gateway processes the incoming message"
+          ],
+          "expected_result": "Expected: The system detects the suspicious URL and marks it for review",
+          "evidence_to_record": "Evidence: Test capture of the flagged link and user notification",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: An incoming email with malicious content is received by the gateway",
+            "When: The system performs inspection on the message body and headers"
+          ],
+          "expected_result": "Expected: The system quarantines the message and generates a security alert",
+          "evidence_to_record": "Evidence: Test capture of quarantine action and generated alert",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: An outgoing email is sent from a university user to an external recipient",
+            "When: The system inspects the content for malicious payloads or links"
+          ],
+          "expected_result": "Expected: The system detects suspicious content and blocks transmission",
+          "evidence_to_record": "Evidence: Test capture of blocked outbound message with reason",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A quarantined email is identified by an administrator",
+            "When: An authorized admin requests review and release of the message"
+          ],
+          "expected_result": "Expected: The system allows the administrator to view and approve or reject the message",
+          "evidence_to_record": "Evidence: Test capture of admin interface response for quarantined email",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: A suspicious message is detected during processing",
+            "When: The system generates a security alert"
+          ],
+          "expected_result": "Expected: The alert is delivered to designated administrators via secure channel",
+          "evidence_to_record": "Evidence: Test capture of alert delivery to admin console",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A system administrator initiates a deployment request for university-wide use",
+            "When: The system processes the deployment request"
+          ],
+          "expected_result": "Expected: The system returns a status indicating successful validation of security, reliability, scalability, and manageability criteria",
+          "evidence_to_record": "Evidence: Test capture of the system's response to deployment request with validated criteria",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A network operations team observes increasing load during peak hours",
+            "When: The system handles traffic under sustained high-load conditions"
+          ],
+          "expected_result": "Expected: The system maintains service availability and performance without degradation",
+          "evidence_to_record": "Evidence: Test capture of system performance metrics during peak load",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A new department requests integration with existing university services",
+            "When: The system is configured to support new service connections"
+          ],
+          "expected_result": "Expected: The system enables configuration without requiring revalidation or manual intervention",
+          "evidence_to_record": "Evidence: Test capture of configuration workflow and successful service integration",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An administrator performs a filtering action on an email message",
+            "When: The system records the filtering decision and associated user action"
+          ],
+          "expected_result": "Expected: The audit log contains a record of the filtering decision and the administrator's identity and timestamp",
+          "evidence_to_record": "Evidence: Test capture of the audit log entry",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: An email security event occurs in the system",
+            "When: The platform generates an alert for monitoring via its dashboard"
+          ],
+          "expected_result": "Expected: The dashboard displays the event with relevant metadata including source, severity, and timestamp",
+          "evidence_to_record": "Evidence: Test capture of dashboard event display",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "SEC-001"
+          ],
+          "procedure": [
+            "Given: The university identity system is integrated with the platform",
+            "When: An administrator logs in using their university credentials"
+          ],
+          "expected_result": "Expected: The platform authenticates the user and grants access based on role and permissions",
+          "evidence_to_record": "Evidence: Test capture of authentication and access grant",
+          "test_type": "positive"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Agile",
+      "justification": "No differentiating input evidence is provided to favor one SDLC model over others. All models receive equal suitability points (40) due to absence of factors such as budget, delivery, failure consequences, feedback, legacy, regulation, schedule, stability, uncertainty, verification. The decision remains provisional until these unknown factors are clarified.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.; FR-002: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.; SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "Review and baseline the source-defined work group: NFR-001: The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Agile delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall protect students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links.; FR-002: The system shall inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages.; SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events.",
+            "Implement the source-defined work group: NFR-001: The solution shall be secure, reliable, scalable, and manageable for university-wide deployment.",
+            "In an authorized isolated test environment, execute TEST-001: Given: An email containing a phishing link is sent to a university user When: The email security gateway processes the incoming message Expected: The system detects the phishing content and blocks delivery",
+            "In an authorized isolated test environment, execute TEST-002: Given: An email with a malicious attachment is sent to a university user When: The email security gateway processes the incoming message Expected: The system identifies the malicious attachment and quarantines it",
+            "In an authorized isolated test environment, execute TEST-003: Given: An email spoofed with a fake university domain is sent to a user When: The email security gateway processes the incoming message Expected: The system flags the sender as spoofed and alerts administrators",
+            "In an authorized isolated test environment, execute TEST-004: Given: An email with a suspicious link is sent to a user When: The email security gateway processes the incoming message Expected: The system detects the suspicious URL and marks it for review",
+            "In an authorized isolated test environment, execute TEST-005: Given: An incoming email with malicious content is received by the gateway When: The system performs inspection on the message body and headers Expected: The system quarantines the message and generates a security alert",
+            "In an authorized isolated test environment, execute TEST-006: Given: An outgoing email is sent from a university user to an external recipient When: The system inspects the content for malicious payloads or links Expected: The system detects suspicious content and blocks transmission",
+            "In an authorized isolated test environment, execute TEST-007: Given: A quarantined email is identified by an administrator When: An authorized admin requests review and release of the message Expected: The system allows the administrator to view and approve or reject the message",
+            "In an authorized isolated test environment, execute TEST-008: Given: A suspicious message is detected during processing When: The system generates a security alert Expected: The alert is delivered to designated administrators via secure channel",
+            "In an authorized isolated test environment, execute TEST-009: Given: A system administrator initiates a deployment request for university-wide use When: The system processes the deployment request Expected: The system returns a status indicating successful validation of security, reliability, scalability, and manageability criteria",
+            "In an authorized isolated test environment, execute TEST-010: Given: A network operations team observes increasing load during peak hours When: The system handles traffic under sustained high-load conditions Expected: The system maintains service availability and performance without degradation",
+            "In an authorized isolated test environment, execute TEST-011: Given: A new department requests integration with existing university services When: The system is configured to support new service connections Expected: The system enables configuration without requiring revalidation or manual intervention",
+            "In an authorized isolated test environment, execute TEST-012: Given: An administrator performs a filtering action on an email message When: The system records the filtering decision and associated user action Expected: The audit log contains a record of the filtering decision and the administrator's identity and timestamp",
+            "In an authorized isolated test environment, execute TEST-013: Given: An email security event occurs in the system When: The platform generates an alert for monitoring via its dashboard Expected: The dashboard displays the event with relevant metadata including source, severity, and timestamp",
+            "In an authorized isolated test environment, execute TEST-014: Given: The university identity system is integrated with the platform When: An administrator logs in using their university credentials Expected: The platform authenticates the user and grants access based on role and permissions",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001",
+            "SEC-001"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against SEC-001: The platform shall maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "NFR-001",
+            "SEC-001"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "quality": {
+      "validation_policy_version": "source-grounding-1.14",
+      "status": "needs_review",
+      "checks_passed": 21,
+      "checks_total": 21,
+      "findings": [
+        {
+          "code": "human_semantic_review_required",
+          "severity": "warning",
+          "section": "document",
+          "item_id": "",
+          "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+        }
+      ],
+      "evidence_coverage": {
+        "E-001": [
+          "FR-001"
+        ],
+        "E-002": [
+          "FR-002"
+        ],
+        "E-003": [
+          "SEC-001"
+        ],
+        "E-004": [
+          "NFR-001"
+        ]
+      },
+      "traceability": [
+        {
+          "requirement_id": "FR-001",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-001",
+            "TEST-002",
+            "TEST-003",
+            "TEST-004"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "FR-002",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [
+            "UC-001",
+            "UC-002"
+          ],
+          "test_ids": [
+            "TEST-005",
+            "TEST-006",
+            "TEST-007",
+            "TEST-008"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "NFR-001",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-009",
+            "TEST-010",
+            "TEST-011"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        },
+        {
+          "requirement_id": "SEC-001",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "source_chunks": [],
+          "scenario_ids": [],
+          "test_ids": [
+            "TEST-012",
+            "TEST-013",
+            "TEST-014"
+          ],
+          "sdlc_phases": [
+            "Requirements and verification planning",
+            "Agile delivery cycle",
+            "Release and handoff"
+          ]
+        }
+      ]
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-29T13:18:31.006049+00:00",
+  "updated_at": "2026-10-29T13:20:05.382625+00:00"
+}

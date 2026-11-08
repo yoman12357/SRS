@@ -1,0 +1,3713 @@
+{
+  "id": "38e4fbe3-3f2c-46f1-9ed8-6b191603bd1f",
+  "project_id": "56185358-f5d9-4da1-a828-e9ee0432291c",
+  "sequence": 1,
+  "content": {
+    "schema_version": "1.0",
+    "project_id": "56185358-f5d9-4da1-a828-e9ee0432291c",
+    "title": "Secure Certificate Management System",
+    "original_description": "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services. Authorized certificate administrators should be able to review certificate requests, approve certificate issuance, renew certificates, revoke compromised certificates, and track certificate status. The system should restrict certificate administration based on approved roles, monitor certificate validity, detect expired certificates and unauthorized certificate changes, generate security alerts, and maintain audit logs of certificate lifecycle activities and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+    "evidence": [
+      {
+        "id": "E-001",
+        "source": "description",
+        "quote": "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services.",
+        "context": ""
+      },
+      {
+        "id": "E-002",
+        "source": "description",
+        "quote": "Authorized certificate administrators should be able to review certificate requests, approve certificate issuance, renew certificates, revoke compromised certificates, and track certificate status.",
+        "context": ""
+      },
+      {
+        "id": "E-003",
+        "source": "description",
+        "quote": "The system should restrict certificate administration based on approved roles, monitor certificate validity, detect expired certificates and unauthorized certificate changes, generate security alerts, and maintain audit logs of certificate lifecycle activities and administrator actions.",
+        "context": ""
+      },
+      {
+        "id": "E-004",
+        "source": "description",
+        "quote": "The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+        "context": ""
+      }
+    ],
+    "analysis": {
+      "title": "Secure Certificate Management System",
+      "domain": "security",
+      "supported": true,
+      "summary": "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services. Authorized certificate administrators should be able to review certificate requests, approve certificate issuance, renew certificates, revoke compromised certificates, and track certificate status. The system should restrict certificate administration based on approved roles, monitor certificate validity, detect expired certificates and unauthorized certificate changes, generate security alerts, and maintain audit logs of certificate lifecycle activities and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+      "stakeholders": [
+        "certificate administrators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security",
+            "nonfunctional"
+          ],
+          "explanation": "The system shall manage digital certificates used by approved campus applications, servers, and network services."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Authorized certificate administrators shall be able to review requests, approve issuance, renew certificates, revoke compromised ones, and track status via a centralized dashboard."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "data",
+            "functional"
+          ],
+          "explanation": "The system shall restrict access by approved roles, monitor validity, detect expired or unauthorized changes, generate alerts, and maintain audit logs of all lifecycle activities and administrator actions."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "nonfunctional"
+          ],
+          "explanation": "The platform shall provide a centralized dashboard, integrate with existing identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+        }
+      ],
+      "questions": [
+        {
+          "id": "Q-dad9a79bf709",
+          "question": "What conditions define the requested detections and their alert triggers?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-3aae42e94793",
+          "question": "Which fields must the audit logs contain?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-64ef2e28335c",
+          "question": "What retention period is required for the audit logs?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-003"
+          ]
+        },
+        {
+          "id": "Q-7b2e5f89a0b1",
+          "question": "Which security acceptance outcomes must be demonstrated?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-819bb986f419",
+          "question": "What measurable reliability and recovery targets must the system meet?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-543394346815",
+          "question": "What measurable scalability targets must the system meet?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-5268b96e41b0",
+          "question": "What criteria define acceptable manageability?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-004"
+          ]
+        },
+        {
+          "id": "Q-66cf5513b374",
+          "question": "How are the stated roles and authorized permissions assigned?",
+          "why_needed": "Resolve the source-stated behavior or acceptance decision.",
+          "critical": false,
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ]
+        }
+      ],
+      "unresolved_decisions": []
+    },
+    "sources": [
+      {
+        "id": "kb-92ffa375cd05a8f5:12",
+        "source_document_id": "kb-92ffa375cd05a8f5",
+        "chunk_index": 12,
+        "page_or_section": "text chunk 13",
+        "relevance_score": 0.7592,
+        "text": "ce which are automatically provided alongside the user's password when authenticating. The most common type is X.509 certificates more commonly known as [client certificates](Transport_Layer_Security_Cheat_Sheet.md#client-certificates-and-mutual-tls). Certificates are supported by all major web browsers, and once installed require no further interaction from the user. The certificates should be linked to an individual's user account in order to prevent users from trying to authenticate against other accounts.\n\n#### Pros\n\n- There is no need to purchase and manage hardware tokens.\n- Once installed, certificates are very simple for users.\n- Certificates can be centrally managed and revoked.\n- Resistant to phishing.\n\n#### Cons\n\n- Using digital certificates requires a backend Private Key Infrastructure (PKI).\n- Installing certificates can be difficult for users, particularly in a highly restricted environment.\n- Enterprise proxy servers which perform SSL decryption will prevent the use of certificates.\n- The certificates are stored on the user's workstation, and as such can be stolen if their system is compromised.\n\n### Smart Cards\n\nSmartcards are credit-card size cards with a chip containing a digital certificate for the user, which is unlocked with a PIN. They are commonly used for operating system authentication, but are rarely used in web applications.\n\n#### Pros\n\n- Stolen smartcards cannot be used without the PIN.\n- Smartcards can be used across multiple applications and systems.\n- Resistant to phishing.\n\n#### Cons\n\n- Managing and distributing smartcards has the same costs and overheads as hardware tokens.\n- Smartcards are not natively supported by modern browsers, so require third party software.\n- Although most business-class laptops have smartcard readers built-in, h",
+        "title": "03_OWASP_CheatSheets/081_OWASP_Multifactor_Authentication_Cheat_Sheet.md",
+        "sha256": "0c1de91561bd8b449f5a27033e799c6928df3f24cb48a965994f615671612490"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:1",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7171,
+        "text": "thing. Each time someone tries to access a resource, evaluate whether they should be allowed. [Sessions](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) should be short-lived and require re-authentication when they expire. No \"set it and forget it\" access.\n\n### 4. Access is Determined by Dynamic Policy\n\nAccess decisions consider multiple factors: who's asking, what device they're using, where they're connecting from, what time it is, and how they normally behave. These policies change based on risk. Someone accessing payroll during work hours from their work laptop is low risk. The same person downloading lots of data at 2 AM from a coffee shop is high risk.\n\n### 5. Monitor and Measure the Security Posture of All Assets\n\nContinuously check the health and security of all devices and systems. If you can't see it, you can't protect it. This includes monitoring for patches, antivirus status, configuration changes, and suspicious behavior. Assets that fall out of compliance lose access.\n\n### 6. All Authentication and Authorization is Dynamic and Strictly Enforced\n\nSecurity decisions happen in real-time for every access request. Don't rely on static rules or permanent permissions. The system should automatically adjust access based on current risk levels, revoke access for compromised accounts, and isolate suspicious devices.\n\n### 7. Collect Information to Improve Security Posture\n\nGather as much security data as possible about users, devices, network traffic, and system behavior. Use this information to detect threats, improve policies, and make better security decisions. This data is essential for compliance and incident investigation.\n\n## Core Zero Trust Architecture Components\n\nZero Trust uses three main parts that work together:\n\n**Pol",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:8",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.7131,
+        "text": "ould validate. The user installs the certificate on a browser and now uses it for the website.\n\nThis approach is appropriate when:\n\n- It is acceptable (or even preferred) that the user has access to the website only from a single computer/browser.\n- The user is not easily scared by the process of installing TLS certificates on their browser, or there will be someone, probably from IT support, who will do this for the user.\n- The website requires an extra step of security.\n- It is also a good thing to use when the website is for an intranet of a company or organization.\n\nIt is generally not a good idea to use this method for widely and publicly available websites that will have an average user. For example, it wouldn't be a good idea to implement this for a website like Facebook. While this technique can prevent the user from having to type a password (thus protecting against an average keylogger from stealing it), it is still considered a good idea to consider using both a password and TLS client authentication combined.\n\nAdditionally, if the client is behind an enterprise proxy that performs SSL/TLS decryption, this will break certificate authentication unless the site is allowed on the proxy.\n\nFor more information, see: [Client-authenticated TLS handshake](https://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake)\n\n### Authentication and Error Messages\n\nIncorrectly implemented error messages in the case of authentication functionality can be used for the purposes of user ID and password enumeration. An application should respond (both HTTP and HTML) in a generic manner.\n\n#### Authentication Responses\n\nUsing any of the authentication mechanisms (login, password reset, or password recovery), an application must respond with a generic erro",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      },
+      {
+        "id": "kb-c1e0239af9dd46bd:8",
+        "source_document_id": "kb-c1e0239af9dd46bd",
+        "chunk_index": 8,
+        "page_or_section": "text chunk 9",
+        "relevance_score": 0.6941,
+        "text": "monitoring of antivirus status, OS patches, security configurations, and device security posture\n- **Certificate-based device identity**: Use PKI certificates to uniquely identify and authenticate each device\n- **Vulnerability scanning**: Regular assessment of device security posture and patch levels\n- **Revoke trust when compromised**: Automatically remove access if device security is compromised\n\n### Protecting Endpoints\n\nEvery device needs these protections:\n\n- **Anti-malware software**: Real-time protection against viruses and malware\n- **Behavior monitoring**: Watch for suspicious device activity\n- **Full disk encryption**: Encrypt all data on the device\n- **Remote wipe**: Ability to erase lost or stolen devices\n\n## Network Architecture\n\n### Micro-Segmentation\n\nInstead of one big network, create small isolated segments:\n\n- **Separate by application**: Each app gets its own network segment\n- **Block by default**: Don't allow traffic unless specifically permitted\n- **Monitor internal traffic**: Watch data moving between systems\n- **Use encrypted communications**: All communication between systems must be encrypted\n\n### Network Controls\n\nImplement these network protections:\n\n- **DNS filtering**: Block access to malicious websites\n- **Web filtering**: Control what websites users can visit\n- **Replace VPNs**: Use Zero Trust Network Access (ZTNA) instead\n- **Monitor traffic**: Analyze all network connections\n\n## Application and Data Protection\n\n### Securing Applications\n\nProtect your applications with these controls:\n\n- **Identity-aware proxy**: Check user identity before allowing app access\n- **Web Application Firewalls (WAFs)**: Block OWASP Top 10 attacks at the application layer. Deploy at network edge, internal segments, or as part of API gateways\n- **API security g",
+        "title": "03_OWASP_CheatSheets/107_OWASP_Zero_Trust_Architecture_Cheat_Sheet.md",
+        "sha256": "f5fe6d1e1cfefc05da1b1b9773acee6b7e9d156f4aa69ab0a14a7a1adfd2a8ef"
+      },
+      {
+        "id": "kb-0150d5352d0ec304:1",
+        "source_document_id": "kb-0150d5352d0ec304",
+        "chunk_index": 1,
+        "page_or_section": "text chunk 2",
+        "relevance_score": 0.7169,
+        "text": "ch could pose a security risk, especially in systems where User IDs might be exposed or inferred from external sources.\n\n### Usernames\n\nUsernames are easy-to-remember identifiers chosen by the user and used for identifying themselves when logging into a system or service. The terms User ID and username might be used interchangeably if the username chosen by the user also serves as their unique identifier within the system.\n\nUsers should be permitted to use their email address as a username, provided the email is verified during sign-up. Additionally, they should have the option to choose a username other than an email address. For information on validating email addresses, please visit the [input validation cheat sheet email discussion](Input_Validation_Cheat_Sheet.md#email-address-validation).\n\n### Authentication Solution and Sensitive Accounts\n\n- Do **NOT** allow login with sensitive accounts (i.e. accounts that can be used internally within the solution such as to a backend / middleware / database) to any front-end user interface\n- Do **NOT** use the same authentication solution (e.g. IDP / AD) used internally for unsecured access (e.g., public access / DMZ)\n\n### Implement Proper Password Strength Controls\n\nA key concern when using passwords for authentication is password strength. A \"strong\" password policy makes it difficult or even improbable for one to guess the password through either manual or automated means. The following characteristics define a strong password:\n\n- Password Length\n    - **Minimum** length for passwords should be enforced by the application.\n        - If MFA is enabled passwords **shorter than 8 characters** are considered to be weak ([NIST SP800-63B](https://pages.nist.gov/800-63-4/sp800-63b.html#passwordver)).\n        - If MFA is not enable",
+        "title": "03_OWASP_CheatSheets/036_OWASP_Authentication_Cheat_Sheet.md",
+        "sha256": "b1d318a57f742d12b57bccda3153873653652c767038c5ca3d9d74350819f303"
+      }
+    ],
+    "introduction": {
+      "summary": "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+      "items": [
+        {
+          "title": "Stakeholder source statement E-001",
+          "detail": "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-002",
+          "detail": "Authorized certificate administrators should be able to review certificate requests, approve certificate issuance, renew certificates, revoke compromised certificates, and track certificate status.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-003",
+          "detail": "The system should restrict certificate administration based on approved roles, monitor certificate validity, detect expired certificates and unauthorized certificate changes, generate security alerts, and maintain audit logs of certificate lifecycle activities and administrator actions.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Stakeholder source statement E-004",
+          "detail": "The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable.",
+          "status": "confirmed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "functional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "FR-001",
+          "title": "manage certificates used by approved campus applications, servers, and network services",
+          "statement": "The system shall manage certificates used by approved campus applications, servers, and network services.",
+          "rationale": "Source obligation E-001_O01.",
+          "priority": "must",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "system manages certificates used by approved campus applications, servers, and network services",
+              "when": "the system initiates certificate management for an approved service",
+              "then": "the resulting certificate state is returned in a response captured externally",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-002",
+          "title": "allow Authorized certificate administrators to review certificate requests",
+          "statement": "The system shall allow Authorized certificate administrators to review certificate requests.",
+          "rationale": "Source obligation E-002_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized certificate administrators review a certificate request",
+              "when": "the actor initiates the review operation on the named request",
+              "then": "the requested certificate request is returned for examination",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-003",
+          "title": "allow Authorized certificate administrators to approve certificate issuance",
+          "statement": "The system shall allow Authorized certificate administrators to approve certificate issuance.",
+          "rationale": "Source obligation E-002_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized certificate administrators approve a certificate issuance request",
+              "when": "the actor initiates the approval operation on the named request",
+              "then": "the request's approved status is observed in the system state",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-004",
+          "title": "allow Authorized certificate administrators to renew certificates",
+          "statement": "The system shall allow Authorized certificate administrators to renew certificates.",
+          "rationale": "Source obligation E-002_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized certificate administrators renew a certificate",
+              "when": "the actor initiates the renewal operation on the named certificate",
+              "then": "the certificate is observed in its renewed state",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-005",
+          "title": "allow Authorized certificate administrators to revoke compromised certificates",
+          "statement": "The system shall allow Authorized certificate administrators to revoke compromised certificates.",
+          "rationale": "Source obligation E-002_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized certificate administrators revoke a compromised certificate",
+              "when": "the actor initiates the revocation operation on the named certificate",
+              "then": "the certificate's revoked status is observed in the system state",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-006",
+          "title": "allow Authorized certificate administrators to track certificate status",
+          "statement": "The system shall allow Authorized certificate administrators to track certificate status.",
+          "rationale": "Source obligation E-002_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "Authorized certificate administrators track a certificate status",
+              "when": "the actor initiates the tracking operation on the named certificate",
+              "then": "the history of that certificate's status is available for examination",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-007",
+          "title": "restrict certificate administration based on approved roles",
+          "statement": "The system shall restrict certificate administration based on approved roles.",
+          "rationale": "Source obligation E-003_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "the system has certificate administration privileges assigned to approved roles",
+              "when": "the system attempts to perform certificate administration actions",
+              "then": "only actions permitted by the approved role are executed; unauthorized actions are denied",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-008",
+          "title": "monitor certificate validity",
+          "statement": "The system shall monitor certificate validity.",
+          "rationale": "Source obligation E-003_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a certificate is issued with a defined validity period",
+              "when": "the system monitors certificate validity during operation",
+              "then": "The system reports that certificate validity is within the defined period during operation",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-009",
+          "title": "detect expired certificates",
+          "statement": "The system shall detect expired certificates.",
+          "rationale": "Source obligation E-003_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a certificate has expired or is nearing expiration",
+              "when": "the system detects certificate validity status changes",
+              "then": "the system identifies and flags expired certificates within the monitoring scope",
+              "method": "analysis",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-010",
+          "title": "detect unauthorized certificate changes",
+          "statement": "The system shall detect unauthorized certificate changes.",
+          "rationale": "Source obligation E-003_O04.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a certificate is modified by an unauthorized entity",
+              "when": "An unauthorized modification to the certificate is detected.",
+              "then": "The system generates an alert indicating the change and its source.",
+              "method": "demonstration",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-dad9a79bf709 is TBD."
+          ]
+        },
+        {
+          "id": "FR-011",
+          "title": "generate security alerts",
+          "statement": "The system shall generate security alerts.",
+          "rationale": "Source obligation E-003_O05.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a security condition is triggered that requires alerting",
+              "when": "the system initiates an alert condition",
+              "then": "an alert exists in the system as a record, with no specified destination or field set",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-012",
+          "title": "maintain audit logs of certificate lifecycle activities and administrator actions",
+          "statement": "The system shall maintain audit logs of certificate lifecycle activities and administrator actions.",
+          "rationale": "Source obligation E-003_O06.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "auditability",
+            "data"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "certificate lifecycle activities and administrator actions occur",
+              "when": "the system records all administrative interactions with certificates",
+              "then": "The system records all administrative interactions with certificates in audit logs",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-3aae42e94793 is TBD.",
+            "Decision Q-64ef2e28335c is TBD."
+          ]
+        },
+        {
+          "id": "FR-013",
+          "title": "provide a centralized dashboard",
+          "statement": "The system shall provide a centralized dashboard.",
+          "rationale": "Source obligation E-004_O01.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a system-controlled user opens the dashboard named in the source obligation",
+              "when": "the system provides a centralized dashboard as specified",
+              "then": "the requested dashboard is displayed or available for use",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-014",
+          "title": "integrate with existing university identity services",
+          "statement": "The system shall integrate with existing university identity services.",
+          "rationale": "Source obligation E-004_O02.",
+          "priority": "should",
+          "dimensions": [
+            "business",
+            "integration"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a system-controlled user initiates an exchange with the named external identity service",
+              "when": "the system integrates with existing university identity services as specified",
+              "then": "interoperation with that service is observed",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "FR-015",
+          "title": "support multiple campus locations",
+          "statement": "The system shall support multiple campus locations.",
+          "rationale": "Source obligation E-004_O03.",
+          "priority": "should",
+          "dimensions": [
+            "business"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "a user initiates use from each stated campus location",
+              "when": "the system supports multiple campus locations as specified",
+              "then": "use succeeds at each location",
+              "method": "test",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "related_requirement_ids": [],
+      "related_acceptance_criteria": []
+    },
+    "nonfunctional": {
+      "applicability_reason": "Independent source obligations; unspecified choices remain TBD.",
+      "requirements": [
+        {
+          "id": "NFR-001",
+          "title": "be secure",
+          "statement": "The system shall be secure.",
+          "rationale": "Source obligation E-001_O02.",
+          "priority": "must",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage via certificate management operations.",
+              "when": "An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or success criteria are provided in the current draft.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-7b2e5f89a0b1 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-002",
+          "title": "remain secure",
+          "statement": "The system shall remain secure.",
+          "rationale": "Source obligation E-004_O04.",
+          "priority": "should",
+          "dimensions": [
+            "security"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain secure against unauthorized access and data breaches.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting response"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-7b2e5f89a0b1 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-003",
+          "title": "remain reliable",
+          "statement": "The system shall remain reliable.",
+          "rationale": "Source obligation E-004_O05.",
+          "priority": "should",
+          "dimensions": [
+            "availability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain reliable under varying loads and failure conditions.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-819bb986f419 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-004",
+          "title": "remain scalable",
+          "statement": "The system shall remain scalable.",
+          "rationale": "Source obligation E-004_O06.",
+          "priority": "should",
+          "dimensions": [
+            "performance"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain scalable to support increasing numbers of users and data volumes.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the resulting state"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-543394346815 is TBD."
+          ]
+        },
+        {
+          "id": "NFR-005",
+          "title": "remain manageable",
+          "statement": "The system shall remain manageable.",
+          "rationale": "Source obligation E-004_O07.",
+          "priority": "should",
+          "dimensions": [
+            "usability"
+          ],
+          "basis": "explicit",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "dependencies": [],
+          "acceptance_criteria": [
+            {
+              "given": "The system shall remain manageable through configuration, monitoring, and operational controls.",
+              "when": "An analyst inspects or reviews that acceptance plan.",
+              "then": "The plan's measurable targets remain TBD or unconfirmed.",
+              "method": "inspection",
+              "observable_evidence": "External test capture of the inspection record"
+            }
+          ],
+          "unresolved_decisions": [
+            "Decision Q-5268b96e41b0 is TBD."
+          ]
+        }
+      ],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-013",
+        "FR-014",
+        "FR-015"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "security": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "NFR-001",
+        "NFR-002"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "data": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "network": {
+      "applicability_reason": "Existing canonical requirements, where applicable, are linked below; this section adds no separate obligation. Unresolved stakeholder decisions remain open.",
+      "requirements": [],
+      "related_requirement_ids": [
+        "FR-001"
+      ],
+      "related_acceptance_criteria": []
+    },
+    "compliance": {
+      "mappings": [],
+      "open_decisions": [
+        "Decision Q-66cf5513b374 is TBD.",
+        "Decision Q-dad9a79bf709 is TBD."
+      ]
+    },
+    "architecture": {
+      "summary": "Proposed logical components and interactions mapped to canonical source obligations.",
+      "items": [
+        {
+          "title": "Actor: Authorized certificate administrators",
+          "detail": "Proposed logical endpoint for the source-stated actor: Authorized certificate administrators.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "component_name": "Actor: Authorized certificate administrators",
+          "responsibility": "Represent the source-stated actor: Authorized certificate administrators."
+        },
+        {
+          "title": "Certificate Administration Module",
+          "detail": "Proposed logical owner for FR-002, FR-003, FR-004, FR-005, FR-006, FR-001, FR-007, NFR-001, NFR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-002",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-001",
+            "FR-007",
+            "NFR-001",
+            "NFR-003"
+          ],
+          "component_name": "Certificate Administration Module",
+          "responsibility": "The system shall allow Authorized certificate administrators to review certificate requests. The system shall allow Authorized certificate administrators to approve certificate issuance. The system shall allow Authorized certificate administrators to renew certificates. The system shall allow Authorized certificate administrators to revoke compromised certificates. The system shall allow Authorized certificate administrators to track certificate status. The system shall manage certificates used by approved campus applications, servers, and network services. The system shall restrict certificate administration based on approved roles. The system shall be secure. The system shall remain reliable."
+        },
+        {
+          "title": "Certificate Monitoring and Alerting Module",
+          "detail": "Proposed logical owner for FR-008, FR-009, FR-010, FR-011, FR-001, NFR-002, NFR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-001",
+            "NFR-002",
+            "NFR-003"
+          ],
+          "component_name": "Certificate Monitoring and Alerting Module",
+          "responsibility": "The system shall monitor certificate validity. The system shall detect expired certificates. The system shall detect unauthorized certificate changes. The system shall generate security alerts. The system shall manage certificates used by approved campus applications, servers, and network services. The system shall remain secure. The system shall remain reliable."
+        },
+        {
+          "title": "Audit and Logging Module",
+          "detail": "Proposed logical owner for FR-012, FR-001, NFR-001, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-012",
+            "FR-001",
+            "NFR-001",
+            "NFR-005"
+          ],
+          "component_name": "Audit and Logging Module",
+          "responsibility": "The system shall maintain audit logs of certificate lifecycle activities and administrator actions. The system shall manage certificates used by approved campus applications, servers, and network services. The system shall be secure. The system shall remain manageable."
+        },
+        {
+          "title": "Centralized Dashboard Module",
+          "detail": "Proposed logical owner for FR-013, FR-015, NFR-002, NFR-004, NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-013",
+            "FR-015",
+            "NFR-002",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "component_name": "Centralized Dashboard Module",
+          "responsibility": "The system shall provide a centralized dashboard. The system shall support multiple campus locations. The system shall remain secure. The system shall remain scalable. The system shall remain manageable."
+        },
+        {
+          "title": "Integration with Identity Services Module",
+          "detail": "Proposed logical owner for FR-014, FR-007, FR-015, NFR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-014",
+            "FR-007",
+            "FR-015",
+            "NFR-004"
+          ],
+          "component_name": "Integration with Identity Services Module",
+          "responsibility": "The system shall integrate with existing university identity services. The system shall restrict certificate administration based on approved roles. The system shall support multiple campus locations. The system shall remain scalable."
+        }
+      ],
+      "open_issues": [],
+      "data_flows": [
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-002, FR-003, FR-004, FR-005, FR-006.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "from_component": "Actor: Authorized certificate administrators",
+          "to_component": "Certificate Administration Module",
+          "data_or_action": "The system shall allow Authorized certificate administrators to review certificate requests. The system shall allow Authorized certificate administrators to approve certificate issuance. The system shall allow Authorized certificate administrators to renew certificates. The system shall allow Authorized certificate administrators to revoke compromised certificates. The system shall allow Authorized certificate administrators to track certificate status."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, NFR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-003"
+          ],
+          "from_component": "Certificate Administration Module",
+          "to_component": "Certificate Monitoring and Alerting Module",
+          "data_or_action": "The system shall manage certificates used by approved campus applications, servers, and network services. The system shall remain reliable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-001"
+          ],
+          "from_component": "Certificate Administration Module",
+          "to_component": "Audit and Logging Module",
+          "data_or_action": "The system shall manage certificates used by approved campus applications, servers, and network services. The system shall be secure."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-007.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "from_component": "Certificate Administration Module",
+          "to_component": "Integration with Identity Services Module",
+          "data_or_action": "The system shall restrict certificate administration based on approved roles."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, NFR-003.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001",
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-003"
+          ],
+          "from_component": "Certificate Monitoring and Alerting Module",
+          "to_component": "Certificate Administration Module",
+          "data_or_action": "The system shall manage certificates used by approved campus applications, servers, and network services. The system shall remain reliable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Certificate Monitoring and Alerting Module",
+          "to_component": "Audit and Logging Module",
+          "data_or_action": "The system shall manage certificates used by approved campus applications, servers, and network services."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "from_component": "Certificate Monitoring and Alerting Module",
+          "to_component": "Centralized Dashboard Module",
+          "data_or_action": "The system shall remain secure."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001, NFR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001",
+            "NFR-001"
+          ],
+          "from_component": "Audit and Logging Module",
+          "to_component": "Certificate Administration Module",
+          "data_or_action": "The system shall manage certificates used by approved campus applications, servers, and network services. The system shall be secure."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-001.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-001"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "from_component": "Audit and Logging Module",
+          "to_component": "Certificate Monitoring and Alerting Module",
+          "data_or_action": "The system shall manage certificates used by approved campus applications, servers, and network services."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "from_component": "Audit and Logging Module",
+          "to_component": "Centralized Dashboard Module",
+          "data_or_action": "The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-002.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "from_component": "Centralized Dashboard Module",
+          "to_component": "Certificate Monitoring and Alerting Module",
+          "data_or_action": "The system shall remain secure."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for NFR-005.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "from_component": "Centralized Dashboard Module",
+          "to_component": "Audit and Logging Module",
+          "data_or_action": "The system shall remain manageable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-015, NFR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-015",
+            "NFR-004"
+          ],
+          "from_component": "Centralized Dashboard Module",
+          "to_component": "Integration with Identity Services Module",
+          "data_or_action": "The system shall support multiple campus locations. The system shall remain scalable."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-007.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "from_component": "Integration with Identity Services Module",
+          "to_component": "Certificate Administration Module",
+          "data_or_action": "The system shall restrict certificate administration based on approved roles."
+        },
+        {
+          "title": "Proposed source-defined interaction",
+          "detail": "Proposed directed path for FR-015, NFR-004.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-015",
+            "NFR-004"
+          ],
+          "from_component": "Integration with Identity Services Module",
+          "to_component": "Centralized Dashboard Module",
+          "data_or_action": "The system shall support multiple campus locations. The system shall remain scalable."
+        }
+      ],
+      "trust_boundaries": [
+        {
+          "title": "Proposed source-defined trust boundary",
+          "detail": "Proposed logical trust-domain crossing for FR-002, FR-003, FR-004, FR-005, FR-006.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "untrusted_component": "Actor: Authorized certificate administrators",
+          "trusted_component": "Certificate Administration Module",
+          "enforcement": "The system shall allow Authorized certificate administrators to review certificate requests. The system shall allow Authorized certificate administrators to approve certificate issuance. The system shall allow Authorized certificate administrators to renew certificates. The system shall allow Authorized certificate administrators to revoke compromised certificates. The system shall allow Authorized certificate administrators to track certificate status."
+        }
+      ]
+    },
+    "threats": {
+      "threats": [
+        {
+          "id": "THR-001",
+          "asset": "User identities and authenticated access",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "impact": "Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "control_requirement_ids": [
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-002",
+          "asset": "Role and permission boundaries",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "impact": "A lower-privilege user could access restricted functions or sensitive resources.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-003",
+          "asset": "Access grants and revocations",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A revoked or changed permission remains effective in a session or enforcement point, allowing access after authorization should have ended.",
+          "impact": "A formerly authorized principal could continue using access that is no longer approved.",
+          "control_requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-004",
+          "asset": "Integration trust paths",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "impact": "Untrusted integration data could cause incorrect decisions or hide security events.",
+          "control_requirement_ids": [
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-005",
+          "asset": "Security and administrative audit evidence",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "impact": "Investigators could lose reliable evidence of the events required by the brief.",
+          "control_requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        },
+        {
+          "id": "THR-006",
+          "asset": "Monitoring and security alerts",
+          "actor": "Hypothetical attacker, privileged insider or failure cause",
+          "scenario": "Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "impact": "Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "control_requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "residual_risk": "Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        }
+      ],
+      "assumptions": [
+        "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review."
+      ]
+    },
+    "risks": {
+      "risks": [
+        {
+          "id": "RISK-001",
+          "description": "Derived risk affecting User identities and authenticated access: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "mitigation": "Review impersonation and compromised-identity paths against the stated access duties; confirm any additional identity or session protections with the stakeholder. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-002",
+          "description": "Derived risk affecting Role and permission boundaries: A lower-privilege user could access restricted functions or sensitive resources.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "mitigation": "Test permitted and denied role/resource pairs against the linked authorization duties; review ambiguous permission assignments with the resource owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012"
+          ],
+          "evidence_ids": [
+            "E-002",
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-003",
+          "description": "Derived risk affecting Access grants and revocations: A formerly authorized principal could continue using access that is no longer approved.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A revoked or changed permission remains effective in a session or enforcement point, allowing access after authorization should have ended.",
+          "mitigation": "Trace permission changes through subsequent access decisions and any active access; confirm revocation timing and session semantics before baselining them. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-004",
+          "description": "Derived risk affecting Integration trust paths: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "mitigation": "Review trust assumptions at the specified integration boundaries with missing or altered input fixtures; confirm the required failure handling with the owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ],
+          "evidence_ids": [
+            "E-004"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-005",
+          "description": "Derived risk affecting Security and administrative audit evidence: Investigators could lose reliable evidence of the events required by the brief.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "mitigation": "Compare source-required events with the resulting audit evidence; assess missing and altered-record cases and confirm unprovided protection or retention decisions. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        },
+        {
+          "id": "RISK-006",
+          "description": "Derived risk affecting Monitoring and security alerts: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "likelihood": "unknown",
+          "impact": "unknown",
+          "rationale": "This is a planning risk linked to the defensive hypothesis: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "mitigation": "Evaluate the stated detection duties with representative positive and negative events; confirm undecided thresholds, alert priorities and investigation responsibilities. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "requirement_ids": [
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012"
+          ],
+          "evidence_ids": [
+            "E-003"
+          ],
+          "owner": "TBD"
+        }
+      ],
+      "open_issues": []
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "id": "UC-001",
+          "actor": "Authorized certificate administrators",
+          "goal": "The system shall allow Authorized certificate administrators to review certificate requests.",
+          "story": "As Authorized certificate administrators, I need the following behavior: The system shall allow Authorized certificate administrators to review certificate requests.",
+          "preconditions": [
+            "Authorized certificate administrators review a certificate request"
+          ],
+          "steps": [
+            "the actor initiates the review operation on the named request"
+          ],
+          "success_outcome": "the requested certificate request is returned for examination",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-002",
+          "actor": "Authorized certificate administrators",
+          "goal": "The system shall allow Authorized certificate administrators to approve certificate issuance.",
+          "story": "As Authorized certificate administrators, I need the following behavior: The system shall allow Authorized certificate administrators to approve certificate issuance.",
+          "preconditions": [
+            "Authorized certificate administrators approve a certificate issuance request"
+          ],
+          "steps": [
+            "the actor initiates the approval operation on the named request"
+          ],
+          "success_outcome": "the request's approved status is observed in the system state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-003",
+          "actor": "Authorized certificate administrators",
+          "goal": "The system shall allow Authorized certificate administrators to renew certificates.",
+          "story": "As Authorized certificate administrators, I need the following behavior: The system shall allow Authorized certificate administrators to renew certificates.",
+          "preconditions": [
+            "Authorized certificate administrators renew a certificate"
+          ],
+          "steps": [
+            "the actor initiates the renewal operation on the named certificate"
+          ],
+          "success_outcome": "the certificate is observed in its renewed state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-004",
+          "actor": "Authorized certificate administrators",
+          "goal": "The system shall allow Authorized certificate administrators to revoke compromised certificates.",
+          "story": "As Authorized certificate administrators, I need the following behavior: The system shall allow Authorized certificate administrators to revoke compromised certificates.",
+          "preconditions": [
+            "Authorized certificate administrators revoke a compromised certificate"
+          ],
+          "steps": [
+            "the actor initiates the revocation operation on the named certificate"
+          ],
+          "success_outcome": "the certificate's revoked status is observed in the system state",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        },
+        {
+          "id": "UC-005",
+          "actor": "Authorized certificate administrators",
+          "goal": "The system shall allow Authorized certificate administrators to track certificate status.",
+          "story": "As Authorized certificate administrators, I need the following behavior: The system shall allow Authorized certificate administrators to track certificate status.",
+          "preconditions": [
+            "Authorized certificate administrators track a certificate status"
+          ],
+          "steps": [
+            "the actor initiates the tracking operation on the named certificate"
+          ],
+          "success_outcome": "the history of that certificate's status is available for examination",
+          "alternate_flows": [],
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "evidence_ids": [
+            "E-002"
+          ],
+          "unresolved_decisions": []
+        }
+      ],
+      "open_issues": []
+    },
+    "verification": {
+      "tests": [
+        {
+          "id": "TEST-001",
+          "requirement_ids": [
+            "FR-001"
+          ],
+          "procedure": [
+            "Given: system manages certificates used by approved campus applications, servers, and network services",
+            "When: the system initiates certificate management for an approved service"
+          ],
+          "expected_result": "Expected: the resulting certificate state is returned in a response captured externally",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-002",
+          "requirement_ids": [
+            "FR-002"
+          ],
+          "procedure": [
+            "Given: Authorized certificate administrators review a certificate request",
+            "When: the actor initiates the review operation on the named request"
+          ],
+          "expected_result": "Expected: the requested certificate request is returned for examination",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-003",
+          "requirement_ids": [
+            "FR-003"
+          ],
+          "procedure": [
+            "Given: Authorized certificate administrators approve a certificate issuance request",
+            "When: the actor initiates the approval operation on the named request"
+          ],
+          "expected_result": "Expected: the request's approved status is observed in the system state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-004",
+          "requirement_ids": [
+            "FR-004"
+          ],
+          "procedure": [
+            "Given: Authorized certificate administrators renew a certificate",
+            "When: the actor initiates the renewal operation on the named certificate"
+          ],
+          "expected_result": "Expected: the certificate is observed in its renewed state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-005",
+          "requirement_ids": [
+            "FR-005"
+          ],
+          "procedure": [
+            "Given: Authorized certificate administrators revoke a compromised certificate",
+            "When: the actor initiates the revocation operation on the named certificate"
+          ],
+          "expected_result": "Expected: the certificate's revoked status is observed in the system state",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-006",
+          "requirement_ids": [
+            "FR-006"
+          ],
+          "procedure": [
+            "Given: Authorized certificate administrators track a certificate status",
+            "When: the actor initiates the tracking operation on the named certificate"
+          ],
+          "expected_result": "Expected: the history of that certificate's status is available for examination",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-007",
+          "requirement_ids": [
+            "FR-007"
+          ],
+          "procedure": [
+            "Given: the system has certificate administration privileges assigned to approved roles",
+            "When: the system attempts to perform certificate administration actions"
+          ],
+          "expected_result": "Expected: only actions permitted by the approved role are executed; unauthorized actions are denied",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-008",
+          "requirement_ids": [
+            "FR-008"
+          ],
+          "procedure": [
+            "Given: a certificate is issued with a defined validity period",
+            "When: the system monitors certificate validity during operation"
+          ],
+          "expected_result": "Expected: The system reports that certificate validity is within the defined period during operation",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-009",
+          "requirement_ids": [
+            "FR-009"
+          ],
+          "procedure": [
+            "Given: a certificate has expired or is nearing expiration",
+            "When: the system detects certificate validity status changes"
+          ],
+          "expected_result": "Expected: the system identifies and flags expired certificates within the monitoring scope",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "analysis"
+        },
+        {
+          "id": "TEST-010",
+          "requirement_ids": [
+            "FR-010"
+          ],
+          "procedure": [
+            "Given: a certificate is modified by an unauthorized entity",
+            "When: An unauthorized modification to the certificate is detected."
+          ],
+          "expected_result": "Expected: The system generates an alert indicating the change and its source.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-011",
+          "requirement_ids": [
+            "FR-011"
+          ],
+          "procedure": [
+            "Given: a security condition is triggered that requires alerting",
+            "When: the system initiates an alert condition"
+          ],
+          "expected_result": "Expected: an alert exists in the system as a record, with no specified destination or field set",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-012",
+          "requirement_ids": [
+            "FR-012"
+          ],
+          "procedure": [
+            "Given: certificate lifecycle activities and administrator actions occur",
+            "When: the system records all administrative interactions with certificates"
+          ],
+          "expected_result": "Expected: The system records all administrative interactions with certificates in audit logs",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-013",
+          "requirement_ids": [
+            "FR-013"
+          ],
+          "procedure": [
+            "Given: a system-controlled user opens the dashboard named in the source obligation",
+            "When: the system provides a centralized dashboard as specified"
+          ],
+          "expected_result": "Expected: the requested dashboard is displayed or available for use",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-014",
+          "requirement_ids": [
+            "FR-014"
+          ],
+          "procedure": [
+            "Given: a system-controlled user initiates an exchange with the named external identity service",
+            "When: the system integrates with existing university identity services as specified"
+          ],
+          "expected_result": "Expected: interoperation with that service is observed",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-015",
+          "requirement_ids": [
+            "FR-015"
+          ],
+          "procedure": [
+            "Given: a user initiates use from each stated campus location",
+            "When: the system supports multiple campus locations as specified"
+          ],
+          "expected_result": "Expected: use succeeds at each location",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "positive"
+        },
+        {
+          "id": "TEST-016",
+          "requirement_ids": [
+            "NFR-001"
+          ],
+          "procedure": [
+            "Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage via certificate management operations.",
+            "When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or success criteria are provided in the current draft.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-017",
+          "requirement_ids": [
+            "NFR-002"
+          ],
+          "procedure": [
+            "Given: The system shall remain secure against unauthorized access and data breaches.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting response",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-018",
+          "requirement_ids": [
+            "NFR-003"
+          ],
+          "procedure": [
+            "Given: The system shall remain reliable under varying loads and failure conditions.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-019",
+          "requirement_ids": [
+            "NFR-004"
+          ],
+          "procedure": [
+            "Given: The system shall remain scalable to support increasing numbers of users and data volumes.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the resulting state",
+          "test_type": "inspection"
+        },
+        {
+          "id": "TEST-020",
+          "requirement_ids": [
+            "NFR-005"
+          ],
+          "procedure": [
+            "Given: The system shall remain manageable through configuration, monitoring, and operational controls.",
+            "When: An analyst inspects or reviews that acceptance plan."
+          ],
+          "expected_result": "Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "evidence_to_record": "Evidence: External test capture of the inspection record",
+          "test_type": "inspection"
+        }
+      ],
+      "limitations": [
+        "These verification plans have not been executed; their acceptance outcomes require testing."
+      ]
+    },
+    "glossary": {
+      "summary": "Source-present terminology; definitions introduce no additional product obligation.",
+      "items": [
+        {
+          "title": "Log",
+          "detail": "A collection of event records. This term does not itself require additional logging fields, events or access permissions.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        },
+        {
+          "title": "Audit record",
+          "detail": "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition.",
+          "status": "proposed",
+          "evidence_ids": [
+            "E-003"
+          ],
+          "sources": [],
+          "requirement_ids": []
+        }
+      ],
+      "open_issues": []
+    },
+    "sdlc": {
+      "selected_model": "Incremental",
+      "justification": "The Incremental model is selected based on derived evidence showing the need for integrated security review (E-002), operational validation through monitoring feedback (E-003), staged deployment across multiple locations (E-004) to enable controlled rollout, and integration verification of connected systems (E-004). These factors collectively support a phased, iterative approach that aligns with continuous security assurance and operational feedback. The Incremental model scores 66 points—outperforming Hybrid (65), DevSecOps (63), Spiral (51), and others—due to superior alignment across derived validation criteria. While the evidence is derived rather than direct, it establishes a consistent need for iterative validation, security integration, and deployment control. The model does not require assumptions about budget, delivery, failure consequences, or legacy systems; these remain unknown factors as specified. The decision remains proposed, pending confirmation of team capacity and delivery constraints. No product-based suitability is inferred beyond the evidence provided.",
+      "tradeoffs": [
+        "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions.",
+        "Proposed suitability recommendation; confirm delivery constraints and team capacity before adopting this lifecycle. Missing factors are not assumed."
+      ],
+      "phases": [
+        {
+          "name": "Requirements and verification planning",
+          "phase_type": "planning",
+          "activities": [
+            "Review and baseline the source-defined work group: FR-001: The system shall manage certificates used by approved campus applications, servers, and network services.; FR-002: The system shall allow Authorized certificate administrators to review certificate requests.; FR-003: The system shall allow Authorized certificate administrators to approve certificate issuance.; FR-004: The system shall allow Authorized certificate administrators to renew certificates.; FR-005: The system shall allow Authorized certificate administrators to revoke compromised certificates.; FR-006: The system shall allow Authorized certificate administrators to track certificate status.; FR-007: The system shall restrict certificate administration based on approved roles.; FR-008: The system shall monitor certificate validity.; FR-009: The system shall detect expired certificates.; FR-010: The system shall detect unauthorized certificate changes.; FR-011: The system shall generate security alerts.; FR-012: The system shall maintain audit logs of certificate lifecycle activities and administrator actions.; FR-013: The system shall provide a centralized dashboard.; FR-014: The system shall integrate with existing university identity services.; FR-015: The system shall support multiple campus locations.; NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Versioned requirements baseline",
+            "Unit, integration, system and acceptance test plan",
+            "Unresolved-decision record"
+          ],
+          "entry_criteria": [
+            "Authoritative inputs and canonical requirements are available for review."
+          ],
+          "exit_criteria": [
+            "A human reviewer has recorded the baseline decision and disposition of unresolved scope."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-011: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Incremental delivery cycle",
+          "phase_type": "iteration",
+          "activities": [
+            "Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+            "Implement the source-defined work group: FR-001: The system shall manage certificates used by approved campus applications, servers, and network services.; FR-002: The system shall allow Authorized certificate administrators to review certificate requests.; FR-003: The system shall allow Authorized certificate administrators to approve certificate issuance.; FR-004: The system shall allow Authorized certificate administrators to renew certificates.; FR-005: The system shall allow Authorized certificate administrators to revoke compromised certificates.; FR-006: The system shall allow Authorized certificate administrators to track certificate status.; FR-007: The system shall restrict certificate administration based on approved roles.; FR-008: The system shall monitor certificate validity.; FR-009: The system shall detect expired certificates.; FR-010: The system shall detect unauthorized certificate changes.; FR-011: The system shall generate security alerts.; FR-012: The system shall maintain audit logs of certificate lifecycle activities and administrator actions.; FR-013: The system shall provide a centralized dashboard.; FR-014: The system shall integrate with existing university identity services.; FR-015: The system shall support multiple campus locations.; NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+            "In an authorized isolated test environment, execute TEST-001: Given: system manages certificates used by approved campus applications, servers, and network services When: the system initiates certificate management for an approved service Expected: the resulting certificate state is returned in a response captured externally",
+            "In an authorized isolated test environment, execute TEST-002: Given: Authorized certificate administrators review a certificate request When: the actor initiates the review operation on the named request Expected: the requested certificate request is returned for examination",
+            "In an authorized isolated test environment, execute TEST-003: Given: Authorized certificate administrators approve a certificate issuance request When: the actor initiates the approval operation on the named request Expected: the request's approved status is observed in the system state",
+            "In an authorized isolated test environment, execute TEST-004: Given: Authorized certificate administrators renew a certificate When: the actor initiates the renewal operation on the named certificate Expected: the certificate is observed in its renewed state",
+            "In an authorized isolated test environment, execute TEST-005: Given: Authorized certificate administrators revoke a compromised certificate When: the actor initiates the revocation operation on the named certificate Expected: the certificate's revoked status is observed in the system state",
+            "In an authorized isolated test environment, execute TEST-006: Given: Authorized certificate administrators track a certificate status When: the actor initiates the tracking operation on the named certificate Expected: the history of that certificate's status is available for examination",
+            "In an authorized isolated test environment, execute TEST-007: Given: the system has certificate administration privileges assigned to approved roles When: the system attempts to perform certificate administration actions Expected: only actions permitted by the approved role are executed; unauthorized actions are denied",
+            "In an authorized isolated test environment, execute TEST-008: Given: a certificate is issued with a defined validity period When: the system monitors certificate validity during operation Expected: The system reports that certificate validity is within the defined period during operation",
+            "In an authorized isolated test environment, execute TEST-009: Given: a certificate has expired or is nearing expiration When: the system detects certificate validity status changes Expected: the system identifies and flags expired certificates within the monitoring scope",
+            "In an authorized isolated test environment, execute TEST-010: Given: a certificate is modified by an unauthorized entity When: An unauthorized modification to the certificate is detected. Expected: The system generates an alert indicating the change and its source.",
+            "In an authorized isolated test environment, execute TEST-011: Given: a security condition is triggered that requires alerting When: the system initiates an alert condition Expected: an alert exists in the system as a record, with no specified destination or field set",
+            "In an authorized isolated test environment, execute TEST-012: Given: certificate lifecycle activities and administrator actions occur When: the system records all administrative interactions with certificates Expected: The system records all administrative interactions with certificates in audit logs",
+            "In an authorized isolated test environment, execute TEST-013: Given: a system-controlled user opens the dashboard named in the source obligation When: the system provides a centralized dashboard as specified Expected: the requested dashboard is displayed or available for use",
+            "In an authorized isolated test environment, execute TEST-014: Given: a system-controlled user initiates an exchange with the named external identity service When: the system integrates with existing university identity services as specified Expected: interoperation with that service is observed",
+            "In an authorized isolated test environment, execute TEST-015: Given: a user initiates use from each stated campus location When: the system supports multiple campus locations as specified Expected: use succeeds at each location",
+            "In an authorized isolated test environment, execute TEST-016: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage via certificate management operations. When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD. Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or success criteria are provided in the current draft.",
+            "In an authorized isolated test environment, execute TEST-017: Given: The system shall remain secure against unauthorized access and data breaches. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "In an authorized isolated test environment, execute TEST-018: Given: The system shall remain reliable under varying loads and failure conditions. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "In an authorized isolated test environment, execute TEST-019: Given: The system shall remain scalable to support increasing numbers of users and data volumes. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "In an authorized isolated test environment, execute TEST-020: Given: The system shall remain manageable through configuration, monitoring, and operational controls. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+            "Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+            "Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirement-linked implementation increment",
+            "Recorded test evidence",
+            "Reviewed feedback and next-iteration backlog"
+          ],
+          "entry_criteria": [
+            "Prior work, source scope and the reviewed test plan are available for iteration planning."
+          ],
+          "exit_criteria": [
+            "A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-011: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        },
+        {
+          "name": "Release and handoff",
+          "phase_type": "release",
+          "activities": [
+            "Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+            "Carry unresolved source decisions into handoff; generated text is not human approval."
+          ],
+          "roles": [
+            "Proposed project owner",
+            "Proposed development lead",
+            "Proposed verification reviewer"
+          ],
+          "deliverables": [
+            "Requirements and verification evidence package",
+            "Pending human release decision",
+            "Outstanding-decision record"
+          ],
+          "entry_criteria": [
+            "Verification evidence and unresolved decisions are available for human review."
+          ],
+          "exit_criteria": [
+            "A human has recorded the release/handoff decision for the reviewed content."
+          ],
+          "security_checks": [
+            "Review implementation and acceptance evidence against FR-011: The system shall generate security alerts.",
+            "Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+            "Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+          ],
+          "human_approval": "Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation.",
+          "requirement_ids": [
+            "FR-001",
+            "FR-002",
+            "FR-003",
+            "FR-004",
+            "FR-005",
+            "FR-006",
+            "FR-007",
+            "FR-008",
+            "FR-009",
+            "FR-010",
+            "FR-011",
+            "FR-012",
+            "FR-013",
+            "FR-014",
+            "FR-015",
+            "NFR-001",
+            "NFR-002",
+            "NFR-003",
+            "NFR-004",
+            "NFR-005"
+          ]
+        }
+      ],
+      "unknown_factors": [
+        "budget",
+        "delivery",
+        "failure_consequences",
+        "feedback",
+        "legacy",
+        "regulation",
+        "schedule",
+        "stability",
+        "uncertainty",
+        "verification"
+      ],
+      "verification_pairs": []
+    },
+    "sdlc_policy_version": "sequential-sdlc-2.0",
+    "sdlc_prompt_version": "sequential-sdlc-generation-2.1",
+    "category_metadata_version": "canonical-category-metadata-1.1",
+    "verification_projection_version": "canonical-criteria-verification-1.1",
+    "introduction_projection_version": "source-fact-introduction-1.0",
+    "scenario_projection_version": "canonical-scenarios-1.0",
+    "sdlc_factors": [
+      {
+        "name": "security_assurance",
+        "value": "integrated security review",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "basis": "derived",
+        "rationale": "Security decisions benefit from security review and tests throughout delivery."
+      },
+      {
+        "name": "operational_validation",
+        "value": "monitoring feedback",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "basis": "derived",
+        "rationale": "Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency."
+      },
+      {
+        "name": "deployment_scope",
+        "value": "staged rollout opportunity",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "basis": "derived",
+        "rationale": "Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed."
+      },
+      {
+        "name": "integration_assurance",
+        "value": "integration validation",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "basis": "derived",
+        "rationale": "Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified."
+      }
+    ],
+    "sdlc_candidates": [
+      {
+        "model": "Incremental",
+        "score": 66,
+        "reasons": [
+          "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ]
+      },
+      {
+        "model": "Hybrid",
+        "score": 65,
+        "reasons": [
+          "Derived security_assurance (+8 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+5 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+8 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+4 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ]
+      },
+      {
+        "model": "DevSecOps",
+        "score": 63,
+        "reasons": [
+          "Derived security_assurance (+12 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+8 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+3 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)"
+        ]
+      },
+      {
+        "model": "Spiral",
+        "score": 51,
+        "reasons": [
+          "Derived security_assurance (+5 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived integration_assurance (+6 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ]
+      },
+      {
+        "model": "Agile",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "V-Model",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      },
+      {
+        "model": "Waterfall",
+        "score": 40,
+        "reasons": [
+          "No differentiating input evidence"
+        ]
+      }
+    ],
+    "model_name": "cybersrs-qwen3-4b-ft:latest + qwen3:4b-instruct-2507-q4_K_M",
+    "requested_model_name": "cybersrs-qwen3-4b-ft:latest",
+    "models_used": [
+      "cybersrs-qwen3-4b-ft:latest",
+      "qwen3:4b-instruct-2507-q4_K_M"
+    ],
+    "section_models": {
+      "introduction": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "functional": [
+        "cybersrs-qwen3-4b-ft:latest",
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ],
+      "nonfunctional": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "security": [],
+      "data": [],
+      "network": [],
+      "compliance": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "architecture": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "threats": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "risks": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "scenarios": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "verification": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "glossary": [
+        "cybersrs-qwen3-4b-ft:latest"
+      ],
+      "sdlc": [
+        "qwen3:4b-instruct-2507-q4_K_M"
+      ]
+    },
+    "prompt_version": "sequential-1.38",
+    "input_fingerprint": "4cae1d13219b19e86bfe347d417243a774481f1a54d7b2b22a95c3d826fda3ea"
+  },
+  "content_hash": "912e25f2ff8eec2b07bb58d3555aa768343f3b983a4ab419066b2bb85ea96d5e",
+  "quality": {
+    "validation_policy_version": "source-grounding-1.17",
+    "status": "needs_review",
+    "checks_passed": 21,
+    "checks_total": 21,
+    "findings": [
+      {
+        "code": "human_semantic_review_required",
+        "severity": "warning",
+        "section": "document",
+        "item_id": "",
+        "message": "Review completeness, actor permissions, contradictions and citation applicability; schema and link checks do not prove semantic correctness."
+      }
+    ],
+    "evidence_coverage": {
+      "E-001": [
+        "FR-001",
+        "NFR-001"
+      ],
+      "E-002": [
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006"
+      ],
+      "E-003": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012"
+      ],
+      "E-004": [
+        "FR-013",
+        "FR-014",
+        "FR-015",
+        "NFR-002",
+        "NFR-003",
+        "NFR-004",
+        "NFR-005"
+      ]
+    },
+    "traceability": [
+      {
+        "requirement_id": "FR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-001"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-002",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-001"
+        ],
+        "test_ids": [
+          "TEST-002"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-003",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-002"
+        ],
+        "test_ids": [
+          "TEST-003"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-004",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-003"
+        ],
+        "test_ids": [
+          "TEST-004"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-005",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-004"
+        ],
+        "test_ids": [
+          "TEST-005"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-006",
+        "evidence_ids": [
+          "E-002"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [
+          "UC-005"
+        ],
+        "test_ids": [
+          "TEST-006"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-007",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-007"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-008",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-008"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-009",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-009"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-010",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-010"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-011",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-011"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-012",
+        "evidence_ids": [
+          "E-003"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-012"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-013",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-013"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-014",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-014"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "FR-015",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-015"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-001",
+        "evidence_ids": [
+          "E-001"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-016"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-002",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-017"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-003",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-018"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-004",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-019"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      },
+      {
+        "requirement_id": "NFR-005",
+        "evidence_ids": [
+          "E-004"
+        ],
+        "source_chunks": [],
+        "scenario_ids": [],
+        "test_ids": [
+          "TEST-020"
+        ],
+        "sdlc_phases": [
+          "Requirements and verification planning",
+          "Incremental delivery cycle",
+          "Release and handoff"
+        ]
+      }
+    ]
+  },
+  "run_id": "f4061071-7e25-43b3-bab6-115384c2d923",
+  "created_at": "2026-10-30T03:45:30.782168+00:00",
+  "presentation": {
+    "profile": "ieee-830-1998-1.0",
+    "title": "Secure Certificate Management System",
+    "sections": [
+      {
+        "number": "1",
+        "title": "Introduction",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.1",
+        "title": "Purpose",
+        "paragraphs": [
+          "This specification records the project purpose, stakeholder constraints and unresolved decisions stated in the source evidence below.",
+          "This SRS describes the software's required behavior for users, administrators and the Project Analyst reviewing the specification."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.2",
+        "title": "Scope",
+        "paragraphs": [
+          "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services. Authorized certificate administrators should be able to review certificate requests, approve certificate issuance, renew certificates, revoke compromised certificates, and track certificate status. The system should restrict certificate administration based on approved roles, monitor certificate validity, detect expired certificates and unauthorized certificate changes, generate security alerts, and maintain audit logs of certificate lifecycle activities and administrator actions. The platform should provide a centralized dashboard, integrate with existing university identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "1.3",
+        "title": "Definitions, acronyms and abbreviations",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Log",
+                "A collection of event records. This term does not itself require additional logging fields, events or access permissions."
+              ],
+              [
+                "Audit record",
+                "A stored record of an event. Required event scope and retention are determined by the linked source, not this definition."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.4",
+        "title": "References",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Reference",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Format",
+                "IEEE Std 830-1998, clauses 5 and Annex A (document organization)."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "1.5",
+        "title": "Overview",
+        "paragraphs": [
+          "Section 2 summarizes the product, stakeholders and open decisions. Section 3 contains the uniquely identified requirements. Detailed evidence, acceptance procedures are available in the Normal report. Appendices A-C contain derived threat hypotheses, risk assessment and the proposed SDLC workflow."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2",
+        "title": "Overall description",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.1",
+        "title": "Product perspective",
+        "paragraphs": [
+          "Design a secure digital-certificate management system for a university that manages certificates used by approved campus applications, servers, and network services."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.2",
+        "title": "Product functions",
+        "paragraphs": [
+          "Functional topics are summarized below; section 3 retains the full requirements."
+        ],
+        "bullets": [
+          "manage certificates used by approved campus applications, servers, and network services - FR-001",
+          "allow Authorized certificate administrators to review certificate requests - FR-002",
+          "allow Authorized certificate administrators to approve certificate issuance - FR-003",
+          "allow Authorized certificate administrators to renew certificates - FR-004",
+          "allow Authorized certificate administrators to revoke compromised certificates - FR-005",
+          "allow Authorized certificate administrators to track certificate status - FR-006",
+          "restrict certificate administration based on approved roles - FR-007",
+          "monitor certificate validity - FR-008",
+          "detect expired certificates - FR-009",
+          "detect unauthorized certificate changes - FR-010",
+          "generate security alerts - FR-011",
+          "maintain audit logs of certificate lifecycle activities and administrator actions - FR-012",
+          "provide a centralized dashboard - FR-013",
+          "integrate with existing university identity services - FR-014",
+          "support multiple campus locations - FR-015"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.3",
+        "title": "User characteristics and stakeholders",
+        "paragraphs": [
+          "Labels group stakeholders for readability. They do not combine permissions.",
+          "Education, training and experience requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [
+          {
+            "columns": [
+              "Role",
+              "Source user groups",
+              "Responsibility"
+            ],
+            "rows": [
+              [
+                "Admin",
+                "administrators",
+                "Performs only the role's source-defined operations in section 3."
+              ],
+              [
+                "Project Analyst",
+                "Document review role",
+                "Reviews requirements and tracks open decisions; this role grants no product access."
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "2.4",
+        "title": "Constraints",
+        "paragraphs": [
+          "No additional implementation constraints were confirmed. Source-defined restrictions remain in the requirements in section 3."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "2.5",
+        "title": "Assumptions and dependencies",
+        "paragraphs": [
+          "Open decisions requiring confirmation:"
+        ],
+        "bullets": [
+          "What conditions define the requested detections and their alert triggers?",
+          "Which fields must the audit logs contain?",
+          "What retention period is required for the audit logs?",
+          "Which security acceptance outcomes must be demonstrated?",
+          "What measurable reliability and recovery targets must the system meet?",
+          "What measurable scalability targets must the system meet?",
+          "What criteria define acceptable manageability?",
+          "How are the stated roles and authorized permissions assigned?"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3",
+        "title": "Specific requirements",
+        "paragraphs": [
+          "Each requirement is stated once with its original identifier and wording. Cross-references identify requirements covering more than one concern."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1",
+        "title": "External interface requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.1",
+        "title": "User interfaces",
+        "paragraphs": [
+          "Related requirements: FR-013. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.2",
+        "title": "Hardware interfaces",
+        "paragraphs": [
+          "No specific interface requirement was supplied; confirmation is required."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.3",
+        "title": "Software interfaces",
+        "paragraphs": [
+          "Related requirements: FR-014. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.1.4",
+        "title": "Communications interfaces",
+        "paragraphs": [
+          "Related requirements: FR-001. Interface details beyond those requirements remain unspecified."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.2",
+        "title": "Functional requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "FR-001",
+            "statement": "The system shall manage certificates used by approved campus applications, servers, and network services.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-001"
+            ]
+          },
+          {
+            "id": "FR-002",
+            "statement": "The system shall allow Authorized certificate administrators to review certificate requests.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-002"
+            ]
+          },
+          {
+            "id": "FR-003",
+            "statement": "The system shall allow Authorized certificate administrators to approve certificate issuance.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-003"
+            ]
+          },
+          {
+            "id": "FR-004",
+            "statement": "The system shall allow Authorized certificate administrators to renew certificates.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-004"
+            ]
+          },
+          {
+            "id": "FR-005",
+            "statement": "The system shall allow Authorized certificate administrators to revoke compromised certificates.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-005"
+            ]
+          },
+          {
+            "id": "FR-006",
+            "statement": "The system shall allow Authorized certificate administrators to track certificate status.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-002"
+            ],
+            "test_ids": [
+              "TEST-006"
+            ]
+          },
+          {
+            "id": "FR-007",
+            "statement": "The system shall restrict certificate administration based on approved roles.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-007"
+            ]
+          },
+          {
+            "id": "FR-008",
+            "statement": "The system shall monitor certificate validity.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-008"
+            ]
+          },
+          {
+            "id": "FR-009",
+            "statement": "The system shall detect expired certificates.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-009"
+            ]
+          },
+          {
+            "id": "FR-010",
+            "statement": "The system shall detect unauthorized certificate changes.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-010"
+            ]
+          },
+          {
+            "id": "FR-011",
+            "statement": "The system shall generate security alerts.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-011"
+            ]
+          },
+          {
+            "id": "FR-012",
+            "statement": "The system shall maintain audit logs of certificate lifecycle activities and administrator actions.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-003"
+            ],
+            "test_ids": [
+              "TEST-012"
+            ]
+          },
+          {
+            "id": "FR-013",
+            "statement": "The system shall provide a centralized dashboard.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-013"
+            ]
+          },
+          {
+            "id": "FR-014",
+            "statement": "The system shall integrate with existing university identity services.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-014"
+            ]
+          },
+          {
+            "id": "FR-015",
+            "statement": "The system shall support multiple campus locations.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-015"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.3",
+        "title": "Performance requirements",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-004",
+            "statement": "The system shall remain scalable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-019"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.4",
+        "title": "Logical database requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.5",
+        "title": "Design constraints",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6",
+        "title": "Software system attributes",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.1",
+        "title": "Reliability",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-003",
+            "statement": "The system shall remain reliable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-018"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.2",
+        "title": "Availability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.6.3",
+        "title": "Security",
+        "paragraphs": [
+          "Also covered by: FR-007, FR-011, FR-012."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-001",
+            "statement": "The system shall be secure.",
+            "priority": "must",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-001"
+            ],
+            "test_ids": [
+              "TEST-016"
+            ]
+          },
+          {
+            "id": "NFR-002",
+            "statement": "The system shall remain secure.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-017"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.4",
+        "title": "Maintainability",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "requirements": [
+          {
+            "id": "NFR-005",
+            "statement": "The system shall remain manageable.",
+            "priority": "should",
+            "basis": "explicit",
+            "sources": [],
+            "evidence_ids": [
+              "E-004"
+            ],
+            "test_ids": [
+              "TEST-020"
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3.6.5",
+        "title": "Portability",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "3.7",
+        "title": "Other requirements",
+        "paragraphs": [
+          "No separate requirement was specified in the supplied brief."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A",
+        "title": "Derived threat hypotheses",
+        "paragraphs": [
+          "These are defensive planning hypotheses, not observed incidents or approved extra controls. Unrecognized threats and actual implementation effectiveness require human review.",
+          "These are planning hypotheses, not observed incidents or additional approved controls."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.1",
+        "title": "THR-001: User identities and authenticated access",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "Linked requirements: FR-013, FR-014, FR-015, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.2",
+        "title": "THR-002: Role and permission boundaries",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: A lower-privilege user could access restricted functions or sensitive resources.",
+          "Linked requirements: FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012",
+          "Original evidence: E-002, E-003",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.3",
+        "title": "THR-003: Access grants and revocations",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: A revoked or changed permission remains effective in a session or enforcement point, allowing access after authorization should have ended.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: A formerly authorized principal could continue using access that is no longer approved.",
+          "Linked requirements: FR-002, FR-003, FR-004, FR-005, FR-006",
+          "Original evidence: E-002",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.4",
+        "title": "THR-004: Integration trust paths",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "Linked requirements: FR-013, FR-014, FR-015, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.5",
+        "title": "THR-005: Security and administrative audit evidence",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Investigators could lose reliable evidence of the events required by the brief.",
+          "Linked requirements: FR-007, FR-008, FR-009, FR-010, FR-011, FR-012",
+          "Original evidence: E-003",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "A.6",
+        "title": "THR-006: Monitoring and security alerts",
+        "paragraphs": [
+          "Scenario: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "Hypothetical actor or cause: Hypothetical attacker, privileged insider or failure cause",
+          "Potential consequence: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "Linked requirements: FR-007, FR-008, FR-009, FR-010, FR-011, FR-012",
+          "Original evidence: E-003",
+          "Residual exposure: Unverified planning hypothesis. Linked requirements define intended behavior, not proven prevention. Validate enforcement and residual exposure during design and acceptance review; likelihood and severity are not established."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B",
+        "title": "Risk assessment",
+        "paragraphs": [
+          "Risk treatments are proposals for review. Unknown likelihood and impact ratings mean unassessed; no numeric confidence or severity is inferred."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.1",
+        "title": "RISK-001",
+        "paragraphs": [
+          "Derived risk affecting User identities and authenticated access: Unauthorized use of a legitimate identity could expose resources or alter system state.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker uses a compromised identity or authenticated session to impersonate an authorized user and exercise that user's permitted operations.",
+          "Proposed treatment: Review impersonation and compromised-identity paths against the stated access duties; confirm any additional identity or session protections with the stakeholder. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-013, FR-014, FR-015, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.2",
+        "title": "RISK-002",
+        "paragraphs": [
+          "Derived risk affecting Role and permission boundaries: A lower-privilege user could access restricted functions or sensitive resources.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A principal exploits an incorrect role assignment or permission check to perform operations outside the source-defined authorization boundary.",
+          "Proposed treatment: Test permitted and denied role/resource pairs against the linked authorization duties; review ambiguous permission assignments with the resource owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012",
+          "Original evidence: E-002, E-003"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.3",
+        "title": "RISK-003",
+        "paragraphs": [
+          "Derived risk affecting Access grants and revocations: A formerly authorized principal could continue using access that is no longer approved.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A revoked or changed permission remains effective in a session or enforcement point, allowing access after authorization should have ended.",
+          "Proposed treatment: Trace permission changes through subsequent access decisions and any active access; confirm revocation timing and session semantics before baselining them. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-002, FR-003, FR-004, FR-005, FR-006",
+          "Original evidence: E-002"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.4",
+        "title": "RISK-004",
+        "paragraphs": [
+          "Derived risk affecting Integration trust paths: Untrusted integration data could cause incorrect decisions or hide security events.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: A compromised connected system or integration path supplies forged, altered or missing identity, event or policy data used by the source-defined integration.",
+          "Proposed treatment: Review trust assumptions at the specified integration boundaries with missing or altered input fixtures; confirm the required failure handling with the owner. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-013, FR-014, FR-015, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Original evidence: E-004"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.5",
+        "title": "RISK-005",
+        "paragraphs": [
+          "Derived risk affecting Security and administrative audit evidence: Investigators could lose reliable evidence of the events required by the brief.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: An attacker or recording failure suppresses or alters source-required audit evidence so that access decisions, security events or admin actions cannot be reconstructed.",
+          "Proposed treatment: Compare source-required events with the resulting audit evidence; assess missing and altered-record cases and confirm unprovided protection or retention decisions. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-007, FR-008, FR-009, FR-010, FR-011, FR-012",
+          "Original evidence: E-003"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "B.6",
+        "title": "RISK-006",
+        "paragraphs": [
+          "Derived risk affecting Monitoring and security alerts: Relevant suspicious activity could remain undetected or receive delayed investigation.",
+          "Likelihood: unknown; impact: unknown; owner: TBD.",
+          "Rationale: This is a planning risk linked to the defensive hypothesis: Derived hypothesis: Suspicious activity evades the source-defined detection workflow, or excessive events obscure actionable alerts before an authorized reviewer can investigate.",
+          "Proposed treatment: Evaluate the stated detection duties with representative positive and negative events; confirm undecided thresholds, alert priorities and investigation responsibilities. Assign a responsible reviewer. Verify the linked canonical obligations against their authored acceptance criteria in an authorized isolated environment. Record gaps and obtain a scope decision before adding any product behavior; preserve explicit exclusions.",
+          "Linked requirements: FR-007, FR-008, FR-009, FR-010, FR-011, FR-012",
+          "Original evidence: E-003"
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C",
+        "title": "SDLC recommendation and delivery workflow",
+        "paragraphs": [
+          "Proposed lifecycle: Incremental",
+          "The Incremental model is selected based on derived evidence showing the need for integrated security review (E-002), operational validation through monitoring feedback (E-003), staged deployment across multiple locations (E-004) to enable controlled rollout, and integration verification of connected systems (E-004). These factors collectively support a phased, iterative approach that aligns with continuous security assurance and operational feedback. The Incremental model scores 66 points—outperforming Hybrid (65), DevSecOps (63), Spiral (51), and others—due to superior alignment across derived validation criteria. While the evidence is derived rather than direct, it establishes a consistent need for iterative validation, security integration, and deployment control. The model does not require assumptions about budget, delivery, failure consequences, or legacy systems; these remain unknown factors as specified. The decision remains proposed, pending confirmation of team capacity and delivery constraints. No product-based suitability is inferred beyond the evidence provided.",
+          "Recommendation requires human confirmation of delivery constraints and team capacity. Suitability points are deterministic rule scores, not probabilities.",
+          "Policy version: sequential-sdlc-2.0",
+          "Unconfirmed decision factors: budget, delivery, failure consequences, feedback, legacy, regulation, schedule, stability, uncertainty, verification"
+        ],
+        "bullets": [
+          "Recurring delivery requires stakeholder review and backlog refinement; a cycle does not guarantee completeness or remove unresolved decisions.",
+          "Proposed suitability recommendation; confirm delivery constraints and team capacity before adopting this lifecycle. Missing factors are not assumed."
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1",
+        "title": "Ranking and source evidence",
+        "paragraphs": [],
+        "bullets": [
+          "security_assurance = integrated security review (derived). Security decisions benefit from security review and tests throughout delivery. Original evidence: E-002.",
+          "operational_validation = monitoring feedback (derived). Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. Original evidence: E-003.",
+          "deployment_scope = staged rollout opportunity (derived). Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. Original evidence: E-004.",
+          "integration_assurance = integration validation (derived). Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. Original evidence: E-004."
+        ],
+        "tables": [
+          {
+            "columns": [
+              "Candidate",
+              "Suitability points"
+            ],
+            "rows": [
+              [
+                "Incremental",
+                "66"
+              ],
+              [
+                "Hybrid",
+                "65"
+              ],
+              [
+                "DevSecOps",
+                "63"
+              ],
+              [
+                "Spiral",
+                "51"
+              ],
+              [
+                "Agile",
+                "40"
+              ],
+              [
+                "V-Model",
+                "40"
+              ],
+              [
+                "Waterfall",
+                "40"
+              ]
+            ]
+          }
+        ],
+        "requirements": []
+      },
+      {
+        "number": "C.1.1",
+        "title": "Incremental suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived operational_validation (+6 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+12 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+8 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.2",
+        "title": "Hybrid suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived security_assurance (+8 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+5 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+8 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)",
+          "Derived integration_assurance (+4 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.3",
+        "title": "DevSecOps suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived security_assurance (+12 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived operational_validation (+8 points): Monitoring and alert behavior needs validation with operational feedback; this does not establish continuous deployment or a release frequency. (E-003)",
+          "Derived deployment_scope (+3 points): Multiple deployment locations offer a staged validation and rollout opportunity; the rollout plan remains proposed. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.4",
+        "title": "Spiral suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "Derived security_assurance (+5 points): Security decisions benefit from security review and tests throughout delivery. (E-002)",
+          "Derived integration_assurance (+6 points): Connected systems need integration verification before broader rollout; their age, technology and technical uncertainty remain unspecified. (E-004)"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.5",
+        "title": "Agile suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "No differentiating input evidence"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.6",
+        "title": "V-Model suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "No differentiating input evidence"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.1.7",
+        "title": "Waterfall suitability reasons",
+        "paragraphs": [],
+        "bullets": [
+          "No differentiating input evidence"
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2",
+        "title": "Methodology phases",
+        "paragraphs": [
+          "Activities reference the canonical requirements and proposed verification work. Human gates are pending decisions, not approval records."
+        ],
+        "bullets": [],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2.1",
+        "title": "Requirements and verification planning",
+        "paragraphs": [
+          "Proposed roles: Proposed project owner; Proposed development lead; Proposed verification reviewer",
+          "Linked requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, FR-013, FR-014, FR-015, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Human gate: Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation."
+        ],
+        "bullets": [
+          "Activity: Review and baseline the source-defined work group: FR-001: The system shall manage certificates used by approved campus applications, servers, and network services.; FR-002: The system shall allow Authorized certificate administrators to review certificate requests.; FR-003: The system shall allow Authorized certificate administrators to approve certificate issuance.; FR-004: The system shall allow Authorized certificate administrators to renew certificates.; FR-005: The system shall allow Authorized certificate administrators to revoke compromised certificates.; FR-006: The system shall allow Authorized certificate administrators to track certificate status.; FR-007: The system shall restrict certificate administration based on approved roles.; FR-008: The system shall monitor certificate validity.; FR-009: The system shall detect expired certificates.; FR-010: The system shall detect unauthorized certificate changes.; FR-011: The system shall generate security alerts.; FR-012: The system shall maintain audit logs of certificate lifecycle activities and administrator actions.; FR-013: The system shall provide a centralized dashboard.; FR-014: The system shall integrate with existing university identity services.; FR-015: The system shall support multiple campus locations.; NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+          "Activity: Create the unit, integration, system and acceptance test plan before implementation; retain each authored acceptance criterion.",
+          "Deliverable: Versioned requirements baseline",
+          "Deliverable: Unit, integration, system and acceptance test plan",
+          "Deliverable: Unresolved-decision record",
+          "Entry criterion: Authoritative inputs and canonical requirements are available for review.",
+          "Exit criterion: A human reviewer has recorded the baseline decision and disposition of unresolved scope.",
+          "Security check: Review implementation and acceptance evidence against FR-011: The system shall generate security alerts.",
+          "Security check: Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+          "Security check: Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2.2",
+        "title": "Incremental delivery cycle",
+        "paragraphs": [
+          "Proposed roles: Proposed project owner; Proposed development lead; Proposed verification reviewer",
+          "Linked requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, FR-013, FR-014, FR-015, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Human gate: Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation."
+        ],
+        "bullets": [
+          "Activity: Review and prioritize the backlog for the next iteration without changing source-defined scope.",
+          "Activity: Implement the source-defined work group: FR-001: The system shall manage certificates used by approved campus applications, servers, and network services.; FR-002: The system shall allow Authorized certificate administrators to review certificate requests.; FR-003: The system shall allow Authorized certificate administrators to approve certificate issuance.; FR-004: The system shall allow Authorized certificate administrators to renew certificates.; FR-005: The system shall allow Authorized certificate administrators to revoke compromised certificates.; FR-006: The system shall allow Authorized certificate administrators to track certificate status.; FR-007: The system shall restrict certificate administration based on approved roles.; FR-008: The system shall monitor certificate validity.; FR-009: The system shall detect expired certificates.; FR-010: The system shall detect unauthorized certificate changes.; FR-011: The system shall generate security alerts.; FR-012: The system shall maintain audit logs of certificate lifecycle activities and administrator actions.; FR-013: The system shall provide a centralized dashboard.; FR-014: The system shall integrate with existing university identity services.; FR-015: The system shall support multiple campus locations.; NFR-001: The system shall be secure.; NFR-002: The system shall remain secure.; NFR-003: The system shall remain reliable.; NFR-004: The system shall remain scalable.; NFR-005: The system shall remain manageable.",
+          "Activity: In an authorized isolated test environment, execute TEST-001: Given: system manages certificates used by approved campus applications, servers, and network services When: the system initiates certificate management for an approved service Expected: the resulting certificate state is returned in a response captured externally",
+          "Activity: In an authorized isolated test environment, execute TEST-002: Given: Authorized certificate administrators review a certificate request When: the actor initiates the review operation on the named request Expected: the requested certificate request is returned for examination",
+          "Activity: In an authorized isolated test environment, execute TEST-003: Given: Authorized certificate administrators approve a certificate issuance request When: the actor initiates the approval operation on the named request Expected: the request's approved status is observed in the system state",
+          "Activity: In an authorized isolated test environment, execute TEST-004: Given: Authorized certificate administrators renew a certificate When: the actor initiates the renewal operation on the named certificate Expected: the certificate is observed in its renewed state",
+          "Activity: In an authorized isolated test environment, execute TEST-005: Given: Authorized certificate administrators revoke a compromised certificate When: the actor initiates the revocation operation on the named certificate Expected: the certificate's revoked status is observed in the system state",
+          "Activity: In an authorized isolated test environment, execute TEST-006: Given: Authorized certificate administrators track a certificate status When: the actor initiates the tracking operation on the named certificate Expected: the history of that certificate's status is available for examination",
+          "Activity: In an authorized isolated test environment, execute TEST-007: Given: the system has certificate administration privileges assigned to approved roles When: the system attempts to perform certificate administration actions Expected: only actions permitted by the approved role are executed; unauthorized actions are denied",
+          "Activity: In an authorized isolated test environment, execute TEST-008: Given: a certificate is issued with a defined validity period When: the system monitors certificate validity during operation Expected: The system reports that certificate validity is within the defined period during operation",
+          "Activity: In an authorized isolated test environment, execute TEST-009: Given: a certificate has expired or is nearing expiration When: the system detects certificate validity status changes Expected: the system identifies and flags expired certificates within the monitoring scope",
+          "Activity: In an authorized isolated test environment, execute TEST-010: Given: a certificate is modified by an unauthorized entity When: An unauthorized modification to the certificate is detected. Expected: The system generates an alert indicating the change and its source.",
+          "Activity: In an authorized isolated test environment, execute TEST-011: Given: a security condition is triggered that requires alerting When: the system initiates an alert condition Expected: an alert exists in the system as a record, with no specified destination or field set",
+          "Activity: In an authorized isolated test environment, execute TEST-012: Given: certificate lifecycle activities and administrator actions occur When: the system records all administrative interactions with certificates Expected: The system records all administrative interactions with certificates in audit logs",
+          "Activity: In an authorized isolated test environment, execute TEST-013: Given: a system-controlled user opens the dashboard named in the source obligation When: the system provides a centralized dashboard as specified Expected: the requested dashboard is displayed or available for use",
+          "Activity: In an authorized isolated test environment, execute TEST-014: Given: a system-controlled user initiates an exchange with the named external identity service When: the system integrates with existing university identity services as specified Expected: interoperation with that service is observed",
+          "Activity: In an authorized isolated test environment, execute TEST-015: Given: a user initiates use from each stated campus location When: the system supports multiple campus locations as specified Expected: use succeeds at each location",
+          "Activity: In an authorized isolated test environment, execute TEST-016: Given: A draft acceptance plan for this quality goal: the system shall be secure against unauthorized access and data leakage via certificate management operations. When: An analyst inspects or reviews that acceptance plan to determine whether measurable targets are defined or remain TBD. Expected: The plan's measurable targets remain TBD or unconfirmed, as no specific thresholds, attack scenarios, or success criteria are provided in the current draft.",
+          "Activity: In an authorized isolated test environment, execute TEST-017: Given: The system shall remain secure against unauthorized access and data breaches. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "Activity: In an authorized isolated test environment, execute TEST-018: Given: The system shall remain reliable under varying loads and failure conditions. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "Activity: In an authorized isolated test environment, execute TEST-019: Given: The system shall remain scalable to support increasing numbers of users and data volumes. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "Activity: In an authorized isolated test environment, execute TEST-020: Given: The system shall remain manageable through configuration, monitoring, and operational controls. When: An analyst inspects or reviews that acceptance plan. Expected: The plan's measurable targets remain TBD or unconfirmed.",
+          "Activity: Collect stakeholder feedback; agree its cadence with a human reviewer before scheduling cycles.",
+          "Activity: Return accepted stakeholder feedback and observed defects to the backlog and plan the next iteration.",
+          "Deliverable: Requirement-linked implementation increment",
+          "Deliverable: Recorded test evidence",
+          "Deliverable: Reviewed feedback and next-iteration backlog",
+          "Entry criterion: Prior work, source scope and the reviewed test plan are available for iteration planning.",
+          "Exit criterion: A human reviewer has assessed the increment, test evidence and feedback; unresolved changes return to the next iteration.",
+          "Security check: Review implementation and acceptance evidence against FR-011: The system shall generate security alerts.",
+          "Security check: Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+          "Security check: Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+        ],
+        "tables": [],
+        "requirements": []
+      },
+      {
+        "number": "C.2.3",
+        "title": "Release and handoff",
+        "paragraphs": [
+          "Proposed roles: Proposed project owner; Proposed development lead; Proposed verification reviewer",
+          "Linked requirements: FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, FR-012, FR-013, FR-014, FR-015, NFR-001, NFR-002, NFR-003, NFR-004, NFR-005",
+          "Human gate: Pending human decision by Proposed project owner on this phase's deliverables and unresolved decisions; no approval is recorded by generation."
+        ],
+        "bullets": [
+          "Activity: Review the exact requirements baseline, implementation links and verification evidence before a release decision.",
+          "Activity: Carry unresolved source decisions into handoff; generated text is not human approval.",
+          "Deliverable: Requirements and verification evidence package",
+          "Deliverable: Pending human release decision",
+          "Deliverable: Outstanding-decision record",
+          "Entry criterion: Verification evidence and unresolved decisions are available for human review.",
+          "Exit criterion: A human has recorded the release/handoff decision for the reviewed content.",
+          "Security check: Review implementation and acceptance evidence against FR-011: The system shall generate security alerts.",
+          "Security check: Review implementation and acceptance evidence against NFR-001: The system shall be secure.",
+          "Security check: Review implementation and acceptance evidence against NFR-002: The system shall remain secure."
+        ],
+        "tables": [],
+        "requirements": []
+      }
+    ]
+  }
+}

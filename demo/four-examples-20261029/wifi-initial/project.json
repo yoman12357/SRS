@@ -1,0 +1,10 @@
+{
+  "id": "5427bbe4-1c44-491b-94f8-e91cc6905f78",
+  "name": "Four-case demo - Secure Campus Wi-Fi Management System",
+  "description": "Design a secure campus Wi-Fi management system for a university that provides wireless access to students, faculty, staff, and guests across academic buildings, hostels, laboratories, and administrative offices. The system should use centralized authentication, role-based access control, separate guest access from internal university resources, monitor active wireless sessions, detect repeated authentication failures and unauthorized access attempts, and generate security alerts. Network administrators should be able to configure wireless access policies, review connected devices, revoke access, and inspect audit logs. The solution should support university-managed and approved personal devices and remain secure, scalable, reliable, and manageable across multiple campus locations.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-29T13:16:29.497647+00:00",
+  "updated_at": "2026-10-29T13:16:29.497647+00:00",
+  "reference_hashes": []
+}

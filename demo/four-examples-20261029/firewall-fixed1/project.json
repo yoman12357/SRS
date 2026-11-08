@@ -1,0 +1,10 @@
+{
+  "id": "0bdb1e76-a862-4d69-a69a-66a8e4364f65",
+  "name": "Four-case demo - Secure University Network Firewall Management System",
+  "description": "Design a centralized firewall management system for a university that manages firewall policies across academic, administrative, research, hostel, and guest networks. The system should allow authorized network administrators to create, review, update, and revoke firewall rules, enforce access restrictions between network segments, monitor blocked and allowed traffic, and generate alerts for suspicious or unauthorized communication attempts. The platform should maintain audit logs of firewall policy changes and administrative actions, provide a dashboard for reviewing network security events, and support multiple campus buildings. The solution should be secure, scalable, reliable, and manageable.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-29T13:28:42.425455+00:00",
+  "updated_at": "2026-10-29T13:28:42.425455+00:00",
+  "reference_hashes": []
+}

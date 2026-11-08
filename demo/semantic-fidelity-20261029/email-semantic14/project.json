@@ -1,0 +1,10 @@
+{
+  "id": "d06948dd-4b0f-4a96-9e40-263c75d845c8",
+  "name": "Four-case demo - Secure University Email Security Gateway",
+  "description": "Design a secure email security gateway for a university that protects students, faculty, staff, and administrators from phishing, malicious attachments, spoofed messages, and suspicious links. The system should inspect incoming and outgoing email traffic, detect suspicious messages, quarantine potentially harmful emails, generate security alerts, and allow authorized administrators to review and release quarantined messages. The platform should maintain audit logs of filtering decisions and administrator actions, integrate with the university identity system, and provide a dashboard for monitoring email security events. The solution should be secure, reliable, scalable, and manageable for university-wide deployment.",
+  "answers": [],
+  "analysis": null,
+  "created_at": "2026-10-29T20:18:25.046930+00:00",
+  "updated_at": "2026-10-29T20:18:25.046930+00:00",
+  "reference_hashes": []
+}

@@ -1,0 +1,83 @@
+{
+  "id": "aece45c5-5d1c-4288-aace-257c5e8f7e98",
+  "project_id": "56185358-f5d9-4da1-a828-e9ee0432291c",
+  "kind": "analyse",
+  "status": "completed",
+  "input_hash": "4cae1d13219b19e86bfe347d417243a774481f1a54d7b2b22a95c3d826fda3ea",
+  "events": [
+    {
+      "at": "2026-10-30T03:43:03.176728+00:00",
+      "agent": "analysis",
+      "state": "running"
+    },
+    {
+      "at": "2026-10-30T03:43:09.754264+00:00",
+      "agent": "analysis",
+      "state": "completed",
+      "model": "cybersrs-qwen3-4b-ft:latest",
+      "correction_policy_version": "bounded-corrective-history-1.0",
+      "attempts": 1,
+      "elapsed_seconds": 6.547,
+      "input_tokens": null,
+      "output_tokens": null,
+      "done_reason": "complete_json",
+      "requested_model": "cybersrs-qwen3-4b-ft:latest",
+      "base_repair_used": false
+    }
+  ],
+  "checkpoints": {
+    "analysis": {
+      "title": "Secure Certificate Management System",
+      "domain": "security",
+      "supported": true,
+      "summary": "A university shall implement a secure digital-certificate management system that supports certificate issuance, renewal, revocation, and monitoring with role-based access control and real-time alerting for expired or unauthorized certificates.",
+      "stakeholders": [
+        "certificate administrators"
+      ],
+      "assessments": [
+        {
+          "evidence_id": "E-001",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "security",
+            "nonfunctional"
+          ],
+          "explanation": "The system shall manage digital certificates used by approved campus applications, servers, and network services."
+        },
+        {
+          "evidence_id": "E-002",
+          "kind": "requirement",
+          "sections": [
+            "functional"
+          ],
+          "explanation": "Authorized certificate administrators shall be able to review requests, approve issuance, renew certificates, revoke compromised ones, and track status via a centralized dashboard."
+        },
+        {
+          "evidence_id": "E-003",
+          "kind": "requirement",
+          "sections": [
+            "security",
+            "data",
+            "functional"
+          ],
+          "explanation": "The system shall restrict access by approved roles, monitor validity, detect expired or unauthorized changes, generate alerts, and maintain audit logs of all lifecycle activities and administrator actions."
+        },
+        {
+          "evidence_id": "E-004",
+          "kind": "requirement",
+          "sections": [
+            "functional",
+            "nonfunctional"
+          ],
+          "explanation": "The platform shall provide a centralized dashboard, integrate with existing identity services, support multiple campus locations, and remain secure, reliable, scalable, and manageable."
+        }
+      ],
+      "questions": [],
+      "unresolved_decisions": []
+    }
+  },
+  "error": null,
+  "created_at": "2026-10-30T03:43:03.088100+00:00",
+  "updated_at": "2026-10-30T03:43:09.768364+00:00"
+}

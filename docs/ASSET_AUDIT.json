@@ -1,0 +1,306 @@
+{
+  "verified_files": 789,
+  "asset_failures": [],
+  "task_counts": {
+    "data_test/architecture": 60,
+    "data_test/clarification_questions": 60,
+    "data_test/context_extraction": 60,
+    "data_test/data_requirements": 2,
+    "data_test/functional_requirements": 60,
+    "data_test/network_requirements": 8,
+    "data_test/non_functional_requirements": 44,
+    "data_test/requirement_validation": 60,
+    "data_test/security_requirements": 45,
+    "data_test/srs_generation": 60,
+    "data_test/threat_model": 60,
+    "data_test2/architecture": 60,
+    "data_test2/clarification_questions": 60,
+    "data_test2/context_extraction": 60,
+    "data_test2/data_requirements": 2,
+    "data_test2/functional_requirements": 60,
+    "data_test2/network_requirements": 8,
+    "data_test2/non_functional_requirements": 44,
+    "data_test2/requirement_validation": 60,
+    "data_test2/security_requirements": 45,
+    "data_test2/srs_generation": 60,
+    "data_test2/threat_model": 60
+  },
+  "historical_json_parse_errors": [],
+  "current_prompt_version": "sequential-1.26",
+  "historical_target_schema_audit": {
+    "data_test/architecture": {
+      "current_schema": "ArchitectureSection",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 180,
+        "missing": 180,
+        "model_type": 65
+      },
+      "historical_system_prompt_hashes": [
+        "ecc5268c5e50a39b2a9a4e855b7aa8804fa874d61d03ad21c841559f87a0f4b2"
+      ]
+    },
+    "data_test/clarification_questions": {
+      "current_schema": "Analysis",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "missing": 1320,
+        "extra_forbidden": 900
+      },
+      "historical_system_prompt_hashes": [
+        "aec59c1506db7fcb3b414363050b174af299e4c0aa970bb632e9540e093a3f3a"
+      ]
+    },
+    "data_test/context_extraction": {
+      "current_schema": "Analysis",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 420,
+        "missing": 420
+      },
+      "historical_system_prompt_hashes": [
+        "0b8008f631ed71447599667def62ebf6984cee20fd3d4aa7c09b7c84846399a2"
+      ]
+    },
+    "data_test/data_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 2,
+      "error_types": {
+        "extra_forbidden": 2,
+        "missing": 4
+      },
+      "historical_system_prompt_hashes": [
+        "fb0d7331ce3038cd2b37bb5b7dff8f610a03c2fc9e346f5c82556f142f7cc8c7"
+      ]
+    },
+    "data_test/functional_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 60,
+        "missing": 120
+      },
+      "historical_system_prompt_hashes": [
+        "aea7854d5dbb40a19794f2a1718142406fac143431797101fcc652cac0ffcedf"
+      ]
+    },
+    "data_test/network_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 8,
+      "error_types": {
+        "extra_forbidden": 8,
+        "missing": 16
+      },
+      "historical_system_prompt_hashes": [
+        "bbb16fe1009334bfa95ebe09f7b687f98ab400213396ca1c3e1a40665d5e593d"
+      ]
+    },
+    "data_test/non_functional_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 44,
+      "error_types": {
+        "extra_forbidden": 44,
+        "missing": 88
+      },
+      "historical_system_prompt_hashes": [
+        "ebe01b39bc24b01b5a18174efbaadefa00d5e5d6edd15b699f27115c0c68a515"
+      ]
+    },
+    "data_test/requirement_validation": {
+      "current_schema": "QualityReport",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 660,
+        "missing": 360
+      },
+      "historical_system_prompt_hashes": [
+        "6b32c965154051392cee6784c6479ec6b0cee250ea7c5fb5ac0c0d20998ebd11"
+      ]
+    },
+    "data_test/security_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 45,
+      "error_types": {
+        "extra_forbidden": 45,
+        "missing": 90
+      },
+      "historical_system_prompt_hashes": [
+        "81ddf0fa2439b0e785e14545e838213e89de15fc8eea9f83fc2a8efb188a785e"
+      ]
+    },
+    "data_test/srs_generation": {
+      "current_schema": "Document",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 1080,
+        "missing": 1380,
+        "model_type": 120
+      },
+      "historical_system_prompt_hashes": [
+        "c4f157ea4b214016fc8202c5b3896c40e4dc9778e271da2947f6ffbb68df975d"
+      ]
+    },
+    "data_test/threat_model": {
+      "current_schema": "ThreatSection",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 480,
+        "missing": 540
+      },
+      "historical_system_prompt_hashes": [
+        "b1ca80de1705663b9389c3d15fc22d5db7ef86505cb485e7c75ae3602e0e2882"
+      ]
+    },
+    "data_test2/architecture": {
+      "current_schema": "ArchitectureSection",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 180,
+        "missing": 180,
+        "model_type": 65
+      },
+      "historical_system_prompt_hashes": [
+        "ecc5268c5e50a39b2a9a4e855b7aa8804fa874d61d03ad21c841559f87a0f4b2"
+      ]
+    },
+    "data_test2/clarification_questions": {
+      "current_schema": "Analysis",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "missing": 1320,
+        "extra_forbidden": 900
+      },
+      "historical_system_prompt_hashes": [
+        "aec59c1506db7fcb3b414363050b174af299e4c0aa970bb632e9540e093a3f3a"
+      ]
+    },
+    "data_test2/context_extraction": {
+      "current_schema": "Analysis",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 420,
+        "missing": 420
+      },
+      "historical_system_prompt_hashes": [
+        "0b8008f631ed71447599667def62ebf6984cee20fd3d4aa7c09b7c84846399a2"
+      ]
+    },
+    "data_test2/data_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 2,
+      "error_types": {
+        "extra_forbidden": 2,
+        "missing": 4
+      },
+      "historical_system_prompt_hashes": [
+        "fb0d7331ce3038cd2b37bb5b7dff8f610a03c2fc9e346f5c82556f142f7cc8c7"
+      ]
+    },
+    "data_test2/functional_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 60,
+        "missing": 120
+      },
+      "historical_system_prompt_hashes": [
+        "aea7854d5dbb40a19794f2a1718142406fac143431797101fcc652cac0ffcedf"
+      ]
+    },
+    "data_test2/network_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 8,
+      "error_types": {
+        "extra_forbidden": 8,
+        "missing": 16
+      },
+      "historical_system_prompt_hashes": [
+        "bbb16fe1009334bfa95ebe09f7b687f98ab400213396ca1c3e1a40665d5e593d"
+      ]
+    },
+    "data_test2/non_functional_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 44,
+      "error_types": {
+        "extra_forbidden": 44,
+        "missing": 88
+      },
+      "historical_system_prompt_hashes": [
+        "ebe01b39bc24b01b5a18174efbaadefa00d5e5d6edd15b699f27115c0c68a515"
+      ]
+    },
+    "data_test2/requirement_validation": {
+      "current_schema": "QualityReport",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 660,
+        "missing": 360
+      },
+      "historical_system_prompt_hashes": [
+        "6b32c965154051392cee6784c6479ec6b0cee250ea7c5fb5ac0c0d20998ebd11"
+      ]
+    },
+    "data_test2/security_requirements": {
+      "current_schema": "RequirementsSection",
+      "valid_targets": 0,
+      "incompatible_targets": 45,
+      "error_types": {
+        "extra_forbidden": 45,
+        "missing": 90
+      },
+      "historical_system_prompt_hashes": [
+        "81ddf0fa2439b0e785e14545e838213e89de15fc8eea9f83fc2a8efb188a785e"
+      ]
+    },
+    "data_test2/srs_generation": {
+      "current_schema": "Document",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 1080,
+        "missing": 1380,
+        "model_type": 120
+      },
+      "historical_system_prompt_hashes": [
+        "c4f157ea4b214016fc8202c5b3896c40e4dc9778e271da2947f6ffbb68df975d"
+      ]
+    },
+    "data_test2/threat_model": {
+      "current_schema": "ThreatSection",
+      "valid_targets": 0,
+      "incompatible_targets": 60,
+      "error_types": {
+        "extra_forbidden": 480,
+        "missing": 540
+      },
+      "historical_system_prompt_hashes": [
+        "b1ca80de1705663b9389c3d15fc22d5db7ef86505cb485e7c75ae3602e0e2882"
+      ]
+    }
+  },
+  "schema_audit_limitations": "Direct validation only; no lossful projection, invented labels or semantic acceptance. Historical context/question tasks now share Analysis. No split reassignment or training is performed.",
+  "held_out_sha256": "d14d365e0f21576d91dca3dd1bcba2d2273ac8f6f85ad3ac461ca2f1ddf49aa0",
+  "training_performed": false,
+  "historical_labels_changed": false,
+  "runtime_training_ready": false,
+  "reason": "Historical target schemas differ from the new section-agent schemas. Projection and semantic review are required before any retraining. Missing threats, citations or lifecycle labels must not be fabricated."
+}

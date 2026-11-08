@@ -1,0 +1,149 @@
+{
+  "case": "remediation",
+  "label": "initial",
+  "source_profile": "source-profile.json",
+  "user_folder": "C:\\Users\\Aryan Bokolia\\Desktop\\CyberSRS - Backup and Configuration - 30 Oct 2026\\Secure University Vulnerability Remediation Tracking System",
+  "human_approval": false,
+  "project_id": "6b5d7e3f-ac74-4207-a07a-2f5cfd73f2dc",
+  "analysis": {
+    "run_id": "04290361-848c-44a9-8334-381c4c66be7f",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-30T03:36:10.168192+00:00",
+    "terminal_at": "2026-10-30T03:36:16.414626+00:00",
+    "total_seconds": 6.246,
+    "sections": {
+      "analysis": {
+        "status": "completed",
+        "seconds": 6.148,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 6.148,
+    "completed_srs": false,
+    "human_approval": false
+  },
+  "status": "completed",
+  "error": null,
+  "generation": {
+    "run_id": "2fd78dbf-c88b-4dbb-a9ca-decf695dd53c",
+    "status": "completed",
+    "error": null,
+    "created_at": "2026-10-30T03:36:18.274383+00:00",
+    "terminal_at": "2026-10-30T03:38:42.349743+00:00",
+    "total_seconds": 144.075,
+    "sections": {
+      "introduction": {
+        "status": "completed",
+        "seconds": 1.369,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "functional": {
+        "status": "completed",
+        "seconds": 70.628,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest",
+          "qwen3:4b-instruct-2507-q4_K_M"
+        ]
+      },
+      "nonfunctional": {
+        "status": "completed",
+        "seconds": 10.866,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "security": {
+        "status": "completed",
+        "seconds": 0.027,
+        "models": []
+      },
+      "data": {
+        "status": "completed",
+        "seconds": 0.027,
+        "models": []
+      },
+      "network": {
+        "status": "completed",
+        "seconds": 0.027,
+        "models": []
+      },
+      "compliance": {
+        "status": "completed",
+        "seconds": 6.634,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "architecture": {
+        "status": "completed",
+        "seconds": 32.877,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "threats": {
+        "status": "completed",
+        "seconds": 3.036,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "risks": {
+        "status": "completed",
+        "seconds": 3.148,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "scenarios": {
+        "status": "completed",
+        "seconds": 2.467,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "verification": {
+        "status": "completed",
+        "seconds": 6.054,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "glossary": {
+        "status": "completed",
+        "seconds": 1.168,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      },
+      "sdlc": {
+        "status": "completed",
+        "seconds": 5.215,
+        "models": [
+          "cybersrs-qwen3-4b-ft:latest"
+        ]
+      }
+    },
+    "maximum_section_seconds": 70.628,
+    "completed_srs": true,
+    "human_approval": false
+  },
+  "pdf_pages": 17,
+  "version_id": "7cb4acad-ca11-4602-aac3-ca0492e53a48",
+  "content_hash": "e0145c0318a546d2efafa0391cccc631badda73ec7bcf44869728f0446921558",
+  "quality": "needs_review",
+  "threats": 5,
+  "risks": 5,
+  "sdlc": "Incremental",
+  "models": [
+    "cybersrs-qwen3-4b-ft:latest",
+    "qwen3:4b-instruct-2507-q4_K_M"
+  ],
+  "wall_seconds": 154.516,
+  "source_unchanged": true
+}
