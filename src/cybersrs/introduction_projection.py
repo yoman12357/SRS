@@ -49,10 +49,6 @@ def compose_introduction(
         "open_issues": [],
     }
     content = preserve_scope_evidence(content, evidence, analysis)
-    for item in content["items"]:
-        fact = by_id[item["evidence_ids"][0]]
-        if fact.context:
-            item["title"] += " — response to: " + fact.context
     return NarrativeSection.model_validate(content).model_dump()
 
 

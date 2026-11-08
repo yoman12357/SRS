@@ -38,9 +38,15 @@ def test_standalone_open_review_instruction_stays_unresolved(analysis):
     assert draft.assessments[0].kind == "requirement"
 
 
-def test_bare_product_goal_does_not_authorize_a_design_feature(analysis):
+@pytest.mark.parametrize(
+    "source",
+    [
+        "Design a network access system for temporary conference media accounts.",
+        "Design a network certificate inventory for a university.",
+    ],
+)
+def test_bare_product_goal_does_not_authorize_a_design_feature(analysis, source):
     """Preserve project scope without turning the design request into product behavior."""
-    source = "Design a network access system for temporary conference media accounts."
     evidence = build_evidence(source, [])
     draft = analysis.model_copy(update={"assessments": [analysis.assessments[0]]})
     assert context_evidence_ids(evidence) == {"E-001"}

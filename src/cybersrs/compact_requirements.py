@@ -23,10 +23,11 @@ from .schemas import (
     StrictModel,
 )
 from .semantics import missing_source_actions, missing_source_quantities
+from .source_completion import source_permission_statement
 from .source_obligations import missing_obligation_keys, source_obligations
 from .validation import assign_ids, consolidate_duplicates, requirements_from, validate_section
 
-COMPACT_REQUIREMENTS_VERSION = "source-batch-1.5"
+COMPACT_REQUIREMENTS_VERSION = "source-batch-1.6"
 REPAIR_CAPTURE_OPTIONS = (
     "Test capture of the resulting response",
     "Test capture of the resulting state",
@@ -120,6 +121,12 @@ def generate_compact_requirements(
             "data": "data",
             "network": "integration",
         }
+        rows = draft.model_dump()
+        for eid, row in rows.items():
+            source = source_quotes[eid]
+            if re.match(r"^only\s+", source, re.I):
+                # The actor's exclusivity is itself a requirement, independent of its tests.
+                row["statement"] = source_permission_statement(source) or row["statement"]
         content = {
             "applicability_reason": "Source-backed obligations; unspecified decisions remain open.",
             "requirements": [
@@ -142,7 +149,7 @@ def generate_compact_requirements(
                     ],
                     "unresolved_decisions": row["unresolved_decisions"],
                 }
-                for eid, row in draft.model_dump().items()
+                for eid, row in rows.items()
             ],
             "related_requirement_ids": metadata["required_requirement_ids"],
             "related_acceptance_criteria": [],

@@ -7,6 +7,7 @@ from typing import Literal
 
 from pydantic import Field
 
+from .architecture_sources import source_actor_contracts
 from .clarification_policy import deduplicate_decisions
 from .schemas import Citation, Document, Requirement, StrictModel
 from .source_detail_policy import nonhuman_role_modifier
@@ -57,14 +58,15 @@ def stakeholder_table(document: Document) -> ReportTable:
     """Simplify role labels while retaining source classes and distinct authority."""
     source = " ".join(item.quote for item in document.evidence)
     groups = {
-        "User": r"\b(?:students?|faculty|staff|researchers?|guests?|employees?|"
-        r"contractors?|users?)\b",
+        "User": r"\b(?:students?|faculty|(?:authorized )?(?:university )?staff|"
+        r"researchers?|guests?|employees?|contractors?|(?:campus )?visitors?|users?)\b",
         "Admin": r"\b(?:(?:network|lab|laboratory|university|system)\s+)?"
         r"(?:administrators?|admins?)\b|\badministrative\s+(?:users?|staff)\b",
         "Analyst": r"\b(?:security\s+)?analysts?\b",
         "Operator": r"\b(?:(?:security|support|network)\s+)?operators?\b",
     }
     rows = []
+    represented = set()
     admin_spans = [match.span() for match in re.finditer(groups["Admin"], source, re.I)]
     for label, pattern in groups.items():
         literals = []
@@ -81,12 +83,30 @@ def stakeholder_table(document: Document) -> ReportTable:
             literals = [value for value in literals if value.casefold() not in {"user", "users"}]
         if not literals:
             continue
+        represented.update(value.casefold().rstrip("s") for value in literals)
         responsibility = (
             "Uses permitted functions; each source class keeps its specified permissions."
             if label == "User"
             else "Performs only the role's source-defined operations in section 3."
         )
         rows.append([label, ", ".join(literals), responsibility])
+    obligations = [
+        row.model_dump(include={"id", "statement", "evidence_ids"})
+        for row in _requirements(document)
+    ]
+    actors = document.analysis.stakeholders + [
+        contract["actor"] for contract in source_actor_contracts(document.evidence, obligations)
+    ]
+    for actor in actors:
+        literal = re.sub(r"^(?:the|a|an|only)\s+", "", actor.strip(), flags=re.I)
+        key = literal.casefold().rstrip("s")
+        if not key or key in represented:
+            continue
+        for match in re.finditer(rf"\b{re.escape(literal)}\b", source, re.I):
+            if not nonhuman_role_modifier(source, match.start(), match.end()):
+                represented.add(key)
+                rows.append([match[0], match[0], "See the source-defined scope and requirements."])
+                break
     rows.append(
         [
             "Project Analyst",
@@ -189,9 +209,8 @@ def build_srs_presentation(document: Document) -> SRSPresentation:
         "Overview",
         paragraphs=[
             "Section 2 summarizes the product, stakeholders and open decisions. Section 3 "
-            "contains the uniquely identified requirements. Detailed evidence, acceptance "
-            "procedures are available in the Normal report. Appendices A-C contain derived "
-            "threat hypotheses, risk assessment and the proposed SDLC workflow.",
+            "contains the uniquely identified requirements. Appendices A–D cover threat "
+            "hypotheses, risk assessment, the proposed SDLC and verification procedures.",
         ],
     )
     add("2", "Overall description")
@@ -391,6 +410,27 @@ def build_srs_presentation(document: Document) -> SRSPresentation:
             paragraphs = []
         add(number, title, requirements=assigned, paragraphs=paragraphs, bullets=policies)
     _assessment_appendices(document, add)
+    add(
+        "D",
+        "Verification and acceptance",
+        paragraphs=[
+            "These procedures define how to verify the requirements. Execution results "
+            "are recorded during implementation and acceptance."
+        ],
+        bullets=document.verification.limitations,
+    )
+    for index, test in enumerate(document.verification.tests, 1):
+        add(
+            f"D.{index}",
+            f"{test.id} · {', '.join(test.requirement_ids)}",
+            paragraphs=[
+                *test.procedure,
+                test.expected_result if test.expected_result.startswith("Expected: ")
+                else f"Expected outcome — {test.expected_result}",
+                test.evidence_to_record if test.evidence_to_record.startswith("Evidence: ")
+                else f"Evidence to record — {test.evidence_to_record}",
+            ],
+        )
     return SRSPresentation(title=document.title, sections=sections)
 
 

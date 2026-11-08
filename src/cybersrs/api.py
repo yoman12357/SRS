@@ -23,7 +23,7 @@ from .audit import audit_scope
 from .config import Settings
 from .exports import render_markdown, render_pdf
 from .knowledge import KnowledgeBase, extract_text, source_digest
-from .orchestrator import Orchestrator
+from .orchestrator import Orchestrator, reviewed_clarifications
 from .provider import GenerationError, LLMProvider, OllamaProvider, RepairingOllamaProvider
 from .repository import Repository
 from .schemas import (
@@ -49,6 +49,12 @@ class AnswerInput(StrictModel):
     """One clarification round; previous answers are preserved by question ID."""
 
     answers: list[Answer]
+
+
+class GenerationInput(AnswerInput):
+    """The interactive IEEE workflow's reviewed analysis and its answers."""
+
+    review_token: str = Field(pattern=r"^[a-f0-9]{64}$")
 
 
 class EditInput(StrictModel):
@@ -181,12 +187,18 @@ def create_app(
     @app.exception_handler(ValueError)
     async def invalid(request: Request, exc: ValueError) -> JSONResponse:
         """Keep validation diagnostics free of raw stakeholder/model text."""
+        messages = {
+            "analysis_review_changed": "The project changed. Review the latest analysis.",
+            "project_run_already_active": "The local model is busy. Wait for that run to finish.",
+        }
         return JSONResponse(
             status_code=409,
             content={
                 "detail": {
                     "code": "invalid_state",
-                    "message": "The request conflicts with current project state",
+                    "message": messages.get(
+                        str(exc), "The request conflicts with current project state"
+                    ),
                 }
             },
         )
@@ -287,6 +299,11 @@ def create_app(
         """Dispatch adaptive analysis with pollable agent progress."""
         return coordinator.start(project_id, "analyse")
 
+    @app.post(prefix + "/projects/{project_id}/clarifications")
+    def clarifications(project_id: str) -> dict:
+        """Prepare question choices after the stakeholder reviews the analysis."""
+        return reviewed_clarifications(repository.get_project(project_id))
+
     @app.post(prefix + "/projects/{project_id}/answers", status_code=202)
     def answer(project_id: str, body: AnswerInput) -> dict:
         """Preserve original responses and rerun adaptive analysis."""
@@ -306,14 +323,19 @@ def create_app(
         return coordinator.start(project_id, "analyse")
 
     @app.post(prefix + "/projects/{project_id}/generate", status_code=202)
-    def generate(project_id: str) -> dict:
+    def generate(project_id: str, body: GenerationInput | None = None) -> dict:
         """Start the sequential SRS/SDLC agents using analysed source input."""
+        if body is not None:
+            return coordinator.start(
+                project_id, review_token=body.review_token, answers=body.answers
+            )
         return coordinator.start(project_id)
 
     @app.get(prefix + "/runs/{run_id}")
     def run_detail(run_id: str) -> dict:
         """Return persisted progress, validated checkpoints and safe failure codes."""
         run = repository.get_run(run_id)
+        run["budget_seconds"] = run["checkpoints"].get("_provenance", {}).get("budget_seconds")
         run["checkpoints"] = {
             key: value for key, value in run["checkpoints"].items() if not key.startswith("_")
         }
@@ -491,8 +513,8 @@ def create_app(
     @app.post(prefix + "/chat")
     def chat(body: ChatInput) -> dict:
         """Answer a local cybersecurity question with schema-checked citations."""
-        if body.project_id:
-            repository.get_project(body.project_id)
+        project = repository.get_project(body.project_id) if body.project_id else None
+        analysis = project["analysis"] if project else None
         sources = knowledge.retrieve(body.message, body.project_id)
         source_map = {source.id: source for source in sources}
 
@@ -508,7 +530,14 @@ def create_app(
         with audit_scope(repository, body.project_id):
             result, provenance = chat_provider.generate(
                 prompts.CHAT,
-                {"question": body.message, "sources": [source.model_dump() for source in sources]},
+                {
+                    "question": body.message,
+                    "project_context": {
+                        "summary": analysis["summary"],
+                        "open_decisions": analysis["unresolved_decisions"],
+                    } if analysis else None,
+                    "sources": [source.model_dump() for source in sources],
+                },
                 ChatResponse,
                 threading.Event(),
                 time.monotonic() + settings.ollama_timeout_seconds,

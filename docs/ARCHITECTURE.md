@@ -134,11 +134,12 @@ requirements or a confirmed release cadence. Local Qwen explains the ranked
 methodology while deterministic compilation preserves exact requirements/tests
 and method-specific activities. Human delivery decisions remain pending.
 
-The analysis screen exposes its interpretation and offers IEEE or Normal report
-generation. This is a presentation preference over one canonical document, stored
-per project in the local browser. IEEE now includes assessment/lifecycle
-appendices; Normal keeps the existing 14-section reader. Exports follow the
-selected view using existing query parameters. No external service is introduced.
+ADR-0064 makes the analysis screen the first review step of a single IEEE
+workflow. Confirmation prepares clarification questions. The Generate request
+binds answers to that review and runs answer analysis, generation and automatic
+checkpoint recovery under a shared eight-minute maximum. The IEEE report
+includes threat, risk, lifecycle and verification appendices. Project references,
+human review and canonical section editing are available through disclosures.
 
 ADRs 0059-0060 retain recognized backup/restore activity nouns as objects, map
 the product pronoun It to the system, and split define/initiate/submit/track

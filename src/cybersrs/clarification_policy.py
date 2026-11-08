@@ -86,6 +86,11 @@ TOPICS = {
         r"\bcentralized authentication\b|\bintegrat\w*.*\bidentity\b",
         "Which centralized identity system and integration interface must be supported?",
     ),
+    "wireless_technology": (
+        r"\b(?:wi[ -]?fi|wireless)\s+technolog\w*",
+        r"\b(?:wi[ -]?fi|wireless)\s+technolog\w*",
+        "Which Wi-Fi technology should the project use?",
+    ),
     "isolation": (r"\bisolat\w*", r"\bisolat\w*", "What conditions authorize endpoint isolation?"),
     "policy_sync": (
         r"\b(?:synchroniz|synchronis|distribut|propagat)\w*",
@@ -258,6 +263,23 @@ def deduplicate_decisions(
     return list(selected.values())
 
 
+def _answered_audit_retention(evidence: list[Evidence]) -> bool:
+    """Recognize one binding, question-linked audit duration without resolving a conflict."""
+    answers = [
+        fact for fact in evidence
+        if fact.source.startswith("answer:")
+        and any(key == "audit_retention" for key, _ in decision_topics(fact.context, evidence))
+    ]
+    return len(answers) == 1 and bool(
+        re.fullmatch(
+            r"(?:the )?(?:system|audit logs?)\s+(?:must|shall)\s+retain\s+"
+            r"[^.!?;]+?\s+for\s+\d+\s+(?:hours?|days?|weeks?|months?|years?)\s*[.!]?",
+            answers[0].quote,
+            re.I,
+        )
+    )
+
+
 def normalize_analysis_decisions(
     analysis: Analysis,
     evidence: list[Evidence],
@@ -270,6 +292,18 @@ def normalize_analysis_decisions(
         result.summary = source
     open_facts = {fact.id: fact.quote for fact in evidence if is_open_decision(fact.quote)}
     goals = {fact.id: fact.quote for fact in evidence if is_project_goal(fact.quote)}
+    resolved = set()
+    if _answered_audit_retention(evidence):
+        resolved = {
+            eid for eid, quote in open_facts.items()
+            if re.fullmatch(
+                r"(?:leave|keep)\s+(?:the\s+)?audit logs? retention(?: period| duration)? "
+                r"open for (?:review|discussion|confirmation|decision)[.!]?",
+                quote,
+                re.I,
+            )
+        }
+        goals.update({eid: open_facts.pop(eid) for eid in resolved})
     for assessment in result.assessments:
         if assessment.evidence_id in open_facts:
             assessment.kind = "uncertain"
@@ -302,7 +336,7 @@ def normalize_analysis_decisions(
     for question in result.questions:
         topics = decision_topics(question.question, evidence)
         for key, wording in topics:
-            if key in seen or key in skipped:
+            if key in seen or key in skipped or (resolved and key == "audit_retention"):
                 continue
             seen.add(key)
             supported = {
@@ -327,8 +361,12 @@ def normalize_analysis_decisions(
     result.questions = questions
     unknowns = []
     for value in [*result.unresolved_decisions, *open_facts.values()]:
+        if resolved and any(value == goals[eid] for eid in resolved):
+            continue
         topics = decision_topics(value, evidence)
         for key, wording in topics:
+            if resolved and key == "audit_retention":
+                continue
             if key not in seen and key not in skipped:
                 seen.add(key)
                 unknowns.append(wording)
@@ -337,6 +375,57 @@ def normalize_analysis_decisions(
             unknowns.append("Unanswered stakeholder decision: " + answer.question_text)
     result.unresolved_decisions = list(dict.fromkeys(unknowns))
     return result
+
+
+def questions_after_review(
+    analysis: Analysis, evidence: list[Evidence], answers: list[Answer]
+) -> list[Question]:
+    """Prepare validated suggestions and any separate topics the source explicitly leaves open."""
+    questions = {question.id: question for question in analysis.questions}
+    answered_ids = {answer.question_id for answer in answers}
+    known_topics = {
+        key
+        for text in [
+            *(question.question for question in questions.values()),
+            *(answer.question_text for answer in answers),
+        ]
+        for key, _ in decision_topics(text, evidence)
+    }
+
+    def add(wording: str, ids: list[str]) -> None:
+        """Create one stable question without overwriting a validated suggestion."""
+        fingerprint = " ".join(wording.casefold().split()).encode("utf-8")
+        question_id = "Q-" + hashlib.sha256(fingerprint).hexdigest()[:12]
+        questions.setdefault(
+            question_id,
+            Question(
+                id=question_id,
+                question=wording,
+                why_needed="This decision remains open in the reviewed analysis.",
+                critical=False,
+                evidence_ids=ids,
+            ),
+        )
+
+    for decision in analysis.unresolved_decisions:
+        if len(decision) >= 8 and decision.endswith("?") and not decision.startswith(
+            "Unanswered stakeholder decision:"
+        ):
+            topics = decision_topics(decision, evidence)
+            if topics and all(key in known_topics for key, _ in topics):
+                continue
+            add(decision, [])
+            known_topics.update(key for key, _ in topics)
+    for fact in evidence:
+        if not is_open_decision(fact.quote):
+            continue
+        for key, (question, support, wording) in TOPICS.items():
+            if key not in known_topics and re.search(question, fact.quote, re.I) and re.search(
+                support, fact.quote, re.I
+            ):
+                add(wording, [fact.id])
+                known_topics.add(key)
+    return [question for question in questions.values() if question.id not in answered_ids]
 
 
 def normalize_section_decisions(content: dict, evidence: list[Evidence]) -> dict:
@@ -362,6 +451,14 @@ def consolidate_document_decisions(
 ) -> Analysis:
     """Store each decision once and preserve section associations as stable question references."""
     result = normalize_analysis_decisions(analysis, evidence)
+    current_context = {
+        item.evidence_id for item in result.assessments if item.kind == "context"
+    }
+    resolved_open_facts = {
+        fact.quote for fact in evidence
+        if fact.id in current_context and is_open_decision(fact.quote)
+    }
+    retention_answered = bool(resolved_open_facts) and _answered_audit_retention(evidence)
     registry: dict[str, Question] = {}
     for question in result.questions:
         for key, _ in decision_topics(question.question, evidence):
@@ -370,11 +467,15 @@ def consolidate_document_decisions(
     def register(text: str, ids: list[str]) -> list[str]:
         """Use only supported topics and retain the associated exact source evidence IDs."""
         references = []
+        if text in resolved_open_facts:
+            return []
         if re.fullmatch(r"Decision Q-[a-f0-9]+ is TBD\.", text):
             return (
                 [text] if text.split()[1] in {question.id for question in registry.values()} else []
             )
         for key, canonical in decision_topics(text, evidence):
+            if retention_answered and key == "audit_retention":
+                continue
             supported = {
                 fact.id
                 for fact in evidence

@@ -793,3 +793,32 @@ review questions. The conference PDF has a sparsely filled contents page.
 
 708 backend tests passed with 24 dependency warnings. Ruff passed. These
 measurements cover the listed inputs and configuration.
+
+## Reviewed IEEE demo workflow — 2026-11-08
+
+Each successful local Ollama check used analysis, explicit review and one
+Generate request. The generation budget was 480 seconds even with a longer
+legacy setting. The recovery console submitted a confirmed 90-day retention
+answer with Generate. Its answer analysis ran within that same timer, and the
+final SRS retained the answer and verification outcome. An earlier attempt
+exposed loss of the question context during final consolidation. The regression
+now checks the consolidated introduction against its exact source projection.
+The certificate inventory rerun preserved exclusive auditor access and kept the
+project-design request in the scope section.
+
+| Brief | Generation seconds | Final IEEE pages |
+| --- | ---: | ---: |
+| Research repository access | 91.592 | 11 |
+| Campus certificate inventory | 90.872 | 11 |
+| Laboratory recovery console | 76.171 | 11 |
+| Reported guest Wi-Fi brief | 158.939 | 18 |
+
+Each export retained the canonical requirement statements and expected test
+outcomes. The browser check covered analysis review, both guest Wi-Fi
+clarifications, the single IEEE Generate action, and the report and PDF link.
+A provider-failure fixture confirmed recovery in the same run without a second
+Generate request. The durations describe these local runs. An exhausted deadline
+or unavailable model still ends the run with an explicit incomplete status.
+
+714 backend tests and 17 frontend tests passed, along with Ruff and the production
+build. The backend reported 24 dependency deprecation warnings.

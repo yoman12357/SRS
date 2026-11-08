@@ -19,6 +19,7 @@ fields regardless of detail. Export audit events record the chosen detail.
 | GET,PATCH,DELETE /projects/{id} | Detail/update/delete project and associated data |
 | POST /projects/{id}/analyse | Start background input analysis run |
 | POST /projects/{id}/answers | Store question IDs, answer text and skipped flags; reanalyse |
+| POST /projects/{id}/clarifications | Confirm the displayed analysis and prepare its clarification questions |
 | POST /projects/{id}/generate | Start sequential generation; requires analysed input |
 | GET /runs/{id} | Status, agent events, validated checkpoints, safe error |
 | GET /projects/{id}/runs | Recent run summaries to restore progress after reload |
@@ -35,6 +36,19 @@ fields regardless of detail. Export audit events record the chosen detail.
 | DELETE /projects/{id}/documents/{document} | Remove reference and its private index chunks |
 | POST /chat | Validated cybersecurity answer with local RAG citations; no implicit project creation |
 | GET /projects/{id}/audit | Explicit private JSON audit download with source revisions, model requests/responses, decisions and exact export artifacts |
+
+The interactive workflow calls `POST /clarifications` on the project after the
+user checks its analysis. It returns `{review_token, questions}` bound to the
+current source inputs and exact analysis. Questions come from validated analysis
+and source-stated open decisions. The user can leave any answer blank.
+
+The interactive `POST /generate` accepts `{review_token, answers}`. Answers use
+the existing answer shape and belong to this reviewed question set. Stale review
+tokens are rejected. The returned run owns any necessary answer analysis,
+section generation and bounded automatic recovery under one wall-clock
+budget, capped at 480 seconds. Human review and question time precede this
+budget. The response and run-detail route include `budget_seconds`. Existing
+bodyless generation and separate answer submission remain supported.
 
 Under ADR-0017, the audit attachment includes project-scoped append-only events,
 content hashes and timestamps. Source revisions include prior/new state; inference

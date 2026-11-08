@@ -6,6 +6,7 @@ import time
 
 import pytest
 
+from cybersrs.clarification_policy import consolidate_document_decisions
 from cybersrs.evidence import build_evidence
 from cybersrs.introduction_agent import generate_introduction
 from cybersrs.introduction_projection import (
@@ -29,6 +30,23 @@ SOURCE = (
     "No continuous delivery is planned. Budget and protocol choices are undecided. "
     "Automatic firewall reconfiguration and active vulnerability scanning are out of scope."
 )
+
+
+def test_final_decision_consolidation_keeps_answer_question_context(analysis):
+    """The final introduction must still pass after consolidating answer-linked decisions."""
+    evidence = [
+        Evidence(
+            id="E-001",
+            source="answer:Q-1",
+            quote="The audit log must retain restore requests for 90 days.",
+            context="What retention period is required for the audit logs?",
+        ),
+    ]
+    plan = SourceIntroductionPlan(evidence_order=["E-001"])
+    sections = {"introduction": compose_introduction(plan, evidence, analysis)}
+    consolidated = consolidate_document_decisions(analysis, sections, evidence)
+    assert introduction_projection_issues(sections["introduction"], evidence, consolidated) == []
+    assert sections["introduction"]["items"][0]["title"].endswith(evidence[0].context)
 
 
 def _facts(analysis):

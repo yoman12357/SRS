@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -22,6 +23,7 @@ from .clarification_policy import (
     consolidate_document_decisions,
     normalize_analysis_decisions,
     normalize_section_decisions,
+    questions_after_review,
 )
 from .compact_requirements import generate_compact_requirements
 from .config import Settings
@@ -48,7 +50,7 @@ from .prohibition_verification import (
 )
 from .provider import OUTPUT_MODEL, CancelledError, GenerationError, LLMProvider, check_cancel
 from .quantity_normalization import preserve_retention_duration, preserve_section_retention
-from .repository import Repository, source_input_hash
+from .repository import Repository, canonical_hash, source_input_hash
 from .requirement_repair import (
     REQUIREMENT_REPAIR_VERSION,
     complete_source_gaps,
@@ -95,10 +97,30 @@ from .verification_projection import (
     verification_projection_issues,
 )
 
+IEEE_RUN_LIMIT_SECONDS = 480
+
 
 def input_hash(project: dict) -> str:
     """Identify exact authoritative inputs, excluding model interpretation."""
     return source_input_hash(project)
+
+
+def reviewed_clarifications(project: dict) -> dict:
+    """Prepare the questions for the exact analysis and inputs being reviewed."""
+    if not project["analysis"] or not project["analysis"]["supported"]:
+        raise ValueError("supported_analysis_required")
+    analysis = Analysis.model_validate(project["analysis"])
+    answers = [Answer.model_validate(answer) for answer in project["answers"]]
+    evidence = build_evidence(project["description"], answers)
+    return {
+        "review_token": canonical_hash(
+            {"inputs": input_hash(project), "analysis": project["analysis"]}
+        ),
+        "questions": [
+            question.model_dump()
+            for question in questions_after_review(analysis, evidence, answers)
+        ],
+    }
 
 
 def _same_requirement_behavior(revised: dict, previous: dict) -> bool:
@@ -150,23 +172,48 @@ class Orchestrator:
         resume_from: str | None = None,
         checkpoint_edits: dict[str, dict] | None = None,
         edit_actor: str = "human",
+        review_token: str | None = None,
+        answers: list[Answer] | None = None,
     ) -> dict:
         """Persist and dispatch an analysis, generation or version-revision workflow."""
         if edit_actor not in {"human", "assistant"}:
             raise ValueError("invalid_edit_actor")
-        project = self.repository.get_project(project_id)
-        if kind != "analyse" and not project["analysis"]:
-            raise ValueError("analysis_required")
-        if kind != "analyse" and not project["analysis"]["supported"]:
-            raise ValueError("unsupported_domain")
         with self._lock:
+            project = self.repository.get_project(project_id)
+            if kind != "analyse" and not project["analysis"]:
+                raise ValueError("analysis_required")
+            if kind != "analyse" and not project["analysis"]["supported"]:
+                raise ValueError("unsupported_domain")
             for existing_id in self.cancels:
                 existing = self.repository.get_run(existing_id)
-                if existing["project_id"] == project_id and existing["status"] in {
-                    "queued",
-                    "running",
-                }:
+                exclusive = review_token is not None or existing["project_id"] == project_id
+                if exclusive and existing["status"] in {"queued", "running"}:
                     raise ValueError("project_run_already_active")
+            analyse_answers = False
+            budget = self.settings.generation_timeout_seconds
+            if review_token is not None:
+                reviewed = reviewed_clarifications(project)
+                if reviewed["review_token"] != review_token:
+                    raise ValueError("analysis_review_changed")
+                known = {question["id"]: question["question"] for question in reviewed["questions"]}
+                merged = {answer["question_id"]: answer for answer in project["answers"]}
+                for answer in answers or []:
+                    if answer.question_id not in known or answer.question_id in merged:
+                        raise ValueError("unknown_or_duplicate_question")
+                    merged[answer.question_id] = Answer(
+                        question_id=answer.question_id,
+                        text=answer.text if not answer.skipped else "",
+                        skipped=answer.skipped or not answer.text.strip(),
+                        question_text=known[answer.question_id],
+                    ).model_dump()
+                if answers:
+                    project = self.repository.update_project(
+                        project_id, answers=list(merged.values()),
+                        expected_input_hash=input_hash(project),
+                    )
+                    analyse_answers = True
+                budget = min(budget, IEEE_RUN_LIMIT_SECONDS)
+            deadline = time.monotonic() + budget
             run = self.repository.create_run(project_id, kind, input_hash(project))
             self.repository.update_run(
                 run["id"],
@@ -187,6 +234,7 @@ class Orchestrator:
                     "_provenance",
                     {
                         "model": self.provider.model_name,
+                        "budget_seconds": budget,
                         "section_timeout_seconds": self.settings.section_timeout_seconds,
                         "atomic_test_repair_limit": self.settings.atomic_test_repair_limit,
                         "compact_requirements_enabled": self.settings.compact_requirements_enabled,
@@ -216,8 +264,11 @@ class Orchestrator:
                 resume_from,
                 checkpoint_edits,
                 edit_actor,
+                deadline,
+                review_token is not None,
+                analyse_answers,
             )
-        return run
+        return {**run, "budget_seconds": budget}
 
     def retry(
         self, run_id: str, section_edits: dict[str, dict] | None = None, editor: str = "human"
@@ -267,37 +318,56 @@ class Orchestrator:
         resume_from: str | None,
         checkpoint_edits: dict[str, dict] | None,
         edit_actor: str,
+        deadline: float,
+        reviewed: bool,
+        analyse_answers: bool,
     ) -> None:
-        deadline = time.monotonic() + self.settings.generation_timeout_seconds
         scope = audit_scope(self.repository, project["id"], run_id)
         scope.__enter__()
         try:
             self.repository.record_audit(project["id"], "workflow_input", project, run_id)
             check_cancel(cancel, deadline)
             self.repository.update_run(run_id, status="running")
-            if self.repository.get_run(run_id)["kind"] == "analyse":
-                deadline = min(deadline, time.monotonic() + self.settings.section_timeout_seconds)
-                self._analyse(run_id, project, cancel, deadline)
-            else:
-                self._generate(
-                    run_id,
-                    project,
-                    cancel,
-                    deadline,
-                    version_id,
-                    section,
-                    edited_content,
-                    resume_from,
-                    checkpoint_edits,
-                    edit_actor,
+            analysis_only = self.repository.get_run(run_id)["kind"] == "analyse"
+            if analysis_only or analyse_answers:
+                analysis_deadline = min(
+                    deadline, time.monotonic() + self.settings.section_timeout_seconds
                 )
+                self._analyse(run_id, project, cancel, analysis_deadline)
+            if not analysis_only:
+                if analyse_answers:
+                    analysed = self.repository.get_project(project["id"])
+                    if input_hash(analysed) != input_hash(project):
+                        raise GenerationError("project_inputs_changed")
+                    if not analysed["analysis"] or not analysed["analysis"]["supported"]:
+                        raise GenerationError("unsupported_domain")
+                    project = analysed
+                for attempt in range(2 if reviewed else 1):
+                    try:
+                        self._generate(
+                            run_id, project, cancel, deadline, version_id, section,
+                            edited_content, resume_from, checkpoint_edits, edit_actor,
+                        )
+                        break
+                    except GenerationError as exc:
+                        if not reviewed or attempt or not re.match(
+                            r"(?:section_validation_failed|section_completion_failed|"
+                            r"passage_completion_failed|targeted_requirement_repair_failed|"
+                            r"local_model_stream_error|invalid_model_envelope|generation_budget_exhausted)",
+                            str(exc),
+                        ):
+                            raise
+                        check_cancel(cancel, deadline)
+                        resume_from = run_id
             self.repository.update_run(run_id, status="completed")
         except CancelledError:
             self.repository.update_run(run_id, status="cancelled", error="generation_cancelled")
         except (GenerationError, ValueError, KeyError) as exc:
             # All expected errors carry field names/codes only, never raw inputs.
             safe = str(exc) if isinstance(exc, GenerationError) else type(exc).__name__
-            if safe == "generation_budget_exhausted":
+            if safe == "generation_budget_exhausted" and reviewed and time.monotonic() >= deadline:
+                safe = "generation_time_limit"
+            elif safe == "generation_budget_exhausted":
                 events = self.repository.get_run(run_id)["events"]
                 agent = events[-1].get("agent", "generation") if events else "generation"
                 safe = f"section_budget_exhausted:{agent}"
@@ -589,6 +659,8 @@ class Orchestrator:
                         scenario_projection_version = previous_event.get(
                             "scenario_projection_version", ""
                         )
+                    if resume_from == run_id:
+                        continue
                     self.repository.update_run(
                         run_id,
                         event={

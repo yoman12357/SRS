@@ -22,7 +22,7 @@ def is_project_goal(text: str) -> bool:
     """Recognize a bare product-design request with no embedded runtime duty."""
     goal = re.fullmatch(
         r"(?:design|build|develop|create)\s+(?:an?|the)\s+[^,.;!?]+?"
-        r"\b(?:system|platform|solution|gateway|application|tool|service|console)\b"
+        r"\b(?:system|platform|solution|gateway|application|tool|service|console|inventory)\b"
         r"(?:\s+for\s+(?P<audience>[^,.;!?]+))?[.!]?",
         text.strip(),
         re.I,

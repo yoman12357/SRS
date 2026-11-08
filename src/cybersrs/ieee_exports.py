@@ -93,8 +93,7 @@ def render_srs_markdown(version: dict, status: str) -> str:
             "",
             f"Canonical content SHA-256: {version['content_hash']}",
             "",
-            "Detailed acceptance criteria, evidence, architecture and the SDLC plan "
-            "are retained in the supporting report and canonical JSON.",
+            "The canonical JSON retains the underlying evidence and architecture.",
             "",
         ]
     )
@@ -105,14 +104,15 @@ class IEEEReportTemplate(BaseDocTemplate):
     """Produce a nested contents list and bookmarks for the numbered outline."""
 
     def afterFlowable(self, flowable) -> None:
-        """Collect only report section headings for the contents pass."""
+        """Bookmark every heading and keep the printed contents compact."""
         number = getattr(flowable, "srs_number", None)
         if number is not None:
             level = number.count(".")
             key = "ieee-" + number.replace(".", "-")
             self.canv.bookmarkPage(key)
             self.canv.addOutlineEntry(flowable.getPlainText(), key, level=level)
-            self.notify("TOCEntry", (level, flowable.getPlainText(), self.page, key))
+            if level == 0 or (level == 1 and number[0].isdigit()):
+                self.notify("TOCEntry", (level, flowable.getPlainText(), self.page, key))
 
 
 def render_srs_pdf(version: dict, status: str) -> bytes:
@@ -230,8 +230,7 @@ def render_srs_pdf(version: dict, status: str) -> bytes:
         [
             Spacer(1, 6 * mm),
             para(
-                "Detailed acceptance criteria, evidence, architecture and the SDLC plan are "
-                "available in the supporting report and canonical JSON.",
+                "The canonical JSON retains the underlying evidence and architecture.",
                 "IEEESmall",
             ),
             para(f"Canonical content SHA-256: {version['content_hash']}", "IEEESmall"),

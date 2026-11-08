@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     llm_max_retries: int = Field(default=2, ge=0, le=5)
     base_repair_enabled: bool = True
     adapter_max_retries: int = Field(default=0, ge=0, le=5)
-    generation_timeout_seconds: float = Field(default=3600, gt=0)
+    generation_timeout_seconds: float = Field(default=480, gt=0)
     section_timeout_seconds: float = Field(default=60, gt=0)
     compact_requirements_enabled: bool = False
     atomic_test_repair_limit: int = Field(default=2, ge=0, le=3)

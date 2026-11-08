@@ -7,8 +7,10 @@ import pymupdf
 from fastapi.testclient import TestClient
 
 from cybersrs.api import create_app
+from cybersrs.clarification_policy import questions_after_review
+from cybersrs.evidence import build_evidence
 from cybersrs.orchestrator import Orchestrator
-from cybersrs.provider import check_cancel
+from cybersrs.provider import GenerationError, check_cancel
 from cybersrs.repository import Repository
 from cybersrs.schemas import SECTION_SCHEMAS
 
@@ -178,6 +180,68 @@ def test_failure_keeps_validated_sections_without_success_version(settings, anal
         assert len(repo.list_versions(project["id"])) == 1
     finally:
         coordinator.shutdown()
+
+
+def test_reviewed_ieee_recovers_in_same_run_under_the_total_cap(settings, analysis, sections):
+    """A transient validation failure resumes the failed section under the original deadline."""
+
+    class FailOnce(FakeProvider):
+        """Reject one security candidate."""
+
+        failed = False
+
+        def generate(self, system, context, schema, cancel, deadline, validate=None):
+            """Simulate the provider exhausting corrective validation for one attempt."""
+            if context.get("assigned_section") == "security" and not self.failed:
+                self.failed = True
+                raise GenerationError("section_validation_failed:fixture")
+            return super().generate(system, context, schema, cancel, deadline, validate)
+
+    provider = FailOnce(analysis, sections)
+    app = create_app(
+        settings.model_copy(update={"generation_timeout_seconds": 3600}),
+        provider,
+        FakeKnowledge(),
+    )
+    with TestClient(app) as client:
+        project = client.post(
+            "/api/v1/projects", json={"name": "Synthetic", "description": DESCRIPTION}
+        ).json()
+        base = f"/api/v1/projects/{project['id']}"
+        assert client.post(base + "/clarifications").status_code == 409
+        run_id = client.post(base + "/analyse").json()["id"]
+        assert wait_run(app.state.repository, run_id)["status"] == "completed"
+        reviewed = client.post(base + "/clarifications").json()
+        assert reviewed["questions"] == []
+        body = {"review_token": reviewed["review_token"], "answers": []}
+        stale = client.post(base + "/generate", json=body | {"review_token": "0" * 64})
+        assert stale.status_code == 409
+        started = client.post(base + "/generate", json=body)
+        assert started.status_code == 202
+        assert started.json()["budget_seconds"] == 480
+        generated_id = started.json()["id"]
+        run = wait_run(app.state.repository, generated_id)
+        assert run["status"] == "completed", run["error"]
+        runs = client.get(base + "/runs").json()
+        assert [row["id"] for row in runs if row["kind"] == "generate"] == [generated_id]
+        assert provider.failed
+        assert provider.calls.count("introduction") == 1
+        assert client.get(f"/api/v1/runs/{generated_id}").json()["budget_seconds"] == 480
+        assert len(client.get(base + "/versions").json()) == 1
+
+
+def test_clarification_review_exposes_each_source_stated_open_topic(analysis):
+    """The review step can ask about explicit topics even when model suggestions are empty."""
+    evidence = build_evidence(
+        "Leave the Wi-Fi technology and audit log retention period open for review.",
+        [],
+    )
+    questions = questions_after_review(analysis, evidence, [])
+    assert {question.question for question in questions} == {
+        "Which Wi-Fi technology should the project use?",
+        "What retention period is required for the audit logs?",
+    }
+    assert {tuple(question.evidence_ids) for question in questions} == {("E-001",)}
 
 
 def test_sdlc_version_change_reuses_only_revalidated_predecessors(settings, analysis, sections):

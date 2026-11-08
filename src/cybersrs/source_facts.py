@@ -41,6 +41,8 @@ def preserve_scope_evidence(content: dict, evidence: list[Evidence], analysis: A
                     if item.id in context_ids
                     else f"Stakeholder source statement {item.id}"
                 )
+                if item.context:
+                    claim["title"] += " — response to: " + item.context
                 claim["status"] = "unresolved" if item.id in uncertain else "confirmed"
     for item in evidence:
         if item.id not in protected or any(
@@ -61,4 +63,6 @@ def preserve_scope_evidence(content: dict, evidence: list[Evidence], analysis: A
                 "sources": [],
             }
         )
+        if item.context:
+            result["items"][-1]["title"] += " — response to: " + item.context
     return result

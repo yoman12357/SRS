@@ -11,6 +11,10 @@ export interface Question {
   why_needed: string;
   critical: boolean;
 }
+export interface Clarifications {
+  review_token: string;
+  questions: Question[];
+}
 export interface Analysis {
   title: string;
   domain: string;
@@ -42,6 +46,7 @@ export interface Summary {
 export interface Run {
   id: string;
   input_hash?: string;
+  budget_seconds?: number | null;
   kind: string;
   status: string;
   error: string | null;
@@ -54,6 +59,7 @@ export interface Run {
     at?: string;
     reused?: boolean;
     budget_seconds?: number;
+    version_id?: string;
     retrieval_warning?: string | null;
   }[];
   checkpoints: Record<string, Json>;

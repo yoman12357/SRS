@@ -102,10 +102,9 @@ npm.cmd test
 npm.cmd run build
 ```
 
-The React interface supports project clarification, progress/cancel/retry,
-references, version selection, section editing/regeneration, human decisions,
-JSON/Markdown/PDF download and local cybersecurity questions. Failed runs retain
-validated checkpoints; retries revalidate them and preserve exact source inputs.
+The React interface supports reviewed clarification, timed progress, IEEE PDF
+download, private references, version selection, section editing and human
+decisions. The API also provides canonical JSON/Markdown and checkpoint access.
 Section edits rebuild affected linked artifacts without replacing unrelated
 requirement sections. New versions never inherit human approval.
 
@@ -168,12 +167,16 @@ visible in the AI drafting record and exports. Mixed correction runs do not prov
 adapter improvement. Use pure `--variant base` / `--variant finetuned` evaluation
 runs for comparison, and add `--repair` only when evaluating the deployed policy.
 
-After analysis, review the domain, roles, interpreted scope and open decisions,
-then choose **Generate IEEE SRS** or **Generate Normal SRS**. IEEE uses the existing
-IEEE 830 organization with threat, risk and SDLC appendices. Normal presents all
-14 sections and editing tools. Both use the same canonical content; the selected
-reader format controls PDF/Markdown exports and is remembered per project on
-this browser. Switching formats does not generate again or change approval hashes.
+Enter a project brief and choose **Analyze project**. Check the interpreted scope
+and stakeholders, then select **Confirm analysis & show questions**. You can ask
+for clarification, answer what you know, and leave the remaining decisions open.
+Select **Generate IEEE SRS** once. One timed run incorporates the answers, drafts
+and validates the sections, and handles bounded automatic correction. The run has
+an eight-minute maximum after Generate. It reports genuine timeout or model
+failure and preserves completed work. When the report opens, use
+**Download IEEE SRS PDF**. The IEEE outline includes linked verification, threats,
+risks and the proposed SDLC. Human review and section editing are available from
+the same report.
 
 Source-derived advisory 1.1 retains applicable identity, permission, revocation,
 administration, integration, audit, monitoring, separation and filtering hypotheses.

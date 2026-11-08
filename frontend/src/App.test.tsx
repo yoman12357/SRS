@@ -44,6 +44,10 @@ function mockFetch(overrides: Record<string, unknown> = {}) {
         "/api/v1/projects/p-1/documents": [],
         "/api/v1/projects/p-1/runs": [],
         "POST /api/v1/projects": project,
+        "POST /api/v1/projects/p-1/clarifications": {
+          review_token: "review-token",
+          questions: project.analysis.questions,
+        },
         "POST /api/v1/projects/p-1/analyse": {
           id: "r-1",
           kind: "analyse",
@@ -54,7 +58,8 @@ function mockFetch(overrides: Record<string, unknown> = {}) {
         },
         ...overrides,
       };
-      const value = routes[`${method} ${url}`] ?? routes[url];
+      const route = `${method} ${url}`;
+      const value = Object.hasOwn(routes, route) ? routes[route] : routes[url];
       return {
         ok: value !== undefined,
         status: value === undefined ? 500 : 200,
@@ -72,43 +77,65 @@ beforeEach(() => {
   vi.unstubAllGlobals();
 });
 
-it.each([
-  ["Generate IEEE SRS", "standard"],
-  ["Generate Normal SRS", "full"],
-])(
-  "starts exactly one generation for %s after displaying analysis",
-  async (button, preference) => {
-    localStorage.setItem("cybersrs.selected", "p-1");
-    const fetch = mockFetch({
-      "POST /api/v1/projects/p-1/generate": {
-        id: "r-generate",
-        kind: "generate",
-        status: "queued",
-        events: [],
-        checkpoints: {},
-        error: null,
+it("requires analysis review and submits answers with exactly one IEEE generation request", async () => {
+  localStorage.setItem("cybersrs.selected", "p-1");
+  const fetch = mockFetch({
+    "POST /api/v1/projects/p-1/generate": {
+      id: "r-generate",
+      kind: "generate",
+      status: "queued",
+      events: [],
+      checkpoints: {},
+      error: null,
+      budget_seconds: 480,
+    },
+  });
+  render(<App />);
+  expect(
+    await screen.findByRole("heading", { name: "Project analysis" }),
+  ).toBeInTheDocument();
+  expect(screen.getByText(project.analysis.summary)).toBeInTheDocument();
+  expect(
+    screen.queryByRole("button", { name: "Generate IEEE SRS" }),
+  ).not.toBeInTheDocument();
+  expect(
+    screen.queryByText(project.analysis.questions[0].question),
+  ).not.toBeInTheDocument();
+  fireEvent.click(
+    screen.getByRole("button", { name: "Confirm analysis & show questions" }),
+  );
+  const answer = await screen.findByRole("textbox", {
+    name: /Which roles can modify/,
+  });
+  fireEvent.change(answer, {
+    target: { value: "Network administrators may modify policies." },
+  });
+  expect(
+    screen.getByRole("button", { name: "Ask about this project" }),
+  ).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "Generate IEEE SRS" }));
+  expect(await screen.findByText("Generating IEEE SRS")).toBeInTheDocument();
+  expect(screen.getByText(/Total limit: 8:00/)).toBeInTheDocument();
+  const posts = fetch.mock.calls.filter(
+    ([, options]) => options?.method === "POST",
+  );
+  expect(posts.map(([url]) => String(url).split("/").at(-1))).toEqual([
+    "clarifications",
+    "generate",
+  ]);
+  expect(JSON.parse(String(posts.at(-1)?.[1]?.body))).toEqual({
+    review_token: "review-token",
+    answers: [
+      {
+        question_id: "q-1",
+        text: "Network administrators may modify policies.",
       },
-    });
-    render(<App />);
-    expect(
-      await screen.findByRole("heading", { name: "Project analysis" }),
-    ).toBeInTheDocument();
-    expect(screen.getByText(project.analysis.summary)).toBeInTheDocument();
-    expect(screen.getAllByText(project.analysis.domain).length).toBeGreaterThan(0);
-    fireEvent.click(screen.getByRole("button", { name: button }));
-    await waitFor(() =>
-      expect(
-        fetch.mock.calls.filter(
-          ([url, options]) =>
-            String(url).endsWith("/generate") && options?.method === "POST",
-        ),
-      ).toHaveLength(1),
-    );
-    expect(localStorage.getItem("cybersrs.report-format.p-1")).toBe(preference);
-  },
-);
+    ],
+  });
+  expect(screen.queryByText(/Normal SRS/)).not.toBeInTheDocument();
+});
 
-it("disables both report choices for an unsupported analysis", async () => {
+it("keeps unsupported analyses outside generation", async () => {
   localStorage.setItem("cybersrs.selected", "p-1");
   const fetch = mockFetch({
     "/api/v1/projects/p-1": {
@@ -117,12 +144,13 @@ it("disables both report choices for an unsupported analysis", async () => {
     },
   });
   render(<App />);
+  expect(await screen.findByText("Unsupported domain")).toBeInTheDocument();
   expect(
-    await screen.findByRole("button", { name: "Generate IEEE SRS" }),
-  ).toBeDisabled();
+    screen.queryByRole("button", { name: /Confirm analysis/ }),
+  ).not.toBeInTheDocument();
   expect(
-    screen.getByRole("button", { name: "Generate Normal SRS" }),
-  ).toBeDisabled();
+    screen.queryByRole("button", { name: "Generate IEEE SRS" }),
+  ).not.toBeInTheDocument();
   expect(
     fetch.mock.calls.some(([, options]) => options?.method === "POST"),
   ).toBe(false);
@@ -134,9 +162,7 @@ describe("local project workflow", () => {
     render(<App />);
     const description = screen.getByLabelText("What are you building?");
     fireEvent.change(description, { target: { value: project.description } });
-    fireEvent.click(
-      screen.getByRole("button", { name: /Understand my project/ }),
-    );
+    fireEvent.click(screen.getByRole("button", { name: /Analyze project/ }));
     await waitFor(() =>
       expect(
         fetch.mock.calls.some(
@@ -160,11 +186,19 @@ describe("local project workflow", () => {
     const fetch = mockFetch();
     render(<App />);
     expect(
+      await screen.findByText("Administrator permissions"),
+    ).toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole("button", { name: "Confirm analysis & show questions" }),
+    );
+    expect(
       await screen.findByText("Which roles can modify access policies?"),
     ).toBeInTheDocument();
-    expect(screen.getByText("Administrator permissions")).toBeInTheDocument();
     expect(
-      fetch.mock.calls.some(([, options]) => options?.method === "POST"),
+      screen.getByRole("textbox", { name: /Which roles can modify/ }),
+    ).toHaveValue("");
+    expect(
+      fetch.mock.calls.some(([url]) => String(url).endsWith("/generate")),
     ).toBe(false);
   });
 
@@ -174,9 +208,7 @@ describe("local project workflow", () => {
     fireEvent.change(screen.getByLabelText("What are you building?"), {
       target: { value: project.description },
     });
-    fireEvent.click(
-      screen.getByRole("button", { name: /Understand my project/ }),
-    );
+    fireEvent.click(screen.getByRole("button", { name: /Analyze project/ }));
     expect(await screen.findByRole("alert")).toHaveTextContent(
       "Local request failed",
     );
@@ -185,7 +217,7 @@ describe("local project workflow", () => {
     );
   });
 
-  it("renders failed runs as incomplete with an explicit retry", async () => {
+  it("renders failed runs as incomplete without a manual retry", async () => {
     localStorage.setItem("cybersrs.selected", "p-1");
     mockFetch({
       "/api/v1/projects/p-1/runs": [
@@ -202,12 +234,14 @@ describe("local project workflow", () => {
     });
     render(<App />);
     expect(
-      await screen.findByText("This run needs attention"),
+      await screen.findByText("The run ended before completion"),
     ).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Retry" })).toBeInTheDocument();
     expect(
-      screen.getByText(/No incomplete report was marked successful/),
-    ).toBeInTheDocument();
+      screen.queryByRole("button", { name: "Retry" }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", { name: /Download IEEE/ }),
+    ).not.toBeInTheDocument();
   });
 
   it("distinguishes finished analysis from a finished specification", async () => {
@@ -227,18 +261,14 @@ describe("local project workflow", () => {
     });
     render(<App />);
     expect(
-      await screen.findByText("Project analysis completed"),
+      await screen.findByRole("heading", { name: "Project analysis" }),
     ).toBeInTheDocument();
-    expect(screen.queryByText("Generation completed")).not.toBeInTheDocument();
     expect(
-      screen.queryByText(/Your draft is ready for review/),
+      screen.getByRole("button", { name: "Confirm analysis & show questions" }),
+    ).toBeEnabled();
+    expect(
+      screen.queryByRole("link", { name: /Download IEEE/ }),
     ).not.toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: "Generate IEEE SRS" }),
-    ).toBeEnabled();
-    expect(
-      screen.getByRole("button", { name: "Generate Normal SRS" }),
-    ).toBeEnabled();
   });
 });
 
@@ -306,7 +336,7 @@ it("shows failed current validation even if an older review approved that conten
   });
   render(<App />);
   const review = await screen.findByRole("button", {
-    name: /Review specification/,
+    name: /Open specification/,
   });
   await waitFor(() => expect(review).toBeEnabled());
   fireEvent.click(review);
@@ -385,39 +415,19 @@ it("opens the IEEE reader by default and retains the full section editor", async
   });
   render(<App />);
   const review = await screen.findByRole("button", {
-    name: /Review specification/,
+    name: /Open specification/,
   });
-  expect(await screen.findByText("Generation completed")).toBeInTheDocument();
   await waitFor(() => expect(review).toBeEnabled());
   fireEvent.click(review);
   expect(await screen.findByText("Concise IEEE purpose.")).toBeInTheDocument();
-  expect(screen.queryByText("Generation completed")).not.toBeInTheDocument();
   expect(
     screen.queryByText("Full canonical introduction."),
-  ).not.toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Normal SRS PDF" })).toHaveAttribute(
-    "href",
-    "/api/v1/projects/p-1/versions/v-ieee/export/pdf?detail=full",
-  );
-  fireEvent.click(screen.getByRole("button", { name: "Normal SRS & editing" }));
+  ).not.toBeVisible();
+  expect(screen.queryByText(/Normal SRS/)).not.toBeInTheDocument();
+  expect(
+    screen.getByRole("link", { name: "Download IEEE SRS PDF" }),
+  ).toHaveAttribute("href", "/api/v1/projects/p-1/versions/v-ieee/export/pdf");
+  fireEvent.click(screen.getByText("Review evidence or edit sections"));
   expect(screen.getByText("Full canonical introduction.")).toBeInTheDocument();
   expect(screen.getByRole("button", { name: "Edit section" })).toBeEnabled();
-  expect(localStorage.getItem("cybersrs.report-format.p-1")).toBe("full");
-  expect(screen.getByRole("link", { name: /Export PDF/ })).toHaveAttribute(
-    "href",
-    "/api/v1/projects/p-1/versions/v-ieee/export/pdf?detail=full",
-  );
-  expect(screen.getByRole("link", { name: "MARKDOWN" })).toHaveAttribute(
-    "href",
-    "/api/v1/projects/p-1/versions/v-ieee/export/markdown?detail=full",
-  );
-  expect(screen.getByRole("link", { name: "JSON" })).toHaveAttribute(
-    "href",
-    "/api/v1/projects/p-1/versions/v-ieee/export/json",
-  );
-  fireEvent.click(screen.getByRole("button", { name: "IEEE SRS" }));
-  expect(screen.getByRole("link", { name: /Export PDF/ })).toHaveAttribute(
-    "href",
-    "/api/v1/projects/p-1/versions/v-ieee/export/pdf",
-  );
 });
