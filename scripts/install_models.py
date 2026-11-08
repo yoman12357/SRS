@@ -28,7 +28,7 @@ def _matches(path: Path, asset: dict) -> bool:
         return hashlib.file_digest(stream, "sha256").hexdigest() == asset["sha256"]
 
 
-def _download_part(cache: Path, release: str, asset: dict) -> Path:
+def _download_part(cache: Path, asset: dict) -> Path:
     destination = cache / asset["name"]
     if _matches(destination, asset):
         return destination
@@ -38,7 +38,9 @@ def _download_part(cache: Path, release: str, asset: dict) -> Path:
         try:
             with (
                 httpx.stream(
-                    "GET", f"{release}/{asset['name']}", follow_redirects=True, timeout=60
+                    "GET", asset["url"],
+                    headers={"Accept": "application/octet-stream"},
+                    follow_redirects=True, timeout=60,
                 ) as response,
                 temporary.open("wb") as stream,
             ):
@@ -61,9 +63,7 @@ def _import_model(settings: Settings, manifest: dict, env: dict[str, str]) -> No
     cache.mkdir(parents=True, exist_ok=True)
     weights = cache / manifest["filename"]
     if not _matches(weights, manifest):
-        parts = [
-            _download_part(cache, manifest["release"], asset) for asset in manifest["parts"]
-        ]
+        parts = [_download_part(cache, asset) for asset in manifest["parts"]]
         temporary = weights.with_suffix(".download")
         try:
             with temporary.open("wb") as output:
