@@ -46,8 +46,8 @@ Install 64-bit [Python 3.12](https://www.python.org/downloads/windows/),
 Open Ollama before running setup. Allow about 12 GB of free disk space and an
 internet connection for the first setup. Generation and retrieval run locally.
 
-Clone the repository with Git, or extract the source ZIP from the
-[CyberSRS release](https://github.com/yoman12357/SRS/releases/tag/v0.1.0).
+Clone the repository with Git, or extract the
+[CyberSRS source ZIP](https://github.com/yoman12357/SRS/archive/refs/heads/main.zip).
 
 ```powershell
 git clone https://github.com/yoman12357/SRS.git
@@ -63,9 +63,10 @@ It builds the frontend, verifies and imports the exact released fine-tuned Qwen
 weights, installs missing base Qwen and nomic embedding models, and indexes the
 starter knowledge. Run setup again to retry an interrupted download.
 
-The release also includes the raw QLoRA adapter for historical asset inspection.
+The [model release](https://github.com/yoman12357/SRS/releases/tag/v0.1.0)
+also includes the raw QLoRA adapter for historical asset inspection.
 The runtime uses the verified merged Ollama model. See
-[model provenance](models/NOTICE.md) and [source asset notes](resources/README.md).
+[model provenance](models/NOTICE.md) and [source asset notes](docs/HANDOFF_ASSETS.md).
 The three [example drafts](demo/one-run-verification-20261108) include the
 project briefs, analysis, review questions and IEEE PDFs.
 

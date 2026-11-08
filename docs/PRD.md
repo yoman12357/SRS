@@ -24,7 +24,7 @@ unknowns and contradictions, avoiding invented quantities/technologies/regulatio
 retaining testable acceptance criteria, no dangling references, and complete
 traceability. Validation is evidence and heuristics, not formal correctness proof.
 
-The professor's original brief and extraction are in docs/reference. Its financial
-examples are adapted to cybersecurity; do not invent banking compliance. Enterprise
+The adopted scope of the professor's brief is in PROBLEM_STATEMENT_ALIGNMENT.md.
+Its financial examples are adapted to cybersecurity. Do not invent banking compliance. Enterprise
 identity/MFA and human satisfaction studies remain outside the local single-user
 scope. Agents have no execution, network-management or attack tools.
