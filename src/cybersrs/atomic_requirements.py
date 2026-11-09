@@ -296,6 +296,16 @@ def generate_atomic_requirements(
                 "approved decision. Additional authorities, automatic issuance and response "
                 "fields remain undecided."
             )
+        if by_key[key].action == "reject":
+            result["test_focus"] = (
+                "The stated actor rejects the source-named request. Observe that request's "
+                "rejected decision. Exercise rejection separately from approval."
+            )
+        if by_key[key].action == "set_expiration":
+            result["test_focus"] = (
+                "The stated actor sets the source-named expiration using a fixture date. "
+                "Observe the expiration date set to that value. Leave the date itself unspecified."
+            )
         if by_key[key].action == "renew":
             result["test_focus"] = (
                 "The stated actor renews the source-named certificate. Observe its renewed "

@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 from .schemas import Analysis, Evidence
 
-OBLIGATION_VERSION = "source-obligations-1.4"
+OBLIGATION_VERSION = "source-obligations-1.5"
 
 
 # One action contract drives both semantic validation and the native corrective schema.
@@ -47,6 +47,10 @@ OBSERVED_OUTCOME_PATTERNS = {
     "submit": r"submit|receiv|accept|pending|available",
     "track": r"track|histor|record|display|available|return|shown|list",
     "approve": r"approved|authoriz|accepted|approval.*(?:saved|recorded|available)",
+    "set_expiration": r"\b(?:expiration|expiry)\b.{0,50}"
+    r"\b(?:set|saved|stored|updated|matches?|reflects|applied)\b|"
+    r"\b(?:sets?|saves?|stores?|updates?|appl(?:y|ies|ied))\b.{0,50}"
+    r"\b(?:expiration|expiry)\b",
     "renew": r"renewed|renewal.*(?:complete|succe)|validity.*(?:updat|extend)",
     "restore": r"restor|recover|previous|available|reflect",
     "maintain": r"record|log|stor|retain|present|available",
@@ -133,6 +137,7 @@ VERBS = (
     "be",
 )
 VERB_PATTERN = "|".join(VERBS)
+SET_EXPIRATION = r"set(?=\s+(?:(?:an?|the)\s+)?(?:expiration|expiry)\b)"
 INFLECTIONS = {verb + "s": verb for verb in VERBS}
 INFLECTIONS.update(
     {
@@ -160,6 +165,13 @@ class SourceObligation:
 
 def _parts(body: str) -> list[str]:
     """Split independent predicate conjunctions, leaving noun lists and conditions intact."""
+    body = re.sub(
+        r"\b(approve)\s+or\s+(reject)\b"
+        r"(?=\s+(?:(?:an?|the)\s+)?(?:[\w-]+\s+){0,4}requests?\b)",
+        r"\1 and \2",
+        body,
+        flags=re.I,
+    )
     # "controls and monitors access" shares its object; normalize the coordinated
     # predicate only when the first verb has no object. Noun lists stay untouched.
     body = re.sub(
@@ -179,8 +191,7 @@ def _parts(body: str) -> list[str]:
     ]
     boundaries = list(
         re.finditer(
-            rf",\s*(?:and\s+)?(?=(?:{VERB_PATTERN})\b)|"
-            rf"\s+and\s+(?=(?:{VERB_PATTERN})\b)",
+            rf"(?:,\s*(?:and\s+)?|\s+and\s+)(?=(?:{VERB_PATTERN}|{SET_EXPIRATION})\b)",
             body,
             flags=re.I,
         )
@@ -213,6 +224,9 @@ def _source_body(quote: str) -> tuple[str, str] | None:
     )
     if purpose:
         body = purpose["body"].rstrip(". ")
+        letting = re.match(rf"lets\s+(.+?)\s+((?:request|{VERB_PATTERN})\b.+)", body, re.I)
+        if letting:
+            body = f"allow {letting[1]} to {letting[2]}"
         first, *tail = body.split(" ", 1)
         return "The system", INFLECTIONS.get(first.casefold(), first) + (
             " " + tail[0] if tail else ""
@@ -272,8 +286,11 @@ def source_obligations(fact: Evidence) -> list[SourceObligation]:
             clauses.append((actor, part, product))
     expanded = []
     for role, clause, is_product in clauses:
+        role = re.sub(r"^(?:A|An)\b", lambda match: match[0].lower(), role)
         action_match = re.match(rf"(?P<verb>{VERB_PATTERN})\b\s*(?P<object>.*)", clause, re.I)
         action = action_match["verb"].casefold() if action_match else "source_behavior"
+        if re.match(SET_EXPIRATION, clause, re.I):
+            action = "set_expiration"
         objects = action_match["object"] if action_match else ""
         if action in {"use", "detect"}:
             objects_list = re.split(r",\s*(?:and\s+)?|\s+and\s+", objects)
@@ -392,6 +409,7 @@ def _meaning_words(text: str) -> set[str]:
                 "view": "review",
                 "permit": "allow",
                 "enable": "allow",
+                "let": "allow",
                 "ingest": "collect",
                 "receive": "collect",
             }.get(normalized, normalized)

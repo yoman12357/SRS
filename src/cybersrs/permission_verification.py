@@ -177,7 +177,7 @@ def permission_test_gaps(source: str, criteria: list[dict]) -> list[str]:
     positive_criteria = [
         item
         for item in criteria
-        if _positive_outcome(item["then"])
+        if (_positive_outcome(item["then"]) or _request_decision_observed(contract, item))
         and _role_present(contract["actor_role_terms"], item["given"] + " " + item["when"])
     ]
     gaps = ["positive_permission_test_missing"] if not positive_criteria else []
@@ -250,6 +250,28 @@ def permission_test_gaps(source: str, criteria: list[dict]) -> list[str]:
     if not denied_test:
         gaps.append("prohibited_actor_action_denial_not_tested")
     return sorted(set(gaps))
+
+
+def _request_decision_observed(contract: dict, criterion: dict) -> bool:
+    """Treat an authorized actor's recorded decision as a successful operation."""
+    return any(
+        re.search(rf"\b{action}\b", contract["positive_clause"], re.I)
+        and re.search(trigger, criterion["when"], re.I)
+        and re.search(
+            rf"\b(?:requests?|decisions?)\b[^.;!?]{{0,65}}?\b"
+            rf"(?:is|was|marked as|becomes|changes to|set to|updated to)\s+{outcome}\b|"
+            rf"\b{outcome}\s+(?:request|decision)\s+(?:is|was)\s+"
+            r"(?:observed|visible|available|shown|displayed|returned|recorded)\b|"
+            rf"\b(?:records?|shows?|displays?|returns?)\s+(?:(?:an?|the)\s+)?"
+            rf"{outcome}\s+(?:request|decision)\b",
+            criterion["then"],
+            re.I,
+        )
+        for action, trigger, outcome in (
+            ("approve", r"\bapprov(?:e[sd]?|ing|al)\b", "approved"),
+            ("reject", r"\breject(?:s|ed|ing|ion)?\b", "rejected"),
+        )
+    )
 
 
 def _visible_read_result(text: str) -> bool:

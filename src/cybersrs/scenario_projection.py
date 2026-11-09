@@ -30,13 +30,24 @@ def scenario_inventory(sections: dict, evidence: list[Evidence], analysis: Analy
             if not words:
                 continue
             pattern = r"\b" + r"\s+".join(re.escape(w.rstrip("s")) + "s?" for w in words) + r"\b"
-            if not re.search(pattern, row["statement"], re.I):
-                continue
+            head = re.escape(words[-1].rstrip("s"))
+            restriction = rf"\bonly\s+for\s+(?:the|an?)\s+((?:[A-Za-z-]+\s+){{0,3}}{head}s?)\b"
+            permitted = re.search(restriction, row["statement"], re.I)
             for fact in evidence:
-                if fact.id in row["evidence_ids"]:
+                if fact.id not in row["evidence_ids"]:
+                    continue
+                if re.search(pattern, row["statement"], re.I):
                     match = re.search(pattern, fact.quote, re.I)
                     if match and not nonhuman_role_modifier(fact.quote, match.start(), match.end()):
                         actors.add(match[0])
+                if permitted:
+                    match = re.search(restriction, fact.quote, re.I)
+                    if (
+                        match
+                        and match[1].casefold() == permitted[1].casefold()
+                        and not nonhuman_role_modifier(fact.quote, match.start(1), match.end(1))
+                    ):
+                        actors.add(match[1])
         options[row["id"]] = sorted(actors)
     return {
         "requirements": [deepcopy(row) for row in requirements if row["id"] in required],

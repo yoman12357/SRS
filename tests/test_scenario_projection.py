@@ -127,6 +127,25 @@ def test_plan_cannot_invent_actor_drop_primary_or_use_unknown_alternate(source_v
     assert validate_scenario_plan(wrong, inventory)
 
 
+def test_conditional_download_keeps_the_approved_collaborator_as_actor(analysis):
+    """Use the narrower role named in the permission even when analysis uses a wider label."""
+    source = (
+        "The system must allow downloads only for the approved collaborator "
+        "while the approval is active."
+    )
+    evidence = build_evidence(source, [])
+    interpretation = analysis.model_copy(update={"stakeholders": ["external collaborators"]})
+    row = requirement(source.replace("must", "shall"), "E-001") | {"id": "SEC-001"}
+    sections = {"security": {"requirements": [row]}}
+    assert scenario_inventory(sections, evidence, interpretation)["actor_options"] == {
+        "SEC-001": ["approved collaborator"],
+    }
+    row["statement"] = row["statement"].replace("approved", "invited")
+    assert scenario_inventory(sections, evidence, interpretation)["actor_options"] == {
+        "SEC-001": [],
+    }
+
+
 @pytest.mark.parametrize("repeat_alternate", [False, True])
 def test_scenario_agent_asks_model_for_choices_and_composes_source_text(
     source_view, repeat_alternate

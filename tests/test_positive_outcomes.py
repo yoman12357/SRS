@@ -55,3 +55,40 @@ def test_log_inspection_accepts_returned_view_as_review() -> None:
         ),
     ]
     assert permission_test_gaps(source, tests) == []
+
+
+@pytest.mark.parametrize(
+    ("source", "action", "outcome"),
+    [
+        ("approve or reject", "approves", "The request is marked as approved in the system state"),
+        ("approve", "initiates approval of", "The system records an approved decision"),
+        ("approve", "approves", "The request's approved decision is observed in the system state"),
+        ("reject", "rejects", "The request is rejected in the system state"),
+    ],
+)
+def test_authorized_request_decision_is_an_observable_success(
+    source: str, action: str, outcome: str
+) -> None:
+    """An approved or deliberately rejected request is the observed permission outcome."""
+    tests = [
+        criterion(
+            "A data steward reviews a dataset sharing request",
+            f"The data steward {action} the request",
+            outcome,
+        )
+    ]
+    assert permission_test_gaps(f"A data steward can {source} the request.", tests) == []
+
+
+def test_denied_approval_does_not_satisfy_a_stewards_permission() -> None:
+    """Distinguish intentional rejection from an unsuccessful approval operation."""
+    tests = [
+        criterion(
+            "A data steward reviews a pending request",
+            "The data steward approves the request",
+            "The request is not approved and the action is denied",
+        )
+    ]
+    assert "positive_permission_test_missing" in permission_test_gaps(
+        "A data steward can approve or reject the request.", tests
+    )
